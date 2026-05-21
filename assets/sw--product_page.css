@@ -136,7 +136,15 @@
 }
 .tiktok_wrapper video.cm_video {
   height: 450px !important;
+  width: 100%;
   object-fit: cover;
+}
+.tiktok_slider_video.is-loading .cm_video {
+  opacity: 0;
+}
+.tiktok_slider_video.is-playing .cm_video,
+.tiktok_slider_video .cm_video:not([poster]) {
+  opacity: 1;
 }
 .tiktok_wrapper .slick-slide.slick-current.slick-active.slick-center {
   transform: scale(1.33) rotate(2deg);

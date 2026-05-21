@@ -21,15 +21,39 @@
       <div class="tiktok_slider">
         <div class="tiktok_slider_inner">
           {% for block in section.blocks %}
-            <div class="tiktok_slider_row">
-             
-                <div class="tiktok_slider_video">
-                  <video class="cm_video" playsinline loop muted {% if forloop.index == 1 %}autoplay{% endif %} preload="{% if forloop.index == 1 %}metadata{% else %}none{% endif %}" width="100%" height="100%">
-                    <source src="{{block.settings.url_video}}" type="video/mp4">
-                  </video>
+            <div class="tiktok_slider_row" {{ block.shopify_attributes }}>
+              <div class="tiktok_slider_video" data-video-url="{{ block.settings.url_video | escape }}">
+                {%- if block.settings.video_poster != blank -%}
+                  <img
+                    class="tiktok_video_poster"
+                    src="{{ block.settings.video_poster | image_url: width: 506 }}"
+                    srcset="{{ block.settings.video_poster | image_url: width: 506 }} 1x, {{ block.settings.video_poster | image_url: width: 1012 }} 2x"
+                    alt="{{ block.settings.url_video_text | escape }}"
+                    width="506"
+                    height="450"
+                    loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
+                    decoding="async"
+                  >
+                {%- endif -%}
+                <video
+                  class="cm_video"
+                  playsinline
+                  loop
+                  muted
+                  preload="none"
+                  {% if block.settings.video_poster != blank %}
+                    poster="{{ block.settings.video_poster | image_url: width: 506 }}"
+                  {% endif %}
+                  width="506"
+                  height="450"
+                >
+                  {%- comment -%} src injected by JS only for active/nearby slides {%- endcomment -%}
+                  <source data-src="{{ block.settings.url_video }}" type="video/mp4">
+                </video>
+                {%- if block.settings.url_video_text != blank -%}
                   <h3 class="url_video_text">{{ block.settings.url_video_text }}</h3>
-                </div>
-             
+                {%- endif -%}
+              </div>
             </div>
           {% endfor %}
         </div>
@@ -73,7 +97,13 @@
           {
             "type":"text",
             "id":"url_video",
-            "label":"Video URL"
+            "label":"Video URL (MP4)"
+          },
+          {
+            "type":"image_picker",
+            "id":"video_poster",
+            "label":"Video poster image",
+            "info":"Preview before video loads. Recommended 506×450 px (JPG/WebP). Without this, the slide shows empty until the MP4 downloads."
           },
           {
             "type":"textarea",
@@ -102,28 +132,67 @@
     var $slider = $('.tiktok_slider_inner');
     if (!$slider.length || typeof $.fn.slick !== 'function') return;
 
+    function loadTiktokVideo($video) {
+      var $source = $video.find('source');
+      var src = $source.attr('data-src');
+      if (!src || $source.attr('src')) return;
+      $source.attr('src', src);
+      $video[0].load();
+    }
+
+    function unloadTiktokVideo($video) {
+      var el = $video[0];
+      if (!el) return;
+      el.pause();
+      el.removeAttribute('src');
+      $video.find('source').removeAttr('src');
+      el.load();
+      $video.closest('.tiktok_slider_video').removeClass('is-playing is-loading');
+    }
+
+    function playTiktokSlide($slide) {
+      var $wrap = $slide.find('.tiktok_slider_video');
+      var $video = $wrap.find('video');
+      if (!$video.length) return;
+
+      $wrap.addClass('is-loading');
+      loadTiktokVideo($video);
+
+      var el = $video[0];
+      var onPlaying = function () {
+        $wrap.removeClass('is-loading').addClass('is-playing');
+        el.removeEventListener('playing', onPlaying);
+      };
+      el.addEventListener('playing', onPlaying);
+
+      el.play().catch(function () {
+        $wrap.removeClass('is-loading');
+      });
+    }
+
+    function pauseAllTiktokVideos($exceptSlide) {
+      $slider.find('.slick-slide').each(function () {
+        if ($exceptSlide && this === $exceptSlide[0]) return;
+        unloadTiktokVideo($(this).find('video'));
+      });
+    }
+
+    function handleActiveSlide(slick, slideIndex) {
+      var $slide = $(slick.$slides.get(slideIndex));
+      pauseAllTiktokVideos($slide);
+      playTiktokSlide($slide);
+    }
+
     $slider.on('init', function (event, slick) {
-      if (slick.currentSlide === 0) {
-        var $firstSlide = $(slick.$slides.get(slick.currentSlide));
-        var $video = $firstSlide.find('.tiktok_slider_video video');
-        if ($video.length && $video.get(0)) {
-          $video.get(0).play();
-        }
-        $('.tiktok_slider_video').addClass('hello');
-      }
+      handleActiveSlide(slick, slick.currentSlide);
+    });
+
+    $slider.on('beforeChange', function (event, slick) {
+      pauseAllTiktokVideos();
     });
 
     $slider.on('afterChange', function (event, slick, currentSlide) {
-      var $currentSlide = $(slick.$slides.get(currentSlide));
-      var $video = $currentSlide.find('.tiktok_slider_video video');
-      $video.removeAttr('autoplay');
-      $video.removeAttr('muted');
-      $('.tiktok_slider_inner .tiktok_slider_video video').each(function () {
-        this.pause();
-      });
-      if ($video.length && $video.get(0)) {
-        $video.get(0).play();
-      }
+      handleActiveSlide(slick, currentSlide);
     });
 
     $slider.slick({
@@ -135,7 +204,8 @@
       speed: 500,
       variableWidth: true,
       arrows: true,
-      dots: false
+      dots: false,
+      lazyLoad: 'ondemand'
     });
   });
 
