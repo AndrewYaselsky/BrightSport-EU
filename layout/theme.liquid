@@ -2,6 +2,8 @@
 
 <html class="no-js" lang="{{ shop.locale }}">
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,17 +26,12 @@
     <link rel="preconnect dns-prefetch" href="https://triplewhale-pixel.web.app/" crossorigin>
     <link rel="preconnect dns-prefetch" href="https://api.config-security.com/" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap"
       rel="stylesheet"
     >
     {% if template.name == "SNOW" %}
       <script src="https://app.embed.im/snow.js" defer></script>
     {% endif %}
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    >
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <script>
       sessionStorage.setItem('dontRedirect', 'true');
     </script>
@@ -137,40 +134,15 @@
     }
   </script>-->
     
-    <script>
-      /* >> TriplePixel :: start*/
-        ~function(W,H,A,L,E,_,B,N){function O(U,T,H,R){void 0===R&&(R=!1),H=new XMLHttpRequest,H.open("GET",U,!0),H.send(null),H.onreadystatechange=function(){4===H.readyState&&200===H.status?(R=H.responseText,U.includes(".txt")?eval(R):N[B]=R):(299<H.status||H.status<200)&&T&&!R&&(R=!0,O(U,T-1))}}if(N=window,!N[H+"sn"]){N[H+"sn"]=1;try{A.setItem(H,1+(0|A.getItem(H)||0)),(E=JSON.parse(A.getItem(H+"U")||"[]")).push(location.href),A.setItem(H+"U",JSON.stringify(E))}catch(e){}A.getItem('"!nC`')||(A=N,A[H]||(L=function(){return Date.now().toString(36)+"_"+Math.random().toString(36)},E=A[H]=function(t,e){return W=L(),(E._q=E._q||[]).push([W,t,e]),W},E.ch=W,B="configSecurityConfModel",N[B]=1,O("//conf.config-security.com/model",0),O("//triplewhale-pixel.web.app/triplefw.txt?",5)))}}("","TriplePixel",localStorage);
-      /* << TriplePixel :: end*/
-    </script>
-
     <meta name="google-site-verification" content="Kj_lc5ymIItCyKdpf6ayXI6lgjmTNVkWrkGGB8w-9JM">
-
-    <script src="https://www.googleoptimize.com/optimize.js?id=OPT-MSKR7Z5"></script>
-
-    <!--<script async defer src="https://tools.luckyorange.com/core/lo.js?site-id=a79fcd4b"></script>-->
-    <script>
-      !function (w, d, t) {
-        w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
-
-        ttq.load('CAKVDBRC77UFDAKT4RM0');
-        ttq.page();
-      }(window, document, 'ttq');
-    </script>
-      <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.40/vue.global.prod.min.js"
-        integrity="sha512-8/jAx3J9HeEfyNRszg0WpsZJqr2WiQO5sJHbcXZUmZGD/JazUs8167SEZH1mQ1fVeC86Vk1rrqA5swiEPynj7w=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-      ></script>
-    <script>
-      const { createApp, computed, ref, reactive, onMounted } = Vue;
-    </script>
-    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0"
-    >
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.40/vue.global.prod.min.js"
+      integrity="sha512-8/jAx3J9HeEfyNRszg0WpsZJqr2WiQO5sJHbcXZUmZGD/JazUs8167SEZH1mQ1fVeC86Vk1rrqA5swiEPynj7w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      defer
+    ></script>
     <meta name="theme-color" content="{{ settings.accent_color }}">
 
     <title>
@@ -204,8 +176,12 @@
     <link rel="stylesheet" href="{{ 'theme.scss.css' | asset_url }}">
     <link rel="stylesheet" href="{{ 'is--style.css' | asset_url }}">
     <link rel="stylesheet" href="{{ 'is--custom.css' | asset_url }}">
-    <link rel="stylesheet" href="{{ 'sw--product_page.css' | asset_url }}">
-    <link rel="stylesheet" href="{{ 'sw--dev-page.css' | asset_url }}">
+    {%- if template.name == 'product' -%}
+      <link rel="stylesheet" href="{{ 'sw--product_page.css' | asset_url }}">
+    {%- endif -%}
+    {%- if page.handle contains 'dev-' -%}
+      <link rel="stylesheet" href="{{ 'sw--dev-page.css' | asset_url }}">
+    {%- endif -%}
 
     <script>
       // This allows to expose several variables to the global scope, to be used in scripts
@@ -271,20 +247,6 @@
       <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer></script>
       <script src="{{ 'customer_area.js' | shopify_asset_url }}" defer></script>
     {%- endif -%}
-    <script src="{{ 'jquery-2.2.4.min.js' | asset_url }}"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script
-      src="https://cdn.polyfill.io/v2/polyfill.min.js?features=fetch,Element.prototype.closest,Element.prototype.remove,Element.prototype.classList,Array.prototype.includes,Array.prototype.fill,Object.assign,CustomEvent,IntersectionObserver,IntersectionObserverEntry"
-      defer
-    ></script>
-    <script src="{{ 'libs.min.js' | asset_url }}" defer></script>
-    <script src="{{ 'theme.min.js' | asset_url }}" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
-    <script src="{{ 'custom.js' | asset_url }}" defer></script>
-    <script src="{{ 'is--custom.js' | asset_url }}" defer></script>
-
     {% include 'microdata-schema' %}
 
     {{ shop.metafields.loox.global_html_head }}
@@ -296,10 +258,25 @@
     </script>
     {% include 'hulk_po_vd.liquid' %}
     {% include 'omega_multi_pixel' %}
-    {{ 'mamuta-smarty-core.css' | asset_url | stylesheet_tag }}
-    {{ 'mamuta-smarty.css' | asset_url | stylesheet_tag }}
+    {%- if settings.mamuta_tierprice_enabled -%}
+      {{ 'mamuta-smarty-core.css' | asset_url | stylesheet_tag }}
+      {{ 'mamuta-smarty.css' | asset_url | stylesheet_tag }}
+    {%- endif -%}
   
 	{{ shop.metafields.loox["global_html_head"] }}
+
+    <script>
+      window.addEventListener('load', function () {
+        /* TriplePixel — after load */
+        ~function(W,H,A,L,E,_,B,N){function O(U,T,H,R){void 0===R&&(R=!1),H=new XMLHttpRequest,H.open("GET",U,!0),H.send(null),H.onreadystatechange=function(){4===H.readyState&&200===H.status?(R=H.responseText,U.includes(".txt")?eval(R):N[B]=R):(299<H.status||H.status<200)&&T&&!R&&(R=!0,O(U,T-1))}}if(N=window,!N[H+"sn"]){N[H+"sn"]=1;try{A.setItem(H,1+(0|A.getItem(H)||0)),(E=JSON.parse(A.getItem(H+"U")||"[]")).push(location.href),A.setItem(H+"U",JSON.stringify(E))}catch(e){}A.getItem('"!nC`')||(A=N,A[H]||(L=function(){return Date.now().toString(36)+"_"+Math.random().toString(36)},E=A[H]=function(t,e){return W=L(),(E._q=E._q||[]).push([W,t,e]),W},E.ch=W,B="configSecurityConfModel",N[B]=1,O("//conf.config-security.com/model",0),O("//triplewhale-pixel.web.app/triplefw.txt?",5)))}}("","TriplePixel",localStorage);
+        /* TikTok pixel */
+        !function (w, d, t) {
+          w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
+          ttq.load('CAKVDBRC77UFDAKT4RM0');
+          ttq.page();
+        }(window, document, 'ttq');
+      });
+    </script>
   </head>
 
   <body class="{% if template.directory %}template-{{ template.directory | handle }}{% endif %} template-{{ template.name | handle }} {% if page.handle == 'dev-about-us' %} dev_about {% endif %} {% if page.handle == 'dev-contact-us' %} dev_contact_us {% endif %} {{ product.handle   }}">
@@ -561,9 +538,6 @@
 
       $(document).ready(function() {
         updateGiftWrapStatus();
-
-        const $checkbox = $('#ifAddAddon');
-        $checkbox.prop('checked', true).trigger('change');
       });
 
       $(document).on('click', '.rb-check-btn', function (e) {
@@ -608,7 +582,9 @@
     }
   </style>
 
-    
+
+    {% render 'perf-defer-scripts' %}
+
 	{{ shop.metafields.loox["global_html_body"] }}
 </body>
 </html>
