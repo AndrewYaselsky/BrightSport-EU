@@ -5220,11 +5220,11 @@ span.save_bg_color {
   }
 }
 .bundle_scrollbar_box p{
-  margin-right: 15px;
   display: flex !important;
   align-items: center;
   justify-content: center;
   gap: 4px;
+  margin: 5px;
 }
 
 .Drawer[aria-hidden=false] {
