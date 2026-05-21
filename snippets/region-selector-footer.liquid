@@ -13,6 +13,9 @@
   </div>
 </div>
 <script>
+document.addEventListener('DOMContentLoaded', function () {
+  if (!window.Vue) return;
+  const { createApp, computed, ref, onMounted } = Vue;
   const RegionSelectorFooter = createApp({
     name: 'region-selector-footer',
     element: '#region-selector-footer',
@@ -80,4 +83,5 @@
     }
   })
   RegionSelectorFooter.mount('#region-selector-footer');
+});
 </script>

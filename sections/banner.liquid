@@ -7,7 +7,7 @@
           <div class="Slideshow__ImageContainer  hidden-tablet-and-up">
             <img
               class="Slideshow__Image banner__Image Image--lazyLoad"
-              src="{{ mobile_image | img_url: 'master' | split: '?v' | first }}"
+              src="{{ mobile_image | image_url: width: 1200 | split: '?v' | first }}"
             >
           </div>
         {%- endif -%}
@@ -15,7 +15,7 @@
           <div class="Slideshow__ImageContainer hidden-phone">
             <img
               class="Slideshow__Image banner__Image Image--lazyLoad hide-no-js"
-              src="{{ section.settings.image | img_url: 'master' | split: '?v' | first }}"
+              src="{{ section.settings.image | image_url: width: 1200 | split: '?v' | first }}"
             >
           </div>
         {%- else -%}

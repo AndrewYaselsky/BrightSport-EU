@@ -19,7 +19,7 @@
                    <a href="{{ product.url }}">
                       <img src="{{ product.featured_image | img_url:'master' }}" class="main_img">
                                {% if product.images.size > 1 %}
-                      <img src="{{ product.images[1] | img_url: 'master' }}" class="hover_img">
+                      <img src="{{ product.images[1] | image_url: width: 1200 }}" class="hover_img">
                     {% endif %}
                     </a>
                     {% if product.handle contains 'athlete-bundle' %}

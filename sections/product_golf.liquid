@@ -60,7 +60,7 @@
                                   alt="{{ image.alt | escape }}"
                                   data-max-width="{{ image.width }}"
                                   data-max-height="{{ image.height }}"
-                                  data-original-src="{{ image | img_url: 'master' }}">
+                                  data-original-src="{{ image | image_url: width: 1600 }}">
 
                               {%- assign image_count = image_count | plus: 1 -%}
                             {%- endfor -%}

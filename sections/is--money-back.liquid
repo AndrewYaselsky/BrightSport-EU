@@ -5,7 +5,7 @@
     {% if section.settings.img != blank %}
       <div class="money_back_img_block">
         <div class="money_back_img">
-          <img src="{{ section.settings.img | img_url: 'master' }}">
+          <img src="{{ section.settings.img | image_url: width: 1200 }}">
         </div>
       </div>
     {% endif %}
@@ -15,7 +15,7 @@
         <div class="money_back_wrapper">
           {% if section.settings.img1 != blank %}
             <span>
-              <img src="{{ section.settings.img1 | img_url: 'master' }}">
+              <img src="{{ section.settings.img1 | image_url: width: 1200 }}">
             </span>
           {% endif %}
           {% if section.settings.title != blank %}

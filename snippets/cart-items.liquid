@@ -41,7 +41,7 @@
         <div class="AspectRatio" style="height:120px;">
           <img
             class="CartItem__Image"
-            src="{{ line_item.image | img_url: 'master' }}"
+            src="{{ line_item.image | image_url: width: 1200 }}"
             alt="{{ line_item.image.alt | escape }}">
         </div>
       </div>

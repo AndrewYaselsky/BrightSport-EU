@@ -17,10 +17,10 @@
     <div class="unique_balls_img_{{ forloop.index }} unique_balls_img_block">
       <div class="unique_balls_img">
         {% if block.settings.img != blank %}
-          <img src="{{ block.settings.img | img_url: 'master' }}" class="black_white_ball">
+          <img src="{{ block.settings.img | image_url: width: 1200 }}" class="black_white_ball">
         {% endif %}
         {% if block.settings.img1 != blank %}
-          <img src="{{ block.settings.img1 | img_url: 'master' }}" class="Color_ball">
+          <img src="{{ block.settings.img1 | image_url: width: 1200 }}" class="Color_ball">
         {% endif %}
         {% if block.settings.btn != blank %}
           <a href="{{ block.settings.url }}" class="unique_balls_btn">{{ block.settings.btn }}

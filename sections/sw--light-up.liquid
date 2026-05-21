@@ -1,6 +1,6 @@
 <div class="light_up">
   {% if section.settings.img != blank %}
-    <img src="{{ section.settings.img | img_url: 'master' }}" class="light_up_bg">
+    <img src="{{ section.settings.img | image_url: width: 1200 }}" class="light_up_bg">
   {% endif %}
   
   <div class="container">

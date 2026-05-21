@@ -398,6 +398,8 @@
     {%- include 'mlveda-flag' -%}
     {%- include 'mlveda-currencies-style' %}
 
+    {% render 'perf-defer-scripts' %}
+
     <script>
       $(function(){
         function getCookie(cname) {
@@ -581,9 +583,6 @@
       left: 0 !important;
     }
   </style>
-
-
-    {% render 'perf-defer-scripts' %}
 
 	{{ shop.metafields.loox["global_html_body"] }}
 </body>

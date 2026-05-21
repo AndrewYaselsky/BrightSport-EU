@@ -112,7 +112,7 @@
               alt="{{ image.alt | escape }}"
               data-max-width="{{ image.width }}"
               data-max-height="{{ image.height }}"
-              data-original-src="{{ image | img_url: 'master' }}">
+              data-original-src="{{ image | image_url: width: 1600 }}">
               {% if forloop.first %}
             <div class="feature-image-badge maison_test">
               <!-- <img src="//cdn.shopify.com/s/files/1/0283/8190/4984/t/62/assets/tiktok-badge.svg" alt="tiktok badge" /> -->

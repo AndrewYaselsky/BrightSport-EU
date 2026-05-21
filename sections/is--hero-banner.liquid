@@ -29,11 +29,11 @@
 
 <style>
 .hero_main{
-  background-image: url({{ section.settings.img | img_url: 'master' }});
+  background-image: url({{ section.settings.img | image_url: width: 1200 }});
 }
 @media (max-width:767px){
   .hero_main{
-    background-image: url({{ section.settings.img1 | img_url: 'master' }});
+    background-image: url({{ section.settings.img1 | image_url: width: 1200 }});
   }
 }
 </style>

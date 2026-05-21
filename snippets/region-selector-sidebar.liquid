@@ -13,6 +13,9 @@
   </div>
 </div>
 <script>
+document.addEventListener('DOMContentLoaded', function () {
+  if (!window.Vue) return;
+  const { createApp, computed, ref, onMounted } = Vue;
   const RegionSelectorSidebar = createApp({
     name: 'region-selector-sidebar',
     element: '#region-selector-sidebar',
@@ -80,4 +83,5 @@
     }
   })
   RegionSelectorSidebar.mount('#region-selector-sidebar');
+});
 </script>

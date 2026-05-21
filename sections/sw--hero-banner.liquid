@@ -68,15 +68,32 @@
 
     <div class="new_hero_banner_balls_block">
       <div class="new_hero_banner_balls">
-        <div class="new_hero_banner_balls_slider swiper  swiper-container-3d" dir="rtl">
+        <div class="new_hero_banner_balls_slider swiper swiper-container-3d" dir="rtl">
           <div class="swiper-wrapper">
             {% for block in section.blocks %}
               {% if block.type == 'balls' %}
-                {% if block.settings.img1 and block.settings.img2 != blank %}
+                {% if block.settings.img1 != blank and block.settings.img2 != blank %}
+                  {% if forloop.first %}
+                    <link rel="preload" as="image" href="{{ block.settings.img2 | image_url: width: 900 }}" fetchpriority="high">
+                  {% endif %}
                   <div class="new_hero_banner_balls_slide_block swiper-slide">
                     <div class="new_hero_banner_balls_slide">
-                      <img src="{{ block.settings.img1 | img_url: 'master' }}" class="new_hero_banner_balls_img_bw">
-                      <img src="{{ block.settings.img2 | img_url: 'master' }}" class="new_hero_banner_balls_img_color">
+                      <img
+                        src="{{ block.settings.img1 | image_url: width: 900 }}"
+                        alt=""
+                        width="900"
+                        height="900"
+                        class="new_hero_banner_balls_img_bw"
+                        {% if forloop.first %}loading="eager" fetchpriority="high"{% else %}loading="lazy"{% endif %}
+                      >
+                      <img
+                        src="{{ block.settings.img2 | image_url: width: 900 }}"
+                        alt=""
+                        width="900"
+                        height="900"
+                        class="new_hero_banner_balls_img_color"
+                        {% if forloop.first %}loading="eager"{% else %}loading="lazy"{% endif %}
+                      >
                     </div>
                   </div>
                 {% endif %}
@@ -90,10 +107,10 @@
               <video
                 loop
                 muted
-                preload
+                preload="none"
                 autoplay
                 playsinline
-                poster="{{ section.settings.video_poster_1 | img_url: 'master' }}"
+                poster="{{ section.settings.video_poster_1 | image_url: width: 600 }}"
               >
                 <source src="{{ section.settings.video1 }}" type="video/mp4">
               </video>
@@ -109,10 +126,10 @@
               <video
                 loop
                 muted
-                preload
+                preload="none"
                 autoplay
                 playsinline
-                poster="{{ section.settings.video_poster_2 | img_url: 'master' }}"
+                poster="{{ section.settings.video_poster_2 | image_url: width: 600 }}"
               >
                 <source src="{{ section.settings.video2 }}" type="video/mp4">
               </video>
@@ -140,36 +157,34 @@
 </div>
 
 <script>
-  setTimeout(function(){
-    var swiper = new Swiper(".new_hero_banner_balls_slider", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: 3,
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 0,
-      depth: 350,
-      modifier: 6,
-      slideShadows: false
-    },
-     autoplay: {
-        delay: 4500,
+  document.addEventListener('DOMContentLoaded', function () {
+    if (typeof Swiper === 'undefined') return;
+    var el = document.querySelector('.new_hero_banner_balls_slider');
+    if (!el) return;
+    var swiper = new Swiper(el, {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 350,
+        modifier: 6,
+        slideShadows: false
       },
-        slidesPerView: 'auto',
-      loop: true,
-  });
-    swiper.on('slideChange', function () {
-
-
-      var datas = Number($(".swiper-slide-active").attr("data-swiper-slide-index")) + 1;
-      if(datas == $(".new_hero_banner_balls_slide_block").length) { datas = 0; }
-
-      $(".new_hero_banner_title").removeClass("active");
-      $('.new_hero_banner_title[data-index="'+ datas +'"]').addClass("active");
-
+      autoplay: { delay: 4500 },
+      loop: true
     });
-    },1500);
+    swiper.on('slideChange', function () {
+      var datas = Number(document.querySelector('.swiper-slide-active')?.getAttribute('data-swiper-slide-index')) + 1;
+      var total = document.querySelectorAll('.new_hero_banner_balls_slide_block').length;
+      if (datas === total) datas = 0;
+      document.querySelectorAll('.new_hero_banner_title').forEach(function (t) { t.classList.remove('active'); });
+      var active = document.querySelector('.new_hero_banner_title[data-index="' + datas + '"]');
+      if (active) active.classList.add('active');
+    });
+  });
 </script>
 
 {% schema %}
@@ -282,7 +297,6 @@
 }
 {% endschema %}
 
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
     // setTimeout(function(){
     //   console.log("ad");
