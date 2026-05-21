@@ -1749,6 +1749,7 @@ body #region-selector {
 }
 .bundle_function_block.homepage-bundle-slider .slick-track {
   display: flex;
+  gap: 16px;
 }
 .bundle_function_block.homepage-bundle-slider .slick-slide {
   display: flex;
