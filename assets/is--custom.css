@@ -819,7 +819,8 @@ header .active_megamenu .megamenu_see_btn a:hover svg path {
 
 @font-face {
   font-family: "BaseNeueTrial-Bold";
-  src: url("https://cdn.shopify.com/s/files/1/0283/8190/4984/files/BaseNeueTrial-Bold.otf?v=1692611645");
+  src: url("https://cdn.shopify.com/s/files/1/0688/2299/1135/files/BaseNeue-Bold.woff?v=1684917924") format("woff");
+  font-display: swap;
 }
 h2.upto_maintitle {
   font-family: BaseNeueTrial-Bold;

@@ -1,50 +1,62 @@
 @font-face {
   font-family: "BaseNeueTrial-Bold";
-  src: url(https://cdn.shopify.com/s/files/1/0688/2299/1135/files/BaseNeue-Bold.woff?v=1684917924);
+  src: url(https://cdn.shopify.com/s/files/1/0688/2299/1135/files/BaseNeue-Bold.woff?v=1684917924) format("woff");
+  font-display: swap;
 }
 @font-face {
   font-family: "BaseNeueTrial-Black";
-  src: url(https://cdn.shopify.com/s/files/1/0688/2299/1135/files/BaseNeue-Black.woff?v=1684917924);
+  src: url(https://cdn.shopify.com/s/files/1/0688/2299/1135/files/BaseNeue-Black.woff?v=1684917924) format("woff");
+  font-display: swap;
 }
 @font-face {
   font-family: "BaseNeue-ExpandedExtraBold";
-  src: url(https://cdn.shopify.com/s/files/1/0688/2299/1135/files/BaseNeue-ExpandedExtraBold.woff?v=1684918185);
+  src: url(https://cdn.shopify.com/s/files/1/0688/2299/1135/files/BaseNeue-ExpandedExtraBold.woff?v=1684918185) format("woff");
+  font-display: swap;
 }
 @font-face {
   font-family: "BaseNeue-ExtraBold";
-  src: url(https://cdn.shopify.com/s/files/1/0688/2299/1135/files/BaseNeue-ExtraBold.woff?v=1684918185);
+  src: url(https://cdn.shopify.com/s/files/1/0688/2299/1135/files/BaseNeue-ExtraBold.woff?v=1684918185) format("woff");
+  font-display: swap;
 }
 @font-face {
   font-family: "BaseNeueTrial-SuperCondMedium";
-  src: url(https://cdn.shopify.com/s/files/1/0283/8190/4984/files/BaseNeueTrial-SuperCondMedium.woff?v=1693461168);
+  src: url(https://cdn.shopify.com/s/files/1/0283/8190/4984/files/BaseNeueTrial-SuperCondMedium.woff?v=1693461168) format("woff");
+  font-display: swap;
 }
 @font-face {
   font-family: "BaseNeueTrial-SuperExpSemBd";
-  src: url(https://cdn.shopify.com/s/files/1/0283/8190/4984/files/BaseNeueTrial-SuperExpSemBd.woff?v=1693465461);
+  src: url(https://cdn.shopify.com/s/files/1/0283/8190/4984/files/BaseNeueTrial-SuperExpSemBd.woff?v=1693465461) format("woff");
+  font-display: swap;
 }
 @font-face {
   font-family: "BaseNeueTrial-SuperCondSemBd";
-  src: url(https://cdn.shopify.com/s/files/1/0283/8190/4984/files/BaseNeueTrial-SuperCondSemBd.woff?v=1693463955);
+  src: url(https://cdn.shopify.com/s/files/1/0283/8190/4984/files/BaseNeueTrial-SuperCondSemBd.woff?v=1693463955) format("woff");
+  font-display: swap;
 }
 @font-face {
   font-family: "BaseNeueTrial-CondExtBd";
-  src: url(https://cdn.shopify.com/s/files/1/0283/8190/4984/files/BaseNeueTrial-CondExtBd.woff?v=1693475573);
+  src: url(https://cdn.shopify.com/s/files/1/0283/8190/4984/files/BaseNeueTrial-CondExtBd.woff?v=1693475573) format("woff");
+  font-display: swap;
 }
 @font-face {
   font-family: "BaseNeueTrial-CondensedBold";
-  src: url(https://cdn.shopify.com/s/files/1/0283/8190/4984/files/BaseNeueTrial-CondensedBold.woff?v=1693475572);
+  src: url(https://cdn.shopify.com/s/files/1/0283/8190/4984/files/BaseNeueTrial-CondensedBold.woff?v=1693475572) format("woff");
+  font-display: swap;
 }
 @font-face {
   font-family: "BaseNeueTrial-Black";
-  src: url(https://cdn.shopify.com/s/files/1/0283/8190/4984/files/BaseNeueTrial-Black.woff?v=1693475691);
+  src: url(https://cdn.shopify.com/s/files/1/0283/8190/4984/files/BaseNeueTrial-Black.woff?v=1693475691) format("woff");
+  font-display: swap;
 }
 @font-face {
   font-family: "BaseNeueTrial-ExpSemBd";
-  src: url(https://cdn.shopify.com/s/files/1/0283/8190/4984/files/BaseNeueTrial-ExpSemBd.woff?v=1693478406);
+  src: url(https://cdn.shopify.com/s/files/1/0283/8190/4984/files/BaseNeueTrial-ExpSemBd.woff?v=1693478406) format("woff");
+  font-display: swap;
 }
 @font-face {
   font-family: "BaseNeueTrial-SemiBold";
-  src: url(https://cdn.shopify.com/s/files/1/0283/8190/4984/files/BaseNeueTrial-SemiBold.woff?v=1693478661);
+  src: url(https://cdn.shopify.com/s/files/1/0283/8190/4984/files/BaseNeueTrial-SemiBold.woff?v=1693478661) format("woff");
+  font-display: swap;
 }
 /* @font-face {
   font-family: "Cindie2-Script";
@@ -52,14 +64,14 @@
 } */
 @font-face {
   font-family: "Cindie2-Script";
-  src: url('https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Cindie2-Script.ttf?v=1693999107');
+  src: url('https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Cindie2-Script.ttf?v=1693999107') format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: "BaseNeueTrial-Condensed-BF63d645fc01437";
-  src: url(https://cdn.shopify.com/s/files/1/0283/8190/4984/files/BaseNeueTrial-Condensed-BF63d645fc01437.ttf?v=1696321109);
+  src: url(https://cdn.shopify.com/s/files/1/0283/8190/4984/files/BaseNeueTrial-Condensed-BF63d645fc01437.ttf?v=1696321109) format("truetype");
+  font-display: swap;
 }
-
-@import "https://fonts.fontstorage.com/import/bebasneue.css";
 
 /* Common Css */
 select {
@@ -3880,13 +3892,12 @@ body.template-index .bundle_function_wrapper {
 }
 .new_hero_banner_title {
     color: #fff;
-    font-family: 'BaseNeueTrial-CondExtBd', 'Bebas Neue';
+    font-family: 'BaseNeueTrial-CondExtBd', 'Bebas Neue', sans-serif;
     font-size: 104px;
     font-weight: 700;
     line-height: 88px;
     text-transform: uppercase;
     margin: 0;
-  
 }
 .new_hero_banner_title span {
     color: #FFD700;
