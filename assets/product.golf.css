@@ -101,7 +101,7 @@
 
 body {
   background-color: #0b090e;
-  font-family: Montserrat, sans-serif;
+  font-family: BaseNeueTrial-CondExtBd, "Bebas Neue", sans-serif;
   color: #fff;
   font-size: 1rem;
   line-height: 1.5;
@@ -1242,7 +1242,7 @@ a {
     font-size: 15px;
     text-align: center;
     letter-spacing: .2em;
-    font-family: Montserrat,sans-serif;
+    font-family: BaseNeueTrial-CondExtBd, "Bebas Neue", sans-serif;
     font-weight: 700;
     font-style: normal;
 }
