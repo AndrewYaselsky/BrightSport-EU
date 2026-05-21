@@ -775,7 +775,7 @@ body .header_nav_list li a svg,
     padding-top: 100%;
     position: relative;
     z-index: 1;
-    background: #181818;
+    background: transparent;
 }
 
 .product_item_image > .AspectRatio img {

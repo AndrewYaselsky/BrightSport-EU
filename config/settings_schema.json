@@ -954,6 +954,13 @@
     },
     "settings": [
       {
+        "type": "checkbox",
+        "id": "mamuta_tierprice_enabled",
+        "label": "Enable tier pricing (Mamuta app proxy)",
+        "info": "Turn off if /apps/create_discount_code returns 404. Requires the Mamuta Smarty app and app proxy to be installed.",
+        "default": false
+      },
+      {
         "type": "header",
         "content": {
           "en": "Product page"

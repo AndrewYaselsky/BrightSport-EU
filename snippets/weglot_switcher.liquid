@@ -1,40 +1,33 @@
 <!--Start Weglot Script-->
-<script src="//cdn.weglot.com/weglot.min.js"></script>
-<script id="has-script-tags">Weglot.initialize({ api_key:"wg_f8864cdeb8f6ccf3f7c604f53c139c565",
-	switchers: [
-       {
-           // Same as button_style at root
-           button_style: {
-               full_name: true,
-               with_name: true,
-               is_dropdown: true,
-               with_flags: true,
-               flag_type: "circle",
-               invert_flags: false
-           },
-           // Move switcher somewhere in the page
-           location: {
-               target: ".weg_container",
-               sibling: null
-           }
-       },
+<script src="//cdn.weglot.com/weglot.min.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (typeof Weglot === 'undefined') return;
+
+    var switchers = [
       {
-           // Same as button_style at root
-           button_style: {
-               full_name: true,
-               with_name: true,
-               is_dropdown: true,
-               with_flags: true,
-               flag_type: "circle",
-               invert_flags: false
-           },
-           // Move switcher somewhere in the page
-           location: {
-               target: ".footer_main .weg_container",
-               sibling: null
-           }
-       }
-      
-   ]
-   });
+        button_style: {
+          full_name: true,
+          with_name: true,
+          is_dropdown: true,
+          with_flags: true,
+          flag_type: 'circle',
+          invert_flags: false
+        },
+        location: {
+          target: '#weglot-switcher-2',
+          sibling: null
+        }
+      }
+    ].filter(function (config) {
+      return document.querySelector(config.location.target);
+    });
+
+    if (!switchers.length) return;
+
+    Weglot.initialize({
+      api_key: 'wg_f8864cdeb8f6ccf3f7c604f53c139c565',
+      switchers: switchers
+    });
+  });
 </script>

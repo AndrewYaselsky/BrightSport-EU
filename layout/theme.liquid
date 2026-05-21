@@ -284,6 +284,11 @@
   </head>
 
   <body class="{% if template.directory %}template-{{ template.directory | handle }}{% endif %} template-{{ template.name | handle }} {% if page.handle == 'dev-about-us' %} dev_about {% endif %} {% if page.handle == 'dev-contact-us' %} dev_contact_us {% endif %} {{ product.handle   }}">
+    {%- comment -%} Hidden mounts so Weglot app embed finds targets before footer/header render {%- endcomment -%}
+    <div class="footer_main weglot-stub-mount" hidden aria-hidden="true">
+      <div class="weg_container"></div>
+    </div>
+    <div class="weg_container weglot-stub-mount" hidden aria-hidden="true"></div>
     <script
       async
       src="https://eu-library.klarnaservices.com/lib.js"
@@ -513,8 +518,6 @@
         var data = {};
         data['updates[' + variantId + ']'] = qty;
         
-        console.log(`➡️ [Gift Wrap Action] Зміна статусу. ID: ${variantId}, Нова кількість: ${qty}.`);
-
         $.ajax({
           type: 'POST',
           url: rootUrl + 'cart/update.js',
@@ -553,7 +556,9 @@
       });
     </script>
 
-    {% include 'tierprice-storefront' %}
+    {% if settings.mamuta_tierprice_enabled %}
+      {% include 'tierprice-storefront' %}
+    {% endif %}
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {

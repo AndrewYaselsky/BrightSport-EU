@@ -3606,6 +3606,20 @@ body .bundle_save_btn a:hover {
   stroke: #fff;
 } */
 
+.weglot-stub-mount,
+.weglot-stub-mount .weglot-container,
+.weglot-stub-mount .country-selector {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  padding: 0;
+  margin: -1px;
+}
+
 
 .megamenu_bottom_box_in:hover .megamenu_image_text a p {
       color: #fff;
