@@ -1,0 +1,134 @@
+<div class="bundle_banner_wrapper">
+  <div class="container">
+    <div class="bundle_banner_col">
+      <div class="bundle_banner_box">
+        {% if section.settings.sub_heading  != blank %}
+          <div class="bundle_banner_box_top_heading">
+            <h6>{{ section.settings.sub_heading }}</h6>
+          </div>
+        {% endif %}
+        <div class="bundle_discount_col">
+          <div class="bundle_discount_box">
+            <div class="bundle_discount_box_in">
+              {% if section.settings.discount_image != blank or section.settings.mobile_discount_image != blank %}
+                 <div class="bundle_discount_image">
+                   <img src="{{ section.settings.discount_image | img_url:'master' }}" class="bundle_desktop">
+                   <img src="{{ section.settings.mobile_discount_image | img_url:'master' }}" class="bundle_mobile">
+                 </div>
+              {% endif %}
+            {% if section.settings.btn_text != blank %}
+              <div class="bundle_banner_btn">
+                <a href="{{ section.settings.btn_url }}">
+                  {{ section.settings.btn_text }}
+                  <span>
+                    <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M13.6882 0.29099C13.3019 -0.0969967 12.7222 -0.0969967 12.3358 0.29099C11.9493 0.678988 11.9493 1.26097 12.3358 1.64895L16.7153 5.9815H0.966082C0.450835 6.04613 0 6.4988 0 7.01622C0 7.53352 0.450835 7.98618 0.966082 7.98618H16.7153L12.3358 12.3833C11.9493 12.7714 11.9493 13.3533 12.3358 13.7413C12.5289 13.9354 12.7866 14 13.0442 14C13.3019 14 13.5594 13.9354 13.7527 13.7413L19.7424 7.72753C19.9356 7.53352 20 7.27487 20 7.01622C20 6.75745 19.8712 6.4988 19.7424 6.3049L13.6882 0.29099Z" fill="#0B090E"/>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            {% endif %}
+            {% if section.settings.banner_bottom_text != blank or section.settings.banner_bottom_text_mobile != blank %}
+              <div class="bundle_banner_bottom">
+                 <p class="bundle_desktop">{{ section.settings.banner_bottom_text }}</p>
+                 <p class="bundle_mobile">{{ section.settings.banner_bottom_text_mobile }}</p>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<style>
+.bundle_banner_sec .bundle_banner_col{
+background-image:url({{  section.settings.bg_image | img_url:'master'}}) !important;
+background-position: center !important;
+background-repeat: no-repeat !important;
+background-size: cover !important;
+  border-radius:16px;
+
+}
+
+  @media (max-width:991px){
+  .bundle_banner_sec .bundle_banner_col {
+    border-radius: 10px;
+}
+  }
+@media (max-width:575px){
+
+.bundle_banner_sec .bundle_banner_col{
+background-image:url({{ section.settings.bg_image_mobile | img_url:'master' }}) !important;
+background-position: center !important;
+background-repeat: no-repeat !important;
+background-size: cover !important;
+}
+}
+
+
+</style>
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Bundle Banner",
+    "class" : "bundle_banner_sec",
+    "settings": [
+      {
+        "type" : "image_picker",
+        "id" : "bg_image",
+        "label" : "Background Image"
+      },
+      {
+        "type" : "image_picker",
+        "id" : "bg_image_mobile",
+        "label" : "Mobile Background Image"
+      },
+      {
+        "type"  : "text",
+        "id" :"sub_heading",
+        "label" : "Sub Heading"
+      },
+       {
+        "type" : "image_picker",
+        "id" : "discount_image",
+        "label" : "Discount Image"
+      },
+      {
+        "type" : "image_picker",
+          "id" : "mobile_discount_image",
+        "label" : "Discount Image"
+      },
+      {
+        "type" : "url",
+        "id" : "btn_url",
+        "label"  : "Button Url"
+      },
+      {
+        "type" : "text",
+        "id" : "btn_text",
+        "label" : "Button Text"
+      },
+      {
+        "type" : "html",
+        "id" : "banner_bottom_text",
+        "label" : "Bottom Text"
+      },
+       {
+        "type" : "html",
+        "id" : "banner_bottom_text_mobile",
+        "label" : "Bottom Text"
+      }
+     ],
+    "presets" : [
+      {
+        "name" : "Bundle Banner"
+      } 
+    ]
+  }
+{% endschema %}

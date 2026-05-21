@@ -1,0 +1,50 @@
+<div class="container">
+<div class="footer_service_row">
+  {% for block in section.blocks %}
+    <div class="footer_service_block">
+      <div class="footer_service_wrapper">
+        {% if block.settings.icon != blank %}
+          <span>{{ block.settings.icon }}</span>
+        {% endif %}
+        {% if block.settings.title != blank %}
+          <h2 class="footer_service_title">{{ block.settings.title }}</h2>
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+</div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Footer Services",
+    "class": "is--footer-services",
+    "settings": [
+      
+    ],
+    "blocks": [
+      {
+        "type": "service",
+        "name":  "service",
+        "settings":[
+           {
+             "type": "html",
+             "id": "icon",
+             "label": "Enter Icon"
+           }, 
+           {
+             "type": "textarea",
+             "id": "title",
+             "label": "Title"
+           } 
+        ]        
+      }
+    ],
+    "presets":[
+      {
+        "name": "Footer Services"
+      }
+    ]
+  }
+{% endschema %}

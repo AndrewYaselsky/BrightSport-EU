@@ -1,0 +1,102 @@
+<div class="product_sticky_bar_bottom">
+
+  <div class="inner_covered_sticky_content">
+
+    <div class="image_sticky_Feature">
+      <img src="{{ product.featured_image.src | img_url : 'medium' }}">
+    </div>
+    <div class="sticky_product_name">
+      <h2>
+        {{ product.title }}</h2>
+      <a href="#looxReviews">
+        <div
+          class="loox-rating"
+          data-id="{{ product.id }}"
+          data-rating="{{ product.metafields.loox.avg_rating }}"
+          data-raters="{{ product.metafields.loox.num_reviews }}"></div>
+      </a>
+    </div>
+
+
+
+    {% assign flag_offer = false %}
+    {% assign flag_offer2 = false %}
+    {% assign discount_offer_text = false %}
+
+    {% for tag in product.tags %}
+      {% if tag == 'offer1' %}
+        {% assign flag_offer = true %}
+      {% endif %}
+      {% if tag == 'offer2' or tag == 'offer3' or tag == 'offer4' %}
+        {% assign flag_offer2 = true %}
+      {% endif %}
+      {% if tag == 'BFCM_sale' %}
+        {% assign discount_offer_text = true %}
+      {% endif %}
+    {% endfor %}
+
+    <div class="sticky_button_right">
+      <div class="sticky_price_addtocart">
+
+        {% if discount_offer_text %}
+          <div class="sticky__PriceList Heading">
+            {% assign dis_price = product.selected_or_first_available_variant.price | times: 25 | divided_by: 100.0 | round %}
+            {% assign get_discount_price = product.selected_or_first_available_variant.price | minus: dis_price %}
+            <span class="ProductMeta__Price Price Price--highlight changable_price_main" data-money-convertible>{{ get_discount_price | money_without_trailing_zeros }}</span>
+            <span
+              class="ProductMeta__Price Price Price--compareAt compare_at_price_main"
+              data-compare="{{ product.selected_or_first_available_variant.price  }}"
+              data-money-convertible>{{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}</span>
+          </div>
+        {% else %}
+          {% if flag_offer %}
+            <div class="sticky__PriceList Heading">
+              <span class="ProductMeta__Price Price Price--highlight changable_price_main" data-money-convertible>{{ product.selected_or_first_available_variant.price | minus: 1000 | money_without_trailing_zeros }}</span>
+              <span
+                class="ProductMeta__Price Price Price--compareAt compare_at_price_main"
+                data-compare="{{ product.selected_or_first_available_variant.price  }}"
+                data-money-convertible>{{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}</span>
+            </div>
+          {% elsif flag_offer2 %}
+            <div class="sticky__PriceList Heading">
+              <span class="ProductMeta__Price Price Price--highlight changable_price_main" data-money-convertible>{{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}</span>
+              <span
+                class="ProductMeta__Price Price Price--compareAt compare_at_price_main offer_two_three"
+                data-compare="{{ product.selected_or_first_available_variant.price }}"
+                style="display:none;"
+                data-money-convertible>{{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}</span>
+            </div>
+
+          {% else %}
+            <div class="sticky__PriceList Heading">
+              {%- if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price -%}
+                <span class="ProductMeta__Price Price Price--highlight changable_price_main" data-money-convertible>{{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}</span>
+                <span class="ProductMeta__Price Price Price--compareAt" data-money-convertible>{{ product.selected_or_first_available_variant.compare_at_price | money_without_trailing_zeros }}</span>
+              {%- else -%}
+                <span class="ProductMeta__Price Price changable_price_main" data-money-convertible>{{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}</span>
+              {%- endif -%}
+            </div>
+          {% endif %}
+
+        {% endif %}
+
+
+      </div>
+      
+      <div class="sticky_addtocart_btn">
+        <a class="Sticky_button_addtocart ProductForm__AddToCart Button shopify-payment-button__button--unbranded Button--full">
+          {%- if selected_variant.available -%}
+            <span>
+              {% if product.template_suffix == 'pre-order' %}
+                {{ 'product.form.pre_order' | t }}
+              {% else %}
+                {{ 'product.form.add_to_cart' | t }}{% endif %}
+            </span>
+          {%- endif -%}
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</div>

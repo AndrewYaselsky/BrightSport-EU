@@ -1,0 +1,55 @@
+<div class="container">
+  {% if section.settings.title != blank %}
+    <h2 class="as_seen_title">{{ section.settings.title }}</h2>
+  {% endif %}
+
+  <div class="as_seen_main">
+
+    {% for block in section.blocks %}
+      {% if block.settings.head != blank %}
+        <div class="as_seen_block">
+          <div class="as_seen_wrapper">
+            <div class="as_seen_img">
+            </div>
+            <h2 class="as_seen_head">{{ block.settings.head }}</h2>  
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+    
+  </div>
+
+
+</div>
+
+{% schema %}
+  {
+    "name": "As Seen",
+    "class": "is--as-seen",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "title",
+        "label": "Title"
+      }
+    ],
+    "blocks":[
+      {
+        "type": "as_seen_block",
+        "name": "As Seen Block",
+        "settings":[
+          {
+            "type": "textarea",
+            "id": "head",
+            "label": "Title"
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name": "As Seen"
+      }
+    ]
+  }
+{% endschema %}

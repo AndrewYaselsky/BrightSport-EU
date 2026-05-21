@@ -1,0 +1,40 @@
+<section>
+  <div class="bundle_scrollbar_wrapper">
+    <div class="bundle_scrollbar_col">
+      <div class="bundle_scrollbar_box">
+        <div class="bundle_scrollbar_text">
+          {% for i in (1..5) %}
+            <p>{{ settings.annotext }}</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Bundle Scrollbar",
+    "settings": [],
+    "blocks" : [
+      {
+          "type" : "scrollbar",
+          "name" : "Scrollbar",
+          "settings" : [
+            {
+            "type" :"textarea",
+            "id" :"text",
+            "label"  : "Text"
+          }
+          ]
+      }
+    ],
+    "presets" : [
+      {
+        "name" : "Bundle Scrollbar"
+      }
+    ]
+  }
+{% endschema %}
+

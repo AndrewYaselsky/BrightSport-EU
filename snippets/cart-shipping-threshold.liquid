@@ -1,0 +1,39 @@
+{% comment %}
+  Renders free shipping threshold progress bar
+  
+  Usage:
+  {% render 'cart-shipping-threshold' %}
+{% endcomment %}
+
+{%- assign threshold_in_cents = settings.cart_free_shipping_threshold | times: 100 -%}
+{%- assign progress_percentage = cart.total_price | times: 100.0 | divided_by: threshold_in_cents -%}
+
+{%- if progress_percentage > 100 -%}
+  {%- assign progress_percentage = 100 -%}
+{%- endif -%}
+
+<div class="Cart__ShippingNotice Text--subdued">
+  <div class="Drawer__Container">
+    {%- if cart.total_price >= threshold_in_cents -%}
+      <p>{{ 'cart.general.free_shipping' | t }}</p>
+    {%- else -%}
+      {%- capture remaining_amount -%}
+        <span class="cart-shipping__num">
+          {{ threshold_in_cents | minus: cart.total_price | money_without_trailing_zeros }}
+        </span>
+      {%- endcapture -%}
+      <p>{{ 'cart.general.free_shipping_remaining_html' | t: remaining_amount: remaining_amount }}</p>
+    {%- endif -%}
+    
+    <div class="progress" aria-label="Voortgang gratis verzending">
+      <div
+        class="progress-value"
+        style="width: {{ progress_percentage }}%;"
+        role="progressbar"
+        aria-valuenow="{{ progress_percentage | round }}"
+        aria-valuemin="0"
+        aria-valuemax="100">
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,83 @@
+<div class="container">
+
+  <div class="hero_main">
+    <div class="hero_content">
+      {% if section.settings.sub != blank %}
+        <p class="hero_sub_head">{{ section.settings.sub }}</p>
+      {% endif %}
+      {% if section.settings.title != blank %}
+        <h1 class="hero_title">{{ section.settings.title }}</h1>
+      {% endif %}
+      {% if section.settings.btn != blank %}
+        <a href="{{ section.settings.url }}" class="hero_btn">{{ section.settings.btn }}</a>
+      {% endif %}
+      {%- capture payment_methods -%}
+          {%- for type in shop.enabled_payment_types -%}
+            <li class="hero_payment_icon_list">{{ type | payment_type_svg_tag }}</li>
+          {%- endfor -%}
+        {%- endcapture -%}
+
+      {%- if payment_methods != blank -%}
+        <ul class="hero_payment_icon">
+          {{ payment_methods }}
+        </ul>
+      {%- endif -%}
+    </div>
+  </div>
+
+</div>
+
+<style>
+.hero_main{
+  background-image: url({{ section.settings.img | img_url: 'master' }});
+}
+@media (max-width:767px){
+  .hero_main{
+    background-image: url({{ section.settings.img1 | img_url: 'master' }});
+  }
+}
+</style>
+
+{% schema %}
+  {
+    "name": "Hero Banner",
+    "class": "is--hero-banner",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Select Desktop Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "img1",
+        "label": "Select Mobile Image"
+      },
+      {
+        "type": "textarea",
+        "id": "sub",
+        "label": "Sub-Heading"
+      },
+      {
+        "type": "textarea",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "btn",
+        "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "url",
+        "label": "Button Url"
+      }
+    ],
+    "presets":[
+      {
+        "name": "Hero Banner"
+      }        
+    ]
+  }
+{% endschema %}

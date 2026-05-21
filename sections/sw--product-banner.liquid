@@ -1,0 +1,60 @@
+<div class="bundle_banner_wrapper product_banner_wrapper">
+  <div class="product_banner_inner">
+    <div class="bundle_banner_col">
+      <div class="bundle_banner_box">
+        {% if settings.sub_heading  != blank %}
+          <div class="bundle_banner_box_top_heading">
+            <h6>{{ settings.sub_heading }}</h6>
+          </div>
+        {% endif %}
+        <div class="bundle_discount_col">
+          {%- if template.name == 'product' and product.tags contains 'bogo-deal' -%}
+            <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/ChristmasSale-BOGO-Desktop-Dutch.jpg?v=1764679330" class="bundle_desktop">
+            <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/ChristmasSale-BOGO-Mobile-Dutch.jpg?v=1764679332" class="bundle_mobile">
+          {%- elsif template.name == 'collection' and collection.handle == 'bogo' -%}
+            <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/ChristmasSale-BOGO-Desktop-Dutch.jpg?v=1764679330" class="bundle_desktop">
+            <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/ChristmasSale-BOGO-Mobile-Dutch.jpg?v=1764679332" class="bundle_mobile">
+          {%- else -%}
+            <img src="https:{{ settings.bg_image | img_url:'master' }}" class="bundle_desktop">
+            <img src="https:{{ settings.bg_image_mobile | img_url:'master' }}" class="bundle_mobile">
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.bundle_banner_sec .bundle_banner_col{
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  aspect-ratio: 800 / 119;
+}
+@media (max-width:767px){
+  .bundle_banner_sec .bundle_banner_col{
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    display: flex;
+    align-items: center;
+    aspect-ratio: 195/67;
+    min-height: auto;
+    width: 100%;
+  }
+}
+</style>
+
+{% schema %}
+  {
+    "name": "Bundle Banner",
+    "class" : "bundle_banner_sec",
+    "settings": [
+     ],
+    "presets" : [
+      {
+        "name" : "Product Banner"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,356 @@
+<div class="new_hero_banner_main">
+  <div class="container">
+    <div class="new_hero_banner_row">
+      <div class="new_hero_banner_info_block">
+        <div class="new_hero_banner_info">
+          {% if section.settings.rate != blank %}
+            <p class="new_hero_banner_rate">{{ section.settings.rate }}</p>
+          {% endif %}
+          {% if section.settings.title != blank %}
+            <h2 class="new_hero_banner_title">{{ section.settings.title }}</h2>
+          {% endif %}
+          <div class="new_hero_banner_title_slider">
+            <div class="swiper-wrapper">
+              {% for block in section.blocks %}
+                {% assign forloopindex = forloop.index | minus: 10 %}
+                {% if block.type == 'balls' %}
+                  {% if block.settings.title != blank %}
+                    <h2 class="new_hero_banner_title {% if forloopindex == 0 %}active{% endif %}" data-index="{{ forloop.index | minus: 10 }}">
+                      {{ block.settings.title }}
+                    </h2>
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        {% if section.settings.text != blank %}
+          <div class="new_hero_banner_elevate">
+            {{ section.settings.text }}
+          </div>
+        {% endif %}
+        {% if section.settings.btn != blank %}
+          <a href="{{ section.settings.url }}" class="new_common_btn">
+            {{ section.settings.btn }}
+            <span class="new_common_btn_icon">
+              <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.6882 0.29099C13.3019 -0.0969967 12.7222 -0.0969967 12.3358 0.29099C11.9493 0.678988 11.9493 1.26097 12.3358 1.64895L16.7153 5.9815H0.966082C0.450835 6.04613 0 6.4988 0 7.01622C0 7.53352 0.450835 7.98618 0.966082 7.98618H16.7153L12.3358 12.3833C11.9493 12.7714 11.9493 13.3533 12.3358 13.7413C12.5289 13.9354 12.7866 14 13.0442 14C13.3019 14 13.5594 13.9354 13.7527 13.7413L19.7424 7.72753C19.9356 7.53352 20 7.27487 20 7.01622C20 6.75745 19.8712 6.4988 19.7424 6.3049L13.6882 0.29099Z" fill="currentColor"/>
+              </svg>
+            </span>
+          </a>
+        {% endif %}
+        {%- capture payment_methods -%}
+          {%- for type in shop.enabled_payment_types -%}
+            <li class="new_hero_banner_payment_icon_Item">{{ type | payment_type_svg_tag }}</li>
+          {%- endfor -%}
+        {%- endcapture -%}
+        {% comment %}
+          {%- if payment_methods != blank -%}
+            <ul class="new_hero_banner_payment_icon_list">
+              {{ payment_methods }}
+            </ul>
+          {%- endif -%}
+        {% endcomment %}
+        <div class="new_hero_banner_payment_icon_list">
+          {{ section.settings.payment_icon }}
+        </div>
+        <ul class="new_hero_banner_logo_slide">
+          {% for block in section.blocks %}
+            {% if block.type == 'logo' %}
+              {% if block.settings.logo != blank %}
+                <li class="new_hero_banner_logo_item">{{ block.settings.logo }}</li>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="new_hero_banner_balls_block">
+      <div class="new_hero_banner_balls">
+        <div class="new_hero_banner_balls_slider swiper  swiper-container-3d" dir="rtl">
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+              {% if block.type == 'balls' %}
+                {% if block.settings.img1 and block.settings.img2 != blank %}
+                  <div class="new_hero_banner_balls_slide_block swiper-slide">
+                    <div class="new_hero_banner_balls_slide">
+                      <img src="{{ block.settings.img1 | img_url: 'master' }}" class="new_hero_banner_balls_img_bw">
+                      <img src="{{ block.settings.img2 | img_url: 'master' }}" class="new_hero_banner_balls_img_color">
+                    </div>
+                  </div>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+        <div class="new_hero_banner_balls_video_1">
+          {% if section.settings.video1 != blank %}
+            <div class="new_hero_banner_balls_video">
+              <video
+                loop
+                muted
+                preload
+                autoplay
+                playsinline
+                poster="{{ section.settings.video_poster_1 | img_url: 'master' }}"
+              >
+                <source src="{{ section.settings.video1 }}" type="video/mp4">
+              </video>
+            </div>
+          {% endif %}
+          {% if section.settings.video_text1 != blank %}
+            {{ section.settings.video_text1 }}
+          {% endif %}
+        </div>
+        <div class="new_hero_banner_balls_video_2">
+          {% if section.settings.video2 != blank %}
+            <div class="new_hero_banner_balls_video">
+              <video
+                loop
+                muted
+                preload
+                autoplay
+                playsinline
+                poster="{{ section.settings.video_poster_2 | img_url: 'master' }}"
+              >
+                <source src="{{ section.settings.video2 }}" type="video/mp4">
+              </video>
+            </div>
+          {% endif %}
+          {% if section.settings.video_text2 != blank %}
+            {{ section.settings.video_text2 }}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="new_hero_banner_logo_slide_mo">
+      <h4>AS SEEN ON</h4>
+      <ul class="new_hero_banner_logo_slide">
+        {% for block in section.blocks %}
+          {% if block.type == 'logo' %}
+            {% if block.settings.logo != blank %}
+              <li class="new_hero_banner_logo_item">{{ block.settings.logo }}</li>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  setTimeout(function(){
+    var swiper = new Swiper(".new_hero_banner_balls_slider", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 3,
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 350,
+      modifier: 6,
+      slideShadows: false
+    },
+     autoplay: {
+        delay: 4500,
+      },
+        slidesPerView: 'auto',
+      loop: true,
+  });
+    swiper.on('slideChange', function () {
+
+
+      var datas = Number($(".swiper-slide-active").attr("data-swiper-slide-index")) + 1;
+      if(datas == $(".new_hero_banner_balls_slide_block").length) { datas = 0; }
+
+      $(".new_hero_banner_title").removeClass("active");
+      $('.new_hero_banner_title[data-index="'+ datas +'"]').addClass("active");
+
+    });
+    },1500);
+</script>
+
+{% schema %}
+{
+  "name": "New Hero Banner",
+  "class": "sw--hero-banner",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "rate",
+      "label": "Rate Text"
+    },
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Title",
+      "default": "light up your"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "btn",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "Button URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "video_poster_1",
+      "label": "Video Poster-1"
+    },
+    {
+      "type": "text",
+      "id": "video1",
+      "label": "Video URl-1"
+    },
+    {
+      "type": "richtext",
+      "id": "video_text1",
+      "label": "Video Text-1"
+    },
+    {
+      "type": "image_picker",
+      "id": "video_poster_2",
+      "label": "Video Poster-2"
+    },
+    {
+      "type": "text",
+      "id": "video2",
+      "label": "Video URl-2"
+    },
+    {
+      "type": "richtext",
+      "id": "video_text2",
+      "label": "Video Text-2"
+    },
+    {
+      "type" : "html",
+      "id" : "payment_icon",
+      "label" :"Payment Icon"
+    }
+  ],
+  "blocks":[
+    {
+      "type": "logo",
+      "name": "Logo Slider",
+      "settings": [
+        {
+          "type": "html",
+          "id": "logo",
+          "label": "Select Logo"
+        }
+      ]
+    },
+    {
+      "type": "balls",
+      "name": "Ball Slider",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "title",
+          "label": "Title",
+          "default": "<span></span> game"
+        },
+        {
+          "type": "image_picker",
+          "id": "img1",
+          "label": "Select Ball B&W Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "img2",
+          "label": "Select Ball color Image"
+        }
+      ]
+    }
+  ],
+  "presets":[
+    {
+      "name": "New Hero Banner"
+    }
+  ]
+}
+{% endschema %}
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    // setTimeout(function(){
+    //   console.log("ad");
+    //  $(".new_hero_banner_title_slider").slick({
+    //    slidesToShow: 1,
+    //    infinite:true,
+    //    slidesToScroll: 1,
+    //    autoplay: true,
+    //    autoplaySpeed: 3600,
+    //    vertical: true,
+    //    verticalSwiping: true,
+    //    pauseOnHover: false,
+    //    arrows: false,
+    // });
+    // }, 1500);
+
+
+  // setTimeout(function(){
+  //   console.log("asssas");
+  //   var swiper = new Swiper(".new_hero_banner_title_slider", {
+  //   effect: "coverflow",
+  //   grabCursor: true,
+  //   centeredSlides: true,
+  //   slidesPerView: 1,
+  //   coverflowEffect: {
+  //     rotate: 0,
+  //     stretch: 0,
+  //     depth: 350,
+  //     modifier: 6,
+  //     slideShadows: false
+  //   },
+  //    autoplay: {
+  //       delay: 4500,
+  //     },
+  //       slidesPerView: 'auto',
+  //     loop: true,
+  // });
+  //   },1500);
+
+
+    // var swiper = new Swiper('.new_hero_banner_title_slider', {
+    // direction: 'vertical',
+    // slidesPerView: 3,
+    // spaceBetween: 30,
+    // mousewheel: true,
+    // grabCursor: true,
+    // loop: true,
+    // autoplay: {
+    //   delay: 500,
+    //   disableOnInteraction: false,
+    // },
+    // pagination: {
+    //   el: '.swiper-pagination',
+    //   clickable: true,
+    // },
+    //   });
+
+  // $(document).ready(function(){
+  // var mySwiper = new Swiper('.new_hero_banner_title_slider', {
+  //     direction: 'vertical', // Set the direction to vertical
+  //     effect: 'slide', // Specify the slide effect
+  //     slidesPerView: 1, // Display one slide at a time
+  //     loop: true, // Enable infinite loop
+  //     autoplay: {
+  //         delay: 2000, // Autoplay delay in milliseconds (2 seconds)
+  //         reverseDirection: true, // Reverse direction when reaching the end
+  //         disableOnInteraction: false, // Do not disable autoplay on user interaction
+  //     },
+  // });
+  // });
+</script>

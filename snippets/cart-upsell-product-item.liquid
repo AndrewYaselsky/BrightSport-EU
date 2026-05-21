@@ -1,0 +1,116 @@
+{% comment %}
+  Renders a single upsell product item
+  
+  Accepts:
+  - product: {Object} Product object
+  - image: {String} Image URL
+  - title: {String} Product title
+  - subtitle: {String} Product subtitle
+  - is_bogo_context: {Boolean} Whether we're in BOGO context
+  
+  Usage:
+  {% render 'cart-upsell-product-item', product: product, image: image_url, title: title, subtitle: subtitle %}
+{% endcomment %}
+
+{%- liquid
+  assign flag_offer2 = false
+  assign flag_offer3 = false
+  assign discount_offer_text = false
+  
+  for tag in product.tags
+    if tag == 'offer2' or tag == 'offer3'
+      assign flag_offer2 = true
+    endif
+    if tag == 'offer4'
+      assign flag_offer3 = true
+    endif
+    if tag == 'BFCM_sale'
+      assign discount_offer_text = true
+    endif
+  endfor
+-%}
+
+<div class="upsell-drawer-item">
+  <div class="upsell-img">
+    <img src="{{ image | img_url: 'master' }}" alt="{{ title }}" loading="lazy">
+  </div>
+  
+  <h2 class="ProductMeta__Title Heading u-h4">
+    <a href="{{ product.url }}">{{ title }}</a>
+  </h2>
+  
+  <div class="ProductMeta__Title upsell-subtitle u-h4">
+    {%- if is_bogo_context and subtitle contains 'MIX EN MATCH DE BALLEN' -%}
+      KOOP 1, KRIJG 1 GRATIS BAL - Mix en match de ballen.
+    {%- else -%}
+      {{ subtitle }}
+    {%- endif -%}
+  </div>
+
+  <!-- Price Logic -->
+  {%- render 'cart-upsell-price', 
+      product: product, 
+      flag_offer2: flag_offer2, 
+      flag_offer3: flag_offer3, 
+      discount_offer_text: discount_offer_text -%}
+
+  <!-- Quantity Selector -->
+  <div class="ProductForm__QuantitySelector upsell-qty">
+    <span class="qty-text">AANTAL:</span>
+    <div class="QuantitySelector QuantitySelector--large">
+      <span class="QuantitySelector__Button Link Link--secondary minus-wc{% if discount_offer_text %} discount_offer_hallowen{% else %}{% if flag_offer2 or flag_offer3 %} discount_price{% endif %}{% endif %}" 
+            data-action="decrease-quantity">
+        {% include 'icon' with 'minus' %}
+      </span>
+      <input type="text" 
+             class="QuantitySelector__CurrentQuantity" 
+             pattern="[0-9]*" 
+             name="quantity" 
+             value="1"
+             aria-label="Aantal">
+      <span class="QuantitySelector__Button Link Link--secondary plus-wc{% if discount_offer_text %} discount_offer_hallowen{% else %}{% if flag_offer2 or flag_offer3 %} discount_price{% endif %}{% endif %}" 
+            data-action="increase-quantity">
+        {% include 'icon' with 'plus' %}
+      </span>
+    </div>
+  </div>
+
+  <!-- Add to Cart Button -->
+  <button type="submit" 
+          class="Button Button--primary Button--full ctm-addcart" 
+          {% unless product.available %}disabled="disabled"{% endunless %} 
+          data-id="{{ product.selected_or_first_available_variant.id }}">
+    {% if product.available %}
+      <span class="atc-text">
+        Toevoegen aan winkelwagen
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23.6875 16.125C23.6875 16.7578 23.1602 17.2852 22.5625 17.2852H17.5V22.3477C17.5 22.9453 16.9727 23.4375 16.375 23.4375C15.7422 23.4375 15.25 22.9453 15.25 22.3477V17.2852H10.1875C9.55469 17.2852 9.0625 16.7578 9.0625 16.125C9.0625 15.5273 9.55469 15.0352 10.1875 15.0352H15.25V9.97266C15.25 9.33984 15.7422 8.8125 16.375 8.8125C16.9727 8.8125 17.5 9.33984 17.5 9.97266V15.0352H22.5625C23.1602 15 23.6875 15.5273 23.6875 16.125Z" fill="#0B090E"/>
+        </svg>
+        <span class="money" 
+              data-product-id="{{ product.id }}"
+              {% unless discount_offer_text %}
+                {% if flag_offer2 %}
+                  data-offer2qty2="{{ product.price | minus: 400 }}"
+                  data-offer2qty3="{{ product.price | minus: 600 }}"
+                {% endif %}
+                {% if flag_offer3 %}
+                  data-offer2qty2="{{ product.price | minus: 300 }}"
+                  data-offer2qty3="{{ product.price | minus: 500 }}"
+                {% endif %}
+              {% endunless %} 
+              data-price="{{ product.price }}">
+          {% if discount_offer_text %}
+            {% assign dis_price = product.price | times: 25 | divided_by: 100.0 | round %}
+            {% assign get_discount_price = product.price | minus: dis_price %}
+            {{ get_discount_price | money }}
+          {% else %}
+            {{ product.price | money }}
+          {% endif %}
+        </span>
+      </span>
+      <span class="added-text">Toegevoegd!</span>
+    {% else %}
+      <span class="atc-text">UITVERKOCHT</span>
+    {% endif %}
+  </button>
+</div>

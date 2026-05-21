@@ -1,0 +1,58 @@
+<div class="money_back">
+    <div class="money_back_inner">
+        {% if section.settings.bg_title != blank %}
+          <div class="money_title">
+            <img src="{{ section.settings.bg_title | img_url:'master' }}" alt="">
+          </div>
+        {% endif %}
+        <div class="money_back_col">
+            {% if section.settings.img != blank %}
+              <div class="money_back_img">
+                  <img src="{{ section.settings.img | img_url:'master' }}" alt="">
+              </div>
+            {% endif %}
+            <div class="money_back_text">
+              {% if section.settings.title != blank %}
+                <h2 class="">{{ section.settings.title }}</h2>
+              {% endif %}
+              {% if section.settings.dis != blank %}
+                <div class="money_back_dis">{{ section.settings.dis }}</div>
+              {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Money Back",
+    "settings": [
+      {
+        "type":"image_picker",
+        "id":"img",
+        "label":"Select Image"
+      },
+      {
+        "type":"image_picker",
+        "id":"bg_title",
+        "label":"Bg Title Image"
+      },
+      {
+        "type":"textarea",
+        "id":"title",
+        "label":"Title"
+      },
+      {
+        "type":"textarea",
+        "id":"dis",
+        "label":"description"
+      }
+    ],
+
+    "presets":[
+      {
+        "name":"Money Back"
+      }
+    ]
+  }
+{% endschema %}

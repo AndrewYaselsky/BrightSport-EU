@@ -1,0 +1,60 @@
+<div class="bestsellers_main">
+  <div class="bestsellers_main_block">
+    {% if section.settings.title != blank %}
+      <div class="bestsellers_title_block">
+        <h2 class="bestsellers_title">{{ section.settings.title }}</h2>
+      </div>
+    {% endif %}
+    {% if section.settings.collection != blank %}
+      <div class="bestsellers_slider">
+        {% assign collection_best = section.settings.collection %}
+        {% for product in collection_best.products %}
+          <div class="bestsellers_slide">
+            {% include 'product-item', show_product_info: section.settings.show_product_info, show_color_swatch: section.settings.show_color_swatch, show_labels: true %}
+          </div>
+        {% endfor %}        
+      </div>
+    {% endif %}
+    {% if section.settings.btn != blank %}
+      <div class="bestsellers_btn_block">
+        <a href="/collections/all" class="new_common_btn">
+          {{ section.settings.btn }} 
+          <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.6882 0.29099C13.3019 -0.0969967 12.7222 -0.0969967 12.3358 0.29099C11.9493 0.678988 11.9493 1.26097 12.3358 1.64895L16.7153 5.9815H0.966082C0.450835 6.04613 0 6.4988 0 7.01622C0 7.53352 0.450835 7.98618 0.966082 7.98618H16.7153L12.3358 12.3833C11.9493 12.7714 11.9493 13.3533 12.3358 13.7413C12.5289 13.9354 12.7866 14 13.0442 14C13.3019 14 13.5594 13.9354 13.7527 13.7413L19.7424 7.72753C19.9356 7.53352 20 7.27487 20 7.01622C20 6.75745 19.8712 6.4988 19.7424 6.3049L13.6882 0.29099Z" fill="currentColor"/>
+          </svg>
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "The Bestesllers",
+    "class": "sw--the-bestesllers",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Select Collection"
+      },
+      {
+        "type": "text",
+        "id": "btn",
+        "label": "Button Text"
+      }
+    ],
+    "presets":[
+      {
+        "name": "The Bestesllers"       
+      }
+    ]
+  }
+{% endschema %}

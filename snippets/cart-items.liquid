@@ -1,0 +1,213 @@
+{%- assign discount_total_quantity = 0 -%}
+{%- for item in cart.items -%}
+  {%- if item.product.tags contains 'black_friday_sale' -%}
+    {%- assign discount_total_quantity = discount_total_quantity | plus: item.quantity -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- if discount_total_quantity >= 3 -%}
+  {%- assign global_discount_rate = 0.45 -%}
+{%- elsif discount_total_quantity >= 2 -%}
+  {%- assign global_discount_rate = 0.40 -%}
+{%- elsif discount_total_quantity >= 1 -%}
+  {%- assign global_discount_rate = 0.35 -%}
+{%- else -%}
+  {%- assign global_discount_rate = 0 -%}
+{%- endif -%}
+
+{%- assign for_drawer = true -%}
+{%- if template == 'cart' or template == 'cart.ajax' -%}
+  {%- assign for_drawer = false -%}
+{%- endif -%}
+
+<div class="Cart__ItemList">
+  {%- unless for_drawer -%}
+    <div class="Cart__Head hidden-phone">
+      <span class="Cart__HeadItem Heading Text--subdued u-h7">{{ 'cart.items.product' | t }}</span>
+      <span class="Cart__HeadItem"></span>
+      <span class="Cart__HeadItem Heading Text--subdued u-h7" style="text-align: center">{{ 'cart.items.quantity' | t }}</span>
+      <span class="Cart__HeadItem Heading Text--subdued u-h7" style="text-align: right">{{ 'cart.items.total' | t }}</span>
+    </div>
+  {%- endunless -%}
+
+  {%- for line_item in cart.items -%}
+
+    {%- if for_drawer -%}
+      <div class="CartItemWrapper">
+    {%- endif -%}
+
+    <div class="CartItem">
+      <div class="CartItem__ImageWrapper AspectRatio">
+        <div class="AspectRatio" style="height:120px;">
+          <img
+            class="CartItem__Image"
+            src="{{ line_item.image | img_url: 'master' }}"
+            alt="{{ line_item.image.alt | escape }}">
+        </div>
+      </div>
+
+      <div class="CartItem__Info">
+        <a href="#looxReviews">
+          <div
+            class="loox-rating"
+            data-id="{{ product.id }}"
+            data-rating="{{ product.metafields.loox.avg_rating }}"
+            data-raters="{{ product.metafields.loox.num_reviews }}"
+            style="margin-top:0px"></div>
+        </a>
+        <h2 class="CartItem__Title Heading">
+          <a href="{{ line_item.url }}">{{ line_item.product.title }}</a>
+        </h2>
+
+        <div class="CartItem__Meta Heading Text--subdued">
+          {%- unless line_item.product.has_only_default_variant -%}
+            <p class="CartItem__Variant">{{ line_item.variant.title }}</p>
+          {%- endunless -%}
+
+          {%- if line_item.properties != empty -%}
+            <ul class="CartItem__PropertyList">
+              {%- for property in line_item.properties -%}
+                {%- assign first_character_in_key = property.first | truncate: 1, '' -%}
+                {%- if property.last == blank or first_character_in_key == '_' -%}
+                  {%- continue -%}
+                {%- endif -%}
+                <li class="CartItem__Property">{{ property.first }}: {{ property.last }}</li>
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+
+          <div class="CartItem__PriceList">
+            {%- assign base_price = line_item.line_price -%}
+            {%- assign quantity = line_item.quantity | default: 1 -%}
+
+            {%- if line_item.product.tags contains 'black_friday_sale' -%}
+              {% if settings.show_bogo %}
+                {%- assign price = line_item.line_price -%}
+                {%- assign compare_at_price = 0 -%}
+              {% else %}
+                {%- assign discount_rate = global_discount_rate -%}
+                {%- assign discount_amount = base_price | times: discount_rate -%}
+                {%- assign final_price = base_price | minus: discount_amount -%}
+  
+                {%- if line_item.variant.sku == "giftbag&card" or line_item.variant.sku == "bright-care-shipping-instruction" -%}
+                  {%- assign price = base_price | times: quantity -%}
+                  {%- assign compare_at_price = 0 -%}
+                {%- else -%}
+                  {%- assign price = final_price | times: quantity -%}
+                  {%- assign compare_at_price = base_price | times: quantity -%}
+                {%- endif -%}
+              {%- endif -%}
+            {%- else -%}
+              {%- assign price = base_price | times: quantity -%}
+              {%- assign compare_at_price = line_item.variant.compare_at_price -%}
+            {%- endif -%}
+
+            {%- if line_item.variant.compare_at_price > 0 -%}
+              <span class="CartItem__Price Price Price--highlight notranslate ht-money" data-money-convertible>
+                  {%- if line_item.line_price == 0 -%}
+                    FREE
+                  {%- else -%}
+                    {{ line_item.line_price | money_without_trailing_zeros }}
+                  {%- endif -%}
+              </span>
+              {%- if line_item.line_price != 0 and line_item.original_line_price > line_item.line_price -%}
+                <span class="CartItem__OriginalPrice Price Price--compareAt notranslate ht-money" data-money-convertible>
+                  <span class="cart_compare_text">was</span> {{ line_item.original_line_price | money_without_trailing_zeros }}
+                </span>
+              {%- endif -%}
+            {%- else -%}
+              {% if line_item.variant.sku == "giftbag&card" or line_item.variant.sku == "bright-care-shipping-instruction" %}
+                <span class="CartItem__Price Price Price--highlight notranslate ht-money" data-money-convertible>
+                  {{ price | money_without_trailing_zeros }}
+                </span>
+              {% else %}
+                <span class="CartItem__Price Price Price--highlight notranslate ht-money" data-money-convertible>
+                  {%- if line_item.line_price == 0 -%}
+                    FREE
+                  {%- else -%}
+                    {{ line_item.line_price | money_without_trailing_zeros }}
+                  {%- endif -%}
+                </span>
+                {% if compare_at_price != 0 and line_item.original_line_price > line_item.line_price %}
+                  <span class="CartItem__OriginalPrice Price Price--compareAt notranslate ht-money" data-money-convertible>
+                    <span class="cart_compare_text">was</span> {{ line_item.original_line_price | money_without_trailing_zeros }}
+                  </span>
+                {% endif %}
+              {% endif %}
+            {%- endif -%}
+          </div>
+        </div>
+
+        {%- capture item_actions -%}
+          <div class="CartItem__Actions Heading Text--subdued" style="text-align: center">
+            <div class="CartItem__QuantitySelector">
+              {% if line_item.id != all_products["product_without_quantity"].selected_or_first_available_variant.id %}
+                <div class="QuantitySelector">
+                  {%- assign quantity_minus_one = line_item.quantity | minus: 1 -%}
+                  <a
+                    class="QuantitySelector__Button minus_btn Link Link--primary"
+                    title="{{ 'cart.items.set_quantity' | t: new_quantity: quantity_minus_one }}"
+                    href="/cart/change?quantity={{ quantity_minus_one }}&id={{ line_item.key }}"
+                    data-quantity="{{ quantity_minus_one }}"
+                    data-line-id="{{ line_item.key }}"
+                    data-action="update-item-quantity">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17.7656 12.0935C17.7656 12.5681 17.3701 12.9636 16.9219 12.9636H13.125H11.4375H7.64062C7.16602 12.9636 6.79688 12.5681 6.79688 12.0935C6.79688 11.6453 7.16602 11.2761 7.64062 11.2761H11.4375H13.125H16.9219C17.3701 11.2498 17.7656 11.6453 17.7656 12.0935Z" fill="white" fill-opacity="0.6"/>
+                    </svg>
+                  </a>
+                  <input
+                    type="number"
+                    inputmode="numeric"
+                    onkeypress="return isNumberKey(event)"
+                    name="updates[]"
+                    id="updates_{{ line_item.key }}"
+                    class="QuantitySelector__CurrentQuantity"
+                    pattern="[0-9]*"
+                    data-line-id="{{ line_item.key }}"
+                    value="{{ line_item.quantity }}">
+                  {%- assign quantity_plus_one = line_item.quantity | plus: 1 -%}
+                  <a
+                    class="QuantitySelector__Button plus_btn Link Link--primary"
+                    title="{{ 'cart.items.set_quantity' | t: new_quantity: quantity_plus_one }}"
+                    href="/cart/change?quantity={{ quantity_plus_one }}&id={{ line_item.key }}"
+                    data-quantity="{{ quantity_plus_one }}"
+                    data-line-id="{{ line_item.key }}"
+                    data-action="update-item-quantity">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17.7656 12.0938C17.7656 12.5684 17.3701 12.9639 16.9219 12.9639H13.125V16.7607C13.125 17.209 12.7295 17.5781 12.2812 17.5781C11.8066 17.5781 11.4375 17.209 11.4375 16.7607V12.9639H7.64062C7.16602 12.9639 6.79688 12.5684 6.79688 12.0938C6.79688 11.6455 7.16602 11.2764 7.64062 11.2764H11.4375V7.47949C11.4375 7.00488 11.8066 6.60938 12.2812 6.60938C12.7295 6.60938 13.125 7.00488 13.125 7.47949V11.2764H16.9219C17.3701 11.25 17.7656 11.6455 17.7656 12.0938Z" fill="white" fill-opacity="0.6"/>
+                    </svg>
+                  </a>
+                </div>
+              {% endif %}
+            </div>
+
+            <a
+              href="/cart/change?quantity=0&id={{ line_item.key }}"
+              class="CartItem__Remove Link Link--underline Link--underlineShort"
+              data-quantity="0"
+              data-line-id="{{ line_item.key }}"
+              data-action="remove-item">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.7559 8.15625C14.6445 8.15625 14.5703 8.23047 14.4961 8.30469L13.791 9.34375H19.1719L18.4668 8.30469C18.4297 8.23047 18.3184 8.15625 18.207 8.15625H14.7559ZM21.3242 9.34375H21.8066H23.625H23.9219C24.4043 9.34375 24.8125 9.75195 24.8125 10.2344C24.8125 10.7539 24.4043 11.125 23.9219 11.125H23.4766L22.5859 23.1855C22.4746 24.4473 21.4727 25.375 20.2109 25.375H12.752C11.4902 25.375 10.4883 24.4473 10.377 23.1855L9.48633 11.125H9.07812C8.55859 11.125 8.1875 10.7539 8.1875 10.2344C8.1875 9.75195 8.55859 9.34375 9.07812 9.34375H9.375H11.1562H11.6387L13.0117 7.30273C13.3828 6.74609 14.0508 6.375 14.7559 6.375H18.207C18.9121 6.375 19.5801 6.74609 19.9512 7.30273L21.3242 9.34375ZM21.6953 11.125H11.2676L12.1582 23.0742C12.1953 23.3711 12.4551 23.5938 12.752 23.5938H20.2109C20.5078 23.5938 20.7676 23.3711 20.8047 23.0742L21.6953 11.125Z" fill="#ED0006"/>
+              </svg>
+            </a>
+          </div>
+        {%- endcapture -%}
+
+        {{ item_actions }}
+      </div>
+
+      {%- unless for_drawer -%}
+        {{ item_actions }}
+        <span
+          class="CartItem__LinePrice Price Heading Text--subdued u-h7"
+          data-money-convertible
+          style="text-align: right">{{ line_item.line_price | money_without_trailing_zeros }}</span>
+      {%- endunless -%}
+    </div>
+
+    {%- if for_drawer -%}
+      </div>
+    {%- endif -%}
+  {%- endfor -%}
+</div>

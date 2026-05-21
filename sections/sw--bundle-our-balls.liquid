@@ -1,0 +1,373 @@
+<section class="bundle_common_scroll">
+  <div class="our_balls_wrapper">
+    {% if section.settings.main_heading1 != blank
+      or section.settings.main_heading2 != blank
+      or section.settings.main_heading3 != blank
+    %}
+      <div class="bundle_tab_col fixed_tab">
+        <div class="bundle_tab_box">
+          <div class="bundle_tab_sub_heading ">
+            <a href="#our-balls" class="active_border">
+              <h4>{{ section.settings.main_heading1 }}</h4>
+            </a>
+          </div>
+          <div class="bundle_tab_sub_heading">
+            <a href="#accessories">
+              <h4>{{ section.settings.main_heading2 }}</h4>
+            </a>
+          </div>
+          <div class="bundle_tab_sub_heading">
+            <a href="#bundle">
+              <h4>{{ section.settings.main_heading3 }}</h4>
+            </a>
+            <p>NEW</p>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+    <div class="container">
+      {% if section.settings.main_heading != blank %}
+        <div class="our_balls_heading " id="our-balls">
+          <h2>{{ section.settings.main_heading }}</h2>
+        </div>
+      {% endif %}
+      <div class="our_balls_col">
+        <div class="our_balls_box {{ section.settings.select_position }}">
+          {%- if collection.handle == 'bogo' -%}
+            {% assign collect = collection %}
+          {%- else -%}
+            {% assign collect = section.settings.collections %}
+          {%- endif -%}
+          
+          {% for product in collect.products %}
+            <div class="our_balls_box_in bundle_number{% if collection.handle != 'bogo' %}{{  forloop.index }}{% endif %}">
+              <div class="our_balls_box_in_col">
+                <div class="our_balls_main_box">
+                  <div class="our_balls_product_image">
+                    <a href="{{ product.url }}">
+                      <img src="{{ product.featured_image | img_url:'master' }}" class="main_img">
+                               {% if product.images.size > 1 %}
+                      <img src="{{ product.images[1] | img_url: 'master' }}" class="hover_img">
+                    {% endif %}
+                    </a>
+          
+{% if product.handle contains 'starter-bundle' %}
+  <div class="bundle_animate_col">
+    <div class="bundle_animate_box">
+      <span>
+        <svg width="9" height="11" viewBox="0 0 9 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0549316 7.55263C0.0549316 7.86072 0.221493 8.14748 0.489653 8.30147L4.06569 10.3543C4.1955 10.4286 4.34022 10.4664 4.48513 10.4689C4.48723 10.4692 4.49307 10.47 4.49993 10.47C4.50679 10.47 4.51263 10.4692 4.51473 10.4689C4.65961 10.4664 4.80438 10.4287 4.93436 10.3542L8.51033 8.30134C8.77838 8.14748 8.94493 7.86057 8.94493 7.55263V3.44713C8.94493 3.13879 8.77836 2.85214 8.51018 2.69827L4.93449 0.645665C4.66622 0.49142 4.33346 0.491588 4.06548 0.645546L0.489811 2.69827C0.221643 2.85212 0.0549316 3.13876 0.0549316 3.44713V7.55263ZM4.49415 10.3995C4.49252 10.3992 4.49087 10.399 4.48914 10.3989C4.35462 10.3971 4.22049 10.3623 4.10048 10.2935L0.524511 8.24077C0.332858 8.13071 0.197708 7.94687 0.14703 7.73757C0.197716 7.94685 0.332861 8.13068 0.524501 8.24072L4.10047 10.2935C4.22048 10.3622 4.35461 10.397 4.48913 10.3989C4.49086 10.399 4.49251 10.3992 4.49414 10.3994C4.49604 10.3997 4.49792 10.4 4.49992 10.4C4.50192 10.4 4.5038 10.3997 4.5057 10.3994C4.50733 10.3992 4.50898 10.399 4.51071 10.3989C4.64523 10.397 4.77936 10.3623 4.8995 10.2935L8.47547 8.24059C8.72188 8.09915 8.87492 7.83534 8.87492 7.55259V3.44709C8.87492 3.37962 8.86623 3.31328 8.84966 3.24943C8.86624 3.31329 8.87493 3.37965 8.87493 3.44713V7.55263C8.87493 7.83538 8.72189 8.09919 8.47548 8.24063L4.89951 10.2935C4.77937 10.3624 4.64524 10.3971 4.51072 10.3989C4.50899 10.399 4.50734 10.3992 4.50571 10.3995H4.5057C4.50381 10.3997 4.50193 10.4 4.49993 10.4C4.49793 10.4 4.49605 10.3997 4.49416 10.3995L4.49415 10.3995ZM8.27216 7.55263C8.27216 7.6217 8.23455 7.68653 8.17416 7.72114L4.83632 9.63744V5.69337L8.27216 3.72112V7.55263ZM8.34214 3.60023V3.60018L4.76631 5.6528V9.7583L4.76632 9.7583V5.65284L8.34214 3.60023ZM3.11014 1.96716L4.40172 1.22571C4.43186 1.20839 4.46577 1.19964 4.49993 1.19964C4.53407 1.19964 4.56801 1.20841 4.59827 1.22584L7.93516 3.14146L6.54538 3.9392L3.11014 1.96716ZM4.49993 1.12964C4.54601 1.12964 4.59197 1.14142 4.63312 1.16513L8.07573 3.14144L8.07576 3.14142L4.63311 1.16509C4.59196 1.14138 4.546 1.1296 4.49992 1.1296C4.45384 1.1296 4.40788 1.14138 4.36686 1.16496L2.96953 1.96712L2.96957 1.96714L4.36687 1.165C4.40789 1.14142 4.45385 1.12964 4.49993 1.12964ZM4.23353 5.65284V5.6528L0.657694 3.60005V7.55259C0.657694 7.57393 0.660321 7.59496 0.665342 7.61527C0.660328 7.59497 0.657705 7.57396 0.657705 7.55263V3.60009L4.23353 5.65284ZM0.727705 7.55263V3.72099L4.16354 5.69337V9.63731L0.825865 7.72129C0.765301 7.68655 0.727705 7.62156 0.727705 7.55263ZM0.924256 3.14118L2.4369 2.27295L6.01256 4.32568L6.0126 4.32566L2.43689 2.27291L0.924214 3.14116L0.924256 3.14118ZM2.4369 2.35367L5.872 4.3257L4.49993 5.11324L1.06483 3.14121L2.4369 2.35367Z" fill="white"/>
+        </svg>
+      </span>
+    Bundle
+    </div>
+  </div>
+{% endif %}
+                  </div>
+            
+                    <p>
+                      <b>SALE</b>
+                    </p>
+                          
+                  <div class="our_ball_product_desc">
+                    <div class="our_ball_product_review">
+                      <div class="loox-rating" data-id="14813603594565" data-rating="5.0" data-raters="1" style="text-align:center" title="5.0 rating (1 votes)" aria-label="5.0 rating (1 votes)" role="figure" data-rating-upgraded="1"><div class="loox-rating-content"><svg class="loox-icon" viewBox="0 0 24 24" data-lx-fill="full" role="presentation"><title>5.0 rating (1 votes)</title><use href="#looxicons-rating-icon"></use></svg><svg class="loox-icon" viewBox="0 0 24 24" data-lx-fill="full" aria-hidden="true"><use href="#looxicons-rating-icon"></use></svg><svg class="loox-icon" viewBox="0 0 24 24" data-lx-fill="full" aria-hidden="true"><use href="#looxicons-rating-icon"></use></svg><svg class="loox-icon" viewBox="0 0 24 24" data-lx-fill="full" aria-hidden="true"><use href="#looxicons-rating-icon"></use></svg><svg class="loox-icon" viewBox="0 0 24 24" data-lx-fill="full" aria-hidden="true"><use href="#looxicons-rating-icon"></use></svg><span class="loox-rating-label" aria-hidden="true">&nbsp;(1)</span></div></div>
+                    </div>
+                    <div class="our_ball_product_title">
+                      <h3>
+                        <a href="{{ product.url }}">
+                              {% assign title_words = product.title | split: ' ' %}
+                                {% if title_words.size >= 2 %}
+                                <span class="product_sub_title">  {{ title_words[0] }} </span> <span class="product_main_title">{{ title_words[1] }} {{ title_words[2] }} {{ title_words[3] }} {{ title_words[4] }} {{ title_words[5] }}  {{ title_words[6] }}</span>
+                                {% else %}
+                                 <span class="product_main_title"> {{ product.title }}</span>
+                                {% endif %}
+                        </a>
+                         
+                      </h3>
+                    </div>
+                    <div class="our_ball_product_price">
+                      {% assign show_bogo = false %}
+                      {% for tag in product.tags %}
+                        {% if tag == 'offer2' or tag == 'offer3' %}
+                            {% assign flag_offer2 = true %}
+                        {% endif %}
+                        {% if tag == 'offer4' %}
+                            {% assign flag_offer3 = true %}
+                        {% endif %}
+                        {% if tag == 'BFCM_sale' %}
+                            {% assign discount_offer_text = true %}
+                        {% endif %}
+                        {% if tag == 'bogo-deal' %}
+                            {% assign show_bogo = true %}
+                        {% endif %}
+                      {% endfor %}
+
+                      {%- if product.handle == 'bright-sport-golf-balls' or product.handle == 'bright-sport-golf-balls-bogo' -%}
+                        {%- assign discount_offer_text = true -%}
+                      {%- endif -%}
+
+                      {% if discount_offer_text %}
+                        {% if show_bogo %}
+                          <span class="main_price notranslate ht-money" data-money-convertible>{{ product.first_available_variant.price | money_without_trailing_zeros }}</span>
+                        {% else %}
+                          {%- assign base_price = product.selected_or_first_available_variant.price -%}
+                          {%- assign quantity = 1 -%}
+                          
+                          {%- if quantity == 1 -%}
+                            {%- assign discount_rate = 0.35 -%}
+                          {%- elsif quantity == 2 -%}
+                            {%- assign discount_rate = 0.40 -%}
+                          {%- elsif quantity == 3 -%}
+                            {%- assign discount_rate = 0.45 -%}
+                          {%- else -%}
+                            {%- assign discount_rate = 0.00 -%}
+                          {%- endif -%}
+                          
+                          {%- assign discount_amount = base_price | times: discount_rate -%}
+                          {%- assign final_price = base_price | minus: discount_amount -%}
+  
+                          {% if product.first_available_variant.compare_at_price > 0 and product.first_available_variant.compare_at_price != null %}
+                            <span class="main_price notranslate ht-money" data-money-convertible>{{ product.first_available_variant.price | money_without_trailing_zeros }}</span>
+                            <span class="product_compare_price notranslate ht-money" data-money-convertible>
+                              <span>was</span>
+                              <b>{{ product.first_available_variant.compare_at_price | money_without_trailing_zeros }}</b>
+                            </span>
+                          {% else %}
+                            <span class="main_price notranslate ht-money" data-money-convertible>{{ final_price | money_without_trailing_zeros }}</span>
+                            <span class="product_compare_price notranslate ht-money" data-money-convertible>
+                              <span>was</span>
+                              <b>{{ base_price | money_without_trailing_zeros }}</b>
+                            </span>
+                          {% endif %}
+                        {% endif %}
+                      {% elsif product.compare_at_price > product.price %}   
+                          <span class="main_price notranslate ht-money" data-money-convertible data-price="{{product.price}}">{{ product.price | money_without_trailing_zeros }}</span>
+                          <span class="product_compare_price notranslate ht-money"><span class="compare_text">was</span>{{ product.compare_at_price | money_without_trailing_zeros }}</span>
+                      {% else %}
+                          <span class="main_price notranslate ht-money" data-money-convertible data-price="{{product.price}}">{{ product.price | money_without_trailing_zeros }}</span>
+                      {% endif %}
+                    </div>
+                    
+                    {% if product.handle contains 'starter-bundle' %}
+                      <div class="bundle_discount_price_wrap">
+                        <span class="total_value">Total Value <span class="product_price">{{ product.compare_at_price | money_without_trailing_zeros }}</span></span>
+                        <div class="percentage_price_col">
+                          <span>{{ product.price | money_without_trailing_zeros }}</span>
+                          {% assign savings_percentage = 100 | times: product.price | divided_by: product.compare_at_price %}
+                          {% if savings_percentage > 0 %}
+                            <span class="save_bg_color"> save {{ savings_percentage }}% </span>
+                          {% endif %}
+                        </div>
+                      </div>
+                    {% endif %}
+                    {% if show_bogo %}
+                      <div class="bogo_collection_index">
+                        Every second ball is free!
+                      </div>
+                    {% endif %}
+                    <div class="our_ball_product_add_to_cart">
+                      {%- if collection.handle == 'bogo' -%}
+                        <button type="button" name="add" class="product_cart_add_btn ad_to_cart_coll" style="border-radius: 0 0 30px 30px;width: 100%;max-width:100%;" data-var_id="{{ product.variants.first.id }}" data-add-to-cart="{{ product.variants.first.id }}">
+                          In winkelwagen
+                          <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path d="M15.1875 8.125C15.1875 8.75781 14.6602 9.28516 14.0625 9.28516H9V14.3477C9 14.9453 8.47266 15.4375 7.875 15.4375C7.24219 15.4375 6.75 14.9453 6.75 14.3477V9.28516H1.6875C1.05469 9.28516 0.5625 8.75781 0.5625 8.125C0.5625 7.52734 1.05469 7.03516 1.6875 7.03516H6.75V1.97266C6.75 1.33984 7.24219 0.8125 7.875 0.8125C8.47266 0.8125 9 1.33984 9 1.97266V7.03516H14.0625C14.6602 7 15.1875 7.52734 15.1875 8.125Z" fill="#0B090E"/>
+                          </svg>
+                        </button>
+                      {%- else %}
+                        {% unless forloop.index == 3 %}
+                          <button type="button" name="add" class="product_cart_add_btn ad_to_cart_coll" data-var_id="{{ product.variants.first.id }}" data-add-to-cart="{{ product.variants.first.id }}">
+                            In winkelwagen
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path d="M15.1875 8.125C15.1875 8.75781 14.6602 9.28516 14.0625 9.28516H9V14.3477C9 14.9453 8.47266 15.4375 7.875 15.4375C7.24219 15.4375 6.75 14.9453 6.75 14.3477V9.28516H1.6875C1.05469 9.28516 0.5625 8.75781 0.5625 8.125C0.5625 7.52734 1.05469 7.03516 1.6875 7.03516H6.75V1.97266C6.75 1.33984 7.24219 0.8125 7.875 0.8125C8.47266 0.8125 9 1.33984 9 1.97266V7.03516H14.0625C14.6602 7 15.1875 7.52734 15.1875 8.125Z" fill="#0B090E"/>
+                            </svg>
+                          </button>
+                        {% else %}
+                          <a href="{{ product.url | within: collection }}">
+                            <button type="button" name="add" aria-label="Kies een bal" class="ad_to_cart_coll product_cart_add_btn Button Button--primary">
+                              Kies een bal
+                            </button>
+                          </a>
+                        {% endunless %}
+                      {%- endif -%}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+          {% if section.settings.enabled %}
+            <div class="bundle_function_col our_balls_box_in">
+              <div class="bundle_function_sec">
+                <div class="bundle_function_main_box">
+                  <div class="bundle_function_main_box_in">
+                    {% if section.settings.product_image != blank %}
+                      <div class="bundle_main_image">
+                        <img src="{{ section.settings.product_image | img_url:'master' }}">
+                      </div>
+                    {% endif %}
+
+                    {% if section.settings.product_main_title != blank %}
+                      <div class="bundle_main_title">
+                        <h3>{{ section.settings.product_main_title }}</h3>
+                      </div>
+                    {% endif %}
+                    <div class="bundle_function_bottom_col">
+                      <div class="bundle_left_col">
+                        <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Screenshot_1.png?v=1692952247">
+                        <div class="price">
+                          <p id="totalPrice">Total Price: <span>0.00</span></p>
+                          <div class="discount_price_col">
+                            <p id="totaldicountprice">Total Discount Price: <span>0.00</span></p>
+                            <p>save 50%</p>
+                          </div>
+
+
+
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {% for block in section.blocks %}
+                  <div class="bundle_function_box ">
+                    {% assign product = block.settings.product %}
+                    <div class="bundle_product_name_col"></div>
+                    <div class="add_to_cart">
+                      {% assign discountedPrice = product.price | times: 0.5 %}
+
+                      <input type="hidden" name="product_price[]" value="{{ product.price  }}" class="dev">
+                      <input type="hidden" name="product_discount_price[]" value="{{ discountedPrice  }}">
+                      <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                      <input type="hidden" name="quantity" value="1">
+                    </div>
+                  </div>
+                {% endfor %}
+                {% if section.settings.add_to_cart_btn_text != blank %}
+                  <div class="bundle_right_col">
+                    <button class="btns_cart">
+                      {{ section.settings.add_to_cart_btn_text }}
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.1875 8.125C15.1875 8.75781 14.6602 9.28516 14.0625 9.28516H9V14.3477C9 14.9453 8.47266 15.4375 7.875 15.4375C7.24219 15.4375 6.75 14.9453 6.75 14.3477V9.28516H1.6875C1.05469 9.28516 0.5625 8.75781 0.5625 8.125C0.5625 7.52734 1.05469 7.03516 1.6875 7.03516H6.75V1.97266C6.75 1.33984 7.24219 0.8125 7.875 0.8125C8.47266 0.8125 9 1.33984 9 1.97266V7.03516H14.0625C14.6602 7 15.1875 7.52734 15.1875 8.125Z" fill="#0B090E"/>
+                      </svg>
+                    </button>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style></style>
+{% schema %}
+{
+  "name": "Bundle Our Balls",
+  "class" : "our_balls_sec balls_bundle",
+  "settings": [
+    {
+      "type" : "text",
+      "id" : "main_heading1",
+      "label" : "Tab Heading"
+    },
+     {
+      "type" : "text",
+      "id" : "main_heading2",
+      "label" : "Tab Heading"
+    },
+     {
+      "type" : "text",
+      "id" : "main_heading3",
+      "label" : "Tab Heading"
+    },
+    {
+      "type" : "text",
+      "id" : "main_heading",
+      "label" : "Main Heading"
+    },
+      {
+        "type" : "collection",
+        "id" :"collections",
+        "label" : "Select Collection"
+      },
+        {
+          "type" : "checkbox",
+          "id" : "enabled",
+          "label" :"Enable"
+        } ,
+     {
+      "type" : "image_picker",
+      "id" : "product_image",
+      "label" : "Product Image"
+    },
+    {
+      "type" : "text",
+      "id" : "product_main_title",
+      "label" : "Product Main Title"
+    },
+     {
+      "type" : "text",
+      "id" : "add_to_cart_btn_text",
+      "label" : "In winkelwagen Button Text"
+    },
+    {
+      "type" : "select",
+      "id" : "select_position",
+      "label" : "Select Position",
+      "options" : [
+          {
+            "value" : "top-left",
+            "label" : "Top Left"
+          },
+          {
+            "value"  : "top-right",
+            "label" : "Top Right"
+          },
+         {
+            "value" : "bottom-left",
+            "label" : "Bottom Left"
+          },
+          {
+            "value"  : "bottom-right",
+            "label" : "Bottom Right"
+          }
+      ]
+     }
+  ],
+  "blocks" : [
+    {
+      "type" : "bundle",
+      "name" : "bundle",
+      "settings" : [
+          {
+            "type" : "product",
+            "id" : "product",
+            "label" : "Select Product"
+          }
+      ]
+    }
+  ],
+  "presets" : [
+    {
+      "name" : "Bundle Our Balls"
+    }
+  ]
+}
+{% endschema %}

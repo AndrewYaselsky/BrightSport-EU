@@ -1,0 +1,103 @@
+<div class="unique_balls_main">
+  <div class="container">
+    <div class="unique_balls_title_block">
+      {% if section.settings.title != blank %}
+        <h2>{{ section.settings.title }}</h2>
+      {% endif %}
+      {% if section.settings.title != blank %}
+        <h2 class="mobile_title">{{ section.settings.title1 }}</h2>
+      {% endif %}
+      {% if section.settings.text != blank %}
+        <p class="unique_balls_text">{{ section.settings.text }}</p>
+      {% endif %}
+    </div>
+  </div>
+
+  {% for block in section.blocks %}
+    <div class="unique_balls_img_{{ forloop.index }} unique_balls_img_block">
+      <div class="unique_balls_img">
+        {% if block.settings.img != blank %}
+          <img src="{{ block.settings.img | img_url: 'master' }}" class="black_white_ball">
+        {% endif %}
+        {% if block.settings.img1 != blank %}
+          <img src="{{ block.settings.img1 | img_url: 'master' }}" class="Color_ball">
+        {% endif %}
+        {% if block.settings.btn != blank %}
+          <a href="{{ block.settings.url }}" class="unique_balls_btn">{{ block.settings.btn }}
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M18.6882 9.29099C18.3019 8.903 17.7222 8.903 17.3358 9.29099C16.9493 9.67899 16.9493 10.261 17.3358 10.649L21.7153 14.9815H5.96608C5.45084 15.0461 5 15.4988 5 16.0162C5 16.5335 5.45084 16.9862 5.96608 16.9862H21.7153L17.3358 21.3833C16.9493 21.7714 16.9493 22.3533 17.3358 22.7413C17.5289 22.9354 17.7866 23 18.0442 23C18.3019 23 18.5594 22.9354 18.7527 22.7413L24.7424 16.7275C24.9356 16.5335 25 16.2749 25 16.0162C25 15.7574 24.8712 15.4988 24.7424 15.3049L18.6882 9.29099Z" fill="url(#paint0_linear_1_8955)"/>
+            <defs>
+              <linearGradient id="paint0_linear_1_8955" x1="-13" y1="16" x2="24.7142" y2="14.9257" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FDA503"/>
+                <stop offset="0.244802" stop-color="#F737D8"/>
+                <stop offset="0.453143" stop-color="#0E60FF"/>
+                <stop offset="0.656277" stop-color="#07C2F7"/>
+                <stop offset="0.828159" stop-color="#00E3C0"/>
+                <stop offset="1" stop-color="#00FE67"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+
+{% schema %}
+  {
+    "name": "Unique Balls",
+    "class": "sw--unique-balls",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "title1",
+        "label": "Mobile Title"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "text"
+      }
+    ],
+    "blocks":[
+      {
+        "type": "image_block",
+        "name": "Image Block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "img",
+            "label": "Select Image(B&W)"
+          },
+          {
+            "type": "image_picker",
+            "id": "img1",
+            "label": "Select Image(color)"
+          },
+          {
+            "type": "text",
+            "id": "btn",
+            "label": "Button Text"
+          },
+          {
+            "type": "url",
+            "id": "url",
+            "label": "Button URL"
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name": "Unique Balls"        
+      }
+    ]
+  }
+{% endschema %}

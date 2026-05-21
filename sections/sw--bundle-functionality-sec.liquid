@@ -1,0 +1,724 @@
+<section class="bundle_common_scroll">
+  <div class="bundle_function_wrapper">
+    <div{% if template.name != 'index' %} class="container"{% endif %}>
+      {% if section.settings.main_heading != blank %}
+        <div class="bundle_function_heading " id="bundle">
+          <h2>{{ section.settings.main_heading }}</h2>
+        </div>
+      {% endif %}
+      {% if section.settings.sub_heading != blank %}
+        <div class="bundle_function_sub_heading">
+          <p>{{ section.settings.sub_heading }}</p>
+        </div>
+      {% endif %}
+      <div class="bundle_function_block{% if template.name == 'index' %}  homepage-bundle-slider{% endif %}">
+        <div class="bundle_function_col{% if template.name == 'index' %}  homepage-bundle-slide{% endif %}">
+          <div class="bundle_function_sec">
+            <div class="bundle_function_main_box">
+              <div class="bundle_function_main_box_in">
+                <div>
+                  {% assign product = section.settings.product %}
+                  {% if product.featured_image != blank %}
+                    <div class="bundle_main_image">
+                      <a href="{{ product.url }}">
+                        <img src="{{ product.featured_image | img_url:'master' }}">
+                      </a>
+                      <div class="bundle_animate_col">
+                        <div class="bundle_animate_box">
+                          <span>
+                            <svg width="9" height="11" viewBox="0 0 9 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0549316 7.55263C0.0549316 7.86072 0.221493 8.14748 0.489653 8.30147L4.06569 10.3543C4.1955 10.4286 4.34022 10.4664 4.48513 10.4689C4.48723 10.4692 4.49307 10.47 4.49993 10.47C4.50679 10.47 4.51263 10.4692 4.51473 10.4689C4.65961 10.4664 4.80438 10.4287 4.93436 10.3542L8.51033 8.30134C8.77838 8.14748 8.94493 7.86057 8.94493 7.55263V3.44713C8.94493 3.13879 8.77836 2.85214 8.51018 2.69827L4.93449 0.645665C4.66622 0.49142 4.33346 0.491588 4.06548 0.645546L0.489811 2.69827C0.221643 2.85212 0.0549316 3.13876 0.0549316 3.44713V7.55263ZM4.49415 10.3995C4.49252 10.3992 4.49087 10.399 4.48914 10.3989C4.35462 10.3971 4.22049 10.3623 4.10048 10.2935L0.524511 8.24077C0.332858 8.13071 0.197708 7.94687 0.14703 7.73757C0.197716 7.94685 0.332861 8.13068 0.524501 8.24072L4.10047 10.2935C4.22048 10.3622 4.35461 10.397 4.48913 10.3989C4.49086 10.399 4.49251 10.3992 4.49414 10.3994C4.49604 10.3997 4.49792 10.4 4.49992 10.4C4.50192 10.4 4.5038 10.3997 4.5057 10.3994C4.50733 10.3992 4.50898 10.399 4.51071 10.3989C4.64523 10.397 4.77936 10.3623 4.8995 10.2935L8.47547 8.24059C8.72188 8.09915 8.87492 7.83534 8.87492 7.55259V3.44709C8.87492 3.37962 8.86623 3.31328 8.84966 3.24943C8.86624 3.31329 8.87493 3.37965 8.87493 3.44713V7.55263C8.87493 7.83538 8.72189 8.09919 8.47548 8.24063L4.89951 10.2935C4.77937 10.3624 4.64524 10.3971 4.51072 10.3989C4.50899 10.399 4.50734 10.3992 4.50571 10.3995H4.5057C4.50381 10.3997 4.50193 10.4 4.49993 10.4C4.49793 10.4 4.49605 10.3997 4.49416 10.3995L4.49415 10.3995ZM8.27216 7.55263C8.27216 7.6217 8.23455 7.68653 8.17416 7.72114L4.83632 9.63744V5.69337L8.27216 3.72112V7.55263ZM8.34214 3.60023V3.60018L4.76631 5.6528V9.7583L4.76632 9.7583V5.65284L8.34214 3.60023ZM3.11014 1.96716L4.40172 1.22571C4.43186 1.20839 4.46577 1.19964 4.49993 1.19964C4.53407 1.19964 4.56801 1.20841 4.59827 1.22584L7.93516 3.14146L6.54538 3.9392L3.11014 1.96716ZM4.49993 1.12964C4.54601 1.12964 4.59197 1.14142 4.63312 1.16513L8.07573 3.14144L8.07576 3.14142L4.63311 1.16509C4.59196 1.14138 4.546 1.1296 4.49992 1.1296C4.45384 1.1296 4.40788 1.14138 4.36686 1.16496L2.96953 1.96712L2.96957 1.96714L4.36687 1.165C4.40789 1.14142 4.45385 1.12964 4.49993 1.12964ZM4.23353 5.65284V5.6528L0.657694 3.60005V7.55259C0.657694 7.57393 0.660321 7.59496 0.665342 7.61527C0.660328 7.59497 0.657705 7.57396 0.657705 7.55263V3.60009L4.23353 5.65284ZM0.727705 7.55263V3.72099L4.16354 5.69337V9.63731L0.825865 7.72129C0.765301 7.68655 0.727705 7.62156 0.727705 7.55263ZM0.924256 3.14118L2.4369 2.27295L6.01256 4.32568L6.0126 4.32566L2.43689 2.27291L0.924214 3.14116L0.924256 3.14118ZM2.4369 2.35367L5.872 4.3257L4.49993 5.11324L1.06483 3.14121L2.4369 2.35367Z" fill="white"/>
+                            </svg>
+                          </span>
+                          Bundle
+                        </div>
+                      </div>
+                    </div>
+                  {% endif %}
+                  <div class="bundle_main_title">
+                    <h3>
+                      <a href="{{ product.url }}">
+                        {% assign title_words = product.title | split: ' ' %}
+                        {% if title_words.size >= 2 %}
+                          <span class="product_sub_title"> {{ title_words[0] }} </span>
+                          <span class="product_main_title">
+                            {{- title_words[1] }}
+                            {{ title_words[2] }}
+                            {{ title_words[3] }}
+                            {{ title_words[4] }}
+                            {{ title_words[5] }}
+                            {{ title_words[6] -}}
+                          </span>
+                        {% else %}
+                          <span class="product_main_title"> {{ product.title }}</span>
+                        {% endif %}
+                      </a>
+                    </h3>
+                  </div>
+                  <div class="bundle_function_bottom_col">
+                    <div class="bundle_left_col">
+                      <div class="bundle_reivews">
+                        <div
+                          class="loox-rating"
+                          data-id="{{ product.id }}"
+                          data-rating="{{ product.metafields.loox.avg_rating }}"
+                          data-raters="{{ product.metafields.loox.num_reviews }}"
+                          style="text-align:center"
+                        ></div>
+                      </div>
+                      <div class="price">
+                        <div class="discount_price_col">
+                          <div class="bundle_discount_price_wrap">
+                            <span class="total_value"
+                              >Total Value <span class="product_price">{{ product.compare_at_price | money_without_trailing_zeros }}</span></span
+                            >
+                            <div class="percentage_price_col">
+                              <span>{{ product.price | money_without_trailing_zeros }}</span>
+  
+                              {% assign old_price = product.selected_or_first_available_variant.compare_at_price %}
+                              {% assign new_price = product.selected_or_first_available_variant.price %}
+                              
+                              {% assign discount_amount = new_price | times: 100 %}
+                              {% assign get_diff = discount_amount | divided_by: old_price %}
+                              
+                              {% assign discount_percentage = 100 | minus: get_diff | round: 0 %}
+                              
+                              {% if discount_percentage >= 40 and discount_percentage < 45 %}
+                                {% assign display_discount = 40 %}
+                              {% elsif discount_percentage >= 45 and discount_percentage < 49 %}
+                                {% assign display_discount = 45 %}
+                              {% elsif discount_percentage >= 49 %}
+                                {% assign display_discount = 50 %}
+                              {% else %}
+                                {% assign display_discount = discount_percentage %}
+                              {% endif %}
+                              <div class="save_bg_color">Save {{ display_discount }}%</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+    
+                      {{ product.description }}
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="our_ball_product_add_to_cart">
+                    <a href="{{ product.url | within: collection }}">
+                      <button type="button" class="product_cart_add_btn ad_to_cart_coll">
+                        Add Bundles
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bundle_function_col{% if template.name == 'index' %}  homepage-bundle-slide{% endif %}">
+          <div class="best_selling_text">
+            {{ section.settings.best_selling_text }}
+          </div>
+          <div class="bundle_function_sec">
+            <div class="bundle_function_main_box">
+              <div class="bundle_function_main_box_in">
+                <div>
+                  {% assign product = section.settings.product2 %}
+                  {% if product.featured_image != blank %}
+                    <div class="bundle_main_image">
+                      <a href="{{ product.url }}">
+                        <img src="{{ product.featured_image | img_url:'master' }}">
+                      </a>
+                      <div class="bundle_animate_col">
+                        <div class="bundle_animate_box">
+                          <span>
+                            <svg width="9" height="11" viewBox="0 0 9 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0549316 7.55263C0.0549316 7.86072 0.221493 8.14748 0.489653 8.30147L4.06569 10.3543C4.1955 10.4286 4.34022 10.4664 4.48513 10.4689C4.48723 10.4692 4.49307 10.47 4.49993 10.47C4.50679 10.47 4.51263 10.4692 4.51473 10.4689C4.65961 10.4664 4.80438 10.4287 4.93436 10.3542L8.51033 8.30134C8.77838 8.14748 8.94493 7.86057 8.94493 7.55263V3.44713C8.94493 3.13879 8.77836 2.85214 8.51018 2.69827L4.93449 0.645665C4.66622 0.49142 4.33346 0.491588 4.06548 0.645546L0.489811 2.69827C0.221643 2.85212 0.0549316 3.13876 0.0549316 3.44713V7.55263ZM4.49415 10.3995C4.49252 10.3992 4.49087 10.399 4.48914 10.3989C4.35462 10.3971 4.22049 10.3623 4.10048 10.2935L0.524511 8.24077C0.332858 8.13071 0.197708 7.94687 0.14703 7.73757C0.197716 7.94685 0.332861 8.13068 0.524501 8.24072L4.10047 10.2935C4.22048 10.3622 4.35461 10.397 4.48913 10.3989C4.49086 10.399 4.49251 10.3992 4.49414 10.3994C4.49604 10.3997 4.49792 10.4 4.49992 10.4C4.50192 10.4 4.5038 10.3997 4.5057 10.3994C4.50733 10.3992 4.50898 10.399 4.51071 10.3989C4.64523 10.397 4.77936 10.3623 4.8995 10.2935L8.47547 8.24059C8.72188 8.09915 8.87492 7.83534 8.87492 7.55259V3.44709C8.87492 3.37962 8.86623 3.31328 8.84966 3.24943C8.86624 3.31329 8.87493 3.37965 8.87493 3.44713V7.55263C8.87493 7.83538 8.72189 8.09919 8.47548 8.24063L4.89951 10.2935C4.77937 10.3624 4.64524 10.3971 4.51072 10.3989C4.50899 10.399 4.50734 10.3992 4.50571 10.3995H4.5057C4.50381 10.3997 4.50193 10.4 4.49993 10.4C4.49793 10.4 4.49605 10.3997 4.49416 10.3995L4.49415 10.3995ZM8.27216 7.55263C8.27216 7.6217 8.23455 7.68653 8.17416 7.72114L4.83632 9.63744V5.69337L8.27216 3.72112V7.55263ZM8.34214 3.60023V3.60018L4.76631 5.6528V9.7583L4.76632 9.7583V5.65284L8.34214 3.60023ZM3.11014 1.96716L4.40172 1.22571C4.43186 1.20839 4.46577 1.19964 4.49993 1.19964C4.53407 1.19964 4.56801 1.20841 4.59827 1.22584L7.93516 3.14146L6.54538 3.9392L3.11014 1.96716ZM4.49993 1.12964C4.54601 1.12964 4.59197 1.14142 4.63312 1.16513L8.07573 3.14144L8.07576 3.14142L4.63311 1.16509C4.59196 1.14138 4.546 1.1296 4.49992 1.1296C4.45384 1.1296 4.40788 1.14138 4.36686 1.16496L2.96953 1.96712L2.96957 1.96714L4.36687 1.165C4.40789 1.14142 4.45385 1.12964 4.49993 1.12964ZM4.23353 5.65284V5.6528L0.657694 3.60005V7.55259C0.657694 7.57393 0.660321 7.59496 0.665342 7.61527C0.660328 7.59497 0.657705 7.57396 0.657705 7.55263V3.60009L4.23353 5.65284ZM0.727705 7.55263V3.72099L4.16354 5.69337V9.63731L0.825865 7.72129C0.765301 7.68655 0.727705 7.62156 0.727705 7.55263ZM0.924256 3.14118L2.4369 2.27295L6.01256 4.32568L6.0126 4.32566L2.43689 2.27291L0.924214 3.14116L0.924256 3.14118ZM2.4369 2.35367L5.872 4.3257L4.49993 5.11324L1.06483 3.14121L2.4369 2.35367Z" fill="white"/>
+                            </svg>
+                          </span>
+                          Bundle
+                        </div>
+                      </div>
+                    </div>
+                  {% endif %}
+                  <div class="bundle_main_title">
+                    <h3>
+                      <a href="{{ product.url }}">
+                        {% assign title_words = product.title | split: ' ' %}
+                        {% if title_words.size >= 2 %}
+                          <span class="product_sub_title"> {{ title_words[0] }} </span>
+                          <span class="product_main_title">
+                            {{- title_words[1] }}
+                            {{ title_words[2] }}
+                            {{ title_words[3] }}
+                            {{ title_words[4] }}
+                            {{ title_words[5] }}
+                            {{ title_words[6] -}}
+                          </span>
+                        {% else %}
+                          <span class="product_main_title"> {{ product.title }}</span>
+                        {% endif %}
+                      </a>
+                    </h3>
+                  </div>
+                  <div class="bundle_function_bottom_col">
+                    <div class="bundle_left_col">
+                      <div class="bundle_reivews">
+                        <div
+                          class="loox-rating"
+                          data-id="{{ product.id }}"
+                          data-rating="{{ product.metafields.loox.avg_rating }}"
+                          data-raters="{{ product.metafields.loox.num_reviews }}"
+                          style="text-align:center"
+                        ></div>
+                      </div>
+                      <div class="price">
+                        <div class="discount_price_col">
+                          <div class="bundle_discount_price_wrap">
+                            <span class="total_value"
+                              >Total Value <span class="product_price">{{ product.compare_at_price | money_without_trailing_zeros }}</span></span
+                            >
+                            <div class="percentage_price_col">
+                              <span>{{ product.price | money_without_trailing_zeros }}</span>
+                              
+                              {% assign old_price = product.selected_or_first_available_variant.compare_at_price %}
+                              {% assign new_price = product.selected_or_first_available_variant.price %}
+                              
+                              {% assign discount_amount = new_price | times: 100 %}
+                              {% assign get_diff = discount_amount | divided_by: old_price %}
+                              
+                              {% assign discount_percentage = 100 | minus: get_diff | round: 0 %}
+                              
+                              {% if discount_percentage >= 40 and discount_percentage < 45 %}
+                                {% assign display_discount = 40 %}
+                              {% elsif discount_percentage >= 45 and discount_percentage < 49 %}
+                                {% assign display_discount = 45 %}
+                              {% elsif discount_percentage >= 49 %}
+                                {% assign display_discount = 50 %}
+                              {% else %}
+                                {% assign display_discount = discount_percentage %}
+                              {% endif %}
+                              <div class="save_bg_color">Save {{ display_discount }}%</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {{ product.description }}
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="our_ball_product_add_to_cart">
+                    <a href="{{ product.url | within: collection }}">
+                      <button type="button" class="product_cart_add_btn ad_to_cart_coll">
+                        Add Bundles
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bundle_function_col">
+          <div class="bundle_function_sec">
+            <div class="bundle_function_main_box">
+              <div class="bundle_function_main_box_in">
+                <div>
+                  {% assign product = section.settings.product3 %}
+                  {% if product.featured_image != blank %}
+                    <div class="bundle_main_image">
+                      <a href="{{ product.url }}">
+                        <img src="{{ product.featured_image | img_url:'master' }}">
+                      </a>
+                      <div class="bundle_animate_col">
+                        <div class="bundle_animate_box">
+                          <span>
+                            <svg width="9" height="11" viewBox="0 0 9 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0549316 7.55263C0.0549316 7.86072 0.221493 8.14748 0.489653 8.30147L4.06569 10.3543C4.1955 10.4286 4.34022 10.4664 4.48513 10.4689C4.48723 10.4692 4.49307 10.47 4.49993 10.47C4.50679 10.47 4.51263 10.4692 4.51473 10.4689C4.65961 10.4664 4.80438 10.4287 4.93436 10.3542L8.51033 8.30134C8.77838 8.14748 8.94493 7.86057 8.94493 7.55263V3.44713C8.94493 3.13879 8.77836 2.85214 8.51018 2.69827L4.93449 0.645665C4.66622 0.49142 4.33346 0.491588 4.06548 0.645546L0.489811 2.69827C0.221643 2.85212 0.0549316 3.13876 0.0549316 3.44713V7.55263ZM4.49415 10.3995C4.49252 10.3992 4.49087 10.399 4.48914 10.3989C4.35462 10.3971 4.22049 10.3623 4.10048 10.2935L0.524511 8.24077C0.332858 8.13071 0.197708 7.94687 0.14703 7.73757C0.197716 7.94685 0.332861 8.13068 0.524501 8.24072L4.10047 10.2935C4.22048 10.3622 4.35461 10.397 4.48913 10.3989C4.49086 10.399 4.49251 10.3992 4.49414 10.3994C4.49604 10.3997 4.49792 10.4 4.49992 10.4C4.50192 10.4 4.5038 10.3997 4.5057 10.3994C4.50733 10.3992 4.50898 10.399 4.51071 10.3989C4.64523 10.397 4.77936 10.3623 4.8995 10.2935L8.47547 8.24059C8.72188 8.09915 8.87492 7.83534 8.87492 7.55259V3.44709C8.87492 3.37962 8.86623 3.31328 8.84966 3.24943C8.86624 3.31329 8.87493 3.37965 8.87493 3.44713V7.55263C8.87493 7.83538 8.72189 8.09919 8.47548 8.24063L4.89951 10.2935C4.77937 10.3624 4.64524 10.3971 4.51072 10.3989C4.50899 10.399 4.50734 10.3992 4.50571 10.3995H4.5057C4.50381 10.3997 4.50193 10.4 4.49993 10.4C4.49793 10.4 4.49605 10.3997 4.49416 10.3995L4.49415 10.3995ZM8.27216 7.55263C8.27216 7.6217 8.23455 7.68653 8.17416 7.72114L4.83632 9.63744V5.69337L8.27216 3.72112V7.55263ZM8.34214 3.60023V3.60018L4.76631 5.6528V9.7583L4.76632 9.7583V5.65284L8.34214 3.60023ZM3.11014 1.96716L4.40172 1.22571C4.43186 1.20839 4.46577 1.19964 4.49993 1.19964C4.53407 1.19964 4.56801 1.20841 4.59827 1.22584L7.93516 3.14146L6.54538 3.9392L3.11014 1.96716ZM4.49993 1.12964C4.54601 1.12964 4.59197 1.14142 4.63312 1.16513L8.07573 3.14144L8.07576 3.14142L4.63311 1.16509C4.59196 1.14138 4.546 1.1296 4.49992 1.1296C4.45384 1.1296 4.40788 1.14138 4.36686 1.16496L2.96953 1.96712L2.96957 1.96714L4.36687 1.165C4.40789 1.14142 4.45385 1.12964 4.49993 1.12964ZM4.23353 5.65284V5.6528L0.657694 3.60005V7.55259C0.657694 7.57393 0.660321 7.59496 0.665342 7.61527C0.660328 7.59497 0.657705 7.57396 0.657705 7.55263V3.60009L4.23353 5.65284ZM0.727705 7.55263V3.72099L4.16354 5.69337V9.63731L0.825865 7.72129C0.765301 7.68655 0.727705 7.62156 0.727705 7.55263ZM0.924256 3.14118L2.4369 2.27295L6.01256 4.32568L6.0126 4.32566L2.43689 2.27291L0.924214 3.14116L0.924256 3.14118ZM2.4369 2.35367L5.872 4.3257L4.49993 5.11324L1.06483 3.14121L2.4369 2.35367Z" fill="white"/>
+                            </svg>
+                          </span>
+                          Bundle
+                        </div>
+                      </div>
+                    </div>
+                  {% endif %}
+                  <div class="bundle_main_title">
+                    <h3>
+                      <a href="{{ product.url }}">
+                        {% assign title_words = product.title | split: ' ' %}
+                        {% if title_words.size >= 2 %}
+                          <span class="product_sub_title"> {{ title_words[0] }} </span>
+                          <span class="product_main_title">
+                            {{- title_words[1] }}
+                            {{ title_words[2] }}
+                            {{ title_words[3] }}
+                            {{ title_words[4] }}
+                            {{ title_words[5] }}
+                            {{ title_words[6] -}}
+                          </span>
+                        {% else %}
+                          <span class="product_main_title"> {{ product.title }}</span>
+                        {% endif %}
+                      </a>
+                    </h3>
+                  </div>
+                  <div class="bundle_function_bottom_col">
+                    <div class="bundle_left_col">
+                      <div class="bundle_reivews">
+                        <div
+                          class="loox-rating"
+                          data-id="{{ product.id }}"
+                          data-rating="{{ product.metafields.loox.avg_rating }}"
+                          data-raters="{{ product.metafields.loox.num_reviews }}"
+                          style="text-align:center"
+                        ></div>
+                      </div>
+                      <div class="price">
+                        <div class="discount_price_col">
+                          <div class="bundle_discount_price_wrap">
+                            <span class="total_value"
+                              >Total Value <span class="product_price">{{ product.compare_at_price | money_without_trailing_zeros }}</span></span
+                            >
+                            <div class="percentage_price_col">
+                              <span>{{ product.price | money_without_trailing_zeros }}</span>
+                              
+                              {% assign old_price = product.selected_or_first_available_variant.compare_at_price %}
+                              {% assign new_price = product.selected_or_first_available_variant.price %}
+                              
+                              {% assign discount_amount = new_price | times: 100 %}
+                              {% assign get_diff = discount_amount | divided_by: old_price %}
+                              
+                              {% assign discount_percentage = 100 | minus: get_diff | round: 0 %}
+                              
+                              {% if discount_percentage >= 40 and discount_percentage < 45 %}
+                                {% assign display_discount = 40 %}
+                              {% elsif discount_percentage >= 45 and discount_percentage < 49 %}
+                                {% assign display_discount = 45 %}
+                              {% elsif discount_percentage >= 49 %}
+                                {% assign display_discount = 50 %}
+                              {% else %}
+                                {% assign display_discount = discount_percentage %}
+                              {% endif %}
+                              <div class="save_bg_color">Save {{ display_discount }}%</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {{ product.description }}
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="our_ball_product_add_to_cart">
+                    <a href="{{ product.url | within: collection }}">
+                      <button type="button" class="product_cart_add_btn ad_to_cart_coll">
+                        Add Bundles
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>                   
+
+        <div class="bundle_function_col">
+          <div class="bundle_function_sec">
+            <div class="bundle_function_main_box">
+              <div class="bundle_function_main_box_in">
+                <div>
+                  {% assign product = section.settings.product4 %}
+                  {% if product.featured_image != blank %}
+                    <div class="bundle_main_image">
+                      <a href="{{ product.url }}">
+                        <img src="{{ product.featured_image | img_url:'master' }}">
+                      </a>
+                    </div>
+                  {% endif %}
+                  <div class="bundle_main_title">
+                    <h3>
+                      <a href="{{ product.url }}">
+                        {% assign title_words = product.title | split: ' ' %}
+                        {% if title_words.size >= 2 %}
+                          <span class="product_sub_title"> {{ title_words[0] }} </span>
+                          <span class="product_main_title">
+                            {{- title_words[1] }}
+                            {{ title_words[2] }}
+                            {{ title_words[3] }}
+                            {{ title_words[4] }}
+                            {{ title_words[5] }}
+                            {{ title_words[6] -}}
+                          </span>
+                        {% else %}
+                          <span class="product_main_title"> {{ product.title }}</span>
+                        {% endif %}
+                      </a>
+                    </h3>
+                  </div>
+                  <div class="bundle_function_bottom_col">
+                    <div class="bundle_left_col">
+                      <div class="bundle_reivews">
+                        <div
+                          class="loox-rating"
+                          data-id="{{ product.id }}"
+                          data-rating="{{ product.metafields.loox.avg_rating }}"
+                          data-raters="{{ product.metafields.loox.num_reviews }}"
+                          style="text-align:center"
+                        ></div>
+                      </div>
+                      <div class="price">
+                        <div class="discount_price_col">
+                          <div class="bundle_discount_price_wrap">
+                            <span class="total_value">Total Value <span class="product_price">{{ product.compare_at_price | money_without_trailing_zeros }}</span></span>
+                            <div class="percentage_price_col">
+                              <span>{{ product.price | money_without_trailing_zeros }}</span>
+  
+                              {% assign old_price = product.selected_or_first_available_variant.compare_at_price %}
+                              {% assign new_price = product.selected_or_first_available_variant.price %}
+                              
+                              {% assign discount_amount = new_price | times: 100 %}
+                              {% assign get_diff = discount_amount | divided_by: old_price %}
+                              
+                              {% assign discount_percentage = 100 | minus: get_diff | round: 0 %}
+                              
+                              {% if discount_percentage >= 40 and discount_percentage < 45 %}
+                                {% assign display_discount = 40 %}
+                              {% elsif discount_percentage >= 45 and discount_percentage < 49 %}
+                                {% assign display_discount = 45 %}
+                              {% elsif discount_percentage >= 49 %}
+                                {% assign display_discount = 50 %}
+                              {% else %}
+                                {% assign display_discount = discount_percentage %}
+                              {% endif %}
+                              <div class="save_bg_color">Save {{ display_discount }}%</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {{ product.description }}
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="our_ball_product_add_to_cart">
+                    <a href="{{ product.url | within: collection }}">
+                      <button type="button" class="product_cart_add_btn ad_to_cart_coll">
+                        Add Bundles
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bundle_function_col">
+          <div class="bundle_function_sec">
+            <div class="bundle_function_main_box">
+              <div class="bundle_function_main_box_in">
+                <div>
+                  {% assign product = section.settings.product5 %}
+                  {% if product.featured_image != blank %}
+                    <div class="bundle_main_image">
+                      <a href="{{ product.url }}">
+                        <img src="{{ product.featured_image | img_url:'master' }}">
+                      </a>
+                    </div>
+                  {% endif %}
+                  <div class="bundle_main_title">
+                    <h3>
+                      <a href="{{ product.url }}">
+                        {% assign title_words = product.title | split: ' ' %}
+                        {% if title_words.size >= 2 %}
+                          <span class="product_sub_title"> {{ title_words[0] }} </span>
+                          <span class="product_main_title">
+                            {{- title_words[1] }}
+                            {{ title_words[2] }}
+                            {{ title_words[3] }}
+                            {{ title_words[4] }}
+                            {{ title_words[5] }}
+                            {{ title_words[6] -}}
+                          </span>
+                        {% else %}
+                          <span class="product_main_title"> {{ product.title }}</span>
+                        {% endif %}
+                      </a>
+                    </h3>
+                  </div>
+                  <div class="bundle_function_bottom_col">
+                    <div class="bundle_left_col">
+                      <div class="bundle_reivews">
+                        <div
+                          class="loox-rating"
+                          data-id="{{ product.id }}"
+                          data-rating="{{ product.metafields.loox.avg_rating }}"
+                          data-raters="{{ product.metafields.loox.num_reviews }}"
+                          style="text-align:center"
+                        ></div>
+                      </div>
+                      <div class="price">
+                        <div class="discount_price_col">
+                          <div class="bundle_discount_price_wrap">
+                            <span class="total_value">Total Value <span class="product_price">{{ product.compare_at_price | money_without_trailing_zeros }}</span></span>
+                            <div class="percentage_price_col">
+                              <span>{{ product.price | money_without_trailing_zeros }}</span>
+  
+                              {% assign old_price = product.selected_or_first_available_variant.compare_at_price %}
+                              {% assign new_price = product.selected_or_first_available_variant.price %}
+                              
+                              {% assign discount_amount = new_price | times: 100 %}
+                              {% assign get_diff = discount_amount | divided_by: old_price %}
+                              
+                              {% assign discount_percentage = 100 | minus: get_diff | round: 0 %}
+                              
+                              {% if discount_percentage >= 40 and discount_percentage < 45 %}
+                                {% assign display_discount = 40 %}
+                              {% elsif discount_percentage >= 45 and discount_percentage < 49 %}
+                                {% assign display_discount = 45 %}
+                              {% elsif discount_percentage >= 49 %}
+                                {% assign display_discount = 50 %}
+                              {% else %}
+                                {% assign display_discount = discount_percentage %}
+                              {% endif %}
+                              <div class="save_bg_color">Save {{ display_discount }}%</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {{ product.description }}
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="our_ball_product_add_to_cart">
+                    <a href="{{ product.url | within: collection }}">
+                      <button type="button" class="product_cart_add_btn ad_to_cart_coll">
+                        Add Bundles
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bundle_function_col">
+          <div class="bundle_function_sec">
+            <div class="bundle_function_main_box">
+              <div class="bundle_function_main_box_in">
+                <div>
+                  {% assign product = section.settings.product6 %}
+                  {% if product.featured_image != blank %}
+                    <div class="bundle_main_image">
+                      <a href="{{ product.url }}">
+                        <img src="{{ product.featured_image | img_url:'master' }}">
+                      </a>
+                    </div>
+                  {% endif %}
+                  <div class="bundle_main_title">
+                    <h3>
+                      <a href="{{ product.url }}">
+                        {% assign title_words = product.title | split: ' ' %}
+                        {% if title_words.size >= 2 %}
+                          <span class="product_sub_title"> {{ title_words[0] }} </span>
+                          <span class="product_main_title">
+                            {{- title_words[1] }}
+                            {{ title_words[2] }}
+                            {{ title_words[3] }}
+                            {{ title_words[4] }}
+                            {{ title_words[5] }}
+                            {{ title_words[6] -}}
+                          </span>
+                        {% else %}
+                          <span class="product_main_title"> {{ product.title }}</span>
+                        {% endif %}
+                      </a>
+                    </h3>
+                  </div>
+                  <div class="bundle_function_bottom_col">
+                    <div class="bundle_left_col">
+                      <div class="bundle_reivews">
+                        <div
+                          class="loox-rating"
+                          data-id="{{ product.id }}"
+                          data-rating="{{ product.metafields.loox.avg_rating }}"
+                          data-raters="{{ product.metafields.loox.num_reviews }}"
+                          style="text-align:center"
+                        ></div>
+                      </div>
+                      <div class="price">
+                        <div class="discount_price_col">
+                          <div class="bundle_discount_price_wrap">
+                            <span class="total_value">Total Value <span class="product_price">{{ product.compare_at_price | money_without_trailing_zeros }}</span></span>
+                            <div class="percentage_price_col">
+                              <span>{{ product.price | money_without_trailing_zeros }}</span>
+  
+                              {% assign old_price = product.selected_or_first_available_variant.compare_at_price %}
+                              {% assign new_price = product.selected_or_first_available_variant.price %}
+                              
+                              {% assign discount_amount = new_price | times: 100 %}
+                              {% assign get_diff = discount_amount | divided_by: old_price %}
+                              
+                              {% assign discount_percentage = 100 | minus: get_diff | round: 0 %}
+                              
+                              {% if discount_percentage >= 40 and discount_percentage < 45 %}
+                                {% assign display_discount = 40 %}
+                              {% elsif discount_percentage >= 45 and discount_percentage < 49 %}
+                                {% assign display_discount = 45 %}
+                              {% elsif discount_percentage >= 49 %}
+                                {% assign display_discount = 50 %}
+                              {% else %}
+                                {% assign display_discount = discount_percentage %}
+                              {% endif %}
+                              <div class="save_bg_color">Save {{ display_discount }}%</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {{ product.description }}
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="our_ball_product_add_to_cart">
+                    <a href="{{ product.url | within: collection }}">
+                      <button type="button" class="product_cart_add_btn ad_to_cart_coll">
+                        Add Bundles
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--
+        <div class="bundle_right_col">
+          <button class="btns_cart">
+            In winkelwagen
+            <span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.1875 8.125C15.1875 8.75781 14.6602 9.28516 14.0625 9.28516H9V14.3477C9 14.9453 8.47266 15.4375 7.875 15.4375C7.24219 15.4375 6.75 14.9453 6.75 14.3477V9.28516H1.6875C1.05469 9.28516 0.5625 8.75781 0.5625 8.125C0.5625 7.52734 1.05469 7.03516 1.6875 7.03516H6.75V1.97266C6.75 1.33984 7.24219 0.8125 7.875 0.8125C8.47266 0.8125 9 1.33984 9 1.97266V7.03516H14.0625C14.6602 7 15.1875 7.52734 15.1875 8.125Z" fill="#0B090E"></path>
+              </svg>
+            </span>
+          </button>
+        </div>
+      -->
+
+      <div class="bundle_bottom_review_col">
+        <p>
+          <svg width="80" height="16" viewBox="0 0 80 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.95 6.0875C14.8874 5.89061 14.7668 5.71723 14.604 5.59009C14.4412 5.46294 14.2437 5.38797 14.0375 5.375L10.325 5.11875L8.95002 1.65C8.87494 1.459 8.74425 1.29494 8.57488 1.17905C8.40551 1.06317 8.20525 1.00079 8.00002 1V1C7.7948 1.00079 7.59454 1.06317 7.42516 1.17905C7.25579 1.29494 7.1251 1.459 7.05002 1.65L5.65002 5.1375L1.96252 5.375C1.75659 5.38881 1.55954 5.4641 1.39686 5.59112C1.23418 5.71814 1.11336 5.89106 1.05002 6.0875C0.984985 6.28695 0.981185 6.50131 1.03911 6.70294C1.09704 6.90458 1.21404 7.08423 1.37502 7.21875L4.21252 9.61875L3.36877 12.9375C3.3104 13.162 3.3209 13.3989 3.39892 13.6174C3.47695 13.8358 3.61888 14.0258 3.80627 14.1625C3.98817 14.293 4.20488 14.3664 4.42867 14.373C4.65247 14.3797 4.87316 14.3195 5.06252 14.2L7.99377 12.3438H8.00627L11.1625 14.3375C11.3244 14.4427 11.5132 14.4991 11.7063 14.5C11.8639 14.4988 12.0192 14.4614 12.1602 14.3908C12.3011 14.3201 12.424 14.2181 12.5194 14.0926C12.6147 13.967 12.68 13.8213 12.7103 13.6666C12.7405 13.5118 12.7349 13.3522 12.6938 13.2L11.8 9.56875L14.625 7.21875C14.786 7.08423 14.903 6.90458 14.9609 6.70294C15.0189 6.50131 15.0151 6.28695 14.95 6.0875Z" fill="#FBBC04"/>
+            <path d="M30.95 6.0875C30.8874 5.89061 30.7668 5.71723 30.604 5.59009C30.4412 5.46294 30.2437 5.38797 30.0375 5.375L26.325 5.11875L24.95 1.65C24.8749 1.459 24.7443 1.29494 24.5749 1.17905C24.4055 1.06317 24.2052 1.00079 24 1V1C23.7948 1.00079 23.5945 1.06317 23.4252 1.17905C23.2558 1.29494 23.1251 1.459 23.05 1.65L21.65 5.1375L17.9625 5.375C17.7566 5.38881 17.5595 5.4641 17.3969 5.59112C17.2342 5.71814 17.1134 5.89106 17.05 6.0875C16.985 6.28695 16.9812 6.50131 17.0391 6.70294C17.097 6.90458 17.214 7.08423 17.375 7.21875L20.2125 9.61875L19.3688 12.9375C19.3104 13.162 19.3209 13.3989 19.3989 13.6174C19.4769 13.8358 19.6189 14.0258 19.8063 14.1625C19.9882 14.293 20.2049 14.3664 20.4287 14.373C20.6525 14.3797 20.8732 14.3195 21.0625 14.2L23.9938 12.3438H24.0063L27.1625 14.3375C27.3244 14.4427 27.5132 14.4991 27.7063 14.5C27.8639 14.4988 28.0192 14.4614 28.1602 14.3908C28.3011 14.3201 28.424 14.2181 28.5194 14.0926C28.6147 13.967 28.68 13.8213 28.7103 13.6666C28.7405 13.5118 28.7349 13.3522 28.6938 13.2L27.8 9.56875L30.625 7.21875C30.786 7.08423 30.903 6.90458 30.9609 6.70294C31.0189 6.50131 31.0151 6.28695 30.95 6.0875Z" fill="#FBBC04"/>
+            <path d="M46.95 6.0875C46.8874 5.89061 46.7668 5.71723 46.604 5.59009C46.4412 5.46294 46.2437 5.38797 46.0375 5.375L42.325 5.11875L40.95 1.65C40.8749 1.459 40.7443 1.29494 40.5749 1.17905C40.4055 1.06317 40.2052 1.00079 40 1V1C39.7948 1.00079 39.5945 1.06317 39.4252 1.17905C39.2558 1.29494 39.1251 1.459 39.05 1.65L37.65 5.1375L33.9625 5.375C33.7566 5.38881 33.5595 5.4641 33.3969 5.59112C33.2342 5.71814 33.1134 5.89106 33.05 6.0875C32.985 6.28695 32.9812 6.50131 33.0391 6.70294C33.097 6.90458 33.214 7.08423 33.375 7.21875L36.2125 9.61875L35.3688 12.9375C35.3104 13.162 35.3209 13.3989 35.3989 13.6174C35.4769 13.8358 35.6189 14.0258 35.8063 14.1625C35.9882 14.293 36.2049 14.3664 36.4287 14.373C36.6525 14.3797 36.8732 14.3195 37.0625 14.2L39.9938 12.3438H40.0063L43.1625 14.3375C43.3244 14.4427 43.5132 14.4991 43.7063 14.5C43.8639 14.4988 44.0192 14.4614 44.1602 14.3908C44.3011 14.3201 44.424 14.2181 44.5194 14.0926C44.6147 13.967 44.68 13.8213 44.7103 13.6666C44.7405 13.5118 44.7349 13.3522 44.6938 13.2L43.8 9.56875L46.625 7.21875C46.786 7.08423 46.903 6.90458 46.9609 6.70294C47.0189 6.50131 47.0151 6.28695 46.95 6.0875Z" fill="#FBBC04"/>
+            <path d="M62.95 6.0875C62.8874 5.89061 62.7668 5.71723 62.604 5.59009C62.4412 5.46294 62.2437 5.38797 62.0375 5.375L58.325 5.11875L56.95 1.65C56.8749 1.459 56.7443 1.29494 56.5749 1.17905C56.4055 1.06317 56.2052 1.00079 56 1V1C55.7948 1.00079 55.5945 1.06317 55.4252 1.17905C55.2558 1.29494 55.1251 1.459 55.05 1.65L53.65 5.1375L49.9625 5.375C49.7566 5.38881 49.5595 5.4641 49.3969 5.59112C49.2342 5.71814 49.1134 5.89106 49.05 6.0875C48.985 6.28695 48.9812 6.50131 49.0391 6.70294C49.097 6.90458 49.214 7.08423 49.375 7.21875L52.2125 9.61875L51.3688 12.9375C51.3104 13.162 51.3209 13.3989 51.3989 13.6174C51.4769 13.8358 51.6189 14.0258 51.8063 14.1625C51.9882 14.293 52.2049 14.3664 52.4287 14.373C52.6525 14.3797 52.8732 14.3195 53.0625 14.2L55.9938 12.3438H56.0063L59.1625 14.3375C59.3244 14.4427 59.5132 14.4991 59.7063 14.5C59.8639 14.4988 60.0192 14.4614 60.1602 14.3908C60.3011 14.3201 60.424 14.2181 60.5194 14.0926C60.6147 13.967 60.68 13.8213 60.7103 13.6666C60.7405 13.5118 60.7349 13.3522 60.6938 13.2L59.8 9.56875L62.625 7.21875C62.786 7.08423 62.903 6.90458 62.9609 6.70294C63.0189 6.50131 63.0151 6.28695 62.95 6.0875Z" fill="#FBBC04"/>
+            <path d="M78.95 6.0875C78.8874 5.89061 78.7668 5.71723 78.604 5.59009C78.4412 5.46294 78.2437 5.38797 78.0375 5.375L74.325 5.11875L72.95 1.65C72.8749 1.459 72.7443 1.29494 72.5749 1.17905C72.4055 1.06317 72.2052 1.00079 72 1V1C71.7948 1.00079 71.5945 1.06317 71.4252 1.17905C71.2558 1.29494 71.1251 1.459 71.05 1.65L69.65 5.1375L65.9625 5.375C65.7566 5.38881 65.5595 5.4641 65.3969 5.59112C65.2342 5.71814 65.1134 5.89106 65.05 6.0875C64.985 6.28695 64.9812 6.50131 65.0391 6.70294C65.097 6.90458 65.214 7.08423 65.375 7.21875L68.2125 9.61875L67.3688 12.9375C67.3104 13.162 67.3209 13.3989 67.3989 13.6174C67.4769 13.8358 67.6189 14.0258 67.8063 14.1625C67.9882 14.293 68.2049 14.3664 68.4287 14.373C68.6525 14.3797 68.8732 14.3195 69.0625 14.2L71.9938 12.3438H72.0063L75.1625 14.3375C75.3244 14.4427 75.5132 14.4991 75.7063 14.5C75.8639 14.4988 76.0192 14.4614 76.1602 14.3908C76.3011 14.3201 76.424 14.2181 76.5194 14.0926C76.6147 13.967 76.68 13.8213 76.7103 13.6666C76.7405 13.5118 76.7349 13.3522 76.6938 13.2L75.8 9.56875L78.625 7.21875C78.786 7.08423 78.903 6.90458 78.9609 6.70294C79.0189 6.50131 79.0151 6.28695 78.95 6.0875Z" fill="#FBBC04"/>
+          </svg>
+          Rated <b>4.9/5</b> by 1700+ customers
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  $(document).ready(function() {
+
+     $(".btns_cart").click(function(){
+           $(".bundle_function_box .add_to_cart").removeClass("active");
+           $(this).parents(".bundle_function_col").find(".bundle_function_box").each(function(){
+             $(this).find(".add_to_cart").addClass("active");
+           });
+
+     var variantIDs = [];
+
+         $(".bundle_function_box .add_to_cart.active").each(function(){
+             variantIDs.push($(this).find('input[name="id"]').val());
+         });
+
+         $.ajax({
+             url: '/cart/add.js',
+             type: 'POST',
+             dataType: 'json',
+             data: { quantity: 1, id: variantIDs },
+             success: function(response) {
+                 window.location.href = '/cart';
+             },
+             error: function(jqXHR, textStatus, errorThrown) {
+             }
+             });
+         });
+
+
+     });
+</script>
+
+{% schema %}
+{
+  "name": "Bundle Functionality",
+  "class" : "bundle_functionality_sec",
+  "settings": [
+    {
+      "type" : "text",
+      "id" :"main_heading",
+      "label"  : "Main Heading"
+    },
+       {
+      "type" : "text",
+      "id" :"sub_heading",
+      "label"  : "Sub Heading"
+    },
+    {
+      "type" : "richtext",
+      "id" : "best_selling_text",
+      "label" : "Best Selling Text"
+    },
+    {
+          "type": "product",
+          "id": "product",
+          "label": "Select Product"
+        },
+     {
+          "type": "product",
+          "id": "product2",
+          "label": "Select Product"
+        },
+     {
+          "type": "product",
+          "id": "product3",
+          "label": "Select Product"
+        },
+    {
+          "type": "product",
+          "id": "product4",
+          "label": "Select Product"
+        },
+     {
+          "type": "product",
+          "id": "product5",
+          "label": "Select Product"
+        },
+     {
+          "type": "product",
+          "id": "product6",
+          "label": "Select Product"
+        }
+  ],
+  "presets" : [
+    {
+      "name" : "Bundle Functionality"
+    }
+  ]
+}
+{% endschema %}

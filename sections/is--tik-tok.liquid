@@ -1,0 +1,55 @@
+
+<div class="is--tik-tok" id="{{ section.id }}">
+  <div class="container">
+
+      <div class="tik_tok_title_block">
+        {% if section.settings.head != blank %}
+          <h4><span>{{ section.settings.icon }}</span>{{ section.settings.head }}</h4>
+        {% endif %}
+        {% if section.settings.title != blank %}
+          <h2>{{ section.settings.title }}</h2>
+        {% endif %}
+      </div>
+    
+  </div>
+</div>
+
+<style>
+  #{{ section.id }}.is--tik-tok{
+    background-color: {{ section.settings.color }};
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Tik Tok",
+    "class": "is--tik-tok",
+    "settings": [
+      {
+        "type": "color",
+        "id": "color",
+        "label": "Background color"
+      },
+      {
+        "type": "html",
+        "id": "icon",
+        "label": "Icon Code"
+      },
+      {
+        "type": "textarea",
+        "id": "head",
+        "label": "Heading"
+      },
+      {
+        "type": "textarea",
+        "id": "title",
+        "label": "Title"
+      }
+    ],
+    "presets":[
+      {
+        "name": "Tik Tok"
+      }
+    ]
+  }
+{% endschema %}

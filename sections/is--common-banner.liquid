@@ -1,0 +1,47 @@
+{% if section.settings.enabled_banner %}
+  <div class="common-banner">
+    <div class="container">
+      <div class="common-banner-img">
+        {% if section.settings.image != blank %}
+          <img
+            class="co-desktop-img"
+            src="{{ section.settings.image | img_url : 'master' }}"
+            srcset="{{ section.settings.image | img_url : 'master' }}"
+            alt="{{ section.settings.image.alt }}"
+          >
+        {% endif %}
+        {% if section.settings.mobile_image != blank %}
+          <img
+            class="co-mobile-img"
+            src="{{ section.settings.mobile_image | img_url : 'master' }}"
+            srcset="{{ section.settings.mobile_image | img_url : 'master' }}"
+            alt="{{ section.settings.mobile_image.alt }}"
+          >
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+{% schema %}
+{
+  "name": "Banner",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enabled_banner",
+      "label": "Enable",
+      "default": true
+    },
+    {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Desktop Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile image"
+        }
+  ]
+}
+{% endschema %}

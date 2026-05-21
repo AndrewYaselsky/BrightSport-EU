@@ -1,0 +1,147 @@
+<section>
+  <div class="logo_slider_wrapper">
+    {% if section.settings.main_heading != blank %}
+      <div class="logo_slider_heading">
+        <h4>{{ section.settings.main_heading }}</h4>
+      </div>
+    {% endif %}
+    <div class="logo_slider_col">
+      {% for block in section.blocks %}
+        {% if block.settings.logo_slider_image != blank %}
+          <div class="logo_slider_box">
+            <div class="logo_slider_image">
+              <img src="{{ block.settings.logo_slider_image | img_url:'master' }}">
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Logo Slider",
+  "settings": [
+    {
+      "type" : "text",
+      "id" : "main_heading",
+      "label" : "Main Heading"
+    }
+  ],
+  "blocks" : [
+    {
+      "type" : "Logo",
+      "name" : "Logo",
+      "settings" : [
+        {
+          "type" : "image_picker",
+          "id" :"logo_slider_image",
+          "label" : "Logo Slider Image"
+        }
+      ]
+    }
+  ],
+  "presets" : [
+    {
+      "name" : "Logo Slider"
+    }
+  ]
+}
+{% endschema %}
+
+<script>
+    $('.logo_slider_col').slick({
+    dots: false,
+      arrows:false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 8,
+    slidesToScroll: 1,
+        autoplay: true,
+  autoplaySpeed: 0,
+  speed: 2000,
+  pauseOnHover: false,
+  cssEase: 'linear',
+    responsive: [
+      {
+        breakpoint: 1300,
+        settings: {
+          slidesToShow: 7
+        }
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 6
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 5,
+        }
+      },{
+
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+        {
+        breakpoint: 425,
+        settings: {
+          slidesToShow: 2,
+           speed: 3000,
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });
+</script>
+<style>
+       .logo_slider_wrapper {
+        padding-top: 40px;
+        padding-bottom: 80px;
+    }
+           .logo_slider_wrapper ul.slick-dots,.logo_slider_wrapper .slick-arrow{
+              display: none;
+          }
+    .logo_slider_heading h4 {
+      color: rgba(255, 255, 255, 0.75);
+      text-align: center;
+      font-family: Montserrat;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 20px;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+  }
+
+        .logo_slider_image {
+          max-width: 140px;
+          min-height: 50px;
+          display: flex;
+          align-items: center;
+      }
+        @media (max-width:991px){
+            .logo_slider_image {
+            max-width: 120px;
+        }
+        }
+        @media (max-width:767px){
+            .logo_slider_image {
+            max-width: 100px;
+        }
+        }
+</style>

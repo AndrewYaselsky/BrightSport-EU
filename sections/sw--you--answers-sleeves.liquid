@@ -1,0 +1,89 @@
+<div class="you_answers sleeves_qa">  
+  <div class="container">
+    {% if section.settings.prdct == product.handle %}
+      <script>
+        $( document ).ready(function() {
+          $("#shopify-section-sw--you--answers-socks").hide();
+          $("#shopify-section-sw--you--answers-vision").hide();
+          $("#shopify-section-sw--you--answers").hide();
+          
+          $("#shopify-section-sw--you--answers-sleeves").show();
+        });
+      </script>
+    {% endif %}
+  
+    <div class="you_answers_main">
+      {% if section.settings.title != blank %}
+        <h2 class="you_answers_title">{{ section.settings.title }}</h2>
+      {% endif %}
+      {% if section.settings.caption != blank %}
+        <div class="you_answers_caption">{{ section.settings.caption }}</div>
+      {% endif %}
+      <div class="you_answers_acc_container">      
+        {% for block in section.blocks %}
+          {% if block.settings.question != blank %}
+            <div class="you_answers_acc">
+              <div class="you_answers_acc_head">
+                <h4>{{ block.settings.question }}</h4>
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.5 19.125C16.4185 19.1251 16.3378 19.1088 16.2625 19.0773C16.1873 19.0458 16.119 18.9995 16.0616 18.9414L16.5 19.125ZM16.5 19.125C16.5816 19.1251 16.6623 19.1088 16.7375 19.0773C16.8128 19.0458 16.881 18.9996 16.9384 18.9414L16.5 19.125ZM11.1185 13.9414L16.0615 18.9413H16.9385L21.8815 13.9414C21.8816 13.9414 21.8816 13.9414 21.8816 13.9414C22.1229 13.6974 22.1227 13.3027 21.8816 13.0587C21.6396 12.8138 21.2469 12.8138 21.0048 13.0586L16.5 17.6152L11.9953 13.0587C11.9952 13.0587 11.9952 13.0587 11.9952 13.0586C11.7532 12.8137 11.3605 12.814 11.1185 13.0586C10.8772 13.3026 10.8772 13.6974 11.1185 13.9414Z" fill="white" stroke="white" stroke-width="0.25"/>
+                </svg>
+              </div>
+              <div class="you_answers_acc_content">
+                <p>{{ block.settings.answer }}</p>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Sleeves FAQ",
+    "class": "sw--you-answers",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "caption",
+        "label": "Caption"
+      },
+      {
+        "type": "product",
+        "id": "prdct",
+        "label": "Select product for this FAQ"
+      }
+    ],
+    "blocks":[
+      {
+        "type": "accordian",
+        "name": "Accordian",
+        "settings": [
+          {
+            "type": "textarea",
+            "id": "question",
+            "label": "Question"            
+          },
+          {
+            "type": "html",
+            "id": "answer",
+            "label": "Answer"            
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name": "Sleeves FAQ"        
+      }
+    ]
+  }
+{% endschema %}

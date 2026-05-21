@@ -1,0 +1,173 @@
+  (function () {
+    try {
+      if (window.location.hostname.includes("bright-sports-co")) return;
+
+      var DEBUG = false;
+
+      function log() {
+        if (!DEBUG) return;
+        console.log.apply(console, ["[BRIGHTSPORT-REDIRECT]"].concat([].slice.call(arguments)));
+      }
+
+      var htmlEl = document.documentElement;
+      var host = window.location.hostname;
+      var pathname = window.location.pathname || "/";
+      var search = window.location.search || "";
+      var hash = window.location.hash || "";
+
+      var overrideRedirect = /(?:\?|&)ovr_rdr=1(?:&|$)/.test(search);
+
+      htmlEl.style.opacity = "0";
+
+      if (
+        host.includes("myshopify.com") ||
+        host.includes("localhost") ||
+        host.includes("127.0.0.1")
+      ) {
+        log("Skipped: non-production host", host);
+        htmlEl.style.opacity = "1";
+        return;
+      }
+
+      if (overrideRedirect) {
+        log("Override redirect detected");
+        htmlEl.style.opacity = "1";
+        return;
+      }
+
+      var stores = [
+        {
+          store: "https://uk.brightsport.com",
+          countries: {
+            GB: "United Kingdom"
+          }
+        },
+        {
+          store: "https://us.brightsport.com",
+          countries: {
+            US: "United States",
+            UM: "United States Outlying Islands",
+            CA: "Canada",
+            MX: "Mexico"
+          }
+        },
+        {
+          store: "https://au.brightsport.com",
+          countries: {
+            AU: "Australia",
+            NZ: "New Zealand"
+          }
+        }
+      ];
+
+      var DEFAULT_STORE = "https://brightsport.com";
+      var cacheKey = "brightsport_detected_country";
+
+      function normalize(code) {
+        return (code || "").toString().trim().toUpperCase();
+      }
+
+      function finish() {
+        htmlEl.style.opacity = "1";
+      }
+
+      function getCurrentOrigin() {
+        return window.location.origin.replace(/\/$/, "");
+      }
+
+      function getTargetStoreByCountry(code) {
+        code = normalize(code);
+
+        for (var i = 0; i < stores.length; i++) {
+          if (stores[i].countries[code]) {
+            return stores[i].store.replace(/\/$/, "");
+          }
+        }
+
+        return DEFAULT_STORE.replace(/\/$/, "");
+      }
+
+      function buildRedirectUrl(targetOrigin) {
+        var url = new URL(targetOrigin + pathname);
+        var params = new URLSearchParams(search);
+
+        params.set("ovr_rdr", "1");
+        url.search = params.toString();
+        url.hash = hash || "";
+
+        return url.toString();
+      }
+
+      function handleCountry(code, source) {
+        code = normalize(code);
+
+        log("Country from " + source + ":", code);
+
+        if (code) {
+          sessionStorage.setItem(cacheKey, code);
+        }
+
+        var targetOrigin = getTargetStoreByCountry(code);
+        var currentOrigin = getCurrentOrigin();
+
+        log("Current origin:", currentOrigin);
+        log("Target origin:", targetOrigin);
+
+        if (currentOrigin === targetOrigin) {
+          log("Already on correct store");
+          finish();
+          return;
+        }
+
+        var redirectUrl = buildRedirectUrl(targetOrigin);
+        log("Redirecting to:", redirectUrl);
+        window.location.replace(redirectUrl);
+      }
+
+      var cachedCountry = normalize(sessionStorage.getItem(cacheKey));
+      if (cachedCountry) {
+        handleCountry(cachedCountry, "sessionStorage");
+        return;
+      }
+
+      fetch("/browsing_context_suggestions.json", {
+        credentials: "same-origin"
+      })
+        .then(function (response) {
+          if (!response.ok) {
+            throw new Error("Request failed with status " + response.status);
+          }
+          return response.json();
+        })
+        .then(function (data) {
+          var detected = data && data.detected_values ? data.detected_values : data;
+
+          var code = normalize(
+            (detected &&
+              detected.country &&
+              (detected.country.iso_code ||
+                detected.country.handle ||
+                detected.country.code)) ||
+              detected.country_code ||
+              detected.countryCode ||
+              detected.country_handle
+          );
+
+          handleCountry(code, "Shopify");
+        })
+        .catch(function () {
+          var currentOrigin = getCurrentOrigin();
+          var fallbackOrigin = DEFAULT_STORE.replace(/\/$/, "");
+
+          if (currentOrigin === fallbackOrigin) {
+            finish();
+            return;
+          }
+
+          window.location.replace(buildRedirectUrl(fallbackOrigin));
+        });
+    } catch (e) {
+      console.error("[BRIGHTSPORT-REDIRECT] Fatal error:", e);
+      document.documentElement.style.opacity = "1";
+    }
+  })();

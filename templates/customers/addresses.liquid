@@ -1,0 +1,230 @@
+<div class="Container Container--narrow customer_addresses" data-section-type="addresses" data-section-id="addresses">
+  <header class="PageHeader">
+    <a href="/account" class="PageHeader__Back Heading Text--subdued Link Link--primary u-h7">
+      <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.246094 7.88281C0.0703125 7.70703 0 7.49609 0 7.25C0 7.03906 0.0703125 6.82812 0.246094 6.65234L6.43359 0.746094C6.78516 0.429688 7.3125 0.429688 7.62891 0.78125C7.94531 1.09766 7.94531 1.66016 7.59375 1.97656L2.91797 6.40625H14.9062C15.3633 6.40625 15.75 6.79297 15.75 7.25C15.75 7.74219 15.3633 8.09375 14.9062 8.09375H2.91797L7.59375 12.5586C7.94531 12.875 7.94531 13.4023 7.62891 13.7539C7.3125 14.1055 6.78516 14.1055 6.43359 13.7891L0.246094 7.88281Z" fill="white" fill-opacity="0.6"/>
+</svg>
+
+      {{ 'customer.account.back_to_account' | t }}</a>
+
+    <div class="SectionHeader">
+      <h1 class="SectionHeader__Heading Heading u-h1">{{ 'customer.addresses.title' | t }}</h1>
+
+      {%- if customer.addresses_count == 0 -%}
+        <p class="SectionHeader__Description">{{ 'customer.addresses.empty' | t }}</p>
+      {%- endif -%}
+
+      <div class="SectionHeader__ButtonWrapper">
+        <button type="button" class="Button Button--primary" data-action="open-modal" aria-controls="modal-address-new">{{ 'customer.addresses.add_address' | t }}
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.7656 12.0938C17.7656 12.5684 17.3701 12.9639 16.9219 12.9639H13.125V16.7607C13.125 17.209 12.7295 17.5781 12.2813 17.5781C11.8066 17.5781 11.4375 17.209 11.4375 16.7607V12.9639H7.64063C7.16602 12.9639 6.79688 12.5684 6.79688 12.0938C6.79688 11.6455 7.16602 11.2764 7.64063 11.2764H11.4375V7.47949C11.4375 7.00488 11.8066 6.60938 12.2813 6.60938C12.7295 6.60938 13.125 7.00488 13.125 7.47949V11.2764H16.9219C17.3701 11.25 17.7656 11.6455 17.7656 12.0938Z" fill="#00FE67"/>
+</svg>
+
+        </button>
+      </div>
+    </div>
+  </header>
+
+  {%- if customer.addresses_count > 0 -%}
+    {%- paginate customer.addresses by 9 -%}
+      <div class="Grid Grid--l AddressList">
+        {%- for address in customer.addresses -%}
+          <div class="Grid__Cell 1/2--tablet 1/3--lap-and-up">
+            <div class="Segment">
+              {%- if address == customer.default_address -%}
+                <h2 class="Segment__Title Heading u-h7">{{ 'customer.addresses.default_address_label' | t }}</h2>
+              {%- else -%}
+                {%- assign position = paginate.current_page | times: forloop.index -%}
+                <h2 class="Segment__Title Heading u-h7">{{ 'customer.addresses.address_label' | t: position: position }}</h2>
+              {%- endif -%}
+
+              <div class="Segment__Content">
+                {{ address | format_address | replace: '<p>', '<p class="AccountAddress"><span>' | replace_first: '<br>', '</span><br>' }}
+
+              </div>
+                <div class="Segment__ActionList">
+                  <button class="Segment__ActionItem edit_btn Link Link--underline" data-action="open-modal" aria-controls="modal-{{ address.id }}">{{ 'customer.addresses.edit' | t }}<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.8638 4.05864H11.8443C11.6689 3.88317 11.3764 3.88317 11.2009 4.05864L10.616 4.62405L11.5324 5.54039L12.0978 4.95549C12.2733 4.78002 12.2733 4.48757 12.0978 4.2926L11.8638 4.05864ZM7.34051 7.91898C7.28202 7.95797 7.24302 8.03596 7.22353 8.11395L6.89208 9.24475L8.0424 8.93281C8.12039 8.91331 8.17888 8.87432 8.23737 8.81583L10.8695 6.18378L9.97261 5.28693L7.34051 7.91898ZM10.538 3.39576C11.0839 2.84985 11.9613 2.84985 12.5072 3.39576L12.7607 3.64921C13.3066 4.19512 13.3066 5.07247 12.7607 5.61838L8.90027 9.47871C8.7443 9.63469 8.52983 9.75167 8.29586 9.82965L6.34616 10.3756C6.19018 10.434 6.01471 10.3951 5.89773 10.2586C5.76125 10.1416 5.72225 9.96613 5.76125 9.81016L6.32666 7.86049C6.38515 7.62653 6.52163 7.41207 6.67761 7.25609L10.538 3.39576ZM4.98137 4.15613H7.16503C7.4185 4.15613 7.63296 4.37059 7.63296 4.62405C7.63296 4.897 7.4185 5.09197 7.16503 5.09197H4.98137C4.53293 5.09197 4.20148 5.44291 4.20148 5.87183V11.1749C4.20148 11.6233 4.53293 11.9548 4.98137 11.9548H10.2846C10.7135 11.9548 11.0644 11.6233 11.0644 11.1749V8.9913C11.0644 8.73784 11.2594 8.52338 11.5324 8.52338C11.7858 8.52338 12.0003 8.73784 12.0003 8.9913V11.1749C12.0003 12.1303 11.2204 12.8906 10.2846 12.8906H4.98137C4.02601 12.8906 3.26562 12.1303 3.26562 11.1749V5.87183C3.26562 4.93599 4.02601 4.15613 4.98137 4.15613Z" fill="white"/>
+</svg>
+</button>
+                  <button class="Segment__ActionItem delete_btn Link Link--underline" onclick="Shopify.CustomerAddress.destroy({{ address.id }}); return false">{{ 'customer.addresses.delete' | t }}
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.2998 10.7769L10.6998 5.37687" stroke="#ED0006" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5.2998 5.22314L10.6998 10.6231" stroke="#ED0006" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                  </button>
+                </div>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+
+      {%- include 'pagination' -%}
+    {%- endpaginate -%}
+  {%- endif -%}
+</div>
+
+{% comment %}FORM FOR NEW ADDRESS{% endcomment %}
+
+<div id="modal-address-new" class="Modal Modal--address" aria-hidden="true" role="dialog" data-scrollable>
+  <button class="Modal__Close Modal__Close--outside" data-action="close-modal">{%- include 'icon' with 'close' -%}</button>
+
+  <header class="Modal__Header">
+    <h3 class="Modal__Title Heading u-h2">{{ 'customer.addresses.add_address' | t }}</h3>
+    <p class="Modal__Description">{{ 'customer.addresses.form_subtitle' | t }}</p>
+  </header>
+
+  <div class="Modal__Content">
+    {% form 'customer_address', customer.new_address, class: 'Form Form--spacingTight' %}
+      <div class="Form__Item">
+        <input type="text" class="Form__Input" name="address[first_name]" value="{{ form.first_name }}" placeholder="{{ 'customer.addresses.first_name' | t }}" aria-label="{{ 'customer.addresses.first_name' | t }}" autofocus>
+        <label class="Form__FloatingLabel">{{ 'customer.addresses.first_name' | t }}</label>
+      </div>
+
+      <div class="Form__Item">
+        <input type="text" class="Form__Input" name="address[last_name]" value="{{ form.last_name }}" placeholder="{{ 'customer.addresses.last_name' | t }}" aria-label="{{ 'customer.addresses.last_name' | t }}">
+        <label class="Form__FloatingLabel">{{ 'customer.addresses.last_name' | t }}</label>
+      </div>
+
+      <div class="Form__Item">
+        <input type="text" class="Form__Input" name="address[company]" value="{{ form.company }}" placeholder="{{ 'customer.addresses.company' | t }}" aria-label="{{ 'customer.addresses.company' | t }}">
+        <label class="Form__FloatingLabel">{{ 'customer.addresses.company' | t }}</label>
+      </div>
+
+      <div class="Form__Item">
+        <input type="text" class="Form__Input" name="address[phone]" value="{{ form.phone }}" placeholder="{{ 'customer.addresses.phone' | t }}" aria-label="{{ 'customer.addresses.phone' | t }}">
+        <label class="Form__FloatingLabel">{{ 'customer.addresses.phone' | t }}</label>
+      </div>
+
+      <div class="Form__Item">
+        <input type="text" class="Form__Input" name="address[address1]" value="{{ form.address1 }}" placeholder="{{ 'customer.addresses.address1' | t }}" aria-label="{{ 'customer.addresses.address1' | t }}">
+        <label class="Form__FloatingLabel">{{ 'customer.addresses.address1' | t }}</label>
+      </div>
+
+      <div class="Form__Item">
+        <input type="text" class="Form__Input" name="address[address2]" value="{{ form.address2 }}" placeholder="{{ 'customer.addresses.address2' | t }}" aria-label="{{ 'customer.addresses.address2' | t }}">
+        <label class="Form__FloatingLabel">{{ 'customer.addresses.address2' | t }}</label>
+      </div>
+
+      <div class="Form__Item">
+        <input type="text" class="Form__Input" name="address[city]" value="{{ form.city }}" placeholder="{{ 'customer.addresses.city' | t }}" aria-label="{{ 'customer.addresses.city' | t }}">
+        <label class="Form__FloatingLabel">{{ 'customer.addresses.city' | t }}</label>
+      </div>
+
+      <div class="Form__Group">
+        <div class="Form__Item">
+          <div class="Form__Select Select Select--primary">
+            {%- include 'icon' with 'select-arrow' -%}
+            <select name="address[country]" title="{{ 'customer.addresses.country' | t }}">{{ all_country_option_tags }}</select>
+          </div>
+        </div>
+
+        <div class="Form__Item">
+          <input type="text" class="Form__Input" name="address[zip]" value="{{ form.zip }}" placeholder="{{ 'customer.addresses.zip' | t }}" aria-label="{{ 'customer.addresses.zip' | t }}">
+          <label class="Form__FloatingLabel">{{ 'customer.addresses.zip' | t }}</label>
+        </div>
+      </div>
+
+      <div class="Form__Item Form__Select Select Select--primary" style="display: none">
+        {%- include 'icon' with 'select-arrow' -%}
+        <select name="address[province]" title="{{ 'customer.addresses.province' | t }}"></select>
+      </div>
+
+      <div class="Form__Item">
+        <div class="Form__CheckboxWrapper">
+          <input type="checkbox" class="Form__Checkbox" name="address[default]" id="address-new[default]" value="0">
+          {% include 'icon' with 'checkmark' %}
+
+          <label for="address-new[default]">{{ 'customer.addresses.set_default' | t }}</label>
+        </div>
+      </div>
+
+      <button class="Form__Submit Button Button--primary Button--full">{{ 'customer.addresses.add_address' | t }}</button>
+    {% endform %}
+  </div>
+</div>
+
+{% comment %}FORM FOR EXISTING ADDRESSES{% endcomment %}
+
+{%- paginate customer.addresses by 9 -%}
+  {%- for address in customer.addresses -%}
+    <div id="modal-{{ address.id }}" class="Modal Modal--address" aria-hidden="true" role="dialog" data-scrollable>
+      <button class="Modal__Close Modal__Close--outside" data-action="close-modal">{%- include 'icon' with 'close' -%}</button>
+
+      <header class="Modal__Header">
+        <h3 class="Modal__Title Heading u-h2">{{ 'customer.addresses.edit_address' | t }}</h3>
+        <p class="Modal__Description">{{ 'customer.addresses.form_subtitle' | t }}</p>
+      </header>
+
+      <div class="Modal__Content">
+        {% form 'customer_address', address, class: 'Form Form--spacingTight' %}
+          <div class="Form__Item">
+            <input type="text" class="Form__Input" name="address[first_name]" value="{{ form.first_name }}" placeholder="{{ 'customer.addresses.first_name' | t }}" aria-label="{{ 'customer.addresses.first_name' | t }}" autofocus>
+            <label class="Form__FloatingLabel">{{ 'customer.addresses.first_name' | t }}</label>
+          </div>
+
+          <div class="Form__Item">
+            <input type="text" class="Form__Input" name="address[last_name]" value="{{ form.last_name }}" placeholder="{{ 'customer.addresses.last_name' | t }}" aria-label="{{ 'customer.addresses.last_name' | t }}">
+            <label class="Form__FloatingLabel">{{ 'customer.addresses.last_name' | t }}</label>
+          </div>
+
+          <div class="Form__Item">
+            <input type="text" class="Form__Input" name="address[company]" value="{{ form.company }}" placeholder="{{ 'customer.addresses.company' | t }}" aria-label="{{ 'customer.addresses.company' | t }}">
+            <label class="Form__FloatingLabel">{{ 'customer.addresses.company' | t }}</label>
+          </div>
+
+          <div class="Form__Item">
+            <input type="text" class="Form__Input" name="address[phone]" value="{{ form.phone }}" placeholder="{{ 'customer.addresses.phone' | t }}" aria-label="{{ 'customer.addresses.phone' | t }}">
+            <label class="Form__FloatingLabel">{{ 'customer.addresses.phone' | t }}</label>
+          </div>
+
+          <div class="Form__Item">
+            <input type="text" class="Form__Input" name="address[address1]" value="{{ form.address1 }}" placeholder="{{ 'customer.addresses.address1' | t }}" aria-label="{{ 'customer.addresses.address1' | t }}">
+            <label class="Form__FloatingLabel">{{ 'customer.addresses.address1' | t }}</label>
+          </div>
+
+          <div class="Form__Item">
+            <input type="text" class="Form__Input" name="address[address2]" value="{{ form.address2 }}" placeholder="{{ 'customer.addresses.address2' | t }}" aria-label="{{ 'customer.addresses.address2' | t }}">
+            <label class="Form__FloatingLabel">{{ 'customer.addresses.address2' | t }}</label>
+          </div>
+
+          <div class="Form__Item">
+            <input type="text" class="Form__Input" name="address[city]" value="{{ form.city }}" placeholder="{{ 'customer.addresses.city' | t }}" aria-label="{{ 'customer.addresses.city' | t }}">
+            <label class="Form__FloatingLabel">{{ 'customer.addresses.city' | t }}</label>
+          </div>
+
+          <div class="Form__Group">
+            <div class="Form__Item">
+              <div class="Form__Select Select Select--primary">
+                {%- include 'icon' with 'select-arrow' -%}
+                <select name="address[country]" title="{{ 'customer.addresses.country' | t }}" data-default="{{ form.country }}">{{ all_country_option_tags }}</select>
+              </div>
+            </div>
+
+            <div class="Form__Item">
+              <input type="text" class="Form__Input" name="address[zip]" value="{{ form.zip }}" placeholder="{{ 'customer.addresses.zip' | t }}" aria-label="{{ 'customer.addresses.zip' | t }}">
+              <label class="Form__FloatingLabel">{{ 'customer.addresses.zip' | t }}</label>
+            </div>
+          </div>
+
+          <div class="Form__Item Form__Select Select Select--primary" style="display: none">
+            {%- include 'icon' with 'select-arrow' -%}
+            <select name="address[province]" title="{{ 'customer.addresses.province' | t }}" data-default="{{ form.province }}"></select>
+          </div>
+
+          <div class="Form__Item">
+            <div class="Form__CheckboxWrapper">
+              <input type="checkbox" class="Form__Checkbox" id="address-{{ address.id }}[default]" name="address[default]" {% if address.id == customer.default_address.id %}value="1" checked{% endif %}>
+              {% include 'icon' with 'checkmark' %}
+
+              <label for="address-{{ address.id }}[default]">{{ 'customer.addresses.set_default' | t }}</label>
+            </div>
+          </div>
+
+          <button class="Form__Submit Button Button--primary Button--full">{{ 'customer.addresses.edit_address' | t }}</button>
+        {% endform %}
+      </div>
+    </div>
+  {%- endfor -%}
+{%- endpaginate -%}

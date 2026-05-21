@@ -1,0 +1,590 @@
+<!doctype html>
+
+<html class="no-js" lang="{{ shop.locale }}">
+  <head>
+    <link rel="preconnect dns-prefetch" href="https://triplewhale-pixel.web.app/" crossorigin>
+    <link rel="preconnect dns-prefetch" href="https://api.config-security.com/" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    >
+    {% if template.name == "SNOW" %}
+      <script src="https://app.embed.im/snow.js" defer></script>
+    {% endif %}
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    >
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script>
+      sessionStorage.setItem('dontRedirect', 'true');
+    </script>
+    <script>
+    {% include 'client-redirect' %}
+    </script>
+
+  <!--<script type="module">
+    // Cache settings: the popup won't be shown again for this many hours.
+    const popupKey = 'languageRedirectPopupTimestamp';
+    const popupTimeoutHours = 3; // Change this value to adjust the delay (in hours).
+  
+    // Check if we've already shown the popup recently.
+    const lastPopupTime = localStorage.getItem(popupKey);
+    if (lastPopupTime && (Date.now() - Number(lastPopupTime) < popupTimeoutHours * 3600000)) {
+      // Popup was shown within the timeout period; do nothing.
+    } else {
+      (async () => {
+        // Mapping from country codes to language subfolder codes.
+        const countryToLang = {
+          FI: 'fi',  // Suomi
+          FR: 'fr',  // Français
+          PT: 'pt',  // Português
+          BR: 'pt',  // Português for Brazil
+          ES: 'es',  // Español
+          US: 'en',  // English
+          GB: 'en',  // English
+          DE: 'de',  // Deutsch
+          IT: 'it',  // Italiano
+          NO: 'no',  // Norsk
+          DK: 'da',  // Dansk
+          PL: 'pl',  // Polski
+          SE: 'sv'   // Svenska
+        };
+  
+        // Mapping for full language names (for display in the popup).
+        const langNames = {
+          fi: 'Suomi',
+          fr: 'Français',
+          pt: 'Português',
+          es: 'Español',
+          en: 'English',
+          de: 'Deutsch',
+          it: 'Italiano',
+          no: 'Norsk',
+          da: 'Dansk',
+          pl: 'Polski',
+          sv: 'Svenska'
+        };
+  
+        // Function to get the visitor's country code from your API.
+        const getClientCountryCode = async () => {
+          try {
+            const response = await fetch('https://secret-beyond-64384.herokuapp.com/');
+            const data = await response.json();
+            if (data.result && data.result.status === 'success') {
+              return data.result.countryCode; // e.g., "FR", "FI", "US", etc.
+            } else {
+              return null;
+            }
+          } catch (error) {
+            console.error('Error fetching country code:', error);
+            return null;
+          }
+        };
+  
+        // Retrieve the client's country code.
+        const clientCountryCode = await getClientCountryCode();
+  
+        // Determine the language subfolder. Default to English if country code is not mapped.
+        let langSubfolder = 'en';
+        if (clientCountryCode && countryToLang[clientCountryCode]) {
+          langSubfolder = countryToLang[clientCountryCode];
+        }
+  
+        // Check if the current URL already includes the target language subfolder.
+        const currentUrl = window.location.href;
+        if (!currentUrl.includes(`https://brightsport.com/${langSubfolder}`)) {
+          // Prepare the confirmation message in English.
+          let message;
+          if (langSubfolder === 'en') {
+            message = 'Welcome! Would you like to switch to the English version of the website?';
+          } else {
+            const languageName = langNames[langSubfolder] || langSubfolder.toUpperCase();
+            message = `Welcome! We detected that you might be visiting from a region where ${languageName} is used.\nWould you like to switch to the ${languageName} version of the website?`;
+          }
+          
+          // Display the popup.
+          const userConfirmed = confirm(message);
+          
+          // Cache the fact that we've shown the popup, regardless of the user's answer.
+          localStorage.setItem(popupKey, Date.now().toString());          
+          
+          // If the user accepts, redirect them to the language-specific version.
+          if (userConfirmed) {
+            window.location.href = `https://brightsport.com/${langSubfolder}`;
+          }
+        }
+      })();
+    }
+  </script>-->
+    
+    <script>
+      /* >> TriplePixel :: start*/
+        ~function(W,H,A,L,E,_,B,N){function O(U,T,H,R){void 0===R&&(R=!1),H=new XMLHttpRequest,H.open("GET",U,!0),H.send(null),H.onreadystatechange=function(){4===H.readyState&&200===H.status?(R=H.responseText,U.includes(".txt")?eval(R):N[B]=R):(299<H.status||H.status<200)&&T&&!R&&(R=!0,O(U,T-1))}}if(N=window,!N[H+"sn"]){N[H+"sn"]=1;try{A.setItem(H,1+(0|A.getItem(H)||0)),(E=JSON.parse(A.getItem(H+"U")||"[]")).push(location.href),A.setItem(H+"U",JSON.stringify(E))}catch(e){}A.getItem('"!nC`')||(A=N,A[H]||(L=function(){return Date.now().toString(36)+"_"+Math.random().toString(36)},E=A[H]=function(t,e){return W=L(),(E._q=E._q||[]).push([W,t,e]),W},E.ch=W,B="configSecurityConfModel",N[B]=1,O("//conf.config-security.com/model",0),O("//triplewhale-pixel.web.app/triplefw.txt?",5)))}}("","TriplePixel",localStorage);
+      /* << TriplePixel :: end*/
+    </script>
+
+    <meta name="google-site-verification" content="Kj_lc5ymIItCyKdpf6ayXI6lgjmTNVkWrkGGB8w-9JM">
+
+    <script src="https://www.googleoptimize.com/optimize.js?id=OPT-MSKR7Z5"></script>
+
+    <!--<script async defer src="https://tools.luckyorange.com/core/lo.js?site-id=a79fcd4b"></script>-->
+    <script>
+      !function (w, d, t) {
+        w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
+
+        ttq.load('CAKVDBRC77UFDAKT4RM0');
+        ttq.page();
+      }(window, document, 'ttq');
+    </script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.40/vue.global.prod.min.js"
+        integrity="sha512-8/jAx3J9HeEfyNRszg0WpsZJqr2WiQO5sJHbcXZUmZGD/JazUs8167SEZH1mQ1fVeC86Vk1rrqA5swiEPynj7w=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+    <script>
+      const { createApp, computed, ref, reactive, onMounted } = Vue;
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0"
+    >
+    <meta name="theme-color" content="{{ settings.accent_color }}">
+
+    <title>
+      {{ page_title }}
+      {% if current_tags -%}
+        {%- assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags -}}
+      {%- endif %}
+      {% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}
+      {% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+    </title>
+
+    {%- if page_description -%}
+      <meta name="description" content="{{ page_description | escape }}">
+    {%- endif -%}
+
+    <link rel="canonical" href="{{ canonical_url }}">
+    {% if template contains '/' %}
+      <meta name="robots" content="index,follow">
+    {% endif %}
+
+    {%- if settings.favicon -%}
+      <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
+    {%- endif -%}
+
+    {% include 'social-meta-tags' %}
+
+    {{ content_for_header }}
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="{{ 'theme.scss.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'is--style.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'is--custom.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'sw--product_page.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'sw--dev-page.css' | asset_url }}">
+
+    <script>
+      // This allows to expose several variables to the global scope, to be used in scripts
+      window.theme = {
+        template: {{ template.name | json }},
+        shopCurrency: {{ shop.currency | json }},
+        moneyFormat: {{ shop.money_format | json }},
+        moneyWithCurrencyFormat: {{ shop.money_with_currency_format | json }},
+        currencyConversionEnabled: {{ settings.currency_conversion_enabled | json }},
+        currencyConversionMoneyFormat: {{ settings.currency_conversion_money_format | json }},
+        currencyConversionRoundAmounts: {{ settings.currency_conversion_round_amounts | json }},
+        searchMode: {{ settings.search_mode | json }},
+        showPageTransition: {{ settings.show_page_transition | json }},
+        showElementStaggering: {{ settings.show_element_staggering | json }},
+        showImageZooming: {{ settings.show_image_zooming | json }}
+      };
+
+      window.languages = {
+        cartAddNote: {{ 'cart.general.add_note' | t | json }},
+        cartEditNote: {{ 'cart.general.edit_note' | t | json }},
+        productImageLoadingError: {{ 'product.slideshow.image_loading_error' | t | json }},
+        productFormAddToCart: {% if product.template_suffix == 'pre-order' %}{{ 'product.form.pre_order' | t | json }}{% else %}{{ 'product.form.add_to_cart' | t | json }}{% endif %},
+        productFormUnavailable: {{ 'product.form.unavailable' | t | json }},
+        productFormSoldOut: {{ 'product.form.sold_out' | t | json }},
+        shippingEstimatorOneResult: {{ 'cart.shipping_estimator.one_result_title' | t | json }},
+        shippingEstimatorMoreResults: {{ 'cart.shipping_estimator.more_results_title' | t | json }},
+        shippingEstimatorNoResults: {{ 'cart.shipping_estimator.no_results_title' | t | json }}
+      };
+
+      window.lazySizesConfig = {
+        loadHidden: false,
+        hFac: 0.5,
+        expFactor: 2,
+        ricTimeout: 150,
+        lazyClass: 'Image--lazyLoad',
+        loadingClass: 'Image--lazyLoading',
+        loadedClass: 'Image--lazyLoaded'
+      };
+
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+      document.documentElement.style.setProperty('--window-height', window.innerHeight + 'px');
+
+      // We do a quick detection of some features (we could use Modernizr but for so little...)
+      (function() {
+        document.documentElement.className += ((window.CSS && window.CSS.supports('(position: sticky) or (position: -webkit-sticky)')) ? ' supports-sticky' : ' no-supports-sticky');
+        document.documentElement.className += (window.matchMedia('(-moz-touch-enabled: 1), (hover: none)')).matches ? ' no-supports-hover' : ' supports-hover';
+      }());
+
+      window.onpageshow = function (event) {
+        if (event.persisted) {
+          window.location.reload();
+        }
+      };
+    </script>
+
+    <script src="{{ 'lazysizes.min.js' | asset_url }}" async></script>
+
+    {% if settings.currency_conversion_enabled %}
+      <script src="//cdn.shopify.com/s/javascripts/currencies.js" defer></script>
+    {% endif %}
+
+    {%- if template == 'customers/addresses' -%}
+      <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer></script>
+      <script src="{{ 'customer_area.js' | shopify_asset_url }}" defer></script>
+    {%- endif -%}
+    <script src="{{ 'jquery-2.2.4.min.js' | asset_url }}"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script
+      src="https://cdn.polyfill.io/v2/polyfill.min.js?features=fetch,Element.prototype.closest,Element.prototype.remove,Element.prototype.classList,Array.prototype.includes,Array.prototype.fill,Object.assign,CustomEvent,IntersectionObserver,IntersectionObserverEntry"
+      defer
+    ></script>
+    <script src="{{ 'libs.min.js' | asset_url }}" defer></script>
+    <script src="{{ 'theme.min.js' | asset_url }}" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+    <script src="{{ 'custom.js' | asset_url }}" defer></script>
+    <script src="{{ 'is--custom.js' | asset_url }}" defer></script>
+
+    {% include 'microdata-schema' %}
+
+    {{ shop.metafields.loox.global_html_head }}
+    {% include 'omega_multi_pixel' %}
+    <script>
+      window.mlvedaShopCurrency = "{{ shop.currency }}";
+      window.shopCurrency = "{{ shop.currency }}";
+      window.supported_currencies = "{{ settings.mlvedaACS_supportedCurrencies }}";
+    </script>
+    {% include 'hulk_po_vd.liquid' %}
+    {% include 'omega_multi_pixel' %}
+    {{ 'mamuta-smarty-core.css' | asset_url | stylesheet_tag }}
+    {{ 'mamuta-smarty.css' | asset_url | stylesheet_tag }}
+  
+	{{ shop.metafields.loox["global_html_head"] }}
+  </head>
+
+  <body class="{% if template.directory %}template-{{ template.directory | handle }}{% endif %} template-{{ template.name | handle }} {% if page.handle == 'dev-about-us' %} dev_about {% endif %} {% if page.handle == 'dev-contact-us' %} dev_contact_us {% endif %} {{ product.handle   }}">
+    <script
+      async
+      src="https://eu-library.klarnaservices.com/lib.js"
+      data-client-id="888ee915-a17e-5ca5-922b-39218b9b3043"
+    ></script>
+
+    {% capture the_snippet_content %}{% render 'socialshopwave-helper' %}{% endcapture %}
+    {% unless the_snippet_content contains 'Liquid error' %}
+      {{ the_snippet_content }}
+    {% endunless %}
+    <span class="LoadingBar"></span>
+    <div class="PageOverlay"></div>
+    <div class="PageTransition"></div>
+
+    {% section 'popup' %}
+    {% section 'sidebar-menu' %}
+
+    {%- if template != 'cart' -%}
+      {% include 'cart-drawer' %}
+    {%- endif -%}
+
+    <div class="PageContainer">
+      {% section 'sw--announcement-bar' %}
+      {% section 'header' %}
+
+      <div class="last_chance_bar">
+        <div class="last_chance_flex">
+          <div class="last_chance_bar__title">{{ settings.urgencytext }}</div>
+            <div class="last_chance_bar__inner">
+              <div class="h">
+                <span data-pf-type="CountdownNumber" class="last_chance_bar__inner__hours">05</span>
+                <label data-pf-type="CountdownLabel" class="notranslate ht-money">Hr</label>
+              </div>
+              <div class="last_chance_bar__inner__colon"><span>:</span></div>
+              <div class="m">
+                <span data-pf-type="CountdownNumber" class="last_chance_bar__inner__mins">05</span>
+                <label data-pf-type="CountdownLabel" class="notranslate ht-money">Min</label>
+              </div>
+              <div class="last_chance_bar__inner__colon"><span>:</span></div>
+              <div class="s">
+                <span data-pf-type="CountdownNumber" class="last_chance_bar__inner__secs">32</span>
+                <label data-pf-type="CountdownLabel" class="notranslate ht-money">Sec</label>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <main id="main" role="main">
+        {{ content_for_layout }}
+      </main>
+
+      {% section 'is--footer' %}
+    </div>
+
+    {%- comment -%}
+      --------------------------------------------------------------------------------------------------------------------
+      SEARCH FORM (available globally)
+      --------------------------------------------------------------------------------------------------------------------
+    {%- endcomment -%}
+
+    <div id="Search" class="Search Modal Modal--fullScreen" aria-hidden="true" data-scrollable>
+      <div class="Search__SearchBar">
+        <form action="/search" name="GET" role="search" class="Search__Form">
+          <input
+            type="search"
+            class="Search__Input Heading"
+            name="q"
+            autocomplete="off"
+            autocorrect="off"
+            autocapitalize="off"
+            placeholder="{{ 'search.general.input_placeholder' | t }}"
+            autofocus
+          >
+          <input type="hidden" name="type" value="product">
+        </form>
+
+        <button class="Search__Close Link Link--primary" data-action="close-modal">
+          {% include 'icon' with 'close' %}
+        </button>
+      </div>
+
+      <div class="Search__Results">
+        {%- if settings.search_mode != 'product' -%}
+          <div class="PageLayout PageLayout--breakLap">
+            <div class="PageLayout__Section"></div>
+            <div class="PageLayout__Section PageLayout__Section--secondary"></div>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+    {% include 'banana-stand-footer' %}
+
+    {% include 'adolab-get-clicked-seo' %}
+
+    <!-- Added by Sticky Cart by Uplinkly -->
+    {% include 'sticky-cart-by-uplinkly' %}
+
+    {{ shop.metafields.loox.global_html_body }}
+
+    <!-- Back in Stock helper snippet -->
+    {% render 'back-in-stock-helper' %}
+    <!-- End Back in Stock helper snippet -->
+
+    <!-- **BEGIN** Hextom QAB Integration // Main Include - DO NOT MODIFY -->
+    {% render 'hextom_qab_main', product: product, customer: customer %}
+    <!-- **END** Hextom QAB Integration // Main Include - DO NOT MODIFY -->
+    {% include 'scm-currency-switcher' %}
+    {% include 'scm-currency' %}
+    {% include 'mlveda-currencies-switcher' -%}
+    {%- include 'mlveda-currencies' -%}
+    {%- include 'mlveda-flag' -%}
+    {%- include 'mlveda-currencies-style' %}
+
+    <script>
+      $(function(){
+        function getCookie(cname) {
+          var name = cname + "=";
+          var decodedCookie = document.cookie;
+          var ca = decodedCookie.split(';');
+          for(var i = 0; i <ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        }
+        function setCookie(cname, cvalue, exdays) {
+          var d = new Date();
+          d.setTime(d.getTime() + (exdays*24*60*60*1000));
+          var expires = "expires="+ d.toUTCString();
+          document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        {% if settings.currency_conversion_enabled %}
+        var rs = '{"ALL":"Albania","DZD":"Algeria","USD":"American-Samoa","EUR":"Andorra","AOA":"Angola","XCD":"Anguilla","XCD":"Antarctica","XCD":"Antigua-and-Barbuda","ARS":"Argentina","AMD":"Armenia","AWG":"Aruba","AUD":"Australia","EUR":"Austria","AZN":"Azerbaijan","BSD":"Bahamas","BHD":"Bahrain","BDT":"Bangladesh","BBD":"Barbados","BYR":"Belarus","EUR":"Belgium","BZD":"Belize","XOF":"Benin","BMD":"Bermuda","BTN":"Bhutan","BOB":"Bolivia","BAM":"Bosnia-Herzegovina","BWP":"Botswana","NOK":"Bouvet Island","BRL":"Brazil","USD":"British Indian Ocean Territory","BND":"Brunei Darussalam","BGN":"Bulgaria","XOF":"Burkina Faso","BIF":"Burundi","KHR":"Cambodia","XAF":"Cameroon","CAD":"Canada","CVE":"Cape Verde","KYD":"Cayman Islands","XAF":"Central African Republic","XAF":"Chad","CLP":"Chile","CNY":"China","AUD":"Christmas Island","AUD":"Cocos (Keeling) Islands","COP":"Colombia","KMF":"Comoros","XAF":"Congo","CDF":"Congo, Dem. Republic","NZD":"Cook Islands","CRC":"Costa Rica","HRK":"Croatia","CUP":"Cuba","EUR":"Cyprus","CZK":"Czech Rep.","DKK":"Denmark","DJF":"Djibouti","XCD":"Dominica","DOP":"Dominican Republic","ECS":"Ecuador","EGP":"Egypt","SVC":"El Salvador","XAF":"Equatorial Guinea","ERN":"Eritrea","EUR":"Estonia","ETB":"Ethiopia","EUR":"European Union","FKP":"Falkland Islands (Malvinas)","DKK":"Faroe Islands","FJD":"Fiji","EUR":"Finland","EUR":"France","EUR":"French Guiana","EUR":"French Southern Territories","XAF":"Gabon","GMD":"Gambia","GEL":"Georgia","EUR":"Germany","GHS":"Ghana","GIP":"Gibraltar","GBP":"Great Britain","EUR":"Greece","DKK":"Denmark","XCD":"Grenada","EUR":"Guadeloupe (French)","USD":"Guam (USA)","QTQ":"Guatemala","GGP":"Guernsey","GNF":"Guinea","GWP":"Guinea Bissau","GYD":"Guyana","HTG":"Haiti","AUD":"Heard Island and McDonald Islands","HNL":"Honduras","HKD":"Hong-Kong","HUF":"Hungary","ISK":"Iceland","INR":"India","IDR":"Indonesia","IRR":"Iran","IQD":"Iraq","EUR":"Ireland","GBP":"Isle of Man","ILS":"Israel","EUR":"Italy","XOF":"Ivory Coast","JMD":"Jamaica","JPY":"Japan","GBP":"Jersey","JOD":"Jordan","KZT":"Kazakhstan","KES":"Kenya","AUD":"Kiribati","KPW":"Korea-North","KRW":"Korea-South","KWD":"Kuwait","KGS":"Kyrgyzstan","LAK":"Laos","LVL":"Latvia","LBP":"Lebanon","LSL":"Lesotho","LRD":"Liberia","LYD":"Libya","CHF":"Liechtenstein","LTL":"Lithuania","EUR":"Luxembourg","MOP":"Macau","MKD":"Macedonia","MGF":"Madagascar","MWK":"Malawi","MYR":"Malaysia","MVR":"Maldives","XOF":"Mali","EUR":"Malta","USD":"Marshall Islands","EUR":"Martinique (French)","MRO":"Mauritania","MUR":"Mauritius","EUR":"Mayotte","MXN":"Mexico","USD":"Micronesia","MDL":"Moldova","EUR":"Monaco","MNT":"Mongolia","EUR":"Montenegro","XCD":"Montserrat","MAD":"Morocco","MZN":"Mozambique","MMK":"Myanmar","NAD":"Namibia","AUD":"Nauru","NPR":"Nepal","EUR":"Netherlands","ANG":"Netherlands Antilles","XPF":"New Caledonia (French)","NZD":"New Zealand","NIO":"Nicaragua","XOF":"Niger","NGN":"Nigeria","NZD":"Niue","AUD":"Norfolk Island","USD":"Northern Mariana Islands","NOK":"Norway","OMR":"Oman","PKR":"Pakistan","USD":"Palau","PAB":"Panama","PGK":"Papua New Guinea","PYG":"Paraguay","PEN":"Peru","PHP":"Philippines","NZD":"Pitcairn Island","PLN":"Poland","XPF":"Polynesia (French)","EUR":"Portugal","USD":"Puerto Rico","QAR":"Qatar","EUR":"Reunion (French)","RON":"Romania","RUB":"Russia","RWF":"Rwanda","SHP":"Saint-Helena","XCD":"Saint Kitts & Nevis Anguilla","XCD":"Saint-Lucia","EUR":"Saint Pierre and Miquelon","XCD":"Saint-Vincent-and-the-Grenadines","WST":"Samoa","EUR":"San Marino","STD":"Sao-Tome-and-Principe","SAR":"Saudi Arabia","XOF":"Senegal","RSD":"Serbia","SCR":"Seychelles","SLL":"Sierra-Leone","SGD":"Singapore","EUR":"Slovakia","EUR":"Slovenia","SBD":"Solomon-Islands","SOS":"Somalia","ZAR":"South Africa","GBP":"South-Georgia & South-Sandwich-Islands","SSP":"South Sudan","EUR":"European-Union","LKR":"Sri Lanka","SDG":"Sudan","SRD":"Suriname","NOK":"Svalbard and Jan Mayen Islands","SZL":"Swaziland","SEK":"Sweden","CHF":"Switzerland","SYP":"Syria","TWD":"Taiwan","TJS":"Tajikistan","TZS":"Tanzania","THB":"Thailand","XOF":"Togo","NZD":"New-Zealand","TOP":"Tonga","TTD":"Trinidad and Tobago","TND":"Tunisia","TRY":"Turkey","TMT":"Turkmenistan","USD":"Turks and Caicos Islands","AUD":"Australia","GBP":"United-Kingdom","UGX":"Uganda","UAH":"Ukraine","AED":"United-Arab mirates","UYU":"Uruguay","USD":"USA","USD":"United States of America","USD":"United-States","USD":"USA Minor Outlying Islands","UZS":"Uzbekistan","VUV":"Vanuatu","EUR":"European-Union","VEF":"Venezuela","VND":"Vietnam","USD":"Virgin Islands (British)","USD":"United-States of America","XPF":"Wallis-and-Futuna-Islands","MAD":"Western-Sahara","YER":"Yemen","ZMW":"Zambia","ZWD":"Zimbabwe"}';
+        var robj = $.parseJSON(rs);
+
+        $('.currecyBox option').each(function(){
+          var v = $(this).attr('value');
+          var ocn = robj[v];
+          $(this).attr('data-country',ocn);
+        });
+
+        $('.currency-selector select').on('change', function() {
+          $(this)
+          .parents('form')
+          .submit();
+        });
+
+        if(getCookie('country') != 'yes') {
+          $.getJSON('https://api.ipinfodb.com/v3/ip-country/?key=2466e157b0ad4c8e039bd29eb2b9e1bd9144e012dc94fb9e199cefae4732205d&format=json', function(data) {
+            var cn = data.countryName.replace(' ','-');
+            if($('.currecyBox option[data-country="'+cn+'"]').length) {
+              var val = $('.currecyBox option[data-country="'+cn+'"]').attr('value');
+              $('.currecyBox').val(val).trigger('change');
+            }
+          });
+          setCookie('country', 'yes', 30);
+        }
+        {% endif %}
+      });
+
+      $(document).on('click', '.checkout-btn-small', function(){
+        $("body, html").addClass("upsell-active");
+      });
+
+      $(document).on('click', '.upsell-drawer .Drawer__Close', function(){
+        $("body, html").removeClass("upsell-active");
+      });
+
+      $(document).on('click', '.PageOverlay', function(){
+        $("body, html").removeClass("upsell-active");
+      });
+
+      $(window).scroll(function(){
+        if ($(window).scrollTop() >= 50) {
+          $('.upsell-drawer').addClass('fixed-more-scoll');
+        }
+        else {
+          $('.upsell-drawer').removeClass('fixed-more-scoll');
+        }
+      });
+
+      function updateGiftWrapStatus() {
+        const GIFT_WRAP_VARIANT_ID = parseInt('{{ all_products["giftbagandcard"].selected_or_first_available_variant.id }}');
+        const CHECKBOX_ID = 'ifAddAddon';
+        const $checkbox = $('#' + CHECKBOX_ID);
+
+        if (!GIFT_WRAP_VARIANT_ID || $checkbox.length === 0) {
+          return;
+        }
+
+        jQuery.getJSON('/cart.js')
+          .done(function(cart) {
+            let isGiftWrapInCart = false;
+            let giftWrapItem = null;
+
+            cart.items.forEach(item => {
+              if (item.variant_id === GIFT_WRAP_VARIANT_ID) {
+                isGiftWrapInCart = true;
+                giftWrapItem = item;
+              }
+            });
+
+            if (isGiftWrapInCart) {
+              $checkbox.prop('checked', true);
+              const price = giftWrapItem.price / 100;
+            } else {
+              $checkbox.prop('checked', false);
+            }
+          })
+          .fail(function (jqXHR) {
+            console.error("⚠️ [Gift Wrap Status] Помилка завантаження кошика для перевірки статусу.", jqXHR.status);
+          });
+      }
+
+      $(document).on('change', '#ifAddAddon', function () {
+        var isChecked = $(this).is(':checked');
+        var variantId = '{{ all_products["giftbagandcard"].selected_or_first_available_variant.id }}';
+        var qty = isChecked ? 1 : 0;
+        var rootUrl = (window.Shopify && Shopify.routes ? Shopify.routes.root : '/');
+
+        var data = {};
+        data['updates[' + variantId + ']'] = qty;
+        
+        console.log(`➡️ [Gift Wrap Action] Зміна статусу. ID: ${variantId}, Нова кількість: ${qty}.`);
+
+        $.ajax({
+          type: 'POST',
+          url: rootUrl + 'cart/update.js',
+          data: data,
+          dataType: 'json'
+        })
+        .done(function(cart) {
+          if (typeof GLOBAL_RENDERCART !== 'undefined' && GLOBAL_RENDERCART._rerenderCart) {
+            GLOBAL_RENDERCART._rerenderCart().then(function() {
+              setTimeout(function() {
+                updateGiftWrapStatus(); 
+              }, 50);
+            });
+          } else {
+            updateGiftWrapStatus();
+          }
+        })
+        .fail(function (jqXHR) {
+          console.error('Gift wrap toggle failed:', jqXHR.status, jqXHR.responseText);
+        });
+      });
+
+      $(document).ready(function() {
+        updateGiftWrapStatus();
+
+        const $checkbox = $('#ifAddAddon');
+        $checkbox.prop('checked', true).trigger('change');
+      });
+
+      $(document).on('click', '.rb-check-btn', function (e) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+
+        const cartRedirectUrl = $('.Cart.Drawer__Content').attr('action');
+        window.location.href = cartRedirectUrl;
+      });
+    </script>
+
+    {% include 'tierprice-storefront' %}
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var checkInterval = setInterval(function() {
+        var floatBlock = document.querySelector('.ht-tms--float');
+    
+        var langSelector = document.getElementById('langSelector');
+        var langSelectorSlider = document.getElementById('langSelectorSlider');
+    
+        if (floatBlock) {
+          if (window.innerWidth > 1024 && langSelector) { 
+            langSelector.appendChild(floatBlock);
+            clearInterval(checkInterval);
+          } else if (window.innerWidth <= 1024 && langSelectorSlider) { 
+            langSelectorSlider.appendChild(floatBlock);
+            clearInterval(checkInterval);
+          }
+        }
+      }, 200);
+    });
+  </script>
+
+  <style>
+    .ht-tms--float {
+      position: relative !important;
+      top: 0 !important;
+      left: 0 !important;
+    }
+  </style>
+
+    
+	{{ shop.metafields.loox["global_html_body"] }}
+</body>
+</html>

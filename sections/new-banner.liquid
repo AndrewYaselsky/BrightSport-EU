@@ -1,0 +1,344 @@
+{% comment %}
+  New Banner Section
+  Background image uploadable, 3 discount blocks, sports text, disclaimer
+{% endcomment %}
+
+<style>
+  #shopify-section-new-banner {
+    max-width: 1520px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .spring-sale-banner {
+    position: relative;
+    width: 100%;
+    background-color: {{ section.settings.bg_color }};
+    background-image: {% if section.settings.background_image != blank %}url('{{ section.settings.background_image | image_url: width: 2400 }}'){% else %}none{% endif %};
+    background-size: cover;
+    background-position: top center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    overflow: hidden;
+    font-family: 'Montserrat', Arial, sans-serif;
+    border-radius: 36px;
+    margin-bottom: 40px;
+    z-index: 2;
+  }
+
+  .spring-sale-banner__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, {{ section.settings.overlay_opacity | divided_by: 100.0 }});
+    z-index: 0;
+  }
+
+  .spring-sale-banner__inner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  /* Title */
+  .spring-sale-banner__title {
+    font-size: clamp(32px, 6vw, 46px);
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Montserrat';
+    line-height: 1;
+    color: #ffffff;
+    text-shadow: 
+      6px 6px 0px rgb(143 134 179),
+      4px 4px 0px #8f86b357,
+      9px 9px 12px rgb(0 0 0 / 20%);
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4));
+    line-height: 1;
+    margin: 0;
+  }
+
+  /* Discount blocks row */
+  .spring-sale-banner__discounts {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 80%;
+    width: 100%;
+  }
+
+  .spring-sale-banner__discount-block {
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 28px 18px;
+    padding: 10px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 160px;
+    box-shadow: 0 0 0 6px #ffffff47;
+    transform: skew(-16deg);
+    font-family: 'Montserrat';
+    flex: 1;
+  }
+
+  .spring-sale-banner__discount-text {
+    font-size: 36px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #4b7e32;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    font-style: italic;
+    margin: 0;
+    text-shadow:
+      1px 1px 0 #fff,
+      2px 2px 0 #ccc,
+      3px 3px 3px rgba(0,0,0,0.3);
+  }
+
+  @media screen and (max-width: 767px) {
+    .spring-sale-banner {
+      border-radius: 16px;
+    }
+    #shopify-section-new-banner {
+      padding: 0 20px;
+      margin-bottom: 20px !important;
+    }
+    .spring-sale-banner__title {
+      font-size: 24px;
+      text-shadow:
+        3px 3px 0px rgb(143 134 179),
+        2px 2px 0px #8f86b357,
+        5px 5px 6px rgb(0 0 0 / 20%);
+    }
+    .spring-sale-banner__discounts {
+      gap: 8px;
+    }
+    .spring-sale-banner__inner {
+      gap: 8px;
+      z-index: 2;
+    } 
+    .spring-sale-banner__discount-block {
+      padding: 4px 16px;
+      min-width: auto;
+      box-shadow: 0 0 0 3px #ffffff47;
+      flex: none;
+    }
+    .spring-sale-banner__discount-text {
+      font-size: 16px;
+    }
+    .spring-sale-banner__sports-title {
+      font-size: 8px !important;
+    }
+    .spring-sale-banner__disclaimer {
+      font-size: 8px !important;
+    }
+    .spring-sale-banner__discounts {
+      max-width: 96%;
+    }
+  }
+
+  /* Sports text */
+  .spring-sale-banner__sports {
+    text-align: center;
+  }
+
+  .spring-sale-banner__sports-title {
+    font-size: 21px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1;
+    color: #fdffe6;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    margin: 0 0 4px;
+  }
+
+  /* Side images */
+  .spring-sale-banner__side-img {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    object-position: bottom;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .spring-sale-banner__side-img--left {
+    left: 0;
+  }
+
+  .spring-sale-banner__side-img--right {
+    right: 0;
+  }
+
+  /* Disclaimer */
+  .spring-sale-banner__disclaimer {
+    font-size: 16px;
+    font-weight: 600;
+    color: #493c48;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgb(255 255 255);
+    font-family: 'Montserrat';
+    opacity: 0.9;
+    line-height: 1;
+    margin: 0;
+    text-wrap-style: balance;
+  }
+</style>
+
+<div class="spring-sale-banner">
+  {% if section.settings.overlay_opacity > 0 %}
+    <div class="spring-sale-banner__overlay"></div>
+  {% endif %}
+
+  {% if section.settings.left_image != blank %}
+    <img
+      class="spring-sale-banner__side-img spring-sale-banner__side-img--left"
+      src="{{ section.settings.left_image | image_url: width: 400 }}"
+      alt="{{ section.settings.left_image.alt | escape }}"
+      loading="lazy"
+    >
+  {% endif %}
+
+  {% if section.settings.right_image != blank %}
+    <img
+      class="spring-sale-banner__side-img spring-sale-banner__side-img--right"
+      src="{{ section.settings.right_image | image_url: width: 400 }}"
+      alt="{{ section.settings.right_image.alt | escape }}"
+      loading="lazy"
+    >
+  {% endif %}
+
+  <div class="spring-sale-banner__inner">
+
+    <!-- Title -->
+    <h2 class="spring-sale-banner__title">{{ section.settings.title }}</h2>
+
+    <!-- Discount Blocks -->
+    <div class="spring-sale-banner__discounts">
+      {% for block in section.blocks %}
+        {% if block.type == 'discount' %}
+          <div class="spring-sale-banner__discount-block" {{ block.shopify_attributes }}>
+            <p class="spring-sale-banner__discount-text">{{ block.settings.label }}</p>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <!-- Sports -->
+    <div class="spring-sale-banner__sports">
+      <p class="spring-sale-banner__sports-title">{{ section.settings.sports_text }}</p>
+      <p class="spring-sale-banner__disclaimer">{{ section.settings.disclaimer_text }}</p>
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Spring Sale Banner",
+  "tag": "section",
+  "class": "spring-sale-section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_image",
+      "label": "Left Side Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_image",
+      "label": "Right Side Image"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Fallback Background Color",
+      "default": "#7ec8e3"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Dark Overlay Opacity (%)",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "default": 0
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Banner Title",
+      "default": "Spring Sale"
+    },
+    {
+      "type": "text",
+      "id": "sports_text",
+      "label": "Sports Line",
+      "default": "American Football - Basketball - Golf Balls - Soccer Ball"
+    },
+    {
+      "type": "text",
+      "id": "disclaimer_text",
+      "label": "Disclaimer Text",
+      "default": "Discount automatically applied at checkout, balls can be combined"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "discount",
+      "name": "Discount Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Discount Label",
+          "default": "50% OFF 1"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "New Banner",
+      "blocks": [
+        {
+          "type": "discount",
+          "settings": {
+            "label": "50% OFF 1"
+          }
+        },
+        {
+          "type": "discount",
+          "settings": {
+            "label": "55% OFF 2"
+          }
+        },
+        {
+          "type": "discount",
+          "settings": {
+            "label": "60% OFF 3+"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,47 @@
+{% comment %}
+  Renders upsell products in cart drawer
+  
+  Accepts:
+  - current_product: {Object} Current product object
+  - current_collection: {Object} Current collection object
+  
+  Usage:
+  {% render 'cart-upsell-products', current_product: product, current_collection: collection %}
+{% endcomment %}
+
+{% for i in (1..11) %}
+  {% capture product_var %}c_product{{ i }}{% endcapture %}
+  {% capture image_var %}image{{ i }}{% endcapture %}
+  {% capture subtitle_var %}subtitle{{ i }}{% endcapture %}
+  {% capture ptitle_var %}ptitle_{{ i }}{% endcapture %}
+
+  {% assign product_setting = settings[product_var] %}
+  
+  <!-- BOGO Logic -->
+  {%- assign is_bogo_context = false -%}
+  {%- if template.name == 'product' and current_product.tags contains 'bogo-deal' -%}
+    {%- assign is_bogo_context = true -%}
+  {%- elsif template.name == 'collection' and current_collection.handle == 'bogo' -%}
+    {%- assign is_bogo_context = true -%}
+  {%- endif -%}
+  
+  {%- if is_bogo_context -%}
+    {%- assign bogo_products = 'bright-football,bright™-rugby-football,bright™-netbal,american-football,the-bright-volleyball,bright-basketball,bright-sport-golf-balls' | split: ',' -%}
+    {%- if bogo_products contains product_setting -%}
+      {%- assign product_setting = product_setting | append: '-bogo' -%}
+    {%- endif -%}
+  {%- endif -%}
+
+  {% if product_setting != blank %}
+    {% assign upsell_product = all_products[product_setting] %}
+    
+    {% if upsell_product %}
+      {% render 'cart-upsell-product-item', 
+         product: upsell_product,
+         image: settings[image_var],
+         title: settings[ptitle_var],
+         subtitle: settings[subtitle_var],
+         is_bogo_context: is_bogo_context %}
+    {% endif %}
+  {% endif %}
+{% endfor %}

@@ -1,0 +1,68 @@
+<div class="container">
+
+  <div class="money_back_row">
+
+    {% if section.settings.img != blank %}
+      <div class="money_back_img_block">
+        <div class="money_back_img">
+          <img src="{{ section.settings.img | img_url: 'master' }}">
+        </div>
+      </div>
+    {% endif %}
+
+    <div class="money_back_info_block">
+      <div class="money_back_info">
+        <div class="money_back_wrapper">
+          {% if section.settings.img1 != blank %}
+            <span>
+              <img src="{{ section.settings.img1 | img_url: 'master' }}">
+            </span>
+          {% endif %}
+          {% if section.settings.title != blank %}
+            <h2 class="money_back_title">{{ section.settings.title }}</h2>
+          {% endif %}
+          {% if section.settings.cap != blank %}
+            <div class="money_back_cap">{{ section.settings.cap }}</div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+</div>
+
+
+{% schema %}
+  {
+    "name": "Money Back",
+    "class": "is--money-back",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "img", 
+        "label": "Select image"
+      },
+      {
+        "type": "image_picker",
+        "id": "img1", 
+        "label": "Select Icon image"
+      },
+      {
+        "type": "textarea",
+        "id": "title", 
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "cap", 
+        "label": "Caption"
+      }
+    ],
+    "presets":[
+      {
+        "name": "Money Back"
+      }
+    ]
+  }
+{% endschema %}

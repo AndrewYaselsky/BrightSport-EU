@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="{{ locale }}" dir="{{ direction }}" class="{{ checkout_html_classes }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0"
+    >
+    <meta name="referrer" content="origin">
+
+    <title>{{ page_title }}</title>
+
+    {{ content_for_header }}
+
+    {{ checkout_stylesheets }}
+    {{ checkout_scripts }}
+    {% render 'weglot_hreftags' %}
+    {% render 'weglot_switcher' %}
+  </head>
+  <body data-getlocal="{{ locale }}">
+    {{ skip_to_content_link }}
+
+    <header class="banner" data-header role="banner">
+      <div class="wrap">
+        {{ content_for_logo }}
+      </div>
+    </header>
+
+    {{ order_summary_toggle }}
+    <div class="content" data-content>
+      <div class="wrap">
+        <div class="main">
+          <header class="main__header" role="banner">
+            {{ content_for_logo }}
+            {{ breadcrumb }}
+            {{ alternative_payment_methods }}
+          </header>
+          <main class="main__content" role="main">
+            {{ content_for_layout }}
+          </main>
+          <footer class="main__footer" role="contentinfo">
+            {{ content_for_footer }}
+          </footer>
+        </div>
+        <aside class="sidebar" role="complementary">
+          <div class="sidebar__header">
+            {{ content_for_logo }}
+          </div>
+          <div class="sidebar__content">
+            {{ content_for_order_summary }}
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    {{ tracking_code }}
+
+    <div data-rebuy-id="64369"></div>
+    <script async src="https://cdn.rebuyengine.com/onsite/js/rebuy.js?shop=bright-sports-co.myshopify.com"></script>
+  </body>
+</html>
+
+<style>
+    .rebuy-button{
+      background-color: gold !important;
+      border-color: gold !important;
+      color: black !important;
+  }
+    .rebuy-money.sale{
+      color:#ff7272 !important;
+    }
+    .product-id-4808300396632 .rebuy-money,.product-id-6753116520536 .rebuy-money,.product-id-7214458667096 .rebuy-money,.product-id-4604248653912 .rebuy-money{
+          position: relative;
+      color: #9a9a9a;
+    }
+
+    .product-id-4808300396632 .rebuy-money:after,.product-id-6753116520536 .rebuy-money:after,.product-id-7214458667096 .rebuy-money:after,.product-id-4604248653912 .rebuy-money:after{
+        content: "";
+      width: 42px;
+      height: 1px;
+      background: #9a9a9a;
+      position: absolute;
+      top: 50%;
+      right: 0;
+    }
+
+    .product-id-4808300396632 .rebuy-money:before{
+      content: "€38,47 ";
+       color:#ff7272;
+    }
+
+    .product-id-6753116520536 .rebuy-money:before{
+      content: "€34,97 ";
+       color:#ff7272;
+    }
+
+    .product-id-7214458667096 .rebuy-money:before{
+      content: "€31,47 ";
+       color:#ff7272;
+    }
+    .product-id-4604248653912 .rebuy-money:before{
+      content: "€31,47 ";
+       color:#ff7272;
+    }
+
+
+    @media (max-width: 480px) {
+     .product-id-4808300396632 .rebuy-money:after,.product-id-6753116520536 .rebuy-money:after,.product-id-7214458667096 .rebuy-money:after,.product-id-4604248653912 .rebuy-money:after{
+            width: 36px;
+      }
+    }
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+      $('button#continue_button').click(function(){
+        var value = $('#checkout_shipping_address_country').val();
+        if(value != undefined ){
+          localStorage.setItem('myCart', value);
+        }
+        var cart_value = localStorage.getItem('myCart');
+        console.log(cart_value);
+      });
+
+      var cart = $('nav .breadcrumb li:first-child a').html();
+      var cart_value = localStorage.getItem('myCart');
+
+
+      // *********** START FOR SWEDEN HOME  *********** //
+      if(cart == 'Varukorg'){
+        $('.section.section--payment-method fieldset.content-box .radio-wrapper.content-box__row[data-select-gateway="66317287512"]').hide();
+      }
+      // *********** START FOR SWEDEN HOME  *********** //
+
+
+      // *********** START FOR SWEDEN  *********** //
+      if(cart_value == 'Sweden'){
+        $('.section.section--payment-method fieldset.content-box .radio-wrapper.content-box__row[data-select-gateway="66317287512"]').hide();
+      }else if(cart_value == 'Suède'){
+        $('.section.section--payment-method fieldset.content-box .radio-wrapper.content-box__row[data-select-gateway="66317287512"]').hide();
+      }
+      if(cart_value != 'Sweden'){
+        $('.section.section--payment-method fieldset.content-box .radio-wrapper.content-box__row[data-select-gateway="66317287512"]').show();
+      }
+      // *********** START FOR SWEDEN  *********** //
+
+
+
+      // *********** START FOR GERMANY  *********** //
+      if(cart_value == 'Germany'){
+        $('.section.section--payment-method fieldset.content-box .radio-wrapper.content-box__row[data-gateway-name="ideal"]').hide();
+        $('.section.section--payment-method fieldset.content-box .radio-wrapper.content-box__row[data-gateway-name="bancontact"]').hide();
+      }
+
+      $('.section.section--payment-method fieldset.content-box .radio-wrapper.content-box__row[data-gateway-name="ideal"]').hide();
+      $('.section.section--payment-method fieldset.content-box .radio-wrapper.content-box__row[data-gateway-name="bancontact"]').hide();
+
+
+      // *********** END FOR GERMANY  *********** //
+
+
+
+      // *********** START FOR NETHERLANDS AND BELGIUM  *********** //
+      if(cart_value == 'Netherlands'){
+        $('.section.section--payment-method fieldset.content-box .radio-wrapper.content-box__row[data-gateway-name="ideal"]').show();
+        $('.section.section--payment-method fieldset.content-box .radio-wrapper.content-box__row[data-gateway-name="bancontact"]').show();
+      }
+      if(cart_value == 'Belgium'){
+        $('.section.section--payment-method fieldset.content-box .radio-wrapper.content-box__row[data-gateway-name="ideal"]').show();
+        $('.section.section--payment-method fieldset.content-box .radio-wrapper.content-box__row[data-gateway-name="bancontact"]').show();
+      }
+      // *********** START FOR NETHERLANDS AND BELGIUM  *********** //
+
+
+
+  var get_locale = $('body').data('getlocal');
+
+        setTimeout(function(){
+           if(get_locale == 'it'){
+                  $('.rebuy-button').html('Aggiungi');
+                  $('.rebuy-widget-content .super-title').html('RACCOMANDATI');
+                }else if(get_locale == 'nl'){
+                  $('.rebuy-button').html('Voeg toe');
+                  $('.rebuy-widget-content .super-title').html('VAAK SAMEN GEKOCHT');
+                }else if(get_locale == 'de'){
+                  $('.rebuy-button').html('Hinzufügen');
+                  $('.rebuy-widget-content .super-title').html('EMPFOHLEN');
+                }else if(get_locale == 'fr'){
+                  $('.rebuy-button').html('Ajouter');
+                  $('.rebuy-widget-content .super-title').html('RECOMMANDÉ');
+                }else if(get_locale == 'sv'){
+                  $('.rebuy-button').html('Lägg till');
+                  $('.rebuy-widget-content .super-title').html('REKOMMENDERAD');
+                }else if(get_locale == 'da'){
+                  $('.rebuy-button').html('Tilføje');
+                  $('.rebuy-widget-content .super-title').html('ANBEFALEDE');
+                }else if(get_locale == 'en'){
+                  $('.rebuy-button').html('Add');
+                  $('.rebuy-widget-content .super-title').html('RECOMMENDED');
+                }
+        },2500);
+
+      document.addEventListener("rebuy:cart.change", (event) => {
+                 if(get_locale == 'it'){
+                  $('.rebuy-button').html('Aggiungi');
+                  $('.rebuy-widget-content .super-title').html('RACCOMANDATI');
+                }else if(get_locale == 'nl'){
+                  $('.rebuy-button').html('Voeg toe');
+                  $('.rebuy-widget-content .super-title').html('VAAK SAMEN GEKOCHT');
+                }else if(get_locale == 'de'){
+                  $('.rebuy-button').html('Hinzufügen');
+                  $('.rebuy-widget-content .super-title').html('EMPFOHLEN');
+                }else if(get_locale == 'fr'){
+                  $('.rebuy-button').html('Ajouter');
+                  $('.rebuy-widget-content .super-title').html('RECOMMANDÉ');
+                }else if(get_locale == 'sv'){
+                  $('.rebuy-button').html('Lägg till');
+                  $('.rebuy-widget-content .super-title').html('REKOMMENDERAD');
+                }else if(get_locale == 'da'){
+                  $('.rebuy-button').html('Tilføje');
+                  $('.rebuy-widget-content .super-title').html('ANBEFALEDE');
+                }else if(get_locale == 'en'){
+                  $('.rebuy-button').html('Add');
+                  $('.rebuy-widget-content .super-title').html('RECOMMENDED');
+                }
+      });
+
+    });
+
+    $(document).ready(function(){
+      const locale = $('body').data('getlocal')==""?localStorage.getItem('wglang'):$('body').data('getlocal');
+      const links = document.getElementsByTagName('a');
+        
+      for (let i = 0; i < links.length; i++) {
+         const url = new URL(links[i].href);
+         url.searchParams.set('locale', locale);
+         links[i].href = url.toString();
+      }
+    });
+</script>

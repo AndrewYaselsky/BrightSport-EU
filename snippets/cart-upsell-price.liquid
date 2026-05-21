@@ -1,0 +1,87 @@
+{% comment %}
+  Renders pricing for upsell products with discount logic
+  
+  Accepts:
+  - product: {Object} Product object
+  - flag_offer2: {Boolean} Offer2 flag
+  - flag_offer3: {Boolean} Offer3 flag  
+  - discount_offer_text: {Boolean} BFCM discount flag
+  
+  Usage:
+  {% render 'cart-upsell-price', product: product, flag_offer2: flag_offer2, flag_offer3: flag_offer3, discount_offer_text: discount_offer_text %}
+{% endcomment %}
+
+{%- liquid
+  assign price = 0
+  assign compare_at_price = 0
+  assign base_price = product.selected_or_first_available_variant.price
+  assign quantity = 1
+
+  if quantity == 1
+    assign discount_rate = 0.35
+  elsif quantity == 2
+    assign discount_rate = 0.40
+  elsif quantity == 3
+    assign discount_rate = 0.45
+  else
+    assign discount_rate = 0.00
+  endif
+
+  assign discount_amount = base_price | times: discount_rate
+  assign final_price = base_price | minus: discount_amount
+
+  if product.selected_or_first_available_variant.compare_at_price 
+    assign price = product.selected_or_first_available_variant.price
+    assign compare_at_price = product.selected_or_first_available_variant.compare_at_price
+  else
+    assign price = final_price
+    assign compare_at_price = base_price
+  endif
+-%}
+
+{%- if price > 0 -%}
+  <div class="ProductMeta__PriceList Heading">
+    <span class="money ProductMeta__Price Normalprice Price Price--highlight Text--subdued u-h4" 
+          data-money-convertible>
+      {{ price | money_without_trailing_zeros }}
+    </span>
+    <span class="money ProductMeta__Price Compareprice Price Price--compareAt Text--subdued u-h4" 
+          data-money-convertible>
+      {{ compare_at_price | money_without_trailing_zeros }}
+    </span>
+  </div>
+{%- elsif discount_offer_text -%}
+  <div class="ProductMeta__PriceList Heading">
+    {% assign dis_price = product.selected_or_first_available_variant.price | times: 25 | divided_by: 100.0 | round %}
+    {% assign get_discount_price = product.selected_or_first_available_variant.price | minus: dis_price %}
+    <span class="money ProductMeta__Price Normalprice Price Price--highlight Text--subdued u-h4" 
+          data-money-convertible>
+      {{ get_discount_price | money_without_trailing_zeros }}
+    </span>
+    <span class="money ProductMeta__Price Compareprice Price Price--compareAt Text--subdued u-h4" 
+          data-money-convertible>
+      {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
+    </span>
+  </div>
+{%- elsif product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price -%}
+  <div class="ProductMeta__PriceList Heading" style="margin-bottom: 15px;">
+    <span class="money ProductMeta__Price Normalprice Price Price--highlight Text--subdued u-h4" 
+          data-money-convertible 
+          data-price="{{ product.selected_or_first_available_variant.price }}">
+      {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
+    </span>
+    <span class="money ProductMeta__Price Compareprice Price Price--compareAt Text--subdued u-h4" 
+          data-money-convertible 
+          data-comparePrice="{{ product.selected_or_first_available_variant.compare_at_price }}">
+      {{ product.selected_or_first_available_variant.compare_at_price | money_without_trailing_zeros }}
+    </span>
+  </div>
+{%- else -%}
+  <div class="ProductMeta__PriceList Heading" style="margin-bottom: 15px;">
+    <span class="money ProductMeta__Price Normalprice Price Price--highlight Text--subdued u-h4" 
+          data-money-convertible 
+          data-price="{{ product.selected_or_first_available_variant.price }}">
+      {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
+    </span>
+  </div>
+{%- endif -%}

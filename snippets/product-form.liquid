@@ -1,0 +1,1254 @@
+{%- comment -%}
+  Dit zijn de optienamen waarvoor we automatisch stalen detecteren. Voor de kleur gebruiken we ze om een staal weer te geven, terwijl
+  we voor de maat een maattabel gebruiken (indien van toepassing)
+{%- endcomment -%}
+
+{%- assign color_label = 'color,colour,couleur,colore,farbe,색,色,färg,farve' | split: ',' -%}
+{%- assign size_label = 'size,taille,bröße,tamanho,tamaño,koko,サイズ' | split: ',' -%}
+
+{%- assign size_chart_page = '' -%}
+{%- assign product_popovers = '' -%}
+
+{%- assign selected_variant = product.selected_or_first_available_variant -%}
+
+{% assign flag_offer = false %}
+{% assign flag_offer2 = false %}
+{% assign flag_offer3 = false %}
+{% assign discount_offer_text = false %}
+{% assign show_bogo = false %}
+
+{% for tag in product.tags %}
+  {% if tag == 'BFCM_sale' or product.handle == 'bright-sport-golf-balls' %}
+    {% assign discount_offer_text = true %}
+  {% else %}
+    {% if tag == 'offer1' %}
+      {% assign flag_offer = true %}
+    {% endif %}
+    {% if tag == 'offer2' or tag == 'offer3' %}
+      {% assign flag_offer2 = true %}
+    {% endif %}
+    {% if tag == 'offer4' %}
+      {% assign flag_offer3 = true %}
+    {% endif %}
+    {% if tag == 'bogo-deal' %}
+      {% assign show_bogo = true %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{%- form 'product', product, class: 'ProductForm' -%}
+  {% if discount_offer_text %}
+    {% if show_bogo %}
+      {%- liquid
+        assign base_price = product.selected_or_first_available_variant.price
+      -%}
+      <div class="qty_selector_discount">
+        <div class="qty_selector_discount_title_bogo">🔥 Koop 1 en krijg 1 gratis</div>
+        <div class="qty_selector_discount_title"><span>→ AANBIEDING EINDIGT OM 23:59 ←</span></div>
+          <div class="quantity_selector">
+            <div
+              class="single_quantity"
+              data-qty="1"
+              data-price="{{ base_price | money }}"
+              data-old-price="{{ base_price | money_without_trailing_zeros }}"
+            >
+              <div class="option_radio_custom"></div>
+    
+              <div class="single_quantity_main">
+                <div class="single_quantity_main_left">
+                  <h4 class="h4">1 Bal + 1 Bal</h4>
+                  <div class="sq_you_save">
+                    + Gratis luchtpomp
+                  </div>
+                </div>
+                <div class="single_quantity_main_right">
+                  <h6 class="quanity-price notranslate ht-money" style="margin-bottom: 0px;">{{ base_price | money }}</h6>
+                </div>
+              </div>
+            </div>
+    
+            <div
+              class="single_quantity selected firstclick"
+              data-qty="2"
+              data-price="{{ base_price | times: 2 | money }}"
+              data-old-price="{{ base_price | times: 2 | money_without_trailing_zeros }}"
+            >
+              <div class="option_radio_custom"></div>
+    
+              <div class="single_quantity_main">
+                <div class="single_quantity_main_left">
+                  <h4 class="h4">
+                    2 Ballen + 2 Ballen
+                    <div class="single_quantity_main_left_gratis">Gratis verzending</div>
+                  </h4>
+                  <div class="sq_you_save">
+                    + Gratis luchtpomp
+                  </div>
+                </div>
+                <div class="single_quantity_main_right">
+                  <h6 class="quanity-price notranslate ht-money" style="margin-bottom: 0px;">{{ base_price | times: 2 | money }}</h6>
+                </div>
+              </div>
+    
+              <div class="most-popular">🔥 Meest populair</div>
+            </div>
+    
+            <div
+              class="single_quantity"
+              data-qty="3"
+              data-price="{{ base_price | times: 3 | money }}"
+              data-old-price="{{ base_price | times: 3 | money_without_trailing_zeros }}"
+            >
+              <div class="option_radio_custom"></div>
+    
+              <div class="single_quantity_main">
+                <div class="single_quantity_main_left">
+                  <h4 class="h4">
+                    3 Ballen + 3 Ballen
+                    <div class="single_quantity_main_left_gratis" style="background-color:#ffd602">Beste deal</div>
+                  </h4>
+                  <div class="sq_you_save">
+                    + Gratis luchtpomp
+                  </div>
+                </div>
+                <div class="single_quantity_main_right">
+                  <h6 class="quanity-price notranslate ht-money" style="margin-bottom: 0px;">{{ base_price | times: 3 | money }}</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <style>
+        .template-product .qty_selector_discount .quantity_selector .single_quantity h4 {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        body .qty_selector_discount .quantity_selector .single_quantity .single_quantity_main_left_gratis {
+          margin-left: 0;
+        }
+        .qty_selector_discount_title_bogo {
+          background: #ed0106;
+          padding: 6px;
+          text-align: center;
+          border-radius: 8px;
+          text-transform: uppercase;
+        }
+        .compare_at_price_main, .sticky-add-to-cart-content-compare-at-price {
+          display: none !important;
+        }
+      </style>
+    {% else %}
+      {%- liquid
+        assign price1 = 0
+        assign compare_at_price1 = 0
+        assign save1 = 0
+      
+        assign price2 = 0
+        assign compare_at_price2 = 0
+        assign save2 = 0
+      
+        assign price3 = 0
+        assign compare_at_price3 = 0
+        assign save3 = 0
+      
+        assign base_price = product.selected_or_first_available_variant.price
+         
+        assign discount_rate_1 = 0.50
+        assign discount_amount_1 = base_price | times: discount_rate_1
+        assign final_price_1 = base_price | minus: discount_amount_1
+      
+        assign price1 = final_price_1
+        assign compare_at_price1 = base_price
+        assign save1 = discount_rate_1 | times: 100 | round
+      
+        assign discount_rate_2 = 0.55
+        assign discount_amount_2 = base_price | times: discount_rate_2
+        assign final_price_2 = base_price | minus: discount_amount_2
+          
+        assign price2 = final_price_2
+        assign compare_at_price2 = base_price
+        assign save2 = discount_rate_2 | times: 100 | round
+      
+        assign discount_rate_3 = 0.60
+        assign discount_amount_3 = base_price | times: discount_rate_3
+        assign final_price_3 = base_price | minus: discount_amount_3
+  
+        assign price3 = final_price_3
+        assign compare_at_price3 = base_price 
+        assign save3 = discount_rate_3 | times: 100 | round
+      -%}
+      <div class="qty_selector_discount">
+        <div class="qty_selector_discount_title"><span>→ AANBIEDING EINDIGT OM 23:59 ←</span></div>
+        {%- if price1 > 0 -%}
+          <div class="quantity_selector">
+            <div
+              class="single_quantity"
+              data-qty="1"
+              data-price="{{ price1 | money }}"
+              data-old-price="{{ compare_at_price1 | money_without_trailing_zeros }}"
+            >
+              <div class="option_radio_custom"></div>
+    
+              <div class="single_quantity_main">
+                <div class="single_quantity_main_left">
+                  <h4 class="h4">1 Bal</h4>
+                  <div class="sq_you_save">
+                    {%- if product.tags contains 'bogo-deal' -%}
+                      Koop 1, krijg 1 - mix en match
+                    {%- else -%}
+                      Bespaar {{ save1 }}% op je totale bestelling!
+                    {%- endif -%}
+                  </div>
+                </div>
+                <div class="single_quantity_main_right">
+                  <h6 class="quanity-price notranslate ht-money" style="margin-bottom: 0px;">{{ price1 | money }}</h6>
+                  <h6 class="quanity-prc notranslate ht-money" style="margin-bottom: 0px;">
+                    was <span>{{ compare_at_price1 | money_without_trailing_zeros }}</span>
+                  </h6>
+                </div>
+              </div>
+            </div>
+    
+            <div
+              class="single_quantity selected firstclick"
+              data-qty="2"
+              data-price="{{ price2 | money }}"
+              data-old-price="{{ compare_at_price2 | money_without_trailing_zeros }}"
+            >
+              <div class="option_radio_custom"></div>
+    
+              <div class="single_quantity_main">
+                <div class="single_quantity_main_left">
+                  <h4 class="h4">
+                    2 Ballen
+                    <div class="single_quantity_main_left_gratis">Gratis verzending</div>
+                  </h4>
+                  <div class="sq_you_save">
+                    {%- if product.tags contains 'bogo-deal' -%}
+                      Koop 1 krijg 1 gratis
+                    {%- else -%}
+                      Bespaar {{ save2 }}% op je totale bestelling!
+                    {%- endif -%}
+                  </div>
+                </div>
+                <div class="single_quantity_main_right">
+                  <h6 class="quanity-price notranslate ht-money" style="margin-bottom: 0px;">{{ price2 | money }}</h6>
+                  <h6 class="quanity-prc notranslate ht-money" style="margin-bottom: 0px;">
+                    was <span>{{ compare_at_price2 | money_without_trailing_zeros }}</span>
+                  </h6>
+                </div>
+              </div>
+    
+              <div class="most-popular">🔥 Meest populair</div>
+            </div>
+    
+            <div
+              class="single_quantity"
+              data-qty="{% if product.tags contains 'bogo-deal'%}4{% else %}3{% endif %}"
+              data-price="{{ price3 | money }}"
+              data-old-price="{{ compare_at_price3 | money_without_trailing_zeros }}"
+            >
+              <div class="option_radio_custom"></div>
+    
+              <div class="single_quantity_main">
+                <div class="single_quantity_main_left">
+                  <h4 class="h4">
+                    {% if product.tags contains 'bogo-deal'%}4{% else %}3{% endif %} Ballen
+                    <div class="single_quantity_main_left_gratis" style="background-color:#ffd602">Beste deal</div>
+                  </h4>
+                  <div class="sq_you_save">
+                    {%- if product.tags contains 'bogo-deal' -%}
+                      Koop 2 krijg 2 gratis
+                    {%- else -%}
+                      Bespaar {{ save3 }}% op je totale bestelling!
+                    {%- endif -%}
+                  </div>
+                </div>
+                <div class="single_quantity_main_right">
+                  <h6 class="quanity-price notranslate ht-money" style="margin-bottom: 0px;">
+                    {{ price3 | money }}
+                  </h6>
+                  <h6 class="quanity-prc notranslate ht-money" style="margin-bottom: 0px;">
+                    was <span>{{ compare_at_price3 | money_without_trailing_zeros }}</span>
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        {%- else -%}
+          <div class="quantity_selector">
+            {% assign dis_price_one = selected_variant.price | times: 22.33 | divided_by: 100.0 | round %}
+            {% assign get_discount_price_one = selected_variant.price | minus: dis_price_one %}
+    
+            {% assign discount_price_1 = get_discount_price_one | plus: 0 %}
+            {% assign original_price_1 = selected_variant.price | plus: 0 %}
+    
+            {% assign discount_percentage1 = discount_price_1 | times: 100 | divided_by: original_price_1 %}
+            {% assign discount_percentage1 = 100 | minus: discount_percentage1 %}
+            {% assign discount_percentage1 = discount_percentage1 | round %}
+            <div
+              class="single_quantity"
+              data-qty="1"
+              data-price="{{ get_discount_price_one | money }}"
+              data-old-price="{{ selected_variant.price | money }}"
+            >
+              <div class="option_radio_custom"></div>
+    
+              <div class="single_quantity_main">
+                <div class="single_quantity_main_left">
+                  <h4 class="h4">1 Bal</h4>
+                  <div class="sq_you_save">Bespaar {{ discount_percentage1 }}% op je totale bestelling!</div>
+                </div>
+                <div class="single_quantity_main_right">
+                  <h6 class="quanity-price" style="margin-bottom: 0px;">{{ get_discount_price_one | money }}</h6>
+                  <h6 class="quanity-prc" style="margin-bottom: 0px;">
+                    was <span>{{ selected_variant.price | money }}</span>
+                  </h6>
+                </div>
+              </div>
+            </div>
+    
+            {% assign dis_price_two = selected_variant.price | times: 65 | divided_by: 100 | round %}
+            {% assign get_discount_price_two = selected_variant.price | minus: dis_price_two %}
+    
+            {% assign discount_price_2 = get_discount_price_two | plus: 0 %}
+            {% assign original_price_2 = selected_variant.price | plus: 0 %}
+    
+            {% assign discount_percentage2 = discount_price_2 | times: 100 | divided_by: original_price_2 %}
+            {% assign discount_percentage2 = 100 | minus: discount_percentage2 %}
+            {% assign discount_percentage2 = discount_percentage2 | round %}
+    
+            <div
+              class="single_quantity selected firstclick"
+              data-qty="2"
+              data-price="{{ get_discount_price_two | times: 2 | money }}"
+              data-old-price="{{ selected_variant.price | times: 2 | money }}"
+            >
+              <div class="option_radio_custom"></div>
+    
+              <div class="single_quantity_main">
+                <div class="single_quantity_main_left">
+                  <h4 class="h4">
+                    2 Ballen
+                    <div class="single_quantity_main_left_gratis">Gratis verzending</div>
+                  </h4>
+                  <div class="sq_you_save">Bespaar {{ discount_percentage2 }}% op je totale bestelling!</div>
+                </div>
+                <div class="single_quantity_main_right">
+                  <h6 class="quanity-price" style="margin-bottom: 0px;">{{ get_discount_price_two | times: 2 | money }}</h6>
+                  <h6 class="quanity-prc" style="margin-bottom: 0px;">
+                    was <span>{{ selected_variant.price | times: 2 | money }}</span>
+                  </h6>
+                </div>
+              </div>
+    
+              <div class="most-popular">🔥 Meest populair</div>
+            </div>
+    
+            {% assign dis_price_three = selected_variant.price | times: 70 | divided_by: 100.0 | round %}
+            {% assign get_discount_price_three = selected_variant.price | minus: dis_price_three %}
+    
+            {% assign discount_price_3 = get_discount_price_three | plus: 0 %}
+            {% assign original_price_3 = selected_variant.price | plus: 0 %}
+    
+            {% assign discount_percentage3 = discount_price_3 | times: 100 | divided_by: original_price_3 %}
+            {% assign discount_percentage3 = 100 | minus: discount_percentage3 %}
+            {% assign discount_percentage3 = discount_percentage3 | round %}
+    
+            <div
+              class="single_quantity"
+              data-qty="3"
+              data-price="{{ get_discount_price_three | times: 3 | money }}"
+              data-old-price="{{ selected_variant.price | times: 3 | money }}"
+            >
+              <div class="option_radio_custom"></div>
+    
+              <div class="single_quantity_main">
+                <div class="single_quantity_main_left">
+                  <h4 class="h4">
+                    3 Ballen
+                    <div class="single_quantity_main_left_gratis">Beste deal</div>
+                  </h4>
+                  <div class="sq_you_save">Bespaar {{ discount_percentage3 }}% op je totale bestelling!</div>
+                </div>
+                <div class="single_quantity_main_right">
+                  <h6 class="quanity-price" style="margin-bottom: 0px;">
+                    {{ get_discount_price_three | times: 3 | money }}
+                  </h6>
+                  <h6 class="quanity-prc" style="margin-bottom: 0px;">
+                    was <span>{{ selected_variant.price | times: 3 | money }}</span>
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        {%- endif -%}
+      </div>
+    {% endif %}
+  {% else %}
+    {% unless product.handle == 'the-bright-air-pump' %}
+      {% if flag_offer %}
+        <div class="qty_selector_discount">
+          <label style="margin-bottom: 55px; display: block; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; font-size: 12px;"
+            >Aantal</label
+          >
+          <div class="quantity_selector">
+            <div class="single_quantity selected" data-qty="1">
+              <div class="option_radio_custom"></div>
+              <h4 class="h4">1</h4>
+              <h6
+                class="h6 discounttag"
+                data-oprice="{{ selected_variant.price | minus:1000 | money }}"
+              >
+                Bespaar {{ 1000 | money_without_trailing_zeros }}
+              </h6>
+            </div>
+            <div class="single_quantity" data-qty="2">
+              <div class="option_radio_custom"></div>
+              <h4 class="h4">2</h4>
+              {% assign selected_vn_price = selected_variant.price | minus: 300 | times: 2 %}
+              <h6
+                class="h6 discounttag hasdiscount"
+                data-oprice="{{ selected_variant.price | minus: 1300  | money }}"
+              >
+                Bespaar {{ 2600 | money_without_trailing_zeros }}
+              </h6>
+            </div>
+            <div class="single_quantity" data-qty="3">
+              <div class="option_radio_custom"></div>
+              <h4 class="h4">3</h4>
+              <h6
+                class="h6 discounttag hasdiscount"
+                data-oprice="{{ selected_variant.price | minus: 1500 | money }}"
+              >
+                Bespaar {{ 4500 | money_without_trailing_zeros }}
+              </h6>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+
+      {% if flag_offer2 %}
+        <div class="qty_selector_discount_old">
+          <label style="margin-bottom: 55px; display: block; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; font-size: 12px;"
+            >Aantal</label
+          >
+          <div class="quantity_selector">
+            <div class="single_quantity selected" data-qty="1">
+              <div class="option_radio_custom"></div>
+
+              <h4 class="h4">1</h4>
+              <h6 class="h6 discounttag" data-oprice="{{ selected_variant.price | money }}"></h6>
+            </div>
+            <div class="single_quantity" data-qty="2">
+              <div class="option_radio_custom"></div>
+
+              <h4 class="h4">2</h4>
+              {% assign selected_vn_price = selected_variant.price | minus: 400 | times: 2 %}
+              {% assign top_price = selected_variant.price | times: 2 %}
+              {% assign selected_nt_price = top_price | minus: selected_vn_price %}
+              <h6
+                class="h6 discounttag hasdiscount"
+                data-oprice="{{ selected_variant.price | minus: 400  | money }}"
+              >
+                10% korting
+              </h6>
+            </div>
+            <div class="single_quantity" data-qty="3">
+              <div class="option_radio_custom"></div>
+              <h4 class="h4">3</h4>
+              {% assign selected_vn_b_price = selected_variant.price | minus: 600 | times: 3 %}
+              {% assign top_price = selected_variant.price | times: 3 %}
+              {% assign selected_nb_price = top_price | minus: selected_vn_b_price %}
+
+              <h6
+                class="h6 discounttag hasdiscount"
+                data-oprice="{{ selected_variant.price | minus: 600  | money }}"
+              >
+                15% korting
+              </h6>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+
+      {% if flag_offer3 %}
+        <div class="qty_selector_discount_old">
+          <label style="margin-bottom: 55px; display: block; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; font-size: 12px;"
+            >Aantal</label
+          >
+          <div class="quantity_selector">
+            <div class="single_quantity selected" data-qty="1">
+              <div class="option_radio_custom"></div>
+              <h4 class="h4">1</h4>
+              <h6 class="h6 discounttag" data-oprice="{{ selected_variant.price | money }}"></h6>
+            </div>
+            <div class="single_quantity" data-qty="2">
+              <div class="option_radio_custom"></div>
+              <h4 class="h4">2</h4>
+              {% assign selected_vn_price = selected_variant.price | minus: 300 | times: 2 %}
+              <h6
+                class="h6 discounttag hasdiscount"
+                data-oprice="{{ selected_variant.price | minus: 300  | money }}"
+              >
+                10% korting
+              </h6>
+            </div>
+            <div class="single_quantity" data-qty="3">
+              <div class="option_radio_custom"></div>
+              <h4 class="h4">3</h4>
+              <h6
+                class="h6 discounttag hasdiscount"
+                data-oprice="{{ selected_variant.price | minus: 500  | money }}"
+              >
+                15% korting
+              </h6>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    {% endunless %}
+  {% endif %}
+
+  <input type="hidden" id="variant-id" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+
+  <div class="ProductForm__Variants">
+    {%- unless product.has_only_default_variant -%}
+      <div class="ProductForm__Option">
+        {% if product.options_by_name.Maat and product.options_by_name.Maat.values %}
+          <div class="product-options">
+            <div class="product-options-label">Maat</div>
+            {% for value in product.options_by_name.Maat.values %}
+              {%- liquid
+                assign option_disabled = true
+                for variant in product.variants
+                  if variant.option1 == value and variant.available
+                    assign option_disabled = false
+                    break
+                  endif
+                endfor
+              -%}
+              <input
+                type="radio"
+                name="size"
+                id="size{{ forloop.index }}"
+                value="{{ value | escape }}"
+                {% if forloop.first %}
+                  checked
+                {% endif %}
+                {% if option_disabled %}
+                  disabled
+                  class="disabled"
+                {% endif %}
+              >
+              <label for="size{{ forloop.index }}" {% if option_disabled %}class="sold-out-label"{% endif %}>
+                {{ value }}{% if option_disabled %} <span class="sold-out-text">(Sold Out)</span>{% endif %}
+              </label>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        {% if product.options_by_name.Color and product.options_by_name.Color.values %}
+          <div class="product-options">
+            <div class="product-options-label">Kleur</div>
+            {% for value in product.options_by_name.Color.values %}
+              {%- liquid
+                assign option_disabled = true
+                assign selected_size = product.selected_or_first_available_variant.option1
+                for variant in product.variants
+                  if variant.option1 == selected_size and variant.option2 == value and variant.available
+                    assign option_disabled = false
+                    break
+                  endif
+                endfor
+              -%}
+              <input
+                type="radio"
+                name="color"
+                id="color{{ forloop.index }}"
+                value="{{ value | escape }}"
+                {% if forloop.first %}
+                  checked
+                {% endif %}
+                {% if option_disabled %}
+                  disabled
+                  class="disabled"
+                {% endif %}
+              >
+              <label for="color{{ forloop.index }}" {% if option_disabled %}class="sold-out-label"{% endif %}>
+                {{ value }}{% if option_disabled %} <span class="sold-out-text">(Sold Out)</span>{% endif %}
+              </label>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="qty_selector_discount">
+        <div class="qty_selector_discount_title"><span>→ AANBIEDING EINDIGT OM 23:59 ←</span></div>
+        <div class="quantity_selector">
+          {% assign dis_price_one = selected_variant.compare_at_price | minus: selected_variant.price %}
+
+          <div
+            class="single_quantity"
+            data-qty="1"
+            data-price="{{ selected_variant.price | money }}"
+            data-old-price="{{ selected_variant.compare_at_price | money }}"
+          >
+            <div class="option_radio_custom"></div>
+
+            <div class="single_quantity_main">
+              <div class="single_quantity_main_left">
+                <h4 class="h4">1 Product</h4>
+                <div class="sq_you_save">
+                  Bespaar <span>{{ dis_price_one | money }}</span>
+                </div>
+              </div>
+              <div class="single_quantity_main_right">
+                <h6 class="quanity-price" style="margin-bottom: 0px;">{{ selected_variant.price | money }}</h6>
+                <h6 class="quanity-prc" style="margin-bottom: 0px;">
+                  was <span>{{ selected_variant.compare_at_price | money }}</span>
+                </h6>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="single_quantity selected firstclick"
+            data-qty="2"
+            data-price="{{ selected_variant.price | times: 2 | money }}"
+            data-old-price="{{ selected_variant.compare_at_price | times: 2 | money }}"
+          >
+            <div class="option_radio_custom"></div>
+
+            <div class="single_quantity_main">
+              <div class="single_quantity_main_left">
+                <h4 class="h4">2 Producten</h4>
+                <div class="sq_you_save">
+                  Slechts <span>{{ selected_variant.price | money }}/paar</span>
+                </div>
+              </div>
+              <div class="single_quantity_main_right">
+                <h6 class="quanity-price" style="margin-bottom: 0px;">
+                  {{ selected_variant.price | times: 2 | money }}
+                </h6>
+                <h6 class="quanity-prc" style="margin-bottom: 0px;">
+                  was <span>{{ selected_variant.compare_at_price | times: 2 | money }}</span>
+                </h6>
+              </div>
+            </div>
+
+            <div class="most-popular">🔥 Meest populair</div>
+          </div>
+
+          {% assign saleval_3 = 100
+            | minus: selected_variant.price
+            | times: 100
+            | divided_by: selected_variant.compare_at_price
+          %}
+          {% assign saleval_3 = saleval_3 | round %}
+
+          <div
+            class="single_quantity"
+            data-qty="3"
+            data-price="{{ selected_variant.price | times: 3 | money }}"
+            data-old-price="{{ selected_variant.compare_at_price | times: 3 | money }}"
+          >
+            <div class="option_radio_custom"></div>
+
+            <div class="single_quantity_main">
+              <div class="single_quantity_main_left">
+                <h4 class="h4">3 Producten</h4>
+                <div class="sq_you_save">
+                  <span>Bespaar {{ saleval_3 }}% op je totale bestelling!</span>
+                </div>
+              </div>
+              <div class="single_quantity_main_right">
+                <h6 class="quanity-price" style="margin-bottom: 0px;">
+                  {{ selected_variant.price | times: 3 | money }}
+                </h6>
+                <h6 class="quanity-prc" style="margin-bottom: 0px;">
+                  was <span>{{ selected_variant.compare_at_price | times: 3 | money }}</span>
+                </h6>
+              </div>
+            </div>
+
+            <div class="most-popular best-deal">💎 Beste deal</div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var productForm = document.getElementById('product_form_{{ product.id }}');
+          var variants = {{ product.variants | json }};
+
+          function updateVariant(selectedOptions) {
+            var selectedVariant = variants.find(function(variant) {
+
+              {% if product.options_by_name['Color'] and product.options_by_name['Color'].values %}
+                return selectedOptions.size === variant.option1 && selectedOptions.color === variant.option2;
+              {% else %}
+                return selectedOptions.size === variant.option1;
+              {% endif %}
+            });
+
+            if (selectedVariant) {
+              $("#variant-id").val(selectedVariant.id);
+            }
+          }
+
+          {% if product.options_by_name['Color'] and product.options_by_name['Color'].values %}
+          function updateColorAvailability(selectedSize) {
+            var colorInputs = productForm.querySelectorAll('input[name="color"]');
+            colorInputs.forEach(function(colorInput) {
+              var colorValue = colorInput.value;
+              var isAvailable = variants.some(function(variant) {
+                return variant.option1 === selectedSize && 
+                       variant.option2 === colorValue && 
+                       variant.available;
+              });
+              
+              var label = productForm.querySelector('label[for="' + colorInput.id + '"]');
+              
+              if (isAvailable) {
+                colorInput.disabled = false;
+                colorInput.classList.remove('disabled');
+                if (label) {
+                  label.classList.remove('sold-out-label');
+                  var soldOutText = label.querySelector('.sold-out-text');
+                  if (soldOutText) {
+                    soldOutText.remove();
+                  }
+                }
+              } else {
+                colorInput.disabled = true;
+                colorInput.classList.add('disabled');
+                if (label && !label.querySelector('.sold-out-text')) {
+                  label.classList.add('sold-out-label');
+                  var soldOutSpan = document.createElement('span');
+                  soldOutSpan.className = 'sold-out-text';
+                  soldOutSpan.textContent = ' (Sold Out)';
+                  label.appendChild(soldOutSpan);
+                }
+                // Uncheck if this color was selected but is now unavailable
+                if (colorInput.checked) {
+                  colorInput.checked = false;
+                  // Check first available color
+                  var firstAvailable = Array.from(colorInputs).find(function(input) {
+                    return !input.disabled;
+                  });
+                  if (firstAvailable) {
+                    firstAvailable.checked = true;
+                  }
+                }
+              }
+            });
+          }
+          {% endif %}
+
+          var radioInputs = productForm.querySelectorAll('input[type="radio"]');
+          radioInputs.forEach(function(radio) {
+            radio.addEventListener('change', function() {
+              var selectedOptions = {
+                size: productForm.querySelector('input[name="size"]:checked').value
+
+                {% if product.options_by_name['Color'] and product.options_by_name['Color'].values %}
+                  ,color: productForm.querySelector('input[name="color"]:checked').value
+                {% endif %}
+              };
+              
+              {% if product.options_by_name['Color'] and product.options_by_name['Color'].values %}
+              // Update color availability when size changes
+              if (radio.name === 'size') {
+                updateColorAvailability(selectedOptions.size);
+                // Update selected color if current one is unavailable
+                var checkedColor = productForm.querySelector('input[name="color"]:checked');
+                if (checkedColor && checkedColor.disabled) {
+                  var firstAvailableColor = Array.from(productForm.querySelectorAll('input[name="color"]')).find(function(input) {
+                    return !input.disabled;
+                  });
+                  if (firstAvailableColor) {
+                    firstAvailableColor.checked = true;
+                    selectedOptions.color = firstAvailableColor.value;
+                  }
+                }
+              }
+              {% endif %}
+              
+              updateVariant(selectedOptions);
+            });
+          });
+
+          var defaultOptions = {
+            size: productForm.querySelector('input[name="size"]:checked').value
+
+            {% if product.options_by_name['Color'] and product.options_by_name['Color'].values %}
+              ,color: productForm.querySelector('input[name="color"]:checked').value
+            {% endif %}
+          };
+          
+          {% if product.options_by_name['Color'] and product.options_by_name['Color'].values %}
+          // Initialize color availability on page load
+          updateColorAvailability(defaultOptions.size);
+          {% endif %}
+          
+          updateVariant(defaultOptions);
+        });
+      </script>
+    {%- else -%}
+      <input
+        type="hidden"
+        name="id"
+        data-sku="{{ selected_variant.sku }}"
+        value="{{ selected_variant.id }}"
+      >
+    {%- endunless -%}
+
+    {%- if section.settings.show_quantity_selector -%}
+      <div class="ProductForm__QuantitySelector">
+        <div class="QuantitySelector QuantitySelector--large">
+          {%- assign quantity_minus_one = line_item.quantity | minus: 1 -%}
+
+          <span
+            class="QuantitySelector__Button Link Link--secondary"
+            data-action="decrease-quantity"
+          >
+            {%- include 'icon' with 'minus' -%}
+          </span>
+          <input
+            type="text"
+            class="QuantitySelector__CurrentQuantity"
+            pattern="[0-9]*"
+            name="quantity"
+            value="1"
+          >
+          <span
+            class="QuantitySelector__Button Link Link--secondary"
+            data-action="increase-quantity"
+          >
+            {%- include 'icon' with 'plus' -%}
+          </span>
+        </div>
+      </div>
+    {%- else -%}
+      <input type="hidden" name="quantity" value="1" class="pass_qty_hidden">
+    {%- endif -%}
+
+    {%- if section.settings.show_inventory_quantity -%}
+      {%- assign hide_inventory_quantity_by_default = false -%}
+
+      {%- if selected_variant.inventory_management == blank or selected_variant.inventory_quantity <= 0 -%}
+        {%- assign hide_inventory_quantity_by_default = true -%}
+      {%- endif -%}
+
+      {%- if section.settings.inventory_quantity_threshold != 0
+        and selected_variant.inventory_quantity > section.settings.inventory_quantity_threshold
+      -%}
+        {%- assign hide_inventory_quantity_by_default = true -%}
+      {%- endif -%}
+
+      <p
+        class="ProductForm__Inventory Text--subdued"
+        {% if hide_inventory_quantity_by_default %}
+          style="display: none"
+        {% endif %}
+      >
+        {%- if section.settings.inventory_quantity_threshold == 0 -%}
+          {{- 'product.form.inventory_quantity_count' | t: count: selected_variant.inventory_quantity -}}
+        {%- else -%}
+          {{- 'product.form.low_inventory_quantity_count' | t: count: selected_variant.inventory_quantity -}}
+        {%- endif -%}
+      </p>
+    {%- endif -%}
+  </div>
+
+  {%- comment -%}
+    --------------------------------------------------------------------------------------------------------------------
+    TOEVOEGEN AAN WINKELWAGEN KNOP
+    --------------------------------------------------------------------------------------------------------------------
+  {%- endcomment -%}
+
+  <button
+    style="min-height: 56px;justify-content:center;column-gap:10px;"
+    type="button"
+    class="Main_AddTocart_button maison_test ProductForm__AddToCart Button pulse-animation {% if selected_variant.available and section.settings.show_payment_button == false %}Button--primary shopify-payment-button__button shopify-payment-button__button--unbranded{% else %}shopify-payment-button__button shopify-payment-button__button--unbranded {% endif %} Button--full"
+    {% unless selected_variant.available %}
+      disabled="disabled"
+    {% endunless %}
+  >
+    {%- if selected_variant.available -%}
+      <span>
+        {%- if product.template_suffix == 'pre-order' -%}
+          {{- 'product.form.pre_order' | t -}}
+        {%- else -%}
+          {{- 'product.form.add_to_cart_sty' | t -}}
+        {%- endif -%}
+      </span>
+    {%- else -%}
+      <span>Sold Out</span>
+    {%- endif -%}
+  </button>
+
+  <div class="klarna_payment">
+    <p class="klarna_text">{{ section.settings['klarna-payment-text'] }}</p>
+    <div class="klarna_payment_icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="49" height="21" viewBox="0 0 49 21" fill="none">
+        <path d="M43.8909 0.310059H5.10907C2.56355 0.310059 0.5 1.88867 0.5 3.83599V17.1841C0.5 19.1314 2.56355 20.7101 5.10907 20.7101H43.8909C46.4365 20.7101 48.5 19.1314 48.5 17.1841V3.83599C48.5 1.88867 46.4365 0.310059 43.8909 0.310059Z" fill="#FFB3C7"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M43.9968 12.5014C43.3691 12.5014 42.8603 13.0148 42.8603 13.6482C42.8603 14.2815 43.3691 14.7951 43.9968 14.7951C44.6245 14.7951 45.1334 14.2816 45.1334 13.6482C45.1334 13.0148 44.6245 12.5014 43.9968 12.5014ZM40.2575 11.6147C40.2575 10.7475 39.523 10.0447 38.6168 10.0447C37.7107 10.0447 36.976 10.7476 36.976 11.6147C36.976 12.4819 37.7106 13.1849 38.6168 13.1849C39.5231 13.1849 40.2575 12.4819 40.2575 11.6147ZM40.2636 8.56321H42.0743V14.666H40.2636V14.276C39.752 14.628 39.1346 14.835 38.4685 14.835C36.7061 14.835 35.2773 13.3932 35.2773 11.6147C35.2773 9.83615 36.7061 8.39452 38.4685 8.39452C39.1346 8.39452 39.7521 8.60146 40.2636 8.9536V8.56321ZM25.7726 9.35815V8.5633H23.9187V14.666H25.7768V11.8167C25.7768 10.8554 26.8093 10.3387 27.5258 10.3387C27.5331 10.3387 27.54 10.3395 27.5473 10.3395V8.56378C26.812 8.56378 26.1356 8.88137 25.7726 9.35815ZM21.1545 11.6147C21.1545 10.7476 20.4199 10.0447 19.5137 10.0447C18.6076 10.0447 17.8729 10.7476 17.8729 11.6147C17.8729 12.4819 18.6076 13.185 19.5137 13.185C20.4199 13.185 21.1545 12.4819 21.1545 11.6147ZM21.1605 8.56323H22.9713V14.666H21.1605V14.276C20.6489 14.628 20.0315 14.835 19.3655 14.835C17.603 14.835 16.1742 13.3932 16.1742 11.6147C16.1742 9.83617 17.603 8.39454 19.3655 8.39454C20.0315 8.39454 20.649 8.60148 21.1605 8.95362V8.56323ZM32.0597 8.39909C31.3363 8.39909 30.6517 8.6257 30.194 9.25088V8.5636H28.3911V14.6661H30.2162V11.459C30.2162 10.531 30.8329 10.0766 31.5755 10.0766C32.3713 10.0766 32.8289 10.5563 32.8289 11.4464V14.6661H34.6375V10.7852C34.6375 9.36501 33.5184 8.39909 32.0597 8.39909ZM13.5365 14.6661H15.4318V5.84366H13.5365V14.6661ZM5.21094 14.6685H7.21784V5.84206H5.21094V14.6685ZM12.2304 5.84206C12.2304 7.75291 11.4924 9.53048 10.1774 10.8517L12.9515 14.6688H10.4728L7.45793 10.5205L8.23601 9.9325C9.52636 8.95715 10.2665 7.46631 10.2665 5.84204L12.2304 5.84206Z" fill="#0A0B09"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="stock-section product-stock-section">
+    <span class="pulse green"></span>
+    <span class="stock-section-content">
+      {%- if product.metafields.custom.maximum_stock_number > 0 -%}
+        Nog maar <span class="stock-left">{{ product.metafields.custom.maximum_stock_number }}</span> ballen op voorraad!
+      {%- else -%}
+        {%- liquid
+          assign stockQuantity = product.title | size
+          if stockQuantity < 9
+            assign stockQuantity = 9
+          endif
+        -%}
+        Nog maar <span class="stock-left">{{ stockQuantity }}</span> ballen op voorraad!
+      {%- endif -%}
+    </span>
+  </div>
+
+  {%- if product.metafields.custom.maximum_stock_number > 0 and product.metafields.custom.minimum_stock_number > 0 -%}
+    <script>
+      function setCookie(name, value, hours) {
+        let expires = "";
+  
+        if (hours) {
+          const date = new Date();
+          date.setTime(date.getTime() + (hours*60*60*1000));
+  
+          expires = "; expires=" + date.toUTCString();
+        }
+  
+        document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+      }
+  
+      function getCookie(name) {
+        const nameEQ = name + "=";
+        const ca = document.cookie.split(';');
+  
+        for (let i=0;i < ca.length;i++) {
+          let c = ca[i];
+  
+          while (c.charAt(0)==' ') c = c.substring(1,c.length);
+  
+          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+  
+        return null;
+      }
+  
+      function eraseCookie(name) {
+        document.cookie = name+'=; Max-Age=-99999999;';
+      }
+  
+      document.addEventListener('DOMContentLoaded', () => {
+        let stock = getCookie('product_stock_{{ product.id }}');
+        const stockSection = document.querySelector('.product-stock-section');
+  
+        if (stockSection != null) {
+          const stockLeft = stockSection.querySelector('.stock-left');
+  
+          if (stock == null) {
+            stock = Math.floor(Math.random() * ({{ product.metafields.custom.maximum_stock_number }} - {{ product.metafields.custom.minimum_stock_number }} + 1) + {{ product.metafields.custom.minimum_stock_number }});
+            
+            setCookie('product_stock_{{ product.id }}', stock, 6);
+          }
+  
+          stockLeft.innerText = stock;
+        }
+      });
+    </script>
+  {%- endif -%}
+
+  {%- if section.settings.show_payment_button -%}
+    {{ form | payment_button }}
+  {%- endif -%}
+{%- endform -%}
+
+{% if product.metafields.custom.first_video != null %}
+  <section class="ugc-section maison_test">
+    <h2>{{ section.settings['ugc-section-heading'] }}</h2>
+    <div>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <video autoplay muted loop playsinline class="ugc-section-video">
+              <source src="{{- product.metafields.custom.first_video -}}" type="video/mp4">
+            </video>
+          </div>
+          <div class="swiper-slide">
+            <video autoplay muted loop playsinline class="ugc-section-video">
+              <source src="{{- product.metafields.custom.second_video -}}" type="video/mp4">
+            </video>
+          </div>
+          <div class="swiper-slide">
+            <video autoplay muted loop playsinline class="ugc-section-video">
+              <source src="{{- product.metafields.custom.third_video -}}" type="video/mp4">
+            </video>
+          </div>
+          <div class="swiper-slide">
+            <video autoplay muted loop playsinline class="ugc-section-video">
+              <source src="{{- product.metafields.custom.fourth_video -}}" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+      {% comment %}
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <video autoplay muted loop playsinline class="ugc-section-video">
+              <source src="{{'video-1.mp4' | asset_url}}" type="video/mp4">
+              </video>
+            </div>
+            <div class="swiper-slide">
+              <video autoplay muted loop playsinline class="ugc-section-video">
+                <source src="{{'video-2.mp4' | asset_url}}" type="video/mp4">
+                </video>
+            </div>
+            <div class="swiper-slide">
+              <video autoplay muted loop playsinline class="ugc-section-video">
+                <source src="{{'video-3.mp4' | asset_url}}" type="video/mp4">
+                </video>
+            </div>
+            <div class="swiper-slide">
+              <video autoplay muted loop playsinline class="ugc-section-video">
+                <source src="{{'video-4.mp4' | asset_url}}" type="video/mp4">
+                </video>
+            </div>
+          </div>
+        </div>
+      {% endcomment %}
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+{% endif %}
+
+{%- if size_chart_page != empty -%}
+  {%- comment -%}Als we een maattabel hebben, leggen we de modale inhoud vast (deze moet buiten het formulier worden weergegeven voor juiste positionering){%- endcomment -%}
+
+  {%- capture product_modals -%}
+    <div id="modal-{{ size_chart_page.handle }}" class="Modal Modal--dark Modal--fullScreen Modal--pageContent" aria-hidden="true" role="dialog" data-scrollable>
+      <header class="Modal__Header">
+        <h2 class="Modal__Title Heading u-h1">{{ size_chart_page.title }}</h2>
+      </header>
+
+      <div class="Modal__Content Rte">
+        <div class="Container Container--extraNarrow">
+          {{- size_chart_page.content -}}
+        </div>
+      </div>
+
+      <button class="Modal__Close RoundButton RoundButton--large" data-animate-bottom data-action="close-modal">{% include 'icon' with 'close' %}</button>
+    </div>
+  {%- endcapture -%}
+{%- endif -%}
+
+{%- if section.settings.show_payment_button and selected_variant.available == false -%}
+  <style>
+    #shopify-section-{{ section.id }} .shopify-payment-button {
+      display: none;
+    }
+  </style>
+{%- endif -%}
+
+{% comment %}
+  ------------------------------------------------------------------------------
+  Productgegevens. Dit moet worden uitgevoerd voor alle producten (inclusief homepage).
+
+  BELANGRIJK: DEZE CODE IS VITAAL. BEWERK DEZE NIET OF VERWIJDER DEZE NIET. 
+  ZORG ERVOOR DAT JE PRECIES DEZELFDE ATTRIBUTEN BEHOUDT.
+  ------------------------------------------------------------------------------
+{% endcomment %}
+
+<script type="application/json" data-product-json>
+  {
+    "product": {{ product | json }},
+    "selected_variant_id": {{ selected_variant.id }}
+    {%- if section.settings.show_inventory_quantity -%}
+      ,"inventories": {
+        {%- for variant in product.variants -%}
+          {%- assign inventory_message = '' -%}
+
+          {%- if section.settings.inventory_quantity_threshold == 0 -%}
+            {%- capture inventory_message -%}{{- 'product.form.inventory_quantity_count' | t: count: variant.inventory_quantity -}}{%- endcapture -%}
+          {%- else -%}
+            {%- capture inventory_message -%}{{- 'product.form.low_inventory_quantity_count' | t: count: variant.inventory_quantity -}}{%- endcapture -%}
+          {%- endif -%}
+
+          "{{ variant.id }}": {
+            "inventory_management": {{ variant.inventory_management | json }},
+            "inventory_policy": {{ variant.inventory_policy | json }},
+            "inventory_quantity": {{ variant.inventory_quantity | json }},
+            "inventory_message": {{ inventory_message | json }}
+          }{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      }
+    {%- endif -%}
+  }
+</script>
+
+<script>
+  let added = false;
+  let quantity = 1;
+
+  document.querySelectorAll('div[data-qty]').forEach((el) => {
+    el.addEventListener('click', () => {
+      quantity = parseInt(el.getAttribute('data-qty'));
+    });
+  });
+
+  const atcBtn = document.querySelector('.ProductForm__AddToCart');
+  const text = atcBtn.querySelector('span');
+
+  atcBtn.addEventListener('click', async (e) => {
+
+    var variantid = $("#variant-id").val();
+
+    text.innerText = '{{section.settings.cart-button-before-text}}';
+
+    atcBtn.classList.add('added');
+
+    {% assign free_product = all_products['the-bright-air-pump'] %}
+
+    await fetch('/cart/add.js', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({
+        items: [{ id: variantid, quantity }],
+      }),
+    });
+    
+    const FREE_PRODUCT_ID = {{ free_product.variants.first.id | plus: 0 }};
+    
+    fetch('/cart.js')
+      .then(res => res.json())
+      .then(cart => {
+        const bogoCount = cart.items.filter(item => item.handle.includes('bogo')).length;
+        const hasFreeProduct = cart.items.some(item => item.variant_id === FREE_PRODUCT_ID);
+    
+        if (bogoCount >= 2 && !hasFreeProduct) {    
+          return fetch('/cart/add.js', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              items: [{ id: FREE_PRODUCT_ID, quantity: 1 }]
+            })
+          });
+        }
+      })
+      .then(res => {
+        if (res && res.ok) {
+          console.log('Cadeau toegevoegd 🎁');
+        }
+      })
+      .catch(err => console.error('Fout:', err));
+    
+    added = true;
+    text.innerText = '{{section.settings.cart-button-after-text}}';
+
+    if (added) return openCart();
+
+    updateTopCartCount();
+    rerenderCart();
+  });
+
+
+  $(".single_quantity").on("click", function(){
+    $(".changable_price_main").html($(this).data("price"));
+
+     var price = $(".changable_price_main1").html($(this).data("price")); // Wijzig naar je werkelijke element class
+
+    // Deel de prijs door 4
+    var dividedPrice = price / 4;
+
+    // Update de HTML van het element
+    $(".changable_price_main2").html(dividedPrice.toFixed(2));
+
+
+    $(".changable_price_main1").html($(this).data("price"));
+    $(".compare_at_price_main").html("<b>was</b> <p>" + $(this).data("old-price") + "</p>");
+    $(".sticky_product_name_after_current").html($(this).data("price"));
+    $(".sticky_product_name_after_old").html("<b>was</b> " + $(this).data("old-price"));
+
+    var prices = $(this).data("price");
+    var vals = $(this).data("old-price");
+
+    var saleval = 100 - (Number(prices.replace(/[^0-9.-]+/g,"")) * 100 / Number(vals.replace(/[^0-9.-]+/g,"")));
+    saleval = Math.round(saleval);
+
+    $(".sticky_product_name_percent").text(saleval + "%");
+  });
+</script>
+
+<script>
+  //        fetch("/browsing_context_suggestions.json")
+  //        .then((r) => r.json())
+  //        .then((json) => {
+   //       const code = json.detected_values.country.handle;
+   //       const url = `https://assets.ipstack.com/flags/${code.toLowerCase()}.svg`;
+  //        document.querySelector("#visitor-country").setAttribute("src", url);
+  //        });
+</script>
+
+<style>
+  .ProductForm__AddToCart.added::before {
+    background-color: #34a853 !important;
+    color: white !important;
+  }
+
+  .ProductForm__AddToCart.added {
+    border-color: #34a853 !important;
+    color: white !important;
+  }
+
+  .template-product .ProductForm__AddToCart.added {
+    transform: scale(1) !important;
+    animation: pulse-green 2s infinite !important;
+  }
+  #visitor-country {
+    margin-left:4px;
+    width: 23px;
+    height: 16px;
+  }
+
+  .product-options {
+    border: transparent;
+    margin: 0 0 15px 0;
+    padding: 0;
+    height: auto;
+  }
+  .product-options-label{
+    margin-bottom: 15px;
+  }
+  .product-options label {
+    padding: 10px 15px;
+    background: #fff;
+    color: #000;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    text-wrap: nowrap;
+    line-height: 60px;
+  }
+  .product-options input[type="radio"]:checked + label {
+    background: #fff7ca;
+    border: 2px solid #ffd700;
+  }
+  .product-options input{
+    display: none;
+  }
+</style>

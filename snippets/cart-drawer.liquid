@@ -1,0 +1,236 @@
+{%- capture section_settings -%}
+{
+"type": {{ settings.cart_type | json }},
+"itemCount": {{ cart.item_count }},
+"drawer": true,
+"hasShippingEstimator": false
+}
+{%- endcapture -%}
+
+{%- assign current_product = product -%}
+{%- assign current_collection = collection -%}
+
+<div id="sidebar-cart" class="Drawer Drawer--fromRight" aria-hidden="true" data-section-id="cart" data-section-type="cart" data-section-settings='{{ section_settings }}'>
+  <div class="cart-drawer-cover">
+    <!-- Upsell Drawer -->
+    <div class="upsell-drawer">
+      <div class="upsell-drawer-inner upsell_drawer_scrollbar">
+        <div class="Drawer__Header Drawer__Header--bordered Drawer__Container">
+          <span class="Drawer__Title Heading u-h4">MAAK JE KIT COMPLEET MET</span>
+          <button class="Drawer__Close Icon-Wrapper--clickable upsell-drawer-close" 
+                  data-action="close-drawer" 
+                  data-drawer-id="sidebar-cart" 
+                  aria-label="Winkelwagen sluiten">
+            {%- include 'icon' with 'close' -%}
+          </button>
+        </div>  
+         
+        <div class="upsell-drawer-list" data-scrollable>
+          {% render 'cart-upsell-products', 
+             current_product: current_product, 
+             current_collection: current_collection %}
+        </div>
+        
+        <!-- Upsell Footer -->
+        <div class="upsell-drawer-bottom">
+          <form action="/checkout?locale={{ shop.locale }}" method="POST" novalidate>
+            <button type="submit" class="rb-check-btn Button Button--primary Button--full">
+              <span>Uitchecken</span>
+              <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.1882 9.29099C18.8019 8.903 18.2222 8.903 17.8358 9.29099C17.4493 9.67899 17.4493 10.261 17.8358 10.649L22.2153 14.9815H6.46608C5.95084 15.0461 5.5 15.4988 5.5 16.0162C5.5 16.5335 5.95084 16.9862 6.46608 16.9862H22.2153L17.8358 21.3833C17.4493 21.7714 17.4493 22.3533 17.8358 22.7413C18.0289 22.9354 18.2866 23 18.5442 23C18.8019 23 19.0594 22.9354 19.2527 22.7413L25.2424 16.7275C25.4356 16.5335 25.5 16.2749 25.5 16.0162C25.5 15.7574 25.3712 15.4988 25.2424 15.3049L19.1882 9.29099Z" fill="#0D0C0F"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+ 
+      <div class="cart-upsells__footer upsell_show_more_upsell">
+        <div class="cart-upsells__scroll-indicator">
+          <svg data-v-558efdcc="" data-v-96214230="" fill="#fff" viewBox="0 0 16 16" class="bi-chevron" style="--size:16px; --angle:0deg;">
+            <path data-v-558efdcc="" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+            <path data-v-558efdcc="" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+          </svg>
+          SCROLL VOOR MEER
+          <svg data-v-558efdcc="" data-v-96214230="" fill="#fff" viewBox="0 0 16 16" class="bi-chevron" style="--size:16px; --angle:0deg;">
+            <path data-v-558efdcc="" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+            <path data-v-558efdcc="" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="Drawer__Footer_upsell">
+        <svg width="12" height="17" viewBox="0 0 12 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.3668 11.1506C11.6772 10.8415 11.6772 10.3778 11.3668 10.0686C11.0564 9.75943 10.5908 9.75943 10.2804 10.0686L6.81441 13.5722L6.81441 0.972863C6.7627 0.560665 6.40057 0.199997 5.98664 0.199997C5.5728 0.199997 5.21066 0.560665 5.21066 0.972862L5.21066 13.5722L1.69293 10.0686C1.3825 9.75943 0.916956 9.75943 0.60653 10.0686C0.451316 10.2231 0.399609 10.4293 0.399609 10.6354C0.399609 10.8415 0.451316 11.0475 0.60653 11.2022L5.41758 15.9939C5.5728 16.1485 5.77972 16.2 5.98664 16.2C6.19365 16.2 6.40057 16.0969 6.55569 15.9939L11.3668 11.1506Z" fill="white"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Main Cart Drawer -->
+    <div class="main-drawer-right">
+      <div class="Drawer__Header Drawer__Container">
+        <div>
+          <div class="cart-drawer-top-content-box">
+            <a href="/collections/all">
+              <img class="cart-drawer-left-arrow-icon" src="{{ 'left-arrow-icon.svg' | asset_url }}" alt="terug pijl icoon"/>
+              <span class="cart-drawer-top-content">Doorgaan met winkelen</span>
+            </a>
+          </div>
+          <span class="Drawer__Title Heading u-h4">{{ 'cart.general.title' | t }}</span>
+        </div>
+
+        <button class="Drawer__Close Icon-Wrapper--clickable" 
+                data-action="close-drawer" 
+                data-drawer-id="sidebar-cart" 
+                aria-label="Winkelwagen sluiten">
+          {%- include 'icon' with 'close' -%}
+        </button>
+      </div>
+       
+      <div class="positive-message-box">
+        <p class="positive-message-content">⚽️ Ja, je gaat deze bal super vinden!</p>
+      </div>
+      
+      {% include 'banana-stand-cart-top-container' %}
+  
+      <form class="Cart Drawer__Content" action="/checkout?locale={{ shop.locale }}" method="POST" novalidate>
+        <div class="Drawer__Main" data-scrollable>
+          <!-- Free Shipping Threshold -->
+          {%- if settings.cart_show_free_shipping_threshold -%}
+            {% render 'cart-shipping-threshold' %}
+          {%- endif -%}
+
+          <!-- BOGO Notice -->
+          {% render 'cart-bogo-notice' %}
+          
+          <!-- Cart Items or Empty State -->
+          {%- if cart.item_count == 0 -%}
+            <p class="Cart__Empty Heading u-h5">{{ 'cart.general.empty' | t }}</p>
+          {%- else -%}
+            <div class="Drawer__Container">
+              <input type="hidden" name="attributes[collection_mobile_items_per_row]" value="">
+              <input type="hidden" name="attributes[collection_desktop_items_per_row]" value="">
+              {% include 'cart-items' %}
+            </div>
+          {%- endif -%}
+        </div> 
+
+        <!-- Gift Wrap Add-on -->
+        {% render 'cart-gift-wrap-addon' %}
+        
+        <!-- Stock Notice -->
+        <div class="stock-section maison_test">
+          <span class="pulse green"></span>
+          <span class="stock-section-content">
+            <strong>Lage voorraad!</strong> Bestel nu voor directe verzending!
+          </span>
+        </div>
+            
+        <!-- Cart Footer -->
+        {%- unless cart.item_count == 0 -%}
+          {% render 'cart-footer', cart_save: cart_save %}
+        {%- endunless -%}
+
+        {%- assign showbogocart = false -%}          
+        {%- if request.path contains 'bogo' -%}
+          {%- assign showbogocart = true -%}
+        {%- elsif template.name == 'collection' and collection.handle == 'bogo' -%}
+          {%- assign showbogocart = true -%}
+        {%- endif -%}
+        
+        {%- assign BOGO_total_quantity = 0 -%}
+        {%- for item in cart.items -%}
+          {%- if item.product.tags contains 'bogo-deal' -%}
+            {%- assign BOGO_total_quantity = BOGO_total_quantity | plus: 1 -%}
+          {%- endif -%}
+        {%- endfor -%}
+
+        <!-- BOGO Minimum Items Message -->
+        {% if showbogocart and BOGO_total_quantity < 2 %}
+          <div class="bogo-minimum-message">
+            Voeg minimaal 2 ballen toe om van deze deal te profiteren.
+          </div>
+        {% endif %}
+
+        <!-- Hidden Checkout Button -->
+        <button type="submit" {% if showbogocart and BOGO_total_quantity < 2 %}disabled{% endif %} class="rb-check-btn Button Button--primary Button--full checkout-btn-hide {% if showbogocart and BOGO_total_quantity < 2 %}blocked{% endif %}">
+          <span>Afrekenen</span>
+          <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.1882 9.29099C18.8019 8.903 18.2222 8.903 17.8358 9.29099C17.4493 9.67899 17.4493 10.261 17.8358 10.649L22.2153 14.9815H6.46608C5.95084 15.0461 5.5 15.4988 5.5 16.0162C5.5 16.5335 5.95084 16.9862 6.46608 16.9862H22.2153L17.8358 21.3833C17.4493 21.7714 17.4493 22.3533 17.8358 22.7413C18.0289 22.9354 18.2866 23 18.5442 23C18.8019 23 19.0594 22.9354 19.2527 22.7413L25.2424 16.7275C25.4356 16.5335 25.5 16.2749 25.5 16.0162C5.5 15.7574 25.3712 15.4988 25.2424 15.3049L19.1882 9.29099Z" fill="#0D0C0F"/>
+          </svg>
+        </button>
+      </form>
+      
+      <!-- Payment Icons -->
+      <div class="payment-icons-box">
+        <img src="{{ 'payment-badges.svg' | asset_url }}" alt="Betaalmogelijkheden">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Styles -->
+<style>
+  .rb-check-btn, 
+  .rb-check-btn:before {
+    background-color: gold !important;
+    border-color: gold;
+    color: #000;
+  }
+  
+  .rb-check-btn {
+    margin-top: -10px;
+    width: 86%;
+    margin-left: 26px;
+    margin-right: 26px;
+  }
+  
+  .rb-check-btn:hover {
+    color: #fff;
+    background-color: transparent !important;
+  }
+  
+  .checkout-btn-hide {
+    display: none;
+  }
+  
+  @media (max-width: 760px) {
+    .rb-check-btn {
+      display: none;
+    }
+  }
+</style>
+
+<!-- Scripts -->
+<script>
+  (function() {
+    'use strict';
+    
+    const THRESHOLD_IN_CENTS = {{ settings.cart_free_shipping_threshold | times: 100 | default: 0 }};
+    
+    function updateProgressBar(currentTotal) {
+      const progressValue = document.querySelector('.progress-value');
+      if (!progressValue || !THRESHOLD_IN_CENTS) return;
+      
+      const percentage = Math.min((currentTotal * 100) / THRESHOLD_IN_CENTS, 100);
+      progressValue.style.width = percentage + '%';
+    }
+
+    function fetchCartAndUpdateProgressBar() {
+      fetch('/cart.js')
+        .then(response => {
+          if (!response.ok) throw new Error('Network response was not ok');
+          return response.json();
+        })
+        .then(data => {
+          updateProgressBar(data.total_price);
+        })
+        .catch(error => {
+          console.error('Fout bij het ophalen van winkelwagen data:', error);
+        });
+    }
+
+    // Event listeners
+    document.addEventListener('cart.requestComplete', fetchCartAndUpdateProgressBar);
+    document.addEventListener('DOMContentLoaded', fetchCartAndUpdateProgressBar);
+  })();
+</script>

@@ -1,0 +1,48 @@
+
+{% include 'product-faq' %}
+
+{% schema %}
+    {
+      "name": "Product FAQ Section",
+      "settings": [
+        {
+          "type": "text",
+          "id": "faq-heading-text",
+          "placeholder": "Enter your text here",
+          "default": "Frequently asked questions",
+          "label": "Heading"
+        },
+        {
+            "id": "faq-contact-button-url",
+            "type": "url",
+            "label": "Button link"
+            },
+            {
+            "id": "faq-contact-button",
+            "type": "text",
+            "label": "Button text",
+            "default": "CONTACT US"
+        }
+      ],
+      "blocks": [
+		    {
+            "name": "FAQ Item",
+            "type": "faq",
+            "settings": [
+        {
+            "type": "text",
+            "id": "faq-question",
+            "label": "Question",
+            "default": "Do you have a question?"
+		},
+		{
+            "type": "richtext",
+            "id": "faq-answer",
+            "label": "Answer",
+            "default": "<p>I have an answer</p>"
+		}
+	]
+	 }
+	]
+    }
+{% endschema %}

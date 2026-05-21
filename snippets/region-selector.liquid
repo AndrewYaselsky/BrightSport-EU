@@ -1,0 +1,83 @@
+<div id="region-selector" class="region-selector">
+  <div class="region-selector__select-container">
+    <div class="region-selector__select-text-container">
+      <i class="region-selector__select-icon" v-html="currentStore.icon"></i>
+      <span class="region-selector__select-text" v-html="currentStore.title"></span>
+      <i class="region-selector__select-chevron"><svg class="chevron-down-icon" style="overflow:visible;" viewBox="0 0 19 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <path fill="currentColor" d="M8.88,11.87 L0.21,3.29 C0.0699993,3.1299992 0,2.95500095 0,2.765 C0,2.57499905 0.0699993,2.4100007 0.21,2.27 L1.38,1.13 C1.5200007,0.9699992 1.68499905,0.89 1.875,0.89 C2.06500095,0.89 2.2299993,0.9699992 2.37,1.13 L9.39,8.06 L16.38,1.13 C16.5400008,0.9699992 16.714999,0.89 16.905,0.89 C17.0950009,0.89 17.2599993,0.9699992 17.4,1.13 L18.54,2.27 C18.6800007,2.4100007 18.75,2.57499905 18.75,2.765 C18.75,2.95500095 18.6800007,3.1299992 18.54,3.29 L9.87,11.87 C9.7299993,12.0100007 9.56500095,12.08 9.375,12.08 C9.18499905,12.08 9.0200007,12.0100007 8.88,11.87 Z" id="angle-down---faregular"></path>
+      </svg></i>
+    </div> 
+    <select @change="navigateStore(findStore($event.target.value))" class="region-selector__select">
+        <option class="region-selector__option" :value="region.code" :selected="region.code === currentStore.code" v-for="region in regions" :key="region.code" v-html="region.title"></option>
+    </select>
+  </div>
+</div>
+<script>
+  const RegionSelector = createApp({
+    name: 'region-selector',
+    element: '#region-selector',
+    delimiters: ['${' , '}'],
+    setup() {
+      const regions = [
+          {
+            title: 'Europe',
+            code: 'EU',
+            icon: `{% include 'icon-flag-eu' %}`
+          },
+          {
+            title: 'United Kingdom',
+            code: 'UK',
+            icon: `{% include 'icon-flag-uk' %}`
+          },
+          {
+            title: 'United States',
+            code: 'US',
+            icon: `{% include 'icon-flag-us' %}`
+          },
+          {
+            title: 'Australia',
+            code: 'AU',
+            icon: `{% include 'icon-flag-au' %}`
+          },
+          {
+            title: 'Brazil',
+            code: 'BR',
+            icon: `{% include 'icon-flag-br' %}`
+          },
+          {
+            title: 'Switzerland',
+            code: 'CH',
+            icon: `{% include 'icon-flag-ch' %}`
+          },
+          {
+            title: 'Mexico',
+            code: 'MX',
+            icon: `{% include 'icon-flag-mx' %}`
+          },
+        ]
+        const findStore = (region) => regions.find(({code}) => code === region) || regions[0].value;
+        const currentRegionCountryCode = computed(() => {
+          if(window.location.hostname.includes('uk.brightsport.com')) return 'UK';
+          if(window.location.hostname.includes('us.brightsport.com')) return 'US';
+          if(window.location.hostname.includes('au.brightsport.com')) return 'AU';
+          if(window.location.hostname.includes('br.brightsport.com')) return 'BR';
+          if(window.location.hostname.includes('ch.brightsport.com')) return 'CH';
+          if(window.location.hostname.includes('mx.brightsport.com')) return 'MX';
+          return 'EU';
+        });
+        const currentStore = ref({});
+        const navigateStore = (store) => {
+          if(currentStore.code === store.code) return;
+          window.location.href = store.code === 'EU' ? `https://brightsport.com?ovr_rdr=1` : `https://${store.code.toLowerCase()}.brightsport.com?ovr_rdr=1`;
+        }
+        onMounted(() => currentStore.value = findStore(currentRegionCountryCode.value) || regions[0]);
+      return {
+        regions,
+        currentStore,
+        navigateStore,
+        findStore,
+      }
+    }
+  })
+  RegionSelector.mount('#region-selector');
+</script>

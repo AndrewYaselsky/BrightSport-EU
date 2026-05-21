@@ -1,0 +1,71 @@
+<div class="made_athletes_row made_athletes_row_about">
+
+  <div class="made_athletes_info_block">
+    <div class="made_athletes_info">
+      {% if section.settings.title != blank %}
+        <h2 class="made_athletes_title">{{ section.settings.title }}</h2>
+      {% endif %}
+      {% if section.settings.cap != blank %}
+        <div class="made_athletes_caption">
+          {{ section.settings.cap }}
+        </div>
+      {% endif %}
+      {% if section.settings.text != blank %}
+        <p class="made_athletes_text">{{ section.settings.text }}</p>
+      {% endif %}
+      {% if section.settings.btn != blank %}
+        <a herf="{{ section.settings.url }}" class="new_common_btn">
+        {{ section.settings.btn }}
+          <span class="new_common_btn_icon">
+            <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.6882 0.29099C13.3019 -0.0969967 12.7222 -0.0969967 12.3358 0.29099C11.9493 0.678988 11.9493 1.26097 12.3358 1.64895L16.7153 5.9815H0.966082C0.450835 6.04613 0 6.4988 0 7.01622C0 7.53352 0.450835 7.98618 0.966082 7.98618H16.7153L12.3358 12.3833C11.9493 12.7714 11.9493 13.3533 12.3358 13.7413C12.5289 13.9354 12.7866 14 13.0442 14C13.3019 14 13.5594 13.9354 13.7527 13.7413L19.7424 7.72753C19.9356 7.53352 20 7.27487 20 7.01622C20 6.75745 19.8712 6.4988 19.7424 6.3049L13.6882 0.29099Z" fill="currentColor"/>
+            </svg>
+          </span>
+        </a>
+      {% endif %}
+      {% if section.settings.rate != blank %}
+        <p class="made_athletes_rate">{{ section.settings.rate }}</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "About Made Athletes",
+    "class": "sw--made-athletes",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "cap",
+        "label": "Caption"
+      },
+      {
+        "type": "text",
+        "id": "btn",
+        "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "url",
+        "label": "Button URL"
+      },
+      {
+        "type": "textarea",
+        "id": "rate",
+        "label": "Rating Text"
+      }
+    ],
+    "presets":[
+      {
+        "name": "About Made Athletes"        
+      }
+    ]
+  }
+{% endschema %}

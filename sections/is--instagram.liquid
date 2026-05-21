@@ -1,0 +1,33 @@
+<div class="container">
+
+  <div class="instagram_title_block">
+    <h2 class="instagram_title">{{ section.settings.title }}</h2>
+    {{ section.settings.text }}
+  </div>
+  
+</div>
+
+
+{% schema %}
+  {
+    "name": "Instagram",
+    "class": "is--instagram",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Add Text"
+      }
+    ],
+    "presets":[
+      {
+        "name": "Instagram"
+      }
+    ]
+  }
+{% endschema %}

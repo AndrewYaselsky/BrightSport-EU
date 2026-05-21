@@ -1,0 +1,89 @@
+<div class="container">
+
+  <div class="best_seller_title_block">
+    <div class="best_seller_left">
+      {% if section.settings.title != blank %}
+        <h2 class="best_seller_title">{{ section.settings.title }}</h2>
+      {% endif %}
+      {% if section.settings.head != blank %}
+        <p class="best_seller_head">{{ section.settings.head }}</p>
+      {% endif %}
+    </div>
+    {% if section.settings.btn != blank %}
+      <a href="{{ section.settings.url }}" class="best_seller_btn">{{ section.settings.btn }}
+        <span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.75 12H20.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+    {% endif %}
+  </div>
+
+  <div class="best_seller_main">
+  
+
+    {% if section.settings.collection != blank %}
+     {% assign product = section.settings.collection %}
+      {%for product in product.products %}
+        <div class="best_seller_block">
+          {% include 'product-item' %}
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+  {% if section.settings.btn != blank %}
+    <div class="mobile_best_seller_btn">
+    <a href="{{ section.settings.url }}" class="best_seller_btn ">{{ section.settings.btn }}
+      <span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.75 12H20.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+    </a>
+          </div>
+  {% endif %}
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Our Bestsellers",
+    "class": "is--our-bestsellers",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "head",
+        "label": "Caption"
+      },
+      {
+        "type": "text",
+        "id": "btn",
+        "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "url",
+        "label": "Button Url"
+      },
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Select Collection"
+      }
+    ],
+    "presets":[
+      {
+        "name": "Our Bestsellers"
+      }
+    ]
+  }
+{% endschema %}

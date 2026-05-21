@@ -1,0 +1,32 @@
+<div class="product_revierw_main">
+  {% if template contains 'product' %}
+    <div class="product_revierw_row">
+      <h2 class="product_review_title">Beoordelingen</h2>
+      <h2 class="product_review_title1">Beoordelingen</h2>
+      <h2 class="product_review_title2">Beoordelingen</h2>
+    </div>
+  {% endif %}
+  <div class="product_review_inner">
+{% if product.metafields.loox.num_reviews %}
+  <script id="looxSchemaJson" type="application/ld+json">
+    {
+    "@context": "http://schema.org",
+                        	"@type": "Product",
+                        	"@id": {{ canonical_url | json }},
+    "aggregateRating": {
+                        		"@type": "AggregateRating",
+                        		"ratingValue": "{{ product.metafields.loox.avg_rating }}",
+    "reviewCount": "{{ product.metafields.loox.num_reviews }}"
+    },
+                        	"name": {{ product.title | json }}
+    }
+  </script>
+{% endif %}
+
+
+<div
+  id="looxReviews"
+  data-product-id="{{product.id}}"
+  class="loox-reviews-default">{{ product.metafields.loox.reviews }}</div>
+    </div>
+</div>

@@ -1,0 +1,83 @@
+<section class="maison_test">
+    <div class="faq-section-wrapper">
+      <div class="faq-product-head">
+        <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M28 36C28.8284 36 29.5 35.3284 29.5 34.5C29.5 33.6716 28.8284 33 28 33C27.1716 33 26.5 33.6716 26.5 34.5C26.5 35.3284 27.1716 36 28 36Z" fill="#FBBC04"/>
+        <path d="M28 30V29C28.6922 29 29.3689 28.7947 29.9445 28.4101C30.5201 28.0256 30.9687 27.4789 31.2336 26.8394C31.4985 26.1999 31.5678 25.4961 31.4327 24.8172C31.2977 24.1383 30.9644 23.5146 30.4749 23.0251C29.9854 22.5356 29.3617 22.2023 28.6828 22.0673C28.0039 21.9322 27.3001 22.0015 26.6606 22.2664C26.0211 22.5313 25.4744 22.9799 25.0899 23.5555C24.7053 24.1311 24.5 24.8078 24.5 25.5" stroke="#FBBC04" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="0.5" y="0.5" width="55" height="55" rx="27.5" stroke="#FBBC04"/>
+        </svg>
+        <h3 class="faq-text">{{section.settings.faq-heading-text}}</h3>
+        <!--<a class="faq-contact" href="{{section.settings.faq-contact-button-url}}" target="_blank">
+        <svg class="faq-contact-icon" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.8125 12.85L13.4156 10.975C13.1888 10.8733 12.9397 10.8312 12.692 10.8525C12.4443 10.8738 12.2061 10.9579 12 11.0969L9.64687 12.6625C8.21273 11.966 7.05158 10.8114 6.34687 9.38126L7.90312 7.00001C8.04116 6.79364 8.12547 6.55607 8.14839 6.30885C8.17131 6.06163 8.13212 5.81261 8.03437 5.58438L6.15 1.18751C6.01851 0.890614 5.79586 0.643324 5.51435 0.481498C5.23284 0.319672 4.90711 0.251724 4.58437 0.287507C3.31837 0.453355 2.15566 1.07329 1.31243 2.03206C0.469194 2.99083 0.00281471 4.22319 0 5.50001C0 12.9438 6.05625 19 13.5 19C14.7768 18.9972 16.0092 18.5308 16.9679 17.6876C17.9267 16.8443 18.5467 15.6816 18.7125 14.4156C18.7483 14.0929 18.6803 13.7672 18.5185 13.4857C18.3567 13.2041 18.1094 12.9815 17.8125 12.85Z" fill="white"/>
+        </svg>
+        {{section.settings.faq-contact-button}}</a>-->
+      </div>
+      <div class="faqs-content">
+        
+        {% for block in section.blocks %}
+      		{% assign item = block.settings %}
+          <div class="Collapsible Collapsible--large product-collapsible">
+            <button class="Collapsible__Button Heading collapse-custom-heading u-h6" data-action="toggle-collapsible" aria-expanded="false">
+              {{ item.faq-question }}<span class="Collapsible__Plus"></span>
+            </button>
+
+            <div class="Collapsible__Inner faq-product-inner">
+              <div class="Collapsible__Content">
+                <div class="Rte">
+                  {{ item.faq-answer }}
+                </div>
+              </div>
+            </div>
+          </div>
+      	{% endfor %}
+
+      </div>
+    </div>
+  </section>
+
+    
+
+<style>
+    .faq-section-wrapper {
+       padding: 50px 0px;
+       padding-bottom:0px;
+       width: 1200px;
+       max-width: 90%;
+       margin-left: auto;
+       margin-right: auto;
+       margin-bottom:50px;
+       text-align: center;
+       border:1px solid rgba(255, 255, 255, 0.32);
+    }
+    .faq-product-head {
+        margin-bottom: 40px;
+    }
+   .faq-text {
+       font-size:28px;
+       font-weight: 700;
+       color:rgba(251, 188, 4, 1);
+   }
+   .faq-contact {
+       font-size:15px;
+       font-weight: 700;
+       border-radius: 56px;
+       border: 2px solid rgba(255, 255, 255, 0.12);
+       text-align:center;
+       padding: 16px 60px;
+   }
+   .product-collapsible {
+    padding: 0 20px;
+   }
+   .faq-contact-icon {
+    vertical-align: middle;
+    margin-right: 5px;
+   }
+   .faq-product-inner {
+     text-align:left;
+   }
+   .Collapsible button[aria-expanded="true"] .Collapsible {
+    background-color: #fff;
+    color:#000;
+}
+</style>

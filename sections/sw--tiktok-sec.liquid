@@ -1,0 +1,165 @@
+<section>
+  <div class="tiktok_wrapper">
+    <div class="container_tiktok">
+      <div class="tiktok_col">
+        {% if section.settings.top_heading != blank or section.settings.top_icon != blank %}
+        <div class="tittok_top_heading">
+          <span>{{ section.settings.top_icon }}</span>
+          <h6>{{ section.settings.top_heading  }}</h6>
+        </div>
+          {% endif  %}
+        {% if section.settings.main_heading != blank %}
+          <div class="tiktok_heading">
+            <h2>{{ section.settings.main_heading }}</h2>
+          </div>
+        {% endif %}
+        <div class="tiktok_sub_heading">
+          <h3>{{ section.settings.sub_heading }}</h3>
+        </div>
+      </div>
+
+      <div class="tiktok_slider">
+        <div class="tiktok_slider_inner">
+          {% for block in section.blocks %}
+            <div class="tiktok_slider_row">
+             
+                <div class="tiktok_slider_video">
+                  <video class="cm_video" playsinline="" loop="" {% if forloop.index == 1 %} autoplay="" muted="" {% endif %} width="100%" height="100%" >
+                    <source src="{{block.settings.url_video}}" type="video/mp4">
+                  </video>
+                  <h3 class="url_video_text">{{ block.settings.url_video_text }}</h3>
+                </div>
+             
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Tik Tok",
+    "settings": [
+      {
+        "type" :"text",
+        "id" : "main_heading",
+        "label" : "Main Heading"
+      },
+      {
+        "type" : "text",
+        "id" : "sub_heading",
+        "label" : "Sub Heading"
+      },
+      {
+        "type" : "html",
+        "id" : "top_icon",
+        "label" : "Tik Tok Icon"
+      },
+      {
+        "type" : "text",
+        "id" : "top_heading",
+        "label" : "Top Text"
+      }
+    ],
+
+    "blocks":[
+      {
+        "type":"text",
+        "name":"Video Slider",
+        "settings":[
+          {
+            "type":"text",
+            "id":"url_video",
+            "label":"Video URL"
+          },
+          {
+            "type":"textarea",
+            "id":"url_video_text",
+            "label":"Text"
+          },
+          {
+            "type":"url",
+            "id":"url",
+            "label":"URL"
+          }
+        ]
+      }
+    ],
+
+    "presets":[
+      {
+        "name":"Tik Tok"
+      }
+    ]
+  }
+{% endschema %}
+
+<script>
+ $(document).ready(function(){
+  $('.tiktok_slider_inner').slick({
+    centerMode: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    infinite: true,
+    centerPadding: '0px',
+    speed: 500,
+    variableWidth: true,
+    arrows: true,
+    dots: false
+  });
+
+  // $('.center').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+  //   console.log('beforeChange', currentSlide, nextSlide);
+  // });
+
+  // $('.center').on('afterChange', function(event, slick, currentSlide){
+  //   console.log('afterChange', currentSlide);
+  // });
+
+   
+var $slider = $('.tiktok_slider_inner');
+$slider.on('init', function (event, slick) {
+  if (slick.currentSlide === 0) {
+    var $firstSlide = $(slick.$slides.get(slick.currentSlide));
+    var $video = $firstSlide.find(".tiktok_slider_video video");
+    $video.get(0).play();
+    $(".tiktok_slider_video").addClass("hello");
+  }
+});
+
+$slider.on('afterChange', function (event, slick, currentSlide) {
+  var $currentSlide = $(slick.$slides.get(currentSlide));
+  var $video = $currentSlide.find(".tiktok_slider_video video");
+  $video.removeAttr("autoplay");
+  $video.removeAttr(" muted");
+  $('.tiktok_slider_inner .tiktok_slider_video video').each(function () {
+    this.pause();
+  });
+  $video.get(0).play();
+});
+
+});
+
+
+
+// jQuery(function () {
+//   const slider = jQuery(".tiktok_slider_inner ");
+//   slider;
+
+//   slider.on("wheel", function (e) {
+//     e.preventDefault();
+
+//     if (e.originalEvent.deltaY < 0) {
+//       jQuery(this).slick("slickNext");
+//     } else {
+//       jQuery(this).slick("slickPrev");
+//     }
+//   });
+// });
+
+  
+</script>
+

@@ -1,0 +1,496 @@
+{%- assign main_menu_handle = section.settings.primary_menu | default: 'main-menu' -%}
+{%- if template.name == 'product' and product.tags contains 'bogo-deal' -%}
+  {%- assign main_menu_handle = 'header-mobile-menu-bogo' -%}
+{%- elsif template.name == 'collection' and collection.handle == 'bogo' -%}
+  {%- assign main_menu_handle = 'header-mobile-menu-bogo' -%}
+{%- endif -%}
+{%- assign main_menu = linklists[main_menu_handle] -%}
+
+<section
+  id="sidebar-menu"
+  class="SidebarMenu Drawer Drawer--small Drawer--fromLeft"
+  aria-hidden="true"
+  data-section-id="{{ section.id }}"
+  data-section-type="sidebar-menu"
+>
+  <header class="Drawer__Header" data-drawer-animated-left>
+    <button
+      class="Drawer__Close Icon-Wrapper--clickable"
+      data-action="close-drawer"
+      data-drawer-id="sidebar-menu"
+      aria-label="{{ 'header.navigation.close_sidebar' | t }}"
+    >
+      {%- include 'icon' with 'close' -%}
+    </button>
+  </header>
+
+  <div class="Drawer__Content">
+    <div class="bright_block">
+      {% for block in section.blocks %}
+        {%- assign block_url = block.settings.url -%}
+        {%- assign block_title_url = block.settings.titleurl -%}
+        {%- if template.name == 'product' and product.tags contains 'bogo-deal' -%}
+          {%- if block_url contains 'products/bright-football' or block_url contains 'products/bright-basketball' or block_url contains 'products/the-bright-volleyball' or block_url contains 'products/bright%E2%84%A2-rugby-football' or block_url contains 'products/american-football' or block_url contains 'products/bright-sport-golf-balls' -%}
+            {%- assign block_url = block_url | append: '-bogo' -%}
+            {%- assign block_title_url = block_title_url | append: '-bogo' -%}
+          {%- elsif block_url contains 'collections/all' -%}
+            {%- assign block_url = block_url | replace: 'collections/all', 'collections/bogo' -%}
+            {%- assign block_title_url = block_title_url | replace: 'collections/all', 'collections/bogo' -%}
+          {%- endif -%}
+        {%- elsif template.name == 'collection' and collection.handle == 'bogo' -%}
+          {%- if block_url contains 'products/bright-football' or block_url contains 'products/bright-basketball' or block_url contains 'products/the-bright-volleyball' or block_url contains 'products/bright%E2%84%A2-rugby-football' or block_url contains 'products/american-football' or block_url contains 'products/bright-sport-golf-balls' -%}
+            {%- assign block_url = block_url | append: '-bogo' -%}
+            {%- assign block_title_url = block_title_url | append: '-bogo' -%}
+          {%- elsif block_url contains 'collections/all' -%}
+            {%- assign block_url = block_url | replace: 'collections/all', 'collections/bogo' -%}
+            {%- assign block_title_url = block_title_url | replace: 'collections/all', 'collections/bogo' -%}
+          {%- endif -%}
+        {%- endif -%}
+        
+        {% if block.type == 'slider' %}
+          <div class="bright_wrapper">
+            <div class="bright_box">
+              <div class="bright_image">
+                {% if block.settings.img != blank %}
+                  <a href="{{ block_url }}"><img src="{{ block.settings.img | img_url : "master"}}"></a>
+                {% endif %}
+              </div>
+              <div class="bright_title">
+                {% if block.settings.title != blank %}
+                  <a href="{{ block_title_url }}">{{ block.settings.title }}</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="upto_slide_block">
+      <div class="upto_wrapper" style="background-image:url({{ section.settings.img | img_url : "master" }})">
+        <div class="upto_wrapper_inner">
+          <div class="upto_box">
+            {% if section.settings.title != blank %}
+              <h2 class="upto_maintitle">{{ section.settings.title }}</h2>
+            {% endif %}
+            <div class="upto_subblock">
+              {% if section.settings.titleinner != blank %}
+                <h3 class="upto_subtitle">{{ section.settings.titleinner }}</h3>
+              {% endif %}
+              {% if section.settings.sdasle != blank %}
+                <p>{{ section.settings.sdasle }}</p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Drawer__Main" data-drawer-animated-left data-scrollable>
+      <div class="Drawer__Container">
+        <nav
+          class="SidebarMenu__Nav SidebarMenu__Nav--primary"
+          aria-label="{{ 'header.navigation.sidebar_title' | t }}"
+        >
+          {%- for link in main_menu.links limit: 3 -%}
+            <div class="Collapsible">
+              {%- if link.links != blank -%}
+                <button
+                  class="Collapsible__Button Heading u-h6"
+                  data-action="toggle-collapsible"
+                  {% if link.links != blank %}
+                    aria-expanded="false"
+                  {% endif %}
+                >
+                  {{- link.title | escape -}}
+                  <span class="Collapsible__Plus">
+                    {% include 'mobile_menu_dropdown_icon' %}
+                  </span>
+                </button>
+
+                <div class="Collapsible__Inner">
+                  <div class="Collapsible__Content">
+                    {%- for sub_link in link.links -%}
+                      <div class="Collapsible">
+                        {%- if sub_link.links != blank -%}
+                          <button
+                            class="Collapsible__Button Heading Text--subdued Link--primary u-h7"
+                            data-action="toggle-collapsible"
+                            {% if sub_link.links != blank %}
+                              aria-expanded="false"
+                            {% endif %}
+                          >
+                            {{- sub_link.title | escape -}}
+                            <span class="Collapsible__Plus">
+                              {% include 'mobile_menu_dropdown_icon' %}
+                            </span>
+                          </button>
+
+                          <div class="Collapsible__Inner">
+                            <div class="Collapsible__Content">
+                              <ul class="Linklist Linklist--bordered Linklist--spacingLoose">
+                                {%- for sub_sub_link in sub_link.links -%}
+                                  <li class="Linklist__Item">
+                                    <a href="{{ sub_sub_link.url }}" class="Text--subdued Link ">
+                                      {{- sub_sub_link.title | escape -}}
+                                    </a>
+                                  </li>
+                                {%- endfor -%}
+                              </ul>
+                            </div>
+                          </div>
+                        {%- else -%}
+                          <a
+                            href="{{ sub_link.url }}"
+                            class="Collapsible__Button Heading Text--subdued Link Link--primary u-h7"
+                          >
+                            {{- sub_link.title | escape -}}
+                          </a>
+                        {%- endif -%}
+                      </div>
+                    {%- endfor -%}
+                  </div>
+                </div>
+              {%- else -%}
+                <a
+                  href="{{ link.url }}"
+                  class="Collapsible__Button Heading Link  u-h6 {% if link.active %}active{% endif %}"
+                >
+                  {{- link.title | escape -}}
+                </a>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        </nav>
+
+        {%- assign secondary_menu = linklists[section.settings.secondary_menu] -%}
+
+        <nav class="SidebarMenu__Nav SidebarMenu__Nav--secondary">
+          <ul class="Linklist Linklist--spacingLoose">
+            {%- for link in secondary_menu.links -%}
+              <li class="Linklist__Item">
+                <a href="{{ link.url }}" class="Text--subdued Link Link--primary">{{ link.title | escape }}</a>
+              </li>
+            {%- endfor -%}
+
+            {%- comment -%}We automatically add some links to the secondary menu{%- endcomment -%}
+
+            {%- if shop.customer_accounts_enabled -%}
+              <li class="Linklist__Item">
+                <a
+                  href="{% if customer %}/account{% else %}/account/login{% endif %}"
+                  class="Text--subdued Link Link--primary"
+                >
+                  {{- 'header.navigation.account' | t -}}
+                </a>
+              </li>
+            {%- endif -%}
+
+            <li class="Linklist__Item">
+              <a
+                href="/search"
+                class="Text--subdued Link Link--primary"
+                data-action="open-modal"
+                aria-controls="Search"
+              >
+                {{- 'header.navigation.search' | t -}}
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="icon_text_col">
+      {% for block in section.blocks %}
+        {% if block.type == 'icon' %}
+          <div class="icon_text_box">
+            {% if block.settings.icon != blank %}
+              <div class="icon_text_icon">
+                <span>{{ block.settings.icon }}</span>
+              </div>
+            {% endif %}
+            {% if block.settings.btn_text != blank %}
+              <div class="icon_text">
+                <a href="{{ block.settings.btn_url }}" class="header__icon header__icon--account d-lg-block">
+                  {{ block.settings.btn_text }}
+</a>
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    {%- if section.settings.show_social_media -%}
+      {%- capture social_media -%}
+          {% include 'social-media', class: 'SidebarMenu__Social', spacing: 'fill' %}
+        {%- endcapture -%}
+    {%- endif -%}
+    <div class="weg_container">
+      {% include 'region-selector-sidebar' %}
+      <div id="langSelectorSlider"></div>
+    </div>
+
+    {%- if settings.currency_conversion_enabled or social_media != blank -%}
+      <aside class="Drawer__Footer" data-drawer-animated-bottom>
+        {%- if settings.currency_conversion_enabled -%}
+          <div class="SidebarMenu__CurrencySelector">
+            <div class="Select Select--transparent Currency_form">
+              {% form 'currency' %}
+                {{ form | currency_selector | replace: '<select', '<select class="currecyBox"' }}
+                <button type="submit" class="submit_button">Submit</button>
+              {% endform %}
+
+              {%- include 'icon' with 'select-arrow' -%}
+
+              <select class="CurrencySelector__Select" style="display: none;">
+                {%- capture codes -%}USD,EUR,GBP,CAD,ARS,AUD,BBD,BDT,BSD,BHD,BRL,BOB,BND,BGN,MMK,KYD,CLP,CNY,COP,CRC,HRK,CZK,DKK,DOP,XCD,EGP,XPF,FJD,GHS,GTQ,GYD,GEL,HKD,HUF,ISK,INR,IDR,NIS,JMD,JPY,JOD,KZT,KES,KWD,LVL,LTL,MXN,MYR,MUR,MDL,MAD,MNT,MZN,ANG,NZD,NGN,NOK,OMR,PKR,PYG,PEN,PHP,PLN,QAR,RON,RUB,SAR,RSD,SCR,SGD,SYP,ZAR,KRW,LKR,SEK,CHF,TWD,THB,TZS,TTD,TRY,UAH,AED,UYU,VEB,VND,ZMK{%- endcapture -%}
+                {%- assign supported_codes = settings.currency_conversion_supported_currencies
+                  | remove_first: shop.currency
+                  | upcase
+                  | split: ' '
+                  | uniq
+                -%}
+
+                <option value="{{ shop.currency }}" selected="selected">{{ shop.currency }}</option>
+
+                {%- for code in supported_codes -%}
+                  {%- if codes contains code -%}
+                    <option value="{{ code }}">{{ code }}</option>
+                  {%- endif -%}
+                {%- endfor -%}
+              </select>
+            </div>
+          </div>
+        {%- endif -%}
+
+        {%- if social_media != blank -%}
+          {{ social_media }}
+        {%- endif -%}
+      </aside>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Sidebar menu",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "primary_menu",
+      "label": "Primary menu",
+      "default": "main-menu"
+    },
+    {
+      "type": "link_list",
+      "id": "secondary_menu",
+      "label": "Secondary menu",
+      "info": "This menu won't show dropdown items."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_social_media",
+      "label": "Show social media",
+      "default": true
+    },
+     {
+"type":"image_picker",
+"id":"img",
+"label":"Select background Image"
+},
+{
+"type":"textarea",
+"id":"title",
+"label":"Select Title"
+},
+{
+"type":"text",
+"id":"titleinner",
+"label":"Select SubTitle"
+},
+{
+"type":"text",
+"id":"sdasle",
+"label":"Select Sale"
+}
+  ],
+  "blocks" : [
+    {
+      "type" : "icon",
+      "name" : "Icon",
+      "settings" : [
+        {
+          "type"  : "html",
+          "id" : "icon",
+          "label" : "Icon"
+        },
+        {
+          "type" : "url",
+          "id"  : "btn_url",
+          "label" : "Button Url"
+        },
+        {
+          "type" : "text",
+          "id" : "btn_text",
+          "label" : "Button Text"
+        }
+      ]
+    },
+    {
+      "type":"slider",
+      "name":"slider",
+      "settings":[
+      {
+      "type":"image_picker",
+      "id":"img",
+      "label":"Select Image"
+      },
+      {
+      "type":"url",
+      "id":"url",
+      "label":"Select Image Url"
+      },
+      {
+      "type":"text",
+      "id":"title",
+      "label":"Select Title"
+      },
+      {
+      "type":"url",
+      "id":"titleurl",
+      "label":"Select Title url"
+      }
+      ]
+}
+  ]
+}
+{% endschema %}
+
+<script>
+  //  $('.bright_block').slick({
+  //  centerMode: false,
+  //  centerPadding: '0px',
+  //  slidesToShow: 7,
+  //    arrows:false,
+  //    autoplay:true,
+  //    infinite:false,
+  //    autolpaySpeed:100,
+  //    variableWidth: false,
+  //     draggable:false,
+  // responsive: [
+  //   {
+  //      breakpoint: 992,
+  //      settings: {
+  //        infinite: true,
+  //        slidesToShow: 5,
+  //      }
+  //    },
+  //    {
+  //      breakpoint: 768,
+  //      settings: {
+  //        infinite:true,
+  //        slidesToShow: 5,
+  //      }
+  //    },
+  //     {
+  //      breakpoint: 576,
+  //      settings: {
+  //        infinite:true,
+  //        slidesToShow: 6,
+  //          centerMode: false,
+  //      }
+  //    },
+  //    {
+  //      breakpoint: 450,
+  //      settings: {
+  //        infinite:true,
+  //          slidesToShow: 5,
+  //        centerMode: false,
+  //      }
+  //    },
+  //    {
+  //      breakpoint: 389,
+  //      settings: {
+  //        infinite:true,
+  //          slidesToShow: 4,
+  //        centerMode: false,
+  //      }
+  //    }
+  //  ]
+  //  });
+
+  $('.toggle_menu_home').click(function(){
+    $('.bright_block').slick('refresh')
+  })
+
+
+
+
+const slider = $(".bright_block");
+slider
+  .slick({
+  centerMode: false,
+   centerPadding: '0px',
+   slidesToShow: 7,
+     arrows:false,
+     autoplay:true,
+     infinite:false,
+     autolpaySpeed:100,
+     variableWidth: false,
+      draggable:false,
+  responsive: [
+    {
+       breakpoint: 992,
+       settings: {
+         infinite: false,
+         slidesToShow: 5,
+       }
+     },
+     {
+       breakpoint: 768,
+       settings: {
+         infinite:false,
+         slidesToShow: 5,
+       }
+     },
+      {
+       breakpoint: 576,
+       settings: {
+         infinite:false,
+         slidesToShow: 6,
+           centerMode: false,
+       }
+     },
+     {
+       breakpoint: 450,
+       settings: {
+         infinite:false,
+           slidesToShow: 5,
+         centerMode: false,
+       }
+     },
+     {
+       breakpoint: 389,
+       settings: {
+         infinite:false,
+           slidesToShow: 4,
+         centerMode: false,
+       }
+     }
+   ]
+  });
+
+slider.on('wheel', (function(e) {
+  e.preventDefault();
+
+  if (e.originalEvent.deltaY < 0) {
+    $(this).slick('slickPrev');
+  } else {
+    $(this).slick('slickNext');
+  }
+}));
+
+
+  
+</script>

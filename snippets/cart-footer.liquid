@@ -1,0 +1,139 @@
+{% comment %}
+  Renders cart footer with totals and checkout button
+  
+  Accepts:
+  - cart_save: {Number} Total savings amount (optional)
+  
+  Usage:
+  {% render 'cart-footer', cart_save: cart_save %}
+{% endcomment %}
+
+{%- liquid 
+  assign calculated_cart_save = 0
+  
+  for line_item in cart.items
+    assign line_item_save = 0
+    
+    if line_item.original_price > line_item.final_price
+      assign line_item_save = line_item.original_price | minus: line_item.final_price | times: line_item.quantity
+    elsif line_item.variant.compare_at_price and line_item.variant.compare_at_price > line_item.price
+      assign line_item_save = line_item.variant.compare_at_price | minus: line_item.price | times: line_item.quantity
+    endif
+
+    if line_item.product.metafields.savings.original_price
+      assign original_price = line_item.product.metafields.savings.original_price
+      if original_price > line_item.price
+        assign line_item_save = original_price | minus: line_item.price | times: line_item.quantity
+      endif
+    endif
+
+    assign calculated_cart_save = calculated_cart_save | plus: line_item_save
+  endfor
+  
+  assign total_save = cart.total_discount
+  if calculated_cart_save > total_save
+    assign total_save = calculated_cart_save
+  endif
+  
+  assign total_save = total_save | plus: cart.cart_level_discount_applications_total_allocated_amount
+-%}
+
+<div class="Drawer__Footer" data-drawer-animated-bottom>
+  <!-- Savings Display -->
+  {%- if total_save > 0 -%}
+    <div class="total_price_checkout you-save">
+      <span class="Subtotal_text Heading">Je bespaart</span>
+      <span class="total_price Heading notranslate ht-money">{{ total_save | money_without_trailing_zeros }}</span>
+    </div>
+  {%- endif -%}
+  
+  <!-- Total Price -->
+  <div class="total_price_checkout">
+    <span class="Subtotal_text Heading">Totaal</span>
+    <span class="total_price Heading notranslate ht-money">{{ cart.total_price | money_without_trailing_zeros }}</span>
+  </div>
+
+  {%- liquid
+    assign shipping_and_taxes_notice = 'cart.general.shipping_and_taxes_notice' | t
+    assign show_notes_section = settings.cart_enable_notes
+    assign show_shipping_notice = shipping_and_taxes_notice != blank and shipping_and_taxes_notice != 'cart.general.shipping_and_taxes_notice'
+  -%}
+
+  <!-- Cart Notes and Shipping Notice -->
+  {%- if show_notes_section or show_shipping_notice -%}
+    {%- if show_notes_section -%}
+      <button type="button" 
+              class="Cart__NoteButton" 
+              data-action="toggle-cart-note"
+              aria-expanded="false"
+              aria-controls="cart-note-container">
+        {%- if cart.note == blank -%}
+          {{ 'cart.general.add_note' | t }}
+        {%- else -%}
+          {{ 'cart.general.edit_note' | t }}
+        {%- endif -%}
+      </button>
+    {%- endif -%}
+
+  {%- endif -%}
+
+  <!-- Checkout Button -->
+  <button type="button" 
+          class="Button Button--primary Button--full checkout-btn-small" 
+          style="margin-top: 18px;"
+          aria-label="Doorgaan naar kassa">
+    <span>Doorgaan naar kassa</span>
+  </button>
+
+  <!-- Cart Notes Section -->
+  {%- if show_notes_section -%}
+    <div class="Cart__OffscreenNoteContainer" 
+         id="cart-note-container"
+         aria-hidden="true">
+      
+      <span class="Cart__NoteButton">
+        {%- if cart.note == blank -%}
+          {{ 'cart.general.add_note' | t }}
+        {%- else -%}
+          {{ 'cart.general.edit_note' | t }}
+        {%- endif -%}
+      </span>
+
+      <div class="Form__Item">
+        <label for="cart-note" class="visually-hidden">
+          {{ 'cart.general.note_placeholder' | t }}
+        </label>
+        <textarea class="Cart__Note Form__Textarea" 
+                  name="note" 
+                  id="cart-note" 
+                  rows="3" 
+                  placeholder="{{ 'cart.general.note_placeholder' | t }}" 
+                  data-scrollable
+                  aria-describedby="cart-note-help">{{ cart.note }}</textarea>
+        <small id="cart-note-help" class="visually-hidden">
+          Voeg een opmerking toe aan je bestelling
+        </small>
+      </div>
+
+      <button type="button" 
+              class="Button Button--primary Button--full" 
+              data-action="toggle-cart-note">
+        {{ 'cart.general.save_note' | t }}
+      </button>
+    </div>
+  {%- endif -%}
+</div>
+
+<style>
+  .visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+</style>

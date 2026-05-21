@@ -1,0 +1,55 @@
+<div class="text-with-img">
+  <div class="container">
+    <div class="text-with-img-main">
+      <div class="text-with-img-left">
+        <div class="text-box">
+          <h2 class="text-with-img-title">{{ section.settings.heading }}</h2>
+          {{ section.settings.desc }}
+        </div>
+      </div>
+      {% if section.settings.image != blank %}
+        <div class="text-with-img-right">
+          <img
+            src="{{ section.settings.image | img_url : 'master' }}"
+            srcset="{{ section.settings.image | img_url : 'master' }}"
+            alt="{{ section.settings.image.alt }}"
+            loading="lazy"
+          >
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+ "name" : "Text With Image",
+  "settings": [
+    {
+      "type" : "text",
+      "id" :"heading",
+      "label" : "Heading"
+    },
+    {
+      "type" : "richtext",
+      "id" :"desc",
+      "label" :"Description"
+    },
+    {
+      "type" : "image_picker",
+      "id" : "image",
+      "label" : "Image"
+    }
+  ],
+  "presets" : [
+    {
+      "name" : "Text With Image"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

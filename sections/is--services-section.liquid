@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="services_main">
+  
+    {% for block in section.blocks %}
+      <div class="services_block">
+        <div class="services_wrapper">
+          {% if block.settings.icon != blank %}
+            <span>
+              {{ block.settings.icon }}
+            </span>
+          {% endif %}
+          <div class="services_info">
+            {% if block.settings.title != blank %}
+              <h2 class="services_title">{{ block.settings.title }}</h2>
+            {% endif %}
+            {% if block.settings.caption != blank %}
+              <p class="services_caption">{{ block.settings.caption }}</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Services Section",
+    "class": "is--services-section",
+    "settings": [
+      
+    ],
+    "blocks":[
+      {
+        "type": "services_info",
+        "name": "Services Info",
+        "settings":[
+          {
+            "type": "html",
+            "id": "icon",
+            "label": "Icon"
+          },
+          {
+            "type": "textarea",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "textarea",
+            "id": "caption",
+            "label": "Caption"
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+      "name": "Services Section"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,892 @@
+ {%- capture section_settings -%}
+  {
+  "enableHistoryState": true,
+  "showInventoryQuantity": {% if section.settings.show_inventory_quantity %}true{% else %}false{% endif %},
+  "showThumbnails": {% if section.settings.show_thumbnails %}true{% else %}false{% endif %},
+  "inventoryQuantityThreshold": {{ section.settings.inventory_quantity_threshold }},
+  "enableImageZoom": {% if section.settings.enable_image_zoom %}true{% else %}false{% endif %},
+  "showPaymentButton": {{ section.settings.show_payment_button | json }},
+  "useAjaxCart": {% if settings.cart_type == 'drawer' %}true{% else %}false{% endif %}
+  }
+{%- endcapture -%}
+
+  <div class="page-wrapper" style="padding-top:0 !important">
+    <section data-w-id="65d03ec8-9865-f50a-b6b1-b93cddba62f4" class="section_product-header1">
+      <div class="padding-global">
+        <div class="container-large">
+          <div class="product-header1_component">
+            <div class="w-layout-grid product-header1_layout">
+              <div id="w-node-_95fbb936-a1d2-a764-4241-cb62c9f5dc01-55082463" class="product-header1_gallery_box">
+                <div id="w-node-_65d03ec8-9865-f50a-b6b1-b93cddba6306-55082463" class="product-header1_gallery">
+                  <div id="w-node-_65d03ec8-9865-f50a-b6b1-b93cddba630a-55082463" class="product-header1_list-wrapper">
+                    <div id="productGalleryButtons" class="swiper-container">
+                      <div class="swiper-wrapper">
+                        <div c-block="Product Gallery Block" id="w-node-_6fa7f561-a852-d406-c450-20daa97a0c0e-55082463" class="swiper-slide">
+                          <img class="product-header1_image" src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/golf_6a194d2c-98e1-4899-bd9b-b729bca5489b.png?v=1682519654" c-type="image_picker">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-header1_main-image-wrapper">
+                    <div id="productGallery" class="swiper-container">
+                      <div class="swiper-wrapper">
+                        <div c-block="Product Main Block" class="swiper-slide">
+
+                          {%- assign initial_image_id = product.featured_image.id -%}
+                          {%- assign initial_image_index = 0 -%}
+                          {%- assign image_count = 0 -%}
+                          
+                          {%- for image in product.images -%}
+                            {%- if image.alt == 'featured' or image.alt == 'featured mobile' -%}
+                              {%- continue -%}
+                            {%- endif -%}
+                    
+                            {%- if image.id == product.selected_or_first_available_variant.image.id -%}
+                              {%- assign initial_image_index = image_count -%}
+                              {%- assign initial_image_id = image.id -%}
+                            {%- endif -%}
+                    
+                            {%- include 'image-size', sizes: '200,400,600,700,800,900,1000,1200,1400,1600', image: image -%}
+
+                            {% assign image_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+                          
+                                <img
+                                  class="product-header1_main-image"
+                                  {% if initial_image_id == image.id %}src="{{ image | img_url: '600x' }}"{% endif %}
+                                  data-src="{{ image_url }}"
+                                  data-widths="[{{ supported_sizes }}]"
+                                  data-sizes="auto"
+                                  data-expand="-100"
+                                  alt="{{ image.alt | escape }}"
+                                  data-max-width="{{ image.width }}"
+                                  data-max-height="{{ image.height }}"
+                                  data-original-src="{{ image | img_url: 'master' }}">
+
+                              {%- assign image_count = image_count | plus: 1 -%}
+                            {%- endfor -%}
+        
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="productPagination" class="product-header1_pagination"></div>
+                </div>
+              </div>
+              <div class="product-header1_product-details">
+                <div class="product-header1_reviews-wrapper">
+                  <div class="product-header1_rating-wrapper">
+                    <div class="product-header1_rating-icon w-embed"><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.95 6.0875C14.8874 5.89061 14.7668 5.71723 14.604 5.59009C14.4411 5.46294 14.2437 5.38797 14.0375 5.375L10.325 5.11875L8.94999 1.65C8.87491 1.459 8.74422 1.29494 8.57485 1.17905C8.40548 1.06317 8.20522 1.00079 7.99999 1C7.79477 1.00079 7.59451 1.06317 7.42513 1.17905C7.25576 1.29494 7.12507 1.459 7.04999 1.65L5.64999 5.1375L1.96249 5.375C1.75656 5.38881 1.55951 5.4641 1.39683 5.59112C1.23415 5.71814 1.11332 5.89106 1.04999 6.0875C0.984955 6.28695 0.981155 6.50131 1.03908 6.70294C1.09701 6.90458 1.21401 7.08423 1.37499 7.21875L4.21249 9.61875L3.36874 12.9375C3.31037 13.162 3.32087 13.3989 3.39889 13.6174C3.47692 13.8358 3.61885 14.0258 3.80624 14.1625C3.98814 14.293 4.20485 14.3664 4.42864 14.373C4.65244 14.3797 4.87313 14.3195 5.06249 14.2L7.99374 12.3438H8.00624L11.1625 14.3375C11.3244 14.4427 11.5132 14.4991 11.7062 14.5C11.8639 14.4988 12.0192 14.4614 12.1601 14.3908C12.3011 14.3201 12.424 14.2181 12.5193 14.0926C12.6147 13.967 12.68 13.8213 12.7102 13.6666C12.7405 13.5118 12.7348 13.3522 12.6937 13.2L11.8 9.56875L14.625 7.21875C14.786 7.08423 14.903 6.90458 14.9609 6.70294C15.0188 6.50131 15.015 6.28695 14.95 6.0875Z" fill="#FBBC04"></path>
+                      </svg></div>
+                    <div class="product-header1_rating-icon w-embed"><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.95 6.0875C14.8874 5.89061 14.7668 5.71723 14.604 5.59009C14.4411 5.46294 14.2437 5.38797 14.0375 5.375L10.325 5.11875L8.94999 1.65C8.87491 1.459 8.74422 1.29494 8.57485 1.17905C8.40548 1.06317 8.20522 1.00079 7.99999 1C7.79477 1.00079 7.59451 1.06317 7.42513 1.17905C7.25576 1.29494 7.12507 1.459 7.04999 1.65L5.64999 5.1375L1.96249 5.375C1.75656 5.38881 1.55951 5.4641 1.39683 5.59112C1.23415 5.71814 1.11332 5.89106 1.04999 6.0875C0.984955 6.28695 0.981155 6.50131 1.03908 6.70294C1.09701 6.90458 1.21401 7.08423 1.37499 7.21875L4.21249 9.61875L3.36874 12.9375C3.31037 13.162 3.32087 13.3989 3.39889 13.6174C3.47692 13.8358 3.61885 14.0258 3.80624 14.1625C3.98814 14.293 4.20485 14.3664 4.42864 14.373C4.65244 14.3797 4.87313 14.3195 5.06249 14.2L7.99374 12.3438H8.00624L11.1625 14.3375C11.3244 14.4427 11.5132 14.4991 11.7062 14.5C11.8639 14.4988 12.0192 14.4614 12.1601 14.3908C12.3011 14.3201 12.424 14.2181 12.5193 14.0926C12.6147 13.967 12.68 13.8213 12.7102 13.6666C12.7405 13.5118 12.7348 13.3522 12.6937 13.2L11.8 9.56875L14.625 7.21875C14.786 7.08423 14.903 6.90458 14.9609 6.70294C15.0188 6.50131 15.015 6.28695 14.95 6.0875Z" fill="#FBBC04"></path>
+                      </svg></div>
+                    <div class="product-header1_rating-icon w-embed"><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.95 6.0875C14.8874 5.89061 14.7668 5.71723 14.604 5.59009C14.4411 5.46294 14.2437 5.38797 14.0375 5.375L10.325 5.11875L8.94999 1.65C8.87491 1.459 8.74422 1.29494 8.57485 1.17905C8.40548 1.06317 8.20522 1.00079 7.99999 1C7.79477 1.00079 7.59451 1.06317 7.42513 1.17905C7.25576 1.29494 7.12507 1.459 7.04999 1.65L5.64999 5.1375L1.96249 5.375C1.75656 5.38881 1.55951 5.4641 1.39683 5.59112C1.23415 5.71814 1.11332 5.89106 1.04999 6.0875C0.984955 6.28695 0.981155 6.50131 1.03908 6.70294C1.09701 6.90458 1.21401 7.08423 1.37499 7.21875L4.21249 9.61875L3.36874 12.9375C3.31037 13.162 3.32087 13.3989 3.39889 13.6174C3.47692 13.8358 3.61885 14.0258 3.80624 14.1625C3.98814 14.293 4.20485 14.3664 4.42864 14.373C4.65244 14.3797 4.87313 14.3195 5.06249 14.2L7.99374 12.3438H8.00624L11.1625 14.3375C11.3244 14.4427 11.5132 14.4991 11.7062 14.5C11.8639 14.4988 12.0192 14.4614 12.1601 14.3908C12.3011 14.3201 12.424 14.2181 12.5193 14.0926C12.6147 13.967 12.68 13.8213 12.7102 13.6666C12.7405 13.5118 12.7348 13.3522 12.6937 13.2L11.8 9.56875L14.625 7.21875C14.786 7.08423 14.903 6.90458 14.9609 6.70294C15.0188 6.50131 15.015 6.28695 14.95 6.0875Z" fill="#FBBC04"></path>
+                      </svg></div>
+                    <div class="product-header1_rating-icon w-embed"><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.95 6.0875C14.8874 5.89061 14.7668 5.71723 14.604 5.59009C14.4411 5.46294 14.2437 5.38797 14.0375 5.375L10.325 5.11875L8.94999 1.65C8.87491 1.459 8.74422 1.29494 8.57485 1.17905C8.40548 1.06317 8.20522 1.00079 7.99999 1C7.79477 1.00079 7.59451 1.06317 7.42513 1.17905C7.25576 1.29494 7.12507 1.459 7.04999 1.65L5.64999 5.1375L1.96249 5.375C1.75656 5.38881 1.55951 5.4641 1.39683 5.59112C1.23415 5.71814 1.11332 5.89106 1.04999 6.0875C0.984955 6.28695 0.981155 6.50131 1.03908 6.70294C1.09701 6.90458 1.21401 7.08423 1.37499 7.21875L4.21249 9.61875L3.36874 12.9375C3.31037 13.162 3.32087 13.3989 3.39889 13.6174C3.47692 13.8358 3.61885 14.0258 3.80624 14.1625C3.98814 14.293 4.20485 14.3664 4.42864 14.373C4.65244 14.3797 4.87313 14.3195 5.06249 14.2L7.99374 12.3438H8.00624L11.1625 14.3375C11.3244 14.4427 11.5132 14.4991 11.7062 14.5C11.8639 14.4988 12.0192 14.4614 12.1601 14.3908C12.3011 14.3201 12.424 14.2181 12.5193 14.0926C12.6147 13.967 12.68 13.8213 12.7102 13.6666C12.7405 13.5118 12.7348 13.3522 12.6937 13.2L11.8 9.56875L14.625 7.21875C14.786 7.08423 14.903 6.90458 14.9609 6.70294C15.0188 6.50131 15.015 6.28695 14.95 6.0875Z" fill="#FBBC04"></path>
+                      </svg></div>
+                    <div class="product-header1_rating-icon w-embed"><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.95 6.0875C14.8874 5.89061 14.7668 5.71723 14.604 5.59009C14.4411 5.46294 14.2437 5.38797 14.0375 5.375L10.325 5.11875L8.94999 1.65C8.87491 1.459 8.74422 1.29494 8.57485 1.17905C8.40548 1.06317 8.20522 1.00079 7.99999 1C7.79477 1.00079 7.59451 1.06317 7.42513 1.17905C7.25576 1.29494 7.12507 1.459 7.04999 1.65L5.64999 5.1375L1.96249 5.375C1.75656 5.38881 1.55951 5.4641 1.39683 5.59112C1.23415 5.71814 1.11332 5.89106 1.04999 6.0875C0.984955 6.28695 0.981155 6.50131 1.03908 6.70294C1.09701 6.90458 1.21401 7.08423 1.37499 7.21875L4.21249 9.61875L3.36874 12.9375C3.31037 13.162 3.32087 13.3989 3.39889 13.6174C3.47692 13.8358 3.61885 14.0258 3.80624 14.1625C3.98814 14.293 4.20485 14.3664 4.42864 14.373C4.65244 14.3797 4.87313 14.3195 5.06249 14.2L7.99374 12.3438H8.00624L11.1625 14.3375C11.3244 14.4427 11.5132 14.4991 11.7062 14.5C11.8639 14.4988 12.0192 14.4614 12.1601 14.3908C12.3011 14.3201 12.424 14.2181 12.5193 14.0926C12.6147 13.967 12.68 13.8213 12.7102 13.6666C12.7405 13.5118 12.7348 13.3522 12.6937 13.2L11.8 9.56875L14.625 7.21875C14.786 7.08423 14.903 6.90458 14.9609 6.70294C15.0188 6.50131 15.015 6.28695 14.95 6.0875Z" fill="#FBBC04"></path>
+                      </svg></div>
+                  </div>
+                  <div class="text-s text-semi-bold text-caps">Rated 4.9/5 by 1700+ satisfied customers</div>
+                </div>
+                <h3>BRIGHT Golf Balls</h3>
+                <div class="product-header1_price">
+                  <h6 class="text-medium text-strikethrough opacity-0-6" id="main-com-price">€XXX</h6>
+                  <div class="text-xl text-medium" id="main-price">€99</div>
+                  <div class="product-header1_price_difference">
+                    <div>You save <span id="main-prc">€XX</span></div>
+                  </div>
+                </div>
+                <div class="product-header1_add-to-cart w-form">
+
+                      <div class="pack-container">
+                      <div class="text-s text-bold">Choose your Pack:</div>
+                      <div class="pack-wrapper">
+
+                        {% assign first_var = true %}
+                        {% assign box_counter = 0 %}
+                        
+                        {% for variant in product.variants %} 
+
+                        <script>console.log('{{ variant | json }}');</script>
+
+                          {% assign box_counter = box_counter | plus: 1 %}
+                          {% if first_var == true %} {% assign first_price = variant.price %} {% endif %}
+
+                          {% assign normal_price = variant.compare_at_price | divided_by: 100 %}
+                          {% assign last_price = variant.price | divided_by: normal_price %}
+
+                          <label {% if first_var == true %} checked="" {% endif %} id="w-node-db6ca754-43e4-4345-45b8-7a64422385db-55082463" class="radio-button-field w-radio">
+                            {% if first_var == false %} <div class="pack-price-difference"><div>SAVE {{ 100 | minus: last_price }}%</div></div> {% endif %}
+                            <div data-prc="{{ 100 | minus: last_price }}%" data-id="{{ variant.id }}" data-price="{{ variant.price | money_without_trailing_zeros }}" data-com-price="{{ first_price | times: box_counter | money_without_trailing_zeros }}" class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-button w-radio-input {% if first_var == true %} w--redirected-checked {% endif %}"></div><input type="radio" id="ball_{{ variant.id }}" name="Pack-Price" value="{{ variant.title }}" data-name="Pack Price" style="position:absolute;z-index:-1"><span class="radio-button-label w-form-label" for="ball_{{ variant.id }}">{{ variant.title }}</span>
+                            <div id="w-node-db6ca754-43e4-4345-45b8-7a64422385df-55082463" class="pack-price-div">
+                              {% if first_var == false %} <div id="w-node-db6ca754-43e4-4345-45b8-7a64422385e0-55082463" class="pack-old-price">{{ first_price | times: box_counter | money_without_trailing_zeros }}</div> {% endif %}
+                              <div class="pack-new-price">{{ variant.price | money_without_trailing_zeros }}</div>
+                            </div>
+                          </label>
+
+                          {% if first_var == true %} {% assign first_var = false %} {% endif %}
+                        
+                        {% endfor %}
+                      </div>
+                    </div>
+                    <div class="product-header1_submit">
+
+                      <form method="post" action="/cart/add" id="product_form_8340685259077" accept-charset="UTF-8" class="ProductForm " enctype="multipart/form-data">
+                        <input type="hidden" name="form_type" value="product">
+                        <input type="hidden" name="utf8" value="✓">
+                        <input type="hidden" name="id" id="product-select-8340685259077" value="✓" value="">
+              
+                        <button type="submit" data-action="add-to-cart" id="themainestbutton" c-label="Button URL" c-type="url" data-w-id="caf57aea-42b4-b25e-b6dd-e4f016d59da2" class="button w-inline-block" style="width:100%;">
+                          <div c-label="Button Text" c-type="text" class="button_text">Add To Cart · <span id="main_price_in_button">{{ first_price | money_without_trailing_zeros }}</span></div>
+                          <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/ShoppingCart_1.svg?v=1682459148" loading="lazy" c-label="Button Icon" c-type="image_picker" c-size="100x100" alt="" class="button_icon">
+                        </button>
+                      </form>
+                      
+
+                    <div class="product-header1_payment-methods">
+                      <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Frame.svg?v=1682459148" loading="lazy" alt="" class="product-header1_payment-icon">
+                      <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Frame-1.svg?v=1682459148" loading="lazy" alt="" class="product-header1_payment-icon">
+                      <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Frame-2.svg?v=1682459149" loading="lazy" alt="" class="product-header1_payment-icon">
+                      <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Frame-3.svg?v=1682459148" loading="lazy" alt="" class="product-header1_payment-icon">
+                      <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Frame-4.svg?v=1682459148" loading="lazy" alt="" class="product-header1_payment-icon">
+                      <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Frame-5.svg?v=1682459148" loading="lazy" alt="" class="product-header1_payment-icon">
+                      <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Frame-6.svg?v=1682459148" loading="lazy" alt="" class="product-header1_payment-icon">
+                      <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Frame-7.svg?v=1682459148" loading="lazy" alt="" class="product-header1_payment-icon">
+                      <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Payment-Methods.svg?v=1682459148" loading="lazy" alt="" class="product-header1_payment-icon">
+                    </div>
+                    </div>
+                    <div class="checkbox-wrapper">
+                      <div class="text-s text-bold text-caps-first-letter">Complete your purchase with...</div>
+                      <div class="checkbox-field-wrapper"><label class="w-checkbox checkbox-field">
+                          <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox w--redirected-checked"></div><input type="checkbox" id="checkbox" name="checkbox" data-name="Checkbox" checked="" style="position:absolute;z-index:-1"><img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/pump.jpg?v=1682459149" loading="lazy" alt="" class="checkbox-image">
+                          <div class="checkbox-text">
+                            <div class="text-m text-semi-bold text-caps">THE BRIGHT™ AIR PUMP</div>
+                            <div class="checkbox-price">
+                              <div class="text-s text-normal opacity-0-6 text-strikethrough">€11,95</div>
+                              <div class="text-s text-medium">€5,95</div>
+                              <div class="text-s text-bold green-color">Save $6</div>
+                            </div>
+                          </div><span class="checkbox-label w-form-label" for="checkbox"></span>
+                        </label>
+                        <div class="checkbox-button">
+                          <a c-label="Button URL" c-type="url" data-w-id="95d65649-cbb1-7a29-7e16-af09bc9468a1" href="#" class="button-v2 is-small w-inline-block">
+                            <div c-label="Button Text" c-type="text" class="button_text">Add To Order</div><img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/ShoppingCartGold.svg?v=1682459149" loading="lazy" c-label="Button Icon" c-type="image_picker" c-size="100x100" alt="" class="button_icon">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  
+                  <div class="out-of-stock-state w-form-done">
+                    <div>Thank you! Your submission has been received!</div>
+                  </div>
+                  <div class="error-state w-form-fail">
+                    <div>Oops! Something went wrong while submitting the form.</div>
+                  </div>
+                </div>
+                <div class="product-header1_accordion-wrapper">
+                  <div class="product-header1_accordion">
+                    <div data-w-id="65d03ec8-9865-f50a-b6b1-b93cddba6355" class="product-header1_heading">
+                      <div class="text-m text-bold">Details</div>
+                    </div><img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/ic20-plus.svg?v=1682459148" loading="lazy" alt="" class="product-header1_accordion-icon">
+                    <div class="product-header1_details first">
+                      <div class="margin-bottom margin-small">
+                        <p class="text-m opacity-0-6 margin-bottom-16px">Lorem ipsum dolor sit amet consectetur. Dui a id amet cursus eu enim id. Ut quisque orci hendrerit dui sem orci justo in.</p>
+                      </div>
+                    </div>
+                    <div data-w-id="47c0bc28-c832-bff5-37ca-aa9b55eb1e22" class="product-header1_close"></div>
+                  </div>
+                  <div class="product-header1_accordion">
+                    <div data-w-id="9747a18e-5ed3-0629-740a-4a5ee900cfd0" class="product-header1_heading">
+                      <div class="text-m text-bold">Shipping &amp; Returns</div>
+                    </div><img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/ic20-plus.svg?v=1682459148" loading="lazy" alt="" class="product-header1_accordion-icon">
+                    <div style="height:0px" class="product-header1_details">
+                      <div class="margin-bottom margin-small">
+                        <p class="text-m opacity-0-6 margin-bottom-16px">Lorem ipsum dolor sit amet consectetur. Dui a id amet cursus eu enim id. Ut quisque orci hendrerit dui sem orci justo in.</p>
+                      </div>
+                    </div>
+                    <div class="product-header1_close"></div>
+                  </div>
+                  <div class="product-header1_accordion">
+                    <div data-w-id="b573ed51-dc3b-671c-c1be-ebe3271a44f2" class="product-header1_heading">
+                      <div class="text-m text-bold">Care Guide</div>
+                    </div><img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/ic20-plus.svg?v=1682459148" loading="lazy" alt="" class="product-header1_accordion-icon">
+                    <div style="height:0px" class="product-header1_details">
+                      <div class="margin-bottom margin-small">
+                        <p class="text-m opacity-0-6 margin-bottom-16px">Lorem ipsum dolor sit amet consectetur. Dui a id amet cursus eu enim id. Ut quisque orci hendrerit dui sem orci justo in.</p>
+                      </div>
+                    </div>
+                    <div class="product-header1_close"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="html-embed w-embed">
+        <style>
+  .w-lightbox-frame:nth-child(even),
+  .w-lightbox-item:nth-child(even) {
+    display: none;
+  }
+  #productGalleryButtons {
+  	width: auto;
+  }
+  #productGalleryButtons .swiper-slide {
+  	width: 56px !important;
+    height: 56px !important;
+  }
+  #productGalleryButtons .swiper-wrapper {
+    justify-content: start;
+    flex-direction: column !important;
+    row-gap: 4px;
+  }
+  .swiper-slide-thumb-active .product-header1_image {
+  	border-color: #fff;
+  }
+  .product-header1_accordion:nth-child(1) .product-header1_close {
+  	display: block;
+  }
+  .product-header1_accordion:nth-child(1) .product-header1_accordion-icon {
+  	transform: rotate(135deg);
+  }
+  @media screen and (max-width: 320px) {
+  	.pack-wrapper {
+    	grid-template-columns: 1fr !important;
+    }
+  }
+</style>
+      </div>
+    </section>
+    <section data-w-id="4d88d045-044f-7a9c-fab5-ef0a29c61e9e" class="section_layout234">
+      <div class="w-layout-grid layout234_component">
+        <div c-block="Layout Block" id="w-node-_4d88d045-044f-7a9c-fab5-ef0a29c61ea3-55082463" class="layout234_item">
+          <div class="layout234_item-icon-wrapper"><img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/image_2023-04-26_003841479.png?v=1682458724" loading="lazy" c-label="Icon" c-type="image_picker" c-size="200x200" alt="" class="icon-1x1-medium"></div>
+          <div class="layout234_item-text-wrapper">
+            <div c-label="Title" c-type="text" class="text-l text-bold">Holographic Leather</div>
+            <p c-label="Text" c-type="textarea" class="text-m opacity-0-6">Completely new to the market, meet the next evoIution in sports.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section_header37">
+      <div class="padding-global">
+        <div class="container-large">
+          <div class="w-layout-grid header37_component">
+            <div data-w-id="2801e220-e116-213d-3285-cb9252cfe68b" class="header37_content">
+              <h2 c-label="Heading" c-type="text" data-w-id="2801e220-e116-213d-3285-cb9252cfe68d">Your Game. Your Glow.</h2>
+              <div class="header37_list">
+                <div c-block="Block" class="header37_list-item">
+                  <div c-label="Block Title" c-type="text" class="text-l text-bold text-caps-first-letter">Glow bright. Play at night</div>
+                  <p c-label="Block Text" c-type="textarea" class="text-m text-caps-first-letter opacity-0-8">Never lose your ball again — our LED golf balls light up on impact and stay bright for 10 minute.</p>
+                </div>
+              </div>
+              <div data-w-id="448a7f95-cfaf-8fa8-862b-788c0865e498" class="header37_button-wrapper">
+                <div class="header37_reviews-wrapper">
+                  <div class="product-header1_rating-wrapper">
+                    <div c-label="Embed Star Icon 1" c-type="html" class="product-header1_rating-icon w-embed"><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.95 6.0875C14.8874 5.89061 14.7668 5.71723 14.604 5.59009C14.4411 5.46294 14.2437 5.38797 14.0375 5.375L10.325 5.11875L8.94999 1.65C8.87491 1.459 8.74422 1.29494 8.57485 1.17905C8.40548 1.06317 8.20522 1.00079 7.99999 1C7.79477 1.00079 7.59451 1.06317 7.42513 1.17905C7.25576 1.29494 7.12507 1.459 7.04999 1.65L5.64999 5.1375L1.96249 5.375C1.75656 5.38881 1.55951 5.4641 1.39683 5.59112C1.23415 5.71814 1.11332 5.89106 1.04999 6.0875C0.984955 6.28695 0.981155 6.50131 1.03908 6.70294C1.09701 6.90458 1.21401 7.08423 1.37499 7.21875L4.21249 9.61875L3.36874 12.9375C3.31037 13.162 3.32087 13.3989 3.39889 13.6174C3.47692 13.8358 3.61885 14.0258 3.80624 14.1625C3.98814 14.293 4.20485 14.3664 4.42864 14.373C4.65244 14.3797 4.87313 14.3195 5.06249 14.2L7.99374 12.3438H8.00624L11.1625 14.3375C11.3244 14.4427 11.5132 14.4991 11.7062 14.5C11.8639 14.4988 12.0192 14.4614 12.1601 14.3908C12.3011 14.3201 12.424 14.2181 12.5193 14.0926C12.6147 13.967 12.68 13.8213 12.7102 13.6666C12.7405 13.5118 12.7348 13.3522 12.6937 13.2L11.8 9.56875L14.625 7.21875C14.786 7.08423 14.903 6.90458 14.9609 6.70294C15.0188 6.50131 15.015 6.28695 14.95 6.0875Z" fill="#FBBC04"></path>
+                      </svg></div>
+                    <div c-label="Embed Star Icon 2" c-type="html" class="product-header1_rating-icon w-embed"><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.95 6.0875C14.8874 5.89061 14.7668 5.71723 14.604 5.59009C14.4411 5.46294 14.2437 5.38797 14.0375 5.375L10.325 5.11875L8.94999 1.65C8.87491 1.459 8.74422 1.29494 8.57485 1.17905C8.40548 1.06317 8.20522 1.00079 7.99999 1C7.79477 1.00079 7.59451 1.06317 7.42513 1.17905C7.25576 1.29494 7.12507 1.459 7.04999 1.65L5.64999 5.1375L1.96249 5.375C1.75656 5.38881 1.55951 5.4641 1.39683 5.59112C1.23415 5.71814 1.11332 5.89106 1.04999 6.0875C0.984955 6.28695 0.981155 6.50131 1.03908 6.70294C1.09701 6.90458 1.21401 7.08423 1.37499 7.21875L4.21249 9.61875L3.36874 12.9375C3.31037 13.162 3.32087 13.3989 3.39889 13.6174C3.47692 13.8358 3.61885 14.0258 3.80624 14.1625C3.98814 14.293 4.20485 14.3664 4.42864 14.373C4.65244 14.3797 4.87313 14.3195 5.06249 14.2L7.99374 12.3438H8.00624L11.1625 14.3375C11.3244 14.4427 11.5132 14.4991 11.7062 14.5C11.8639 14.4988 12.0192 14.4614 12.1601 14.3908C12.3011 14.3201 12.424 14.2181 12.5193 14.0926C12.6147 13.967 12.68 13.8213 12.7102 13.6666C12.7405 13.5118 12.7348 13.3522 12.6937 13.2L11.8 9.56875L14.625 7.21875C14.786 7.08423 14.903 6.90458 14.9609 6.70294C15.0188 6.50131 15.015 6.28695 14.95 6.0875Z" fill="#FBBC04"></path>
+                      </svg></div>
+                    <div c-label="Embed Star Icon 3" c-type="html" class="product-header1_rating-icon w-embed"><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.95 6.0875C14.8874 5.89061 14.7668 5.71723 14.604 5.59009C14.4411 5.46294 14.2437 5.38797 14.0375 5.375L10.325 5.11875L8.94999 1.65C8.87491 1.459 8.74422 1.29494 8.57485 1.17905C8.40548 1.06317 8.20522 1.00079 7.99999 1C7.79477 1.00079 7.59451 1.06317 7.42513 1.17905C7.25576 1.29494 7.12507 1.459 7.04999 1.65L5.64999 5.1375L1.96249 5.375C1.75656 5.38881 1.55951 5.4641 1.39683 5.59112C1.23415 5.71814 1.11332 5.89106 1.04999 6.0875C0.984955 6.28695 0.981155 6.50131 1.03908 6.70294C1.09701 6.90458 1.21401 7.08423 1.37499 7.21875L4.21249 9.61875L3.36874 12.9375C3.31037 13.162 3.32087 13.3989 3.39889 13.6174C3.47692 13.8358 3.61885 14.0258 3.80624 14.1625C3.98814 14.293 4.20485 14.3664 4.42864 14.373C4.65244 14.3797 4.87313 14.3195 5.06249 14.2L7.99374 12.3438H8.00624L11.1625 14.3375C11.3244 14.4427 11.5132 14.4991 11.7062 14.5C11.8639 14.4988 12.0192 14.4614 12.1601 14.3908C12.3011 14.3201 12.424 14.2181 12.5193 14.0926C12.6147 13.967 12.68 13.8213 12.7102 13.6666C12.7405 13.5118 12.7348 13.3522 12.6937 13.2L11.8 9.56875L14.625 7.21875C14.786 7.08423 14.903 6.90458 14.9609 6.70294C15.0188 6.50131 15.015 6.28695 14.95 6.0875Z" fill="#FBBC04"></path>
+                      </svg></div>
+                    <div c-label="Embed Star Icon 4" c-type="html" class="product-header1_rating-icon w-embed"><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.95 6.0875C14.8874 5.89061 14.7668 5.71723 14.604 5.59009C14.4411 5.46294 14.2437 5.38797 14.0375 5.375L10.325 5.11875L8.94999 1.65C8.87491 1.459 8.74422 1.29494 8.57485 1.17905C8.40548 1.06317 8.20522 1.00079 7.99999 1C7.79477 1.00079 7.59451 1.06317 7.42513 1.17905C7.25576 1.29494 7.12507 1.459 7.04999 1.65L5.64999 5.1375L1.96249 5.375C1.75656 5.38881 1.55951 5.4641 1.39683 5.59112C1.23415 5.71814 1.11332 5.89106 1.04999 6.0875C0.984955 6.28695 0.981155 6.50131 1.03908 6.70294C1.09701 6.90458 1.21401 7.08423 1.37499 7.21875L4.21249 9.61875L3.36874 12.9375C3.31037 13.162 3.32087 13.3989 3.39889 13.6174C3.47692 13.8358 3.61885 14.0258 3.80624 14.1625C3.98814 14.293 4.20485 14.3664 4.42864 14.373C4.65244 14.3797 4.87313 14.3195 5.06249 14.2L7.99374 12.3438H8.00624L11.1625 14.3375C11.3244 14.4427 11.5132 14.4991 11.7062 14.5C11.8639 14.4988 12.0192 14.4614 12.1601 14.3908C12.3011 14.3201 12.424 14.2181 12.5193 14.0926C12.6147 13.967 12.68 13.8213 12.7102 13.6666C12.7405 13.5118 12.7348 13.3522 12.6937 13.2L11.8 9.56875L14.625 7.21875C14.786 7.08423 14.903 6.90458 14.9609 6.70294C15.0188 6.50131 15.015 6.28695 14.95 6.0875Z" fill="#FBBC04"></path>
+                      </svg></div>
+                    <div c-label="Embed Star Icon 5" c-type="html" class="product-header1_rating-icon w-embed"><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.95 6.0875C14.8874 5.89061 14.7668 5.71723 14.604 5.59009C14.4411 5.46294 14.2437 5.38797 14.0375 5.375L10.325 5.11875L8.94999 1.65C8.87491 1.459 8.74422 1.29494 8.57485 1.17905C8.40548 1.06317 8.20522 1.00079 7.99999 1C7.79477 1.00079 7.59451 1.06317 7.42513 1.17905C7.25576 1.29494 7.12507 1.459 7.04999 1.65L5.64999 5.1375L1.96249 5.375C1.75656 5.38881 1.55951 5.4641 1.39683 5.59112C1.23415 5.71814 1.11332 5.89106 1.04999 6.0875C0.984955 6.28695 0.981155 6.50131 1.03908 6.70294C1.09701 6.90458 1.21401 7.08423 1.37499 7.21875L4.21249 9.61875L3.36874 12.9375C3.31037 13.162 3.32087 13.3989 3.39889 13.6174C3.47692 13.8358 3.61885 14.0258 3.80624 14.1625C3.98814 14.293 4.20485 14.3664 4.42864 14.373C4.65244 14.3797 4.87313 14.3195 5.06249 14.2L7.99374 12.3438H8.00624L11.1625 14.3375C11.3244 14.4427 11.5132 14.4991 11.7062 14.5C11.8639 14.4988 12.0192 14.4614 12.1601 14.3908C12.3011 14.3201 12.424 14.2181 12.5193 14.0926C12.6147 13.967 12.68 13.8213 12.7102 13.6666C12.7405 13.5118 12.7348 13.3522 12.6937 13.2L11.8 9.56875L14.625 7.21875C14.786 7.08423 14.903 6.90458 14.9609 6.70294C15.0188 6.50131 15.015 6.28695 14.95 6.0875Z" fill="#FBBC04"></path>
+                      </svg></div>
+                  </div>
+                  <div c-label="Review Text" c-type="text" class="text-s text-semi-bold text-caps">Rated 4.9/5 by 1700+ satisfied customers</div>
+                </div>
+                <a c-label="Button URL" c-type="url" data-w-id="741cef4e-8f1c-2ec1-76c1-43d99b02784c" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="button-v2 w-inline-block">
+                  <div c-label="Button Text" c-type="text" class="button_text">Grab It Now</div><img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/ArrowRightYellow.svg?v=1682459149" loading="lazy" c-label="Button Icon" c-type="image_picker" c-size="100x100" alt="" class="button_icon">
+                </a>
+                <div class="product-header1_payment-methods">
+                  <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Frame.svg?v=1682459148" loading="lazy" alt="" class="product-header1_payment-icon">
+                  <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Frame-1.svg?v=1682459148" loading="lazy" alt="" class="product-header1_payment-icon">
+                  <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Frame-2.svg?v=1682459149" loading="lazy" alt="" class="product-header1_payment-icon">
+                  <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Frame-3.svg?v=1682459148" loading="lazy" alt="" class="product-header1_payment-icon">
+                  <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Frame-4.svg?v=1682459148" loading="lazy" alt="" class="product-header1_payment-icon">
+                  <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Frame-5.svg?v=1682459148" loading="lazy" alt="" class="product-header1_payment-icon">
+                  <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Frame-6.svg?v=1682459148" loading="lazy" alt="" class="product-header1_payment-icon">
+                  <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Frame-7.svg?v=1682459148" loading="lazy" alt="" class="product-header1_payment-icon">
+                  <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Payment-Methods.svg?v=1682459148" loading="lazy" alt="" class="product-header1_payment-icon">
+                </div>
+              </div>
+            </div>
+            <div id="w-node-_2801e220-e116-213d-3285-cb9252cfe689-55082463" data-w-id="2801e220-e116-213d-3285-cb9252cfe689" class="header37_image-wrapper"><img class="header37_image" src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/balls.jpg?v=1682604336" c-type="image_picker" alt="" c-label="Image" c-size="1600x1600" sizes="90vw" loading="lazy"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="swiper-section">
+      <div class="padding-global">
+        <div class="container-large">
+          <div class="vertical-div align-center">
+            <h2 c-label="Heading" c-type="text" data-w-id="a60f0756-0ef1-1f2b-7765-f3af3102ce60" class="text-center">Witness the Glow-Up</h2>
+            <div data-w-id="3c3f90dd-40f3-1e1e-a012-1b0842ad8bb6" class="swiper-box">
+              <div id="socialSwiper" class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div c-block="Slider Block" class="swiper-slide">
+                    <div class="slide-div"><img class="slide-image" src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Rectangle-6-2.jpg?v=1682459149" c-type="image_picker" alt="" c-label="Slide Image" c-size="1000x1000" sizes="90vw" loading="lazy">
+                      <div class="slide-nick">
+                        <div c-label="Slide Nick" c-type="text">@PARISDUDE · 30k</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-left-arrow-wrapper">
+                <div id="prevArrow" data-w-id="40b1a2c9-6b33-81c9-8e71-7fa1d8425b96" class="swiper-arrow"><img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/ArrowLeft.svg?v=1682459148" loading="lazy" alt="" class="swiper-arrow-icon"></div>
+              </div>
+              <div class="swiper-right-arrow-wrapper">
+                <div id="nextArrow" data-w-id="ce3af611-8089-a67c-b797-5ba637767efb" class="swiper-arrow"><img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/ArrowRight.svg?v=1682459148" loading="lazy" alt="" class="swiper-arrow-icon"></div>
+              </div>
+            </div>
+            <div id="witnessPagination" class="swiper-section-pagination"></div>
+          </div>
+        </div>
+      </div>
+      <div class="html-embed w-embed">
+        <style>
+.slide-div {
+	aspect-ratio: 460/620;
+}
+</style>
+      </div>
+    </section>
+    <section data-w-id="b52cd0ef-8427-8864-4282-c9b7489a5871" class="section_faq6">
+      <div class="padding-global">
+        <div class="container-large">
+          <div class="w-layout-grid faq6_component">
+            <div class="faq6_content">
+              <div class="faq6_icon-div"><img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Question.svg?v=1682459149" loading="lazy" c-label="FAQ Headline Icon" c-type="image_picker" c-size="100x100" alt="" class="faq6_icon"></div>
+              <h3 c-label="Heading" c-type="text" class="yellow-color">Frequently<br>asked questions</h3>
+              <p c-label="Text" c-type="textarea" class="text-m">Lorem ipsum dolor sit amet consectetur. Eu lectus vulputate fermentum sit nisi. Sed eget aliquet amet nullam condimentum hendrerit turpis ut. Nulla dui sit tincidunt augue.</p>
+            </div>
+            <div class="faq6_list">
+              <div class="faq6_accordion">
+                <div class="faq6_question">
+                  <div c-label="First Question" c-type="text" class="text-l text-bold">How does it work?</div>
+                </div>
+                <div class="faq6_question-icon-v1"></div>
+                <div class="faq6_question-icon-v2"></div>
+                <div class="faq6_close"></div>
+                <div class="faq6_answer first">
+                  <div class="faq6_answer_wrapper">
+                    <p c-label="First Answer" c-type="textarea" class="text-l">Balls glow for 10 minutes on impact — whether it’s being hit by the club or falling into the hole, BRIGHT’s LED golf balls are sure to light up your match.</p>
+                  </div>
+                </div>
+              </div>
+              <div c-block="FAQ Block" class="faq6_accordion">
+                <div data-w-id="4dafed1d-eec4-d296-fae5-eb976e9e6412" class="faq6_question">
+                  <div c-label="Question" c-type="text" class="text-l text-bold">How does it work?</div>
+                </div>
+                <div class="faq6_question-icon-v1"></div>
+                <div class="faq6_question-icon-v2"></div>
+                <div class="faq6_close"></div>
+                <div style="width:100%;height:0px" class="faq6_answer">
+                  <div class="faq6_answer_wrapper">
+                    <p c-label="Answer" c-type="textarea" class="text-l">Balls glow for 10 minutes on impact — whether it’s being hit by the club or falling into the hole, BRIGHT’s LED golf balls are sure to light up your match.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="html-embed w-embed">
+        <style>
+.faq6_accordion:nth-child(1) .faq6_question-icon-v2 {
+	background-color: #000;
+}
+.faq6_accordion:nth-child(1) .faq6_close {
+	display: block;
+}
+</style>
+      </div>
+    </section>
+    <section class="section_layout18">
+      <div class="padding-global">
+        <div class="container-large">
+          <div class="w-layout-grid layout18_component">
+            <div class="layout18_content">
+              <div class="layout18_text">
+                <h6 c-label="Heading" c-type="text">How to use</h6>
+                <p c-label="Text" c-type="textarea" class="text-m text-semi-bold opacity-0-6">Our LED golf balls have a battery life of over 50 hours, automatically light up on impact, and stay glowing for 10 minutes after activation.</p>
+              </div>
+              <div class="layout18_item-list">
+                <div c-block="Step Block" id="w-node-a98fd419-4e9c-b5b8-2cbf-e777e8575a56-55082463" class="layout18_item">
+                  <div class="layout18_item-icon-wrapper">
+                    <div c-label="Step Number" c-type="text">1</div>
+                  </div>
+                  <div class="layout18_item-text-wrapper">
+                    <div c-label="Step Title" c-type="text" class="text-m text-bold text-caps-first-letter">Swing Them!</div>
+                    <p c-label="Step Text" c-type="textarea" class="text-m text-medium opacity-0-6">Play your best swing to activate the golf balls on impact. Watch them soar through the field with flying colours.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="w-node-a98fd419-4e9c-b5b8-2cbf-e777e8575a68-55082463" class="layout18_image-wrapper"><img class="layout18_image" src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Rectangle-16-2.jpg?v=1682459149" c-type="image_picker" alt="" c-label="Image" c-size="1600x1600" sizes="(max-width: 991px) 100vw, 44vw" loading="lazy"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section_layout209">
+      <div class="padding-global">
+        <div class="container-large">
+          <div class="w-layout-grid layout209_component">
+            <div class="layout209_image-wrapper"><img class="layout209_image" src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Rectangle-16-1.jpg?v=1682459150" c-type="image_picker" alt="" c-label="Image" c-size="1600x1600" sizes="(max-width: 991px) 100vw, 44vw" loading="lazy"></div>
+            <div id="w-node-a50c2fdd-7629-658b-6573-a578630a7db5-55082463" class="layout209_content">
+              <div class="layout209_text">
+                <div class="layout209_headline"><img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/ArchiveBox.png?v=1682459149" loading="lazy" c-label="Headline Icon" c-type="image_picker" c-size="200x200" alt="" class="layout209_headline-icon">
+                  <h6 c-label="Heading" c-type="text">What&#x27;s Included</h6>
+                </div>
+                <p c-label="Text" c-type="textarea" class="text-size-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+              </div>
+              <div class="layout209_item-list">
+                <div c-block="Layout Block" id="w-node-a50c2fdd-7629-658b-6573-a578630a7dbd-55082463" class="layout209_item">
+                  <div class="layout209_item-icon-wrapper"><img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Frame-801.png?v=1682459148" loading="lazy" c-label="Icon" c-type="image_picker" c-size="200x200" alt="" class="icon-1x1-xsmall"></div>
+                  <div class="layout209_item-text-wrapper">
+                    <div c-label="Text" c-type="text" class="text-m text-semi-bold">Golf Balls x6</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section_cta51">
+      <div class="padding-global">
+        <div class="container-large">
+          <div class="vertical-div align-center">
+            <div class="cta51_card">
+              <div class="cta51_card-wrapper">
+                <h6 c-label="Heading" c-type="text">Be Inspired. Be an Innovator. Be BRIGHT</h6>
+                <p c-label="Text" c-type="textarea" class="text-m text-caps-first-letter opacity-0-6">Inspired by spirit. Built for sport.<br><br>BRIGHT was created to transform the way we channel imagination, inspiration, and innovation into the way we play sports. A curiosity and enthusiasm for transforming the landscape of athleticism is what drives the essence of our ideas. Our mission is to keep the spirit of sport alive and uplifted, always working to positively impact the lives of our athletes through the innovation behind our products.</p>
+                <div class="cta51_button-wrapper">
+                  <div class="header37_reviews-wrapper">
+                    <div class="product-header1_rating-wrapper">
+                      <div c-label="Embed Star Icon 1" c-type="html" class="product-header1_rating-icon w-embed"><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M14.95 6.0875C14.8874 5.89061 14.7668 5.71723 14.604 5.59009C14.4411 5.46294 14.2437 5.38797 14.0375 5.375L10.325 5.11875L8.94999 1.65C8.87491 1.459 8.74422 1.29494 8.57485 1.17905C8.40548 1.06317 8.20522 1.00079 7.99999 1C7.79477 1.00079 7.59451 1.06317 7.42513 1.17905C7.25576 1.29494 7.12507 1.459 7.04999 1.65L5.64999 5.1375L1.96249 5.375C1.75656 5.38881 1.55951 5.4641 1.39683 5.59112C1.23415 5.71814 1.11332 5.89106 1.04999 6.0875C0.984955 6.28695 0.981155 6.50131 1.03908 6.70294C1.09701 6.90458 1.21401 7.08423 1.37499 7.21875L4.21249 9.61875L3.36874 12.9375C3.31037 13.162 3.32087 13.3989 3.39889 13.6174C3.47692 13.8358 3.61885 14.0258 3.80624 14.1625C3.98814 14.293 4.20485 14.3664 4.42864 14.373C4.65244 14.3797 4.87313 14.3195 5.06249 14.2L7.99374 12.3438H8.00624L11.1625 14.3375C11.3244 14.4427 11.5132 14.4991 11.7062 14.5C11.8639 14.4988 12.0192 14.4614 12.1601 14.3908C12.3011 14.3201 12.424 14.2181 12.5193 14.0926C12.6147 13.967 12.68 13.8213 12.7102 13.6666C12.7405 13.5118 12.7348 13.3522 12.6937 13.2L11.8 9.56875L14.625 7.21875C14.786 7.08423 14.903 6.90458 14.9609 6.70294C15.0188 6.50131 15.015 6.28695 14.95 6.0875Z" fill="#FBBC04"></path>
+                        </svg></div>
+                      <div c-label="Embed Star Icon 2" c-type="html" class="product-header1_rating-icon w-embed"><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M14.95 6.0875C14.8874 5.89061 14.7668 5.71723 14.604 5.59009C14.4411 5.46294 14.2437 5.38797 14.0375 5.375L10.325 5.11875L8.94999 1.65C8.87491 1.459 8.74422 1.29494 8.57485 1.17905C8.40548 1.06317 8.20522 1.00079 7.99999 1C7.79477 1.00079 7.59451 1.06317 7.42513 1.17905C7.25576 1.29494 7.12507 1.459 7.04999 1.65L5.64999 5.1375L1.96249 5.375C1.75656 5.38881 1.55951 5.4641 1.39683 5.59112C1.23415 5.71814 1.11332 5.89106 1.04999 6.0875C0.984955 6.28695 0.981155 6.50131 1.03908 6.70294C1.09701 6.90458 1.21401 7.08423 1.37499 7.21875L4.21249 9.61875L3.36874 12.9375C3.31037 13.162 3.32087 13.3989 3.39889 13.6174C3.47692 13.8358 3.61885 14.0258 3.80624 14.1625C3.98814 14.293 4.20485 14.3664 4.42864 14.373C4.65244 14.3797 4.87313 14.3195 5.06249 14.2L7.99374 12.3438H8.00624L11.1625 14.3375C11.3244 14.4427 11.5132 14.4991 11.7062 14.5C11.8639 14.4988 12.0192 14.4614 12.1601 14.3908C12.3011 14.3201 12.424 14.2181 12.5193 14.0926C12.6147 13.967 12.68 13.8213 12.7102 13.6666C12.7405 13.5118 12.7348 13.3522 12.6937 13.2L11.8 9.56875L14.625 7.21875C14.786 7.08423 14.903 6.90458 14.9609 6.70294C15.0188 6.50131 15.015 6.28695 14.95 6.0875Z" fill="#FBBC04"></path>
+                        </svg></div>
+                      <div c-label="Embed Star Icon 3" c-type="html" class="product-header1_rating-icon w-embed"><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M14.95 6.0875C14.8874 5.89061 14.7668 5.71723 14.604 5.59009C14.4411 5.46294 14.2437 5.38797 14.0375 5.375L10.325 5.11875L8.94999 1.65C8.87491 1.459 8.74422 1.29494 8.57485 1.17905C8.40548 1.06317 8.20522 1.00079 7.99999 1C7.79477 1.00079 7.59451 1.06317 7.42513 1.17905C7.25576 1.29494 7.12507 1.459 7.04999 1.65L5.64999 5.1375L1.96249 5.375C1.75656 5.38881 1.55951 5.4641 1.39683 5.59112C1.23415 5.71814 1.11332 5.89106 1.04999 6.0875C0.984955 6.28695 0.981155 6.50131 1.03908 6.70294C1.09701 6.90458 1.21401 7.08423 1.37499 7.21875L4.21249 9.61875L3.36874 12.9375C3.31037 13.162 3.32087 13.3989 3.39889 13.6174C3.47692 13.8358 3.61885 14.0258 3.80624 14.1625C3.98814 14.293 4.20485 14.3664 4.42864 14.373C4.65244 14.3797 4.87313 14.3195 5.06249 14.2L7.99374 12.3438H8.00624L11.1625 14.3375C11.3244 14.4427 11.5132 14.4991 11.7062 14.5C11.8639 14.4988 12.0192 14.4614 12.1601 14.3908C12.3011 14.3201 12.424 14.2181 12.5193 14.0926C12.6147 13.967 12.68 13.8213 12.7102 13.6666C12.7405 13.5118 12.7348 13.3522 12.6937 13.2L11.8 9.56875L14.625 7.21875C14.786 7.08423 14.903 6.90458 14.9609 6.70294C15.0188 6.50131 15.015 6.28695 14.95 6.0875Z" fill="#FBBC04"></path>
+                        </svg></div>
+                      <div c-label="Embed Star Icon 4" c-type="html" class="product-header1_rating-icon w-embed"><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M14.95 6.0875C14.8874 5.89061 14.7668 5.71723 14.604 5.59009C14.4411 5.46294 14.2437 5.38797 14.0375 5.375L10.325 5.11875L8.94999 1.65C8.87491 1.459 8.74422 1.29494 8.57485 1.17905C8.40548 1.06317 8.20522 1.00079 7.99999 1C7.79477 1.00079 7.59451 1.06317 7.42513 1.17905C7.25576 1.29494 7.12507 1.459 7.04999 1.65L5.64999 5.1375L1.96249 5.375C1.75656 5.38881 1.55951 5.4641 1.39683 5.59112C1.23415 5.71814 1.11332 5.89106 1.04999 6.0875C0.984955 6.28695 0.981155 6.50131 1.03908 6.70294C1.09701 6.90458 1.21401 7.08423 1.37499 7.21875L4.21249 9.61875L3.36874 12.9375C3.31037 13.162 3.32087 13.3989 3.39889 13.6174C3.47692 13.8358 3.61885 14.0258 3.80624 14.1625C3.98814 14.293 4.20485 14.3664 4.42864 14.373C4.65244 14.3797 4.87313 14.3195 5.06249 14.2L7.99374 12.3438H8.00624L11.1625 14.3375C11.3244 14.4427 11.5132 14.4991 11.7062 14.5C11.8639 14.4988 12.0192 14.4614 12.1601 14.3908C12.3011 14.3201 12.424 14.2181 12.5193 14.0926C12.6147 13.967 12.68 13.8213 12.7102 13.6666C12.7405 13.5118 12.7348 13.3522 12.6937 13.2L11.8 9.56875L14.625 7.21875C14.786 7.08423 14.903 6.90458 14.9609 6.70294C15.0188 6.50131 15.015 6.28695 14.95 6.0875Z" fill="#FBBC04"></path>
+                        </svg></div>
+                      <div c-label="Embed Star Icon 5" c-type="html" class="product-header1_rating-icon w-embed"><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M14.95 6.0875C14.8874 5.89061 14.7668 5.71723 14.604 5.59009C14.4411 5.46294 14.2437 5.38797 14.0375 5.375L10.325 5.11875L8.94999 1.65C8.87491 1.459 8.74422 1.29494 8.57485 1.17905C8.40548 1.06317 8.20522 1.00079 7.99999 1C7.79477 1.00079 7.59451 1.06317 7.42513 1.17905C7.25576 1.29494 7.12507 1.459 7.04999 1.65L5.64999 5.1375L1.96249 5.375C1.75656 5.38881 1.55951 5.4641 1.39683 5.59112C1.23415 5.71814 1.11332 5.89106 1.04999 6.0875C0.984955 6.28695 0.981155 6.50131 1.03908 6.70294C1.09701 6.90458 1.21401 7.08423 1.37499 7.21875L4.21249 9.61875L3.36874 12.9375C3.31037 13.162 3.32087 13.3989 3.39889 13.6174C3.47692 13.8358 3.61885 14.0258 3.80624 14.1625C3.98814 14.293 4.20485 14.3664 4.42864 14.373C4.65244 14.3797 4.87313 14.3195 5.06249 14.2L7.99374 12.3438H8.00624L11.1625 14.3375C11.3244 14.4427 11.5132 14.4991 11.7062 14.5C11.8639 14.4988 12.0192 14.4614 12.1601 14.3908C12.3011 14.3201 12.424 14.2181 12.5193 14.0926C12.6147 13.967 12.68 13.8213 12.7102 13.6666C12.7405 13.5118 12.7348 13.3522 12.6937 13.2L11.8 9.56875L14.625 7.21875C14.786 7.08423 14.903 6.90458 14.9609 6.70294C15.0188 6.50131 15.015 6.28695 14.95 6.0875Z" fill="#FBBC04"></path>
+                        </svg></div>
+                    </div>
+                    <div c-label="Review Text" c-type="text" class="text-s text-semi-bold text-caps">Rated 4.9/5 by 1700+ satisfied customers</div>
+                  </div>
+                  <a c-label="Button URL" c-type="url" data-w-id="741cef4e-8f1c-2ec1-76c1-43d99b02784c" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="button-v2 w-inline-block">
+                    <div c-label="Button Text" c-type="text" class="button_text">Grab It Now</div><img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/ArrowRightYellow.svg?v=1682459149" loading="lazy" c-label="Button Icon" c-type="image_picker" c-size="100x100" alt="" class="button_icon">
+                  </a>
+                <div class="product-header1_payment-methods">
+                  <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Frame.svg?v=1682459148" loading="lazy" alt="" class="product-header1_payment-icon">
+                  <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Frame-1.svg?v=1682459148" loading="lazy" alt="" class="product-header1_payment-icon">
+                  <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Frame-2.svg?v=1682459149" loading="lazy" alt="" class="product-header1_payment-icon">
+                  <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Frame-3.svg?v=1682459148" loading="lazy" alt="" class="product-header1_payment-icon">
+                  <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Frame-4.svg?v=1682459148" loading="lazy" alt="" class="product-header1_payment-icon">
+                  <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Frame-5.svg?v=1682459148" loading="lazy" alt="" class="product-header1_payment-icon">
+                  <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Frame-6.svg?v=1682459148" loading="lazy" alt="" class="product-header1_payment-icon">
+                  <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Frame-7.svg?v=1682459148" loading="lazy" alt="" class="product-header1_payment-icon">
+                  <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Payment-Methods.svg?v=1682459148" loading="lazy" alt="" class="product-header1_payment-icon">
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section_layout215">
+      <div class="padding-global">
+        <div class="container-large">
+          <div class="w-layout-grid layout215_component">
+            <div data-w-id="44c3a9d7-8542-8c83-e9bd-a426f992f49e" class="layout215_image-wrapper"><img class="layout215_image" src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/image_2023-04-26_182821770.png?v=1682522908" c-type="image_picker" alt="" c-label="Image"></div>
+            <div data-w-id="44c3a9d7-8542-8c83-e9bd-a426f992f4a0" class="layout215_content">
+              <div id="w-node-_7bedfe1b-6e4d-aea2-2b4f-2ba9c3e30eda-55082463" class="layout215_content-wrapper">
+                <div class="layout215_icon-div"><img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/ShieldCheck.svg?v=1682459148" loading="lazy" c-label="Icon" c-type="image_picker" c-size="200x200" alt="" class="layout215_icon"></div>
+                <h3 c-label="Heading" c-type="text">100% Money Back</h3>
+                <p c-label="Text" c-type="textarea" class="text-m text-caps-first-letter opacity-0-6">Lorem ipsum dolor sit amet consectetur. Eu lectus vulputate fermentum sit nisi. Sed eget aliquet amet nullam condimentum hendrerit turpis ut. Nulla dui sit tincidunt augue.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div data-w-id="ec42aeb4-94ab-3da5-1acf-c7a09b7ff952" class="cta-box-wrapper">
+    <div class="cta-box">
+      <div class="cta-product-info"><img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/golf_6a194d2c-98e1-4899-bd9b-b729bca5489b.png?v=1682519654" loading="lazy" alt="" class="cta-product-image">
+        <div>
+          <div class="cta_reviews-wrapper">
+            <div class="cta_rating-wrapper">
+              <div class="cta_rating-icon w-embed"><svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.2125 4.56563C11.1655 4.41796 11.0751 4.28792 10.9529 4.19256C10.8308 4.09721 10.6827 4.04098 10.5281 4.03125L7.74371 3.83906L6.71246 1.2375C6.65615 1.09425 6.55813 0.971205 6.4311 0.884289C6.30407 0.797374 6.15387 0.750592 5.99996 0.75V0.75C5.84604 0.750592 5.69584 0.797374 5.56881 0.884289C5.44178 0.971205 5.34377 1.09425 5.28746 1.2375L4.23746 3.85312L1.47183 4.03125C1.31738 4.04161 1.16959 4.09807 1.04758 4.19334C0.925571 4.28861 0.834955 4.4183 0.787456 4.56563C0.738678 4.71521 0.735828 4.87598 0.779274 5.02721C0.822719 5.17843 0.910468 5.31317 1.03121 5.41406L3.15933 7.21406L2.52652 9.70312C2.48274 9.87151 2.49062 10.0492 2.54913 10.213C2.60765 10.3769 2.7141 10.5193 2.85464 10.6219C2.99106 10.7198 3.1536 10.7748 3.32144 10.7798C3.48929 10.7848 3.65481 10.7396 3.79683 10.65L5.99527 9.25781H6.00464L8.37183 10.7531C8.49326 10.832 8.63483 10.8743 8.77964 10.875C8.89789 10.8741 9.01434 10.846 9.12006 10.7931C9.22577 10.7401 9.31793 10.6636 9.38946 10.5694C9.46099 10.4753 9.50997 10.366 9.53265 10.2499C9.55532 10.1339 9.55109 10.0142 9.52027 9.9L8.84996 7.17656L10.9687 5.41406C11.0894 5.31317 11.1772 5.17843 11.2206 5.02721C11.2641 4.87598 11.2612 4.71521 11.2125 4.56563Z" fill="white"></path>
+                </svg></div>
+              <div class="cta_rating-icon w-embed"><svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.2125 4.56563C11.1655 4.41796 11.0751 4.28792 10.9529 4.19256C10.8308 4.09721 10.6827 4.04098 10.5281 4.03125L7.74371 3.83906L6.71246 1.2375C6.65615 1.09425 6.55813 0.971205 6.4311 0.884289C6.30407 0.797374 6.15387 0.750592 5.99996 0.75V0.75C5.84604 0.750592 5.69584 0.797374 5.56881 0.884289C5.44178 0.971205 5.34377 1.09425 5.28746 1.2375L4.23746 3.85312L1.47183 4.03125C1.31738 4.04161 1.16959 4.09807 1.04758 4.19334C0.925571 4.28861 0.834955 4.4183 0.787456 4.56563C0.738678 4.71521 0.735828 4.87598 0.779274 5.02721C0.822719 5.17843 0.910468 5.31317 1.03121 5.41406L3.15933 7.21406L2.52652 9.70312C2.48274 9.87151 2.49062 10.0492 2.54913 10.213C2.60765 10.3769 2.7141 10.5193 2.85464 10.6219C2.99106 10.7198 3.1536 10.7748 3.32144 10.7798C3.48929 10.7848 3.65481 10.7396 3.79683 10.65L5.99527 9.25781H6.00464L8.37183 10.7531C8.49326 10.832 8.63483 10.8743 8.77964 10.875C8.89789 10.8741 9.01434 10.846 9.12006 10.7931C9.22577 10.7401 9.31793 10.6636 9.38946 10.5694C9.46099 10.4753 9.50997 10.366 9.53265 10.2499C9.55532 10.1339 9.55109 10.0142 9.52027 9.9L8.84996 7.17656L10.9687 5.41406C11.0894 5.31317 11.1772 5.17843 11.2206 5.02721C11.2641 4.87598 11.2612 4.71521 11.2125 4.56563Z" fill="white"></path>
+                </svg></div>
+              <div class="cta_rating-icon w-embed"><svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.2125 4.56563C11.1655 4.41796 11.0751 4.28792 10.9529 4.19256C10.8308 4.09721 10.6827 4.04098 10.5281 4.03125L7.74371 3.83906L6.71246 1.2375C6.65615 1.09425 6.55813 0.971205 6.4311 0.884289C6.30407 0.797374 6.15387 0.750592 5.99996 0.75V0.75C5.84604 0.750592 5.69584 0.797374 5.56881 0.884289C5.44178 0.971205 5.34377 1.09425 5.28746 1.2375L4.23746 3.85312L1.47183 4.03125C1.31738 4.04161 1.16959 4.09807 1.04758 4.19334C0.925571 4.28861 0.834955 4.4183 0.787456 4.56563C0.738678 4.71521 0.735828 4.87598 0.779274 5.02721C0.822719 5.17843 0.910468 5.31317 1.03121 5.41406L3.15933 7.21406L2.52652 9.70312C2.48274 9.87151 2.49062 10.0492 2.54913 10.213C2.60765 10.3769 2.7141 10.5193 2.85464 10.6219C2.99106 10.7198 3.1536 10.7748 3.32144 10.7798C3.48929 10.7848 3.65481 10.7396 3.79683 10.65L5.99527 9.25781H6.00464L8.37183 10.7531C8.49326 10.832 8.63483 10.8743 8.77964 10.875C8.89789 10.8741 9.01434 10.846 9.12006 10.7931C9.22577 10.7401 9.31793 10.6636 9.38946 10.5694C9.46099 10.4753 9.50997 10.366 9.53265 10.2499C9.55532 10.1339 9.55109 10.0142 9.52027 9.9L8.84996 7.17656L10.9687 5.41406C11.0894 5.31317 11.1772 5.17843 11.2206 5.02721C11.2641 4.87598 11.2612 4.71521 11.2125 4.56563Z" fill="white"></path>
+                </svg></div>
+              <div class="cta_rating-icon w-embed"><svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.2125 4.56563C11.1655 4.41796 11.0751 4.28792 10.9529 4.19256C10.8308 4.09721 10.6827 4.04098 10.5281 4.03125L7.74371 3.83906L6.71246 1.2375C6.65615 1.09425 6.55813 0.971205 6.4311 0.884289C6.30407 0.797374 6.15387 0.750592 5.99996 0.75V0.75C5.84604 0.750592 5.69584 0.797374 5.56881 0.884289C5.44178 0.971205 5.34377 1.09425 5.28746 1.2375L4.23746 3.85312L1.47183 4.03125C1.31738 4.04161 1.16959 4.09807 1.04758 4.19334C0.925571 4.28861 0.834955 4.4183 0.787456 4.56563C0.738678 4.71521 0.735828 4.87598 0.779274 5.02721C0.822719 5.17843 0.910468 5.31317 1.03121 5.41406L3.15933 7.21406L2.52652 9.70312C2.48274 9.87151 2.49062 10.0492 2.54913 10.213C2.60765 10.3769 2.7141 10.5193 2.85464 10.6219C2.99106 10.7198 3.1536 10.7748 3.32144 10.7798C3.48929 10.7848 3.65481 10.7396 3.79683 10.65L5.99527 9.25781H6.00464L8.37183 10.7531C8.49326 10.832 8.63483 10.8743 8.77964 10.875C8.89789 10.8741 9.01434 10.846 9.12006 10.7931C9.22577 10.7401 9.31793 10.6636 9.38946 10.5694C9.46099 10.4753 9.50997 10.366 9.53265 10.2499C9.55532 10.1339 9.55109 10.0142 9.52027 9.9L8.84996 7.17656L10.9687 5.41406C11.0894 5.31317 11.1772 5.17843 11.2206 5.02721C11.2641 4.87598 11.2612 4.71521 11.2125 4.56563Z" fill="white"></path>
+                </svg></div>
+              <div class="cta_rating-icon w-embed"><svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.2125 4.56563C11.1655 4.41796 11.0751 4.28792 10.9529 4.19256C10.8308 4.09721 10.6827 4.04098 10.5281 4.03125L7.74371 3.83906L6.71246 1.2375C6.65615 1.09425 6.55813 0.971205 6.4311 0.884289C6.30407 0.797374 6.15387 0.750592 5.99996 0.75V0.75C5.84604 0.750592 5.69584 0.797374 5.56881 0.884289C5.44178 0.971205 5.34377 1.09425 5.28746 1.2375L4.23746 3.85312L1.47183 4.03125C1.31738 4.04161 1.16959 4.09807 1.04758 4.19334C0.925571 4.28861 0.834955 4.4183 0.787456 4.56563C0.738678 4.71521 0.735828 4.87598 0.779274 5.02721C0.822719 5.17843 0.910468 5.31317 1.03121 5.41406L3.15933 7.21406L2.52652 9.70312C2.48274 9.87151 2.49062 10.0492 2.54913 10.213C2.60765 10.3769 2.7141 10.5193 2.85464 10.6219C2.99106 10.7198 3.1536 10.7748 3.32144 10.7798C3.48929 10.7848 3.65481 10.7396 3.79683 10.65L5.99527 9.25781H6.00464L8.37183 10.7531C8.49326 10.832 8.63483 10.8743 8.77964 10.875C8.89789 10.8741 9.01434 10.846 9.12006 10.7931C9.22577 10.7401 9.31793 10.6636 9.38946 10.5694C9.46099 10.4753 9.50997 10.366 9.53265 10.2499C9.55532 10.1339 9.55109 10.0142 9.52027 9.9L8.84996 7.17656L10.9687 5.41406C11.0894 5.31317 11.1772 5.17843 11.2206 5.02721C11.2641 4.87598 11.2612 4.71521 11.2125 4.56563Z" fill="white"></path>
+                </svg></div>
+            </div>
+            <div class="text-xs text-bold text-caps">4.9 (Reviews 1700+)</div>
+          </div>
+          <div class="text-m text-bold">BRIGHT Golf Balls</div>
+        </div>
+      </div>
+      <div class="cta-cart-wrapper">
+        <div class="cta-price-info">
+          <div class="cta-price-info-block">
+            <div class="text-m text-semi-bold opacity-0-6 text-caps text-strikethrough" id="ATC_com_price">$XXX</div>
+            <div class="text-m text-semi-bold" id="ATC_price">$189</div>
+          </div>
+          <div class="cta_price_difference">
+            <div>You save <span id="ATC-prc">€XX</span></div>
+          </div>
+        </div>
+          <button data-action="add-to-cart" onclick='document.getElementById("themainestbutton").click();' label="Button URL" c-type="url" data-w-id="caf57aea-42b4-b25e-b6dd-e4f016d59da2" class="button is-small w-inline-block">
+            <div c-label="Button Text" c-type="text" class="button_text">ADD TO CART</div>
+          </button>
+      </div>
+    </div>
+    <div data-w-id="3738b409-7695-f961-2a6b-a20ccd602cd1" class="cta-button">
+      <a c-label="Button URL" c-type="url" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" data-w-id="0cdf8d9a-2343-693c-7bb5-13100062a584" class="button w-inline-block">
+        <div c-label="Button Text" c-type="text" class="button_text">Grab It Now</div><img src="images/ArrowRight_1.svg" loading="lazy" c-label="Button Icon" c-type="image_picker" c-size="100x100" alt="" class="button_icon">
+      </a>
+    </div>
+    <div class="cta_add-to-cart w-form">
+        <div class="pack-container">
+          <div class="text-s text-bold">Choose your Pack:</div>
+          <div class="pack-wrapper"><label checked="" id="w-node-afd656a8-e0c0-1171-5342-53f0e489e9ab-55082463" class="radio-button-field w-radio">
+              <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-button w-radio-input w--redirected-checked"></div><input type="radio" id="6-Balls" name="Pack-Price" value="6 Balls" data-name="Pack Price" checked="" style="opacity:0;position:absolute;z-index:-1"><span class="radio-button-label w-form-label" for="6-Balls">6x balls</span>
+              <div id="w-node-afd656a8-e0c0-1171-5342-53f0e489e9af-55082463" class="pack-price-div">
+                <div class="pack-new-price">€99</div>
+              </div>
+            </label><label id="w-node-afd656a8-e0c0-1171-5342-53f0e489e9b2-55082463" class="radio-button-field w-radio">
+              <div class="pack-price-difference">
+                <div>SAVE $20</div>
+              </div>
+              <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-button w-radio-input"></div><input type="radio" id="12-Balls" name="Pack-Price" value="12 Balls" data-name="Pack Price" style="opacity:0;position:absolute;z-index:-1"><span class="radio-button-label w-form-label" for="12-Balls">12x balls</span>
+              <div id="w-node-afd656a8-e0c0-1171-5342-53f0e489e9b9-55082463" class="pack-price-div">
+                <div id="w-node-afd656a8-e0c0-1171-5342-53f0e489e9ba-55082463" class="pack-old-price">€xxx</div>
+                <div class="pack-new-price">€99</div>
+              </div>
+            </label><label id="w-node-afd656a8-e0c0-1171-5342-53f0e489e9be-55082463" class="radio-button-field w-radio">
+              <div class="pack-price-difference">
+                <div>SAVE $20</div>
+              </div>
+              <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-button w-radio-input"></div><input type="radio" id="16-Balls" name="Pack-Price" value="16 Balls" data-name="Pack Price" style="opacity:0;position:absolute;z-index:-1"><span class="radio-button-label w-form-label" for="16-Balls">16x balls</span>
+              <div class="pack-price-div">
+                <div id="w-node-afd656a8-e0c0-1171-5342-53f0e489e9c6-55082463" class="pack-old-price">€xxx</div>
+                <div class="pack-new-price">€99</div>
+              </div>
+            </label></div>
+        </div>
+        <div class="product-header1_submit">
+
+            <button type="submit" data-action="add-to-cart" id="themainestbutton" c-label="Button URL" c-type="url" data-w-id="caf57aea-42b4-b25e-b6dd-e4f016d59da2" class="button w-inline-block">
+              <div c-label="Button Text" c-type="text" class="button_text">Add To Cart · $99</div>
+              <img src="images/ShoppingCart_1.svg" loading="lazy" c-label="Button Icon" c-type="image_picker" c-size="100x100" alt="" class="button_icon">
+            </button>
+
+          <div class="product-header1_payment-methods"><img src="images/Frame.svg" loading="lazy" alt="" class="product-header1_payment-icon"><img src="images/Frame-1.svg" loading="lazy" alt="" class="product-header1_payment-icon"><img src="images/Frame-2.svg" loading="lazy" alt="" class="product-header1_payment-icon"><img src="images/Frame-3.svg" loading="lazy" alt="" class="product-header1_payment-icon"><img src="images/Frame-4.svg" loading="lazy" alt="" class="product-header1_payment-icon"><img src="images/Frame-5.svg" loading="lazy" alt="" class="product-header1_payment-icon"><img src="images/Frame-6.svg" loading="lazy" alt="" class="product-header1_payment-icon"><img src="images/Frame-7.svg" loading="lazy" alt="" class="product-header1_payment-icon"><img src="images/Payment-Methods.svg" loading="lazy" alt="" class="product-header1_payment-icon"></div>
+        </div>
+
+      <div class="out-of-stock-state w-form-done">
+        <div>Thank you! Your submission has been received!</div>
+      </div>
+      <div class="error-state w-form-fail">
+        <div>Oops! Something went wrong while submitting the form.</div>
+      </div>
+    </div>
+    <div class="html-embed w-embed">
+      <style>
+        .cta-box-wrapper .cta-button .button {
+        	background-color: #fff;
+        }
+      </style>
+    </div>
+  </div>
+
+{% schema %}
+  {
+    "name": "Product page",
+    "class": "shopify-section--bordered",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_share_buttons",
+        "label": "Show social sharing buttons",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_vendor",
+        "label": "Show vendor",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "description_below_add_to_cart",
+        "label": "Description below add to cart",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "show_color_swatch",
+        "label": "Show color swatch",
+        "default": true,
+        "info": "Some colors appear white? [Learn more](http://support.maestrooo.com/article/80-product-uploading-custom-color-for-color-swatch)."
+      }, {
+        "type": "checkbox",
+        "id": "show_color_carousel",
+        "label": "Show color carousel",
+        "info": "A selector will appear with variant image previews when choosing colors.",
+        "default": false
+      }, {
+        "type": "checkbox",
+        "id": "show_quantity_selector",
+        "label": "Show quantity selector",
+        "default": true
+      }, {
+        "type": "checkbox",
+        "id": "show_inventory_quantity",
+        "label": "Show inventory quantity",
+        "info": "Make sure that your inventory is tracked. [Learn more](https://help.shopify.com/manual/products/inventory#set-up-inventory-tracking).",
+        "default": false
+      }, {
+        "type": "range",
+        "id": "inventory_quantity_threshold",
+        "label": "Inventory quantity threshold",
+        "info": "Only show inventory quantity if below threshold. Choose 0 to always show.",
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "default": 0
+      }, {
+        "type": "checkbox",
+        "id": "show_payment_button",
+        "label": "Show dynamic checkout button",
+        "info": "Lets customers check out directly using a familiar payment method. [Learn more](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "default": false
+      }, {
+        "type": "header",
+        "content": "Product images"
+      }, {
+        "type": "select",
+        "id": "image_size",
+        "label": "Size",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          }, {
+            "value": "medium",
+            "label": "Medium"
+          }, {
+            "value": "large",
+            "label": "Large"
+          }, {
+            "value": "fill",
+            "label": "Fill screen"
+          }
+        ],
+        "default": "large"
+      }, {
+        "type": "checkbox",
+        "id": "enable_image_zoom",
+        "label": "Enable zoom",
+        "default": true
+      }, {
+        "type": "checkbox",
+        "id": "show_thumbnails",
+        "label": "Show thumbnails",
+        "info": "Only applicable on large screens",
+        "default": true
+      }, {
+        "type": "header",
+        "content": "Tabs"
+      }, {
+        "type": "page",
+        "id": "tab_page_1_handle",
+        "label": "First page"
+      }, {
+        "type": "page",
+        "id": "tab_page_2_handle",
+        "label": "Second page"
+      }, {
+        "type": "paragraph",
+        "content": "The theme also allows you to add specific tabs for a given product only. [Learn more about this feature](http://support.maestrooo.com/article/83-product-adding-different-tabs-per-product)."
+      }, {
+        "type": "header",
+        "content": "Reviews"
+      }, {
+        "type": "paragraph",
+        "content": "You need to install [Shopify's free Product Reviews](https://apps.shopify.com/product-reviews) app before enabling this option."
+      }, {
+        "type": "checkbox",
+        "id": "reviews_enabled",
+        "label": "Enable",
+        "default": false
+      }, {
+        "type": "header",
+        "content": "Featured image"
+      }, {
+        "type": "paragraph",
+        "content": "You can highlight an image after product tabs by adding the ALT tag \"featured\" to a given image. [Learn more](http://support.maestrooo.com/article/152-product-highlight-a-featured-image)."
+      }, {
+        "type": "select",
+        "id": "featured_image_size",
+        "label": "Section size",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          }, {
+            "value": "normal",
+            "label": "Normal"
+          }, {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "large"
+      },
+      {
+        "type": "header",
+        "content": "Add To Cart Button"
+      },
+      {
+        "type": "text",
+        "id": "cart-button-text",
+        "placeholder": "Enter your text here",
+        "default": "ADD TO CART",
+        "label": "Button Text"
+    },
+      {
+        "type": "text",
+        "id": "cart-button-before-text",
+        "placeholder": "Enter your text here",
+        "default": "ADDING TO CART... ",
+        "label": "Before Click Text"
+    },
+    {
+        "type": "text",
+        "id": "cart-button-after-text",
+        "placeholder": "Enter your text here",
+        "default": "ADDED TO CART!",
+        "label": "After Click Text" 
+    },
+      {
+        "type": "header",
+        "content": "UGC Section Heading"
+      },
+      {
+        "type": "text",
+        "id": "ugc-section-heading",
+        "placeholder": "Enter your text here",
+        "default": "ERVAAR DE GLOW",
+        "label": "Heading"
+    },
+    {
+        "type": "header",
+        "content": "Stock Section Text"
+      },
+      {
+        "type": "text",
+        "id": "stock-text",
+        "placeholder": "Enter your text here",
+        "default": "Lage voorraad! Klaar voor verzending ",
+        "label": "Text"
+    },
+    {
+        "type": "header",
+        "content": "Klarna Payment Text"
+      },
+      {
+        "type": "text",
+        "id": "klarna-payment-text",
+        "placeholder": "Enter your text here",
+        "default": "Betaal pas over 30 dagen met",
+        "label": "Text"
+    },
+    {
+        "type": "header",
+        "content": "Money Back Gurantee"
+      },
+      {
+        "type": "text",
+        "id": "money-back-heading",
+        "placeholder": "Enter your text here",
+        "default": "Money Back Gurantee",
+        "label": "Text"
+    },
+      {
+        "type": "richtext",
+        "id": "money-back-top-text",
+        "label": "Text",
+        "default": "<p>BRIGHT is doing its utmost to bring the most innovative ball to the market and we want to make sure you can be part of it without any risk. Here's how:</p>"
+      },
+      {
+      "type": "image_picker",
+      "id": "money-back-image",
+      "label": "Image"
+     },
+      {
+        "type": "richtext",
+        "id": "money-back-bottom-text",
+        "label": "Text",
+        "default": "<p>We offer 24/7 ticket and e-mail support, please feel free to contact support@brightsport.com. We are ready to help you :)</p>"
+      },
+      {
+        "type": "header",
+        "content": "What's included"
+      },
+      {
+        "type": "text",
+        "id": "what-included-heading",
+        "placeholder": "Enter your text here",
+        "default": "What's included",
+        "label": "Text"
+    },
+      {
+        "type": "richtext",
+        "id": "what-included-text",
+        "label": "Text",
+        "default": "<p>BRIGHT is doing its utmost to bring the most innovative ball to the market and we want to make sure you can be part of it without any risk. Here's how:</p>"
+      },
+      {
+      "type": "image_picker",
+      "id": "what-included-image",
+      "label": "Image"
+     }
+    ]
+  }
+{% endschema %}

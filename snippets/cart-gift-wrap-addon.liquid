@@ -1,0 +1,35 @@
+{% comment %}
+  Renders gift wrap add-on option in cart
+  
+  Usage:
+  {% render 'cart-gift-wrap-addon' %}
+{% endcomment %}
+
+<div class="AddonItem__Row">
+  <div class="CartItem cart_item">
+    <div class="CartItem__ImageWrapper">
+      <img class="CartItem__Image cart_image" 
+           src="https://brightsport.com/cdn/shop/files/bright-bags8.png?v=1705555594" 
+           alt="Cadeauverpakking + Kaart" 
+           width="90" 
+           height="87" 
+           loading="lazy">
+    </div>
+    
+    <div class="main_cartitem_price">
+      <div class="CartItem__Info">
+        <h2 class="CartItem__Title Heading">Ja, verpak mijn bestelling als cadeau</h2>
+        <div class="cartItem__desc">Verras je dierbaren met het perfecte cadeau!</div>
+      </div>
+      
+      <div class="CartPrice_Info">
+        <span class="CartItem__Price Price">€4,99</span>
+        
+        <label class="switch" for="ifAddAddon">
+          <input type="checkbox" id="ifAddAddon" checked aria-label="Cadeauverpakking toevoegen">
+          <span class="slider round"></span>
+        </label>
+      </div>  
+    </div>
+  </div>
+</div>

@@ -1,0 +1,89 @@
+<div class="container">
+<div class="your_game_row">
+
+  <div class="your_game_info">
+    <div class="your_game_info_block">
+      <h2>{{ section.settings.title }}</h2>
+      <div class="your_game_cap">
+        {{ section.settings.rich }}
+      </div>
+      <p class="your_game_rate">{{ section.settings.rate }}</p>
+      {% if section.settings.btn != blank %}
+        <a href="{{ section.settings.url }}">{{ section.settings.btn }}<span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.75 12H20.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+      {% endif %}
+
+              
+        {%- capture payment_methods -%}
+          {%- for type in shop.enabled_payment_types -%}
+            <li class="your_game_Item">{{ type | payment_type_svg_tag }}</li>
+          {%- endfor -%}
+        {%- endcapture -%}
+
+      {%- if payment_methods != blank -%}
+        <ul class="your_game_payment">
+          {{ payment_methods }}
+        </ul>
+      {%- endif -%}
+    </div>
+  </div>
+
+  <div class="your_game_img">
+    <div class="your_game_img_block">
+      <img src="{{ section.settings.img | img_url: 'master' }}">
+    </div>
+  </div>
+  
+  
+</div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Your Game",
+    "class": "is--your-game",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "rich",
+        "label": "Caption"
+      },
+      {
+        "type": "textarea",
+        "id": "rate",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "btn",
+        "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "url",
+        "label": "Button Url"
+      },
+      {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Select Image"
+      }
+    ],
+    "presets":[
+      {
+        "name": "Your Game"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,50 @@
+<section data-section-id="reset-password" data-section-type="reset-password">
+  <div class="Container">
+    <div class="PageContent PageContent--fitScreen PageContent--extraNarrow">
+      {%- form 'create_customer', name: 'create_customer', class: 'Form Form--spacingTight', id: 'create_customer' -%}
+        <header class="Form__Header">
+          <h1 class="Form__Title Heading u-h1">{{ 'customer.register.title' | t }}</h1>
+          <p class="Form__Legend">{{ 'customer.register.description' | t }}</p>
+        </header>
+
+        {%- if form.errors -%}
+          <div class="Form__Alert Alert Alert--error">
+            <ul class="Alert__ErrorList">
+              {%- for field in form.errors -%}
+                {%- if field == 'form' -%}
+                  <li class="Alert__ErrorItem">{{ form.errors.messages[field] }}</li>
+                {%- else -%}
+                  <li class="Alert__ErrorItem"><strong>{{ form.errors.translated_fields[field] }}</strong> {{ form.errors.messages[field] }}</li>
+                {%- endif -%}
+              {%- endfor -%}
+            </ul>
+          </div>
+        {%- endif -%}
+
+        <div class="dev_contact_form_Item">
+          <input type="text" class="dev_contact_form_Input" name="customer[first_name]" aria-label="{{ 'customer.register.first_name' | t }}" placeholder="{{ 'customer.register.first_name' | t }}" autofocus>
+          <label class="dev_contact_form_FloatingLabel">{{ 'customer.register.first_name' | t }}</label>
+        </div>
+
+        <div class="dev_contact_form_Item">
+          <input type="text" class="dev_contact_form_Input" name="customer[last_name]" aria-label="{{ 'customer.register.last_name' | t }}" placeholder="{{ 'customer.register.last_name' | t }}">
+          <label class="dev_contact_form_FloatingLabel">{{ 'customer.register.last_name' | t }}</label>
+        </div>
+
+        <div class="dev_contact_form_Item">
+          <input type="email" class="dev_contact_form_Input" name="customer[email]" aria-label="{{ 'customer.register.email' | t }}" placeholder="{{ 'customer.register.email' | t }}" required="required">
+          <label class="dev_contact_form_FloatingLabel">{{ 'customer.register.email' | t }}</label>
+        </div>
+
+        <div class="dev_contact_form_Item">
+          <input type="password" class="dev_contact_form_Input" name="customer[password]" aria-label="{{ 'customer.register.password' | t }}" placeholder="{{ 'customer.register.password' | t }}" required="required">
+          <label class="dev_contact_form_FloatingLabel">{{ 'customer.register.password' | t }}</label>
+        </div>
+
+        <button type="submit" class="Form__Submit Button Button--primary Button--full">{{ 'customer.register.submit' | t }}<svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.1882 9.29099C18.8019 8.903 18.2222 8.903 17.8358 9.29099C17.4493 9.67899 17.4493 10.261 17.8358 10.649L22.2153 14.9815H6.46608C5.95084 15.0461 5.5 15.4988 5.5 16.0162C5.5 16.5335 5.95084 16.9862 6.46608 16.9862H22.2153L17.8358 21.3833C17.4493 21.7714 17.4493 22.3533 17.8358 22.7413C18.0289 22.9354 18.2866 23 18.5442 23C18.8019 23 19.0594 22.9354 19.2527 22.7413L25.2424 16.7275C25.4356 16.5335 25.5 16.2749 25.5 16.0162C25.5 15.7574 25.3712 15.4988 25.2424 15.3049L19.1882 9.29099Z" fill="#0B090E"/>
+</svg></button>
+      {%- endform -%}
+    </div>
+  </div>
+</section>

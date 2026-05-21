@@ -1,0 +1,172 @@
+{%- assign has_section_separator = false -%}
+
+{%- for block in section.blocks -%}
+  {%- if block.type == 'separator' -%}
+    {%- assign has_section_separator = true -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- capture faq_content -%}
+  <div class="Faq">
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when 'separator' -%}
+          <h1 class="Faq__Section Heading u-h1" {{ block.shopify_attributes }}>
+            <span class="Anchor" id="block-{{ block.id }}"></span>
+            {{- block.settings.title | escape -}}
+          </h1>
+
+        {%- when 'question' -%}
+          <div class="Faq__Item {% if section.blocks[forloop.index].type == 'separator' or forloop.last %}Faq__Item--lastOfSection{% endif %}" aria-expanded="false" {{ block.shopify_attributes }}>
+            <span class="Faq__Icon">{% include 'icon' with 'select-arrow-right' %}</span>
+
+            <div class="Faq__ItemWrapper">
+              <button class="Faq__Question">{{ block.settings.title | escape }}</button>
+
+              <div class="Faq__AnswerWrapper" aria-hidden="true">
+                <div class="Faq__Answer Rte">
+                  {{ block.settings.answer }}
+                </div>
+              </div>
+            </div>
+          </div>
+      {%- endcase -%}
+    {%- endfor -%}
+  </div>
+{%- endcapture -%}
+
+<section data-section-type="faq" data-section-id="{{ section.id }}">
+  <div class="Container">
+    <div class="PageContent {% unless has_section_separator %}PageContent--narrow{% endunless %}">
+      {%- if has_section_separator -%}
+        <div class="PageLayout">
+          <div class="PageLayout__Section PageLayout__Section--secondary PageLayout__Section--sticky hidden-phone">
+            <ol class="FaqSummary">
+              {%- assign faq_separator_count = 0 -%}
+
+              {%- for block in section.blocks -%}
+                {%- if block.type == 'separator' -%}
+                  <li class="FaqSummary__Item {% if faq_separator_count == 0 %}is-active{% endif %}">
+                    <a href="#block-{{ block.id }}" class="FaqSummary__Link" data-offset="80">
+                      <span class="FaqSummary__LinkLabel">{{ block.settings.title | escape }}</span>
+                    </a>
+                  </li>
+
+                  {%- assign faq_separator_count = faq_separator_count | plus: 1 -%}
+                {%- endif -%}
+              {%- endfor -%}
+            </ol>
+          </div>
+
+          <div class="PageLayout__Section">
+            {{- faq_content -}}
+          </div>
+        </div>
+      {%- else -%}
+        {{- faq_content -}}
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "FAQ",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "separator",
+      "name": "Section separator",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "type": "question",
+      "name": "Question",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "separator",
+        "settings": {
+          "title": "Shipping"
+        }
+      },
+      {
+        "type": "question",
+        "settings": {
+          "title": "Verzenden jullie naar het buitenland?",
+          "answer": "<p>Ja, we verzenden over de hele wereld. Verzendkosten zijn van toepassing en worden toegevoegd bij het afrekenen. We hebben het hele jaar door kortingen en promoties, dus houd ons in de gaten voor exclusieve deals.</p>"
+        }
+      },
+      {
+        "type": "question",
+        "settings": {
+          "title": "Hoe lang duurt het voordat ik mijn bestelling ontvang?",
+          "answer": "<p>Het hangt ervan af waar je bent. Bestellingen die hier worden verwerkt, hebben 5-7 werkdagen nodig om aan te komen. Overzeese leveringen kunnen tussen de 7 en 16 dagen duren. De leveringsdetails staan vermeld in uw bevestigingsmail.</p>"
+        }
+      },
+      {
+        "type": "question",
+        "settings": {
+          "title": "Welke vervoerders gebruiken jullie?",
+          "answer": "<p>We gebruiken alle grote vervoerders en lokale koerierspartners. Tijdens het afrekenen wordt u gevraagd een bezorgmethode te selecteren.</p>"
+        }
+      },
+      {
+        "type": "separator",
+        "settings": {
+          "title": "Product"
+        }
+      },
+      {
+        "type": "question",
+        "settings": {
+          "title": "Kan ik mijn product retourneren?",
+          "answer": "<p>We streven er altijd naar om ervoor te zorgen dat onze klanten van onze producten houden, maar als je toch een bestelling moet retourneren, helpen we je graag verder. Stuur ons gewoon een rechtstreekse e-mail en we zullen u door het proces leiden.</p>"
+        }
+      },
+      {
+        "type": "question",
+        "settings": {
+          "title": "Kan ik mijn product laten personaliseren?",
+          "answer": "<p>Het hangt af van de maker en het product. Alle opties worden beschreven op de productpagina, dus kijk uit voor aanpassingsmogelijkheden daar.</p>"
+        }
+      },
+      {
+        "type": "separator",
+        "settings": {
+          "title": "Other"
+        }
+      },
+      {
+        "type": "question",
+        "settings": {
+          "title": "Heeft u een vraag?",
+          "answer": "<p>U kunt contact met ons opnemen via onze contactpagina! Wij helpen u graag verder.</p>"
+        }
+      }
+    ]
+  }
+}
+{% endschema %}

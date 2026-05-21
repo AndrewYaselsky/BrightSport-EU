@@ -1,0 +1,214 @@
+<section>
+  <div class="bundle_wrapper">
+    <div class="container">
+      {% if section.settings.mian_heading != blank %}
+        <div class="bundle_heading">
+          <h2 class="common_heading">{{ section.settings.mian_heading }}</h2>
+        </div>
+      {% endif %}
+      <div class="bundle_col">
+        {% for block in section.blocks %}
+            <div class="bundle_box">
+                <div class="bundle_product_box_col">
+                    <div class="bundle_product_box_in">
+                     {% if  block.settings.product_main_image != blank %}
+                        <div class="bundle_product_image">
+                          <img src="{{ block.settings.product_main_image | img_url:'master' }}">
+                        </div>
+                    {% endif %}
+                    {% if block.settings.product_main_title != blank %}
+                      <div class="bundle_product_title">
+                        {{ block.settings.product_main_title }}
+                      </div>
+                    {% endif %}
+                    {% if block.settings.product_price != blank or block.settings.compare_price != blank %}
+                      <div class="bundle_product_price">
+                         <span>{{ block.settings.product_price }}</span>
+                          <span>{{ block.settings.compare_price }}</span>
+                      </div>
+                    {% endif %}
+                 
+                        <div class="product_sub_product_col">
+                           {% for i in (1..5) %}
+                        {% capture product %}product{{i}}{% endcapture %}
+                                 {% capture product_title %}product_title{{i}}{% endcapture %}
+                          <div class="product_sub_box" value="{{ product.id }}" data-id="{{ block.settings[product].id }}" >
+
+
+                            <div class="product_sub_title">
+                                  {{ block.settings[product].title  }}
+                                </div>
+                                <div class="product_sub_title">
+                                  {{ block.settings[product].price | money }}
+                                </div>
+                          </div>
+
+
+
+
+
+                          
+ <form action="/cart/add" method="post" id="addToCart">
+    <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+    <input type="hidden" name="quantity" value="1" />
+    <input type="submit" value="In winkelwagen" style="display: none;" />
+    <a href="#" class="add-btn">In winkelwagen</a>
+</form> 
+
+                          
+                          
+                        {% endfor %}
+
+
+<button id="add-to-cart-button">In winkelwagen</button>
+
+
+
+
+
+                          
+                          
+                        </div>
+  
+
+  
+           
+   
+
+                      
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+$(document).ready(function() {
+$('.add-btn').on('click', function(event) {
+event.preventDefault();
+$('#triggerAddToCart').trigger('click'); // Trigger the hidden button click
+});
+
+$('#triggerAddToCart').on('click', function() {
+  var form = $('#addToCart');
+  var productID = form.find('input[name="id"]').val();
+  var quantity = form.find('input[name="quantity"]').val(); // Adjust as needed
+
+  $.ajax({
+    type: 'POST',
+    url: '/cart/add.js',
+    data: {
+      id: productID,
+      quantity: quantity
+    },
+    dataType: 'json',
+    success: function(response) {
+      console.log("Product added to cart");
+      // Redirect to the cart page
+      window.location.href = '/cart';
+    },
+    error: function(XMLHttpRequest, textStatus, errorThrown) {
+      console.log("Failed to add product to cart");
+      console.error('Error:', errorThrown);
+    }
+  });
+});
+});
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Bundle Sec",
+    "settings": [],
+    "blocks"  : [
+      {
+        "type" : "bundle",
+        "name" : "Bundle",
+        "settings" : [
+          {
+              "type" : "image_picker",
+              "id" : "product_main_image",
+              "label" : "Prodcut Main Image"
+          },
+          {
+            "type" : "text",
+            "id" : "product_main_title",
+            "label" :"Product Main Title"
+          },
+          {
+            "type" : "text",
+            "id" : "product_price",
+            "label" : "Product Price"
+          },
+          {
+            "type" : "text",
+            "id" :"compare_price",
+            "label"  : "Comapre Price"
+          },
+          {
+            "type" : "product",
+            "id" :"product_var1",
+            "label" : "Select Product"
+          },
+           {
+            "type" : "product",
+            "id" :"product_var2",
+            "label" : "Select Product"
+          },
+           {
+            "type" : "product",
+            "id" :"product_var3",
+            "label" : "Select Product"
+          },
+           {
+            "type" : "product",
+            "id" :"product_var4",
+            "label" : "Select Product"
+          },
+           {
+            "type" : "product",
+            "id" :"product_var5",
+            "label" : "Select Product"
+          },
+          {
+            "type" : "text",
+            "id" : "product_title1",
+            "label" :"Product Title1"
+          }
+        ]
+      }
+    ],
+    "presets" : [
+      {
+        "name" : "Bundle Sec"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+  .bundle_col {
+    display: flex;
+}
+
+.bundle_box {
+    width: 33.33%;
+  padding:0 15px;
+}
+</style>

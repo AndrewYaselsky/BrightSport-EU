@@ -1,0 +1,107 @@
+<section data-section-id="login" data-section-type="login">
+  <div class="Container">
+    <div class="PageContent PageContent--fitScreen PageContent--extraNarrow">
+      {%- assign is_recover_active = false -%}
+
+      {%- form 'recover_customer_password' -%}
+        {%- if form.errors or form.posted_successfully? -%}
+          {%- assign is_recover_active = true -%}
+        {%- endif -%}
+      {%- endform -%}
+
+      {%- comment -%}
+      --------------------------------------------------------------------------------------------------------------------
+      CUSTOMER LOGIN FORM
+      --------------------------------------------------------------------------------------------------------------------
+      {%- endcomment -%}
+
+      {%- if is_recover_active -%}
+        {%- assign login_default_visibility = 'display: none' -%}
+      {%- else -%}
+        {%- assign login_default_visibility = 'display: block' -%}
+      {%- endif -%}
+
+      {%- form 'customer_login', name: 'login', class: 'Form Form--spacingTight', id: 'customer_login', style: login_default_visibility -%}
+        <header class="Form__Header">
+          <h1 class="Form__Title Heading u-h1">{{ 'customer.login.title' | t }}</h1>
+          <p class="Form__Legend">{{ 'customer.login.description' | t }}</p>
+        </header>
+
+        {%- if form.errors -%}
+          <p class="Form__Alert Alert Alert--error">
+            {{- form.errors.messages['form'] -}}
+          </p>
+        {%- endif -%}
+
+        <div class="dev_contact_form_Item">
+          <input type="email" class="dev_contact_form_Input" name="customer[email]" required="required" placeholder="{{ 'customer.login.email' | t }}" aria-label="{{ 'customer.login.email' | t }}" autofocus>
+          <label class="dev_contact_form_FloatingLabel">{{ 'customer.login.email' | t }}</label>
+        </div>
+
+        <div class="dev_contact_form_Item">
+          <input type="password" class="dev_contact_form_Input" name="customer[password]" required="required" placeholder="{{ 'customer.login.password' | t }}" aria-label="{{ 'customer.login.password' | t }}">
+          <label class="dev_contact_form_FloatingLabel">{{ 'customer.login.password' | t }}</label>
+          <button type="button" class="Form__ItemHelp Link Link--primary" data-action="toggle-recover-form">{{ 'customer.login.forgot' | t }}</button>
+        </div>
+
+        <button type="submit" class="Form__Submit Button Button--primary Button--full">{{ 'customer.login.submit' | t }} <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.1882 9.29099C18.8019 8.903 18.2222 8.903 17.8358 9.29099C17.4493 9.67899 17.4493 10.261 17.8358 10.649L22.2153 14.9815H6.46608C5.95084 15.0461 5.5 15.4988 5.5 16.0162C5.5 16.5335 5.95084 16.9862 6.46608 16.9862H22.2153L17.8358 21.3833C17.4493 21.7714 17.4493 22.3533 17.8358 22.7413C18.0289 22.9354 18.2866 23 18.5442 23C18.8019 23 19.0594 22.9354 19.2527 22.7413L25.2424 16.7275C25.4356 16.5335 25.5 16.2749 25.5 16.0162C25.5 15.7574 25.3712 15.4988 25.2424 15.3049L19.1882 9.29099Z" fill="#0B090E"/>
+</svg></button>
+
+        <div class="Form__Hint Form__Hint--center">
+          <span class="Text--subdued">{{ 'customer.login.register_label' | t }}</span>
+          <a href="/account/register" class="Link Link--secondary">{{ 'customer.login.register_link' | t }}</a>
+        </div>
+      {%- endform -%}
+
+      {%- comment -%}
+      --------------------------------------------------------------------------------------------------------------------
+      CUSTOMER RECOVERY FORM
+      --------------------------------------------------------------------------------------------------------------------
+      {%- endcomment -%}
+
+      {%- if is_recover_active -%}
+        {%- assign recover_default_visibility = 'display: block' -%}
+      {%- else -%}
+        {%- assign recover_default_visibility = 'display: none' -%}
+      {%- endif -%}
+
+      {%- form 'recover_customer_password', name: 'recover', class: 'Form Form--spacingTight', id: 'recover_customer_password', style: recover_default_visibility -%}
+        <header class="Form__Header">
+          <h1 class="Form__Title Heading u-h1">{{ 'customer.recover_password.title' | t }}</h1>
+
+          {%- unless form.posted_successfully? -%}
+            <p class="Form__Legend">{{ 'customer.recover_password.description' | t }}</p>
+          {%- endunless -%}
+        </header>
+
+        {%- if form.errors -%}
+          <p class="Form__Alert Alert Alert--error">
+            {{- form.errors.messages['form'] -}}
+          </p>
+        {%- endif -%}
+
+        {%- if form.posted_successfully? -%}
+          <p class="Form__Alert Alert Alert--success">
+            {{- 'customer.recover_password.success' | t -}}
+          </p>
+        {%- endif -%}
+
+        <div class="dev_contact_form_Item">
+          <input type="email" class="dev_contact_form_Input" name="email" required="required" placeholder="{{ 'customer.recover_password.email' | t }}" aria-label="{{ 'customer.recover_password.email' | t }}" autofocus>
+          <label class="dev_contact_form_FloatingLabel">{{ 'customer.recover_password.email' | t }}</label>
+        </div>
+
+        <button type="submit" class="Form__Submit Button Button--primary Button--full">{{ 'customer.recover_password.submit' | t }}<svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.1882 9.29099C18.8019 8.903 18.2222 8.903 17.8358 9.29099C17.4493 9.67899 17.4493 10.261 17.8358 10.649L22.2153 14.9815H6.46608C5.95084 15.0461 5.5 15.4988 5.5 16.0162C5.5 16.5335 5.95084 16.9862 6.46608 16.9862H22.2153L17.8358 21.3833C17.4493 21.7714 17.4493 22.3533 17.8358 22.7413C18.0289 22.9354 18.2866 23 18.5442 23C18.8019 23 19.0594 22.9354 19.2527 22.7413L25.2424 16.7275C25.4356 16.5335 25.5 16.2749 25.5 16.0162C25.5 15.7574 25.3712 15.4988 25.2424 15.3049L19.1882 9.29099Z" fill="#0B090E"/>
+</svg></button>
+
+        <div class="Form__Hint Form__Hint--center">
+          <span class="Text--subdued">{{ 'customer.recover_password.login_label' | t }}</span>
+          <button type="button" class="Link Link--secondary" data-action="toggle-recover-form">{{ 'customer.recover_password.login_link' | t }} 
+</button>
+        </div>
+      {%- endform -%}
+    </div>
+  </div>
+</section>

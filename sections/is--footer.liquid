@@ -1,0 +1,359 @@
+<div class="footer_main">
+  <div class="">
+  
+    <div class="footer_row">
+
+      <div class="footer_info_block">
+        <div class="footer_info_wrapper">
+          <div class="footer_logo">
+            <a href="{{ shop.url }}" class="footer_logo_block">
+              {{ section.settings.logo }}
+            </a>
+            {{ section.settings.address }}
+
+            <div class="weg_container">
+              {% include 'region-selector-footer' %}
+{% assign current_lang = localization.language.iso_code | downcase %}
+
+<div class="weglot-container" id="weglot-switcher-2" data-switcher-id="2">
+  <aside
+    class="weglot_switcher country-selector default closed wg-drop"
+    data-wg-notranslate="true"
+    aria-label="Geselecteerde taal: {% case current_lang %}{% when 'nl' %}Nederlands{% when 'pt' %}Português{% when 'fi' %}Suomi{% when 'sv' %}Svenska{% when 'no' %}Norsk{% when 'da' %}Dansk{% when 'en' %}English{% when 'de' %}Deutsch{% when 'fr' %}Français{% when 'it' %}Italiano{% when 'es' %}Español{% else %}{{ current_lang | upcase }}{% endcase %}"
+  >
+    <div
+      class="wg-li {{ current_lang }} wgcurrent wg-flags"
+      data-l="{{ current_lang }}"
+      role="combobox"
+      aria-label="Taalwisselaar"
+      aria-expanded="false"
+      aria-controls="weglot-listbox"
+    >
+      <a href="{% if current_lang == 'nl' %}/{% else %}/{{ current_lang }}{% endif %}" id="weglot-language-{{ current_lang }}" lang="{{ current_lang }}">
+        <img
+          src="https://cdn.weglot.com/flags/circle/{% case current_lang %}{% when 'en' %}gb{% when 'da' %}dk{% when 'sv' %}se{% else %}{{ current_lang }}{% endcase %}.svg"
+          width="24"
+          height="24"
+          alt=""
+          class="wg-flag"
+        >
+        {% case current_lang %}
+          {% when 'nl' %}Nederlands
+          {% when 'pt' %}Português
+          {% when 'fi' %}Suomi
+          {% when 'sv' %}Svenska
+          {% when 'no' %}Norsk
+          {% when 'da' %}Dansk
+          {% when 'en' %}English
+          {% when 'de' %}Deutsch
+          {% when 'fr' %}Français
+          {% when 'it' %}Italiano
+          {% when 'es' %}Español
+          {% else %}{{ current_lang | upcase }}
+        {% endcase %}
+      </a>
+    </div>
+
+    <ul role="listbox" id="weglot-listbox" aria-label="Taallijst" style="display: none;">
+      <li class="wg-li pt wg-flags" data-l="pt" role="option" id="wg-pt">
+        <a href="/pt" id="weglot-language-pt" lang="pt">
+          <img src="https://cdn.weglot.com/flags/circle/pt.svg" width="24" height="24" alt="" class="wg-flag">
+          Português
+        </a>
+      </li>
+
+      <li class="wg-li fi wg-flags" data-l="fi" role="option" id="wg-fi">
+        <a href="/fi" id="weglot-language-fi" lang="fi">
+          <img src="https://cdn.weglot.com/flags/circle/fi.svg" width="24" height="24" alt="" class="wg-flag">
+          Suomi
+        </a>
+      </li>
+
+      <li class="wg-li sv wg-flags" data-l="sv" role="option" id="wg-sv">
+        <a href="/sv" id="weglot-language-sv" lang="sv">
+          <img src="https://cdn.weglot.com/flags/circle/se.svg" width="24" height="24" alt="" class="wg-flag">
+          Svenska
+        </a>
+      </li>
+
+      <li class="wg-li no wg-flags" data-l="no" role="option" id="wg-no">
+        <a href="/no" id="weglot-language-no" lang="no">
+          <img src="https://cdn.weglot.com/flags/circle/no.svg" width="24" height="24" alt="" class="wg-flag">
+          Norsk
+        </a>
+      </li>
+
+      <li class="wg-li da wg-flags" data-l="da" role="option" id="wg-da">
+        <a href="/da" id="weglot-language-da" lang="da">
+          <img src="https://cdn.weglot.com/flags/circle/dk.svg" width="24" height="24" alt="" class="wg-flag">
+          Dansk
+        </a>
+      </li>
+
+      <li class="wg-li en wg-flags" data-l="en" role="option" id="wg-en">
+        <a href="/en" id="weglot-language-en" lang="en">
+          <img src="https://cdn.weglot.com/flags/circle/gb.svg" width="24" height="24" alt="" class="wg-flag">
+          English
+        </a>
+      </li>
+
+      <li class="wg-li de wg-flags" data-l="de" role="option" id="wg-de">
+        <a href="/de" id="weglot-language-de" lang="de">
+          <img src="https://cdn.weglot.com/flags/circle/de.svg" width="24" height="24" alt="" class="wg-flag">
+          Deutsch
+        </a>
+      </li>
+
+      <li class="wg-li fr wg-flags" data-l="fr" role="option" id="wg-fr">
+        <a href="/fr" id="weglot-language-fr" lang="fr">
+          <img src="https://cdn.weglot.com/flags/circle/fr.svg" width="24" height="24" alt="" class="wg-flag">
+          Français
+        </a>
+      </li>
+
+      <li class="wg-li it wg-flags" data-l="it" role="option" id="wg-it">
+        <a href="/it" id="weglot-language-it" lang="it">
+          <img src="https://cdn.weglot.com/flags/circle/it.svg" width="24" height="24" alt="" class="wg-flag">
+          Italiano
+        </a>
+      </li>
+
+      <li class="wg-li es wg-flags" data-l="es" role="option" id="wg-es">
+        <a href="/es" id="weglot-language-es" lang="es">
+          <img src="https://cdn.weglot.com/flags/circle/es.svg" width="24" height="24" alt="" class="wg-flag">
+          Español
+        </a>
+      </li>
+    </ul>
+  </aside>
+</div>
+              <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                  const switcher = document.querySelector('#weglot-switcher-2 .country-selector');
+                  if (!switcher) return;
+
+                  const trigger = switcher.querySelector('[role="combobox"]');
+                  const listbox = switcher.querySelector('[role="listbox"]');
+
+                  if (!trigger || !listbox) return;
+
+                  function openDropdown() {
+                    switcher.classList.remove('closed');
+                    trigger.setAttribute('aria-expanded', 'true');
+                    listbox.style.display = 'block';
+                  }
+
+                  function closeDropdown() {
+                    switcher.classList.add('closed');
+                    trigger.setAttribute('aria-expanded', 'false');
+                    listbox.style.display = 'none';
+                  }
+
+                  function toggleDropdown(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+                    if (isOpen) {
+                      closeDropdown();
+                    } else {
+                      openDropdown();
+                    }
+                  }
+
+                  trigger.addEventListener('click', toggleDropdown);
+
+                  trigger.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowDown') {
+                      e.preventDefault();
+                      openDropdown();
+                    }
+
+                    if (e.key === 'Escape') {
+                      closeDropdown();
+                    }
+                  });
+
+                  document.addEventListener('click', function (e) {
+                    if (!switcher.contains(e.target)) {
+                      closeDropdown();
+                    }
+                  });
+                });
+              </script>
+            </div>
+          </div>
+          <div class="footer_link_list">
+             <h2 class="footer_title">{{ section.settings.title }}</h2>
+            {%- assign linklist = linklists[section.settings.menu] -%}
+            {%- if template.name == 'product' and product.tags contains 'bogo-deal' and section.settings.menu == 'bright' -%}
+              {%- assign linklist = linklists['bright-bogo'] -%}
+            {%- elsif template.name == 'collection' and collection.handle == 'bogo' and section.settings.menu == 'bright' -%}
+              {%- assign linklist = linklists['bright-bogo'] -%}
+            {%- endif -%}
+              {%- if linklist != blank -%}
+              <ul class="footer_link">
+                {%- for link in linklist.links -%}
+                  <li class="footer_link_item">
+                    <a href="{{ link.url }}" class="Link Link--primary">{{ link.title | escape }}</a>
+                  </li>
+                {%- endfor -%}
+              </ul>
+            {% endif %}
+          </div>
+          <div class="footer_link_list">
+             <h2 class="footer_title">{{ section.settings.title1 }}</h2>
+             {%- assign linklist = linklists[section.settings.menu1] -%}
+              {%- if template.name == 'product' and product.tags contains 'bogo-deal' and section.settings.menu1 == 'bright' -%}
+                {%- assign linklist = linklists['bright-bogo'] -%}
+              {%- elsif template.name == 'collection' and collection.handle == 'bogo' and section.settings.menu1 == 'bright' -%}
+                {%- assign linklist = linklists['bright-bogo'] -%}
+              {%- endif -%}
+              {%- if linklist != blank -%}
+              <ul class="footer_link">
+                {%- for link in linklist.links -%}
+                  <li class="footer_link_item">
+                    <a href="{{ link.url }}" class="Link Link--primary">{{ link.title | escape }}</a>
+                  </li>
+                {%- endfor -%}
+              </ul>
+            {% endif %}
+          </div>
+          <div class="footer_payment_icon">
+            {%- capture payment_methods -%}
+              {%- for type in shop.enabled_payment_types -%}
+                <li class="footer_payment_icon_Item">{{ type | payment_type_svg_tag }}</li>
+              {%- endfor -%}
+            {%- endcapture -%}
+    {% comment %}
+            {%- if payment_methods != blank -%}
+              <ul class="footer_payment_icon_list">
+                {{ payment_methods }}
+              </ul>
+            {%- endif -%}
+            {% endcomment %}
+
+              <div class="footer_payments">
+                {{ section.settings.footer_payment_icon }}
+              </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="footer_newsletter_block">
+        <div class="footer_newsletter_wrapper">
+          <h2 class="footer_title">{{ section.settings.news_title }}</h2>
+          <p class="footer_newsletter_cap">{{ section.settings.cap }}</p>
+          {%- form 'customer', id: 'footer-newsletter', class: 'Footer__Newsletter Form' -%}
+            {%- if form.posted_successfully? -%}
+              <p class="Form__Alert Alert Alert--success">{{ 'footer.newsletter.success' | t }}</p>
+            {%- else -%}
+              {%- if form.errors -%}
+                <p class="Form__Alert Alert Alert--error">{{ form.errors.messages['email'] }}</p>
+              {%- endif -%}
+
+              <input type="hidden" name="contact[tags]" value="newsletter">
+              <div class="footer_form_block">
+                <div class="footer_form_input_field">
+                  <label>email</label>
+                  <input type="email" name="contact[email]" class="Form__Input" aria-label="{{ 'footer.newsletter.input' | t }}" placeholder="{{ 'footer.newsletter.input' | t }}" required>
+                </div>
+                <button type="submit" class="Form__Submit Button Button--primary"><span>Join CLUB</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path d="M23.4647 8.42555L21.2147 23.0154C21.1796 23.367 20.9686 23.6834 20.6522 23.8591C20.4764 23.9295 20.3007 23.9998 20.0897 23.9998C19.9491 23.9998 19.8085 23.9646 19.6679 23.8943L15.3788 22.1013L13.5858 24.7732C13.4452 25.0193 13.1991 25.1248 12.953 25.1248C12.5663 25.1248 12.2499 24.8084 12.2499 24.4216V21.0466C12.2499 20.7654 12.3202 20.5193 12.4608 20.3435L20.1249 10.4998L9.78895 19.8162L6.16786 18.3045C5.78114 18.1287 5.49989 17.7771 5.49989 17.3201C5.46473 16.8279 5.67567 16.4763 6.06239 16.2654L21.8124 7.30055C22.1639 7.08961 22.6561 7.08961 23.0077 7.3357C23.3593 7.5818 23.535 8.00367 23.4647 8.42555Z" fill="url(#paint0_linear_1_16228)"/>
+                    <defs>
+                      <linearGradient id="paint0_linear_1_16228" x1="5.49609" y1="16.1356" x2="23.2939" y2="16.2061" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#0E60FF"/>
+                        <stop offset="0.656256" stop-color="#07C2F7"/>
+                        <stop offset="1" stop-color="#00E3C0"/>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </button>
+              </div>
+            {%- endif -%}
+          {%- endform -%}
+      
+     
+   
+          <div class="footer_socail_link">
+            <h2 class="footer_title">{{ section.settings.social_title }}</h2>
+            {% include 'social-media', class: 'Footer_Social', spacing: 'loose' %}
+          </div>
+        </div>
+      </div>
+  
+    </div>
+    
+  </div>
+</div>
+
+<div class="footer_gradiant"></div>
+
+
+
+
+{% schema %}
+  {
+    "name": "footer",
+    "class": "is--footer",
+    "settings": [
+      {
+        "type": "html",
+        "id": "logo",
+        "label": "Select Logo Image"
+      },
+      {
+        "type": "richtext",
+        "id": "address",
+        "label": "Address Text"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Menu Title"
+      },
+      {
+        "type": "link_list",
+        "id": "menu",
+        "label": "Select Menu"
+      },
+      {
+        "type": "text",
+        "id": "title1",
+        "label": "Menu Title"
+      },
+      {
+        "type": "link_list",
+        "id": "menu1",
+        "label": "Select Menu"
+      },
+      {
+        "type": "text",
+        "id": "news_title",
+        "label": "Newletter Title"
+      },
+      {
+        "type": "textarea",
+        "id": "cap",
+        "label": "Newletter Caption"
+      },
+      {
+        "type": "text",
+        "id": "social_title",
+        "label": "Social Title"
+      },
+      {
+        "type" : "html",
+        "id": "footer_payment_icon",
+        "label" : "Footer Payment Icon"
+      }
+    ],
+    "presets":[
+      {
+        "name": "footer"
+      }
+    ]
+  }
+{% endschema %}

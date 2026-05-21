@@ -1,0 +1,85 @@
+<div class="our-mission-sec">
+  <div class="our-mission-main">
+    <div class="container">
+      <h5 class="mission-sub-title">{{ section.settings.sub_title }}</h5>
+      <h2 class="mission-main-title">{{ section.settings.heading }}</h2>
+    </div>
+      <div class="our-mission-img">
+    {% if section.settings.image != blank %}
+        <img class="image_desktop"
+          src="{{ section.settings.image | img_url : 'master' }}"
+          srcset="{{ section.settings.image | img_url : 'master' }}"
+          alt="{{ section.settings.image.alt }}"
+          loading="lazy"
+        >
+    {% endif %}
+    {% if section.settings.image_mobile != blank %}
+        <img class="image_mobile"
+          src="{{ section.settings.image_mobile | img_url : 'master' }}"
+          srcset="{{ section.settings.image_mobile | img_url : 'master' }}"
+          alt="{{ section.settings.image_mobile.alt }}"
+          loading="lazy"
+        >
+        {% endif %}
+      </div>
+    <div class="our-mission-desc">
+      <p>{{ section.settings.desc }}</p>
+      {% if section.settings.btn_text != blank %}
+        <a class="shop-our-btn" href="{{ section.settings.btn_url }}">{{ section.settings.btn_text }}</a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Our Mission",
+  "settings": [
+    {
+      "type" : "text",
+      "id" : "sub_title",
+      "label" : "Sub Title"
+    },
+    {
+      "type" : "textarea",
+      "id" : "heading",
+      "label" :"Heading"
+    },
+    {
+      "type" : "image_picker",
+      "id" : "image",
+      "label" : "Image"
+    },
+    {
+      "type" : "image_picker",
+      "id" : "image_mobile",
+      "label" : "Image Mobile"
+    },
+    {
+      "type" : "textarea",
+      "id" : "desc",
+      "label" : "Description"
+    },
+    {
+      "type" :"url",
+      "id" : "btn_url",
+      "label" :"Bestseller Button URl"
+    },
+    {
+      "type" :"text",
+      "id" : "btn_text",
+      "label" :"Bestseller Button Text"
+    }
+  ],
+  "presets" : [
+    {
+      "name" : "Our Mission"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,430 @@
+{% comment %}
+  Kerst Sale BOGO Banner
+  Editable Shopify section based on uploaded banner design
+{% endcomment %}
+
+<style>
+  #shopify-section-{{ section.id }} {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .kerst-bogo-banner {
+    position: relative;
+    width: 100%;
+    min-height: {{ section.settings.desktop_height }}px;
+    background-color: {{ section.settings.bg_color }};
+    background-image: {% if section.settings.background_image != blank %}url('{{ section.settings.background_image | image_url: width: 3000 }}'){% else %}none{% endif %};
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    font-family: 'Montserrat', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 40px;
+    margin-bottom: 32px;
+  }
+
+  .kerst-bogo-banner__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, {{ section.settings.overlay_opacity | divided_by: 100.0 }});
+    z-index: 1;
+  }
+
+  .kerst-bogo-banner__content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1520px;
+    display: grid;
+    grid-template-columns: 1fr 1.15fr 1fr;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .kerst-bogo-banner__center {
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .kerst-bogo-banner__eyebrow {
+    margin: 0 0 2px;
+    font-size: clamp(18px, 2.1vw, 34px);
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: {{ section.settings.eyebrow_color }};
+    text-shadow: 0 4px 8px rgba(0,0,0,0.35);
+  }
+
+  .kerst-bogo-banner__title {
+    margin: 0;
+    font-size: clamp(44px, 5.7vw, 92px);
+    font-weight: 950;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    color: {{ section.settings.title_color }};
+    text-shadow: 0 6px 12px rgba(0,0,0,0.35);
+  }
+
+  .kerst-bogo-banner__subtitle {
+    margin: 14px 0 0;
+    font-size: clamp(22px, 2.4vw, 42px);
+    font-weight: 950;
+    line-height: 0.95;
+    text-transform: uppercase;
+    color: {{ section.settings.subtitle_color }};
+    text-shadow: 0 5px 10px rgba(0,0,0,0.35);
+  }
+
+  .kerst-bogo-banner__steps {
+    justify-self: end;
+    max-width: 390px;
+    color: #ffffff;
+  }
+
+  .kerst-bogo-banner__steps-title {
+    margin: 0 0 10px;
+    font-size: clamp(20px, 1.8vw, 30px);
+    font-weight: 950;
+    line-height: 1;
+    text-transform: uppercase;
+    color: {{ section.settings.steps_title_color }};
+    text-shadow: 0 4px 8px rgba(0,0,0,0.35);
+  }
+
+  .kerst-bogo-banner__list {
+    margin: 0;
+    padding-left: 0;
+  }
+
+  .kerst-bogo-banner__list li {
+    font-size: clamp(14px, 1.1vw, 20px);
+    font-weight: 800;
+    line-height: 1.35;
+    margin-bottom: 6px;
+    color: {{ section.settings.steps_text_color }};
+    text-shadow: 0 3px 7px rgba(0,0,0,0.35);
+  }
+
+  .kerst-bogo-banner__empty {
+    min-height: 1px;
+  }
+
+  .kerst-bogo-banner__deco {
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .kerst-bogo-banner__deco--left {
+    left: 0;
+    bottom: 0;
+    width: min(39vw, 620px);
+  }
+
+  .kerst-bogo-banner__deco--right {
+    right: 0;
+    bottom: 0;
+    width: min(39vw, 620px);
+  }
+
+  .kerst-bogo-banner__deco img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  @media screen and (max-width: 989px) {
+    .kerst-bogo-banner {
+      min-height: {{ section.settings.tablet_height }}px;
+      padding: 28px 20px;
+      background-position: center;
+    }
+
+    .kerst-bogo-banner__content {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .kerst-bogo-banner__empty {
+      display: none;
+    }
+
+    .kerst-bogo-banner__steps {
+      justify-self: center;
+      text-align: left;
+      max-width: 420px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 18px;
+      padding: 14px 18px;
+      backdrop-filter: blur(2px);
+    }
+
+    .kerst-bogo-banner__deco--left,
+    .kerst-bogo-banner__deco--right {
+      width: 38vw;
+      opacity: 0.9;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .kerst-bogo-banner {
+      min-height: {{ section.settings.mobile_height }}px;
+      padding: 30px 16px;
+      background-image: {% if section.settings.mobile_background_image != blank %}url('{{ section.settings.mobile_background_image | image_url: width: 1200 }}'){% elsif section.settings.background_image != blank %}url('{{ section.settings.background_image | image_url: width: 1600 }}'){% else %}none{% endif %};
+    }
+
+    .kerst-bogo-banner__title {
+      font-size: clamp(40px, 13vw, 64px);
+      letter-spacing: -1px;
+    }
+
+    .kerst-bogo-banner__subtitle {
+      font-size: clamp(20px, 7vw, 32px);
+      margin-top: 10px;
+    }
+
+    .kerst-bogo-banner__steps-title {
+      font-size: 20px;
+    }
+
+    .kerst-bogo-banner__list li {
+      font-size: 14px;
+      margin-top: 20px;
+    }
+
+    .kerst-bogo-banner__deco--left,
+    .kerst-bogo-banner__deco--right {
+      display: none;
+    }
+  }
+</style>
+
+<section class="kerst-bogo-banner">
+  {% if section.settings.overlay_opacity > 0 %}
+    <div class="kerst-bogo-banner__overlay"></div>
+  {% endif %}
+
+  {% if section.settings.left_image != blank %}
+    <div class="kerst-bogo-banner__deco kerst-bogo-banner__deco--left">
+      <img
+        src="{{ section.settings.left_image | image_url: width: 900 }}"
+        alt="{{ section.settings.left_image.alt | escape }}"
+        loading="lazy"
+      >
+    </div>
+  {% endif %}
+
+  {% if section.settings.right_image != blank %}
+    <div class="kerst-bogo-banner__deco kerst-bogo-banner__deco--right">
+      <img
+        src="{{ section.settings.right_image | image_url: width: 900 }}"
+        alt="{{ section.settings.right_image.alt | escape }}"
+        loading="lazy"
+      >
+    </div>
+  {% endif %}
+
+  <div class="kerst-bogo-banner__content">
+    <div class="kerst-bogo-banner__empty"></div>
+
+    <div class="kerst-bogo-banner__center">
+      {% if section.settings.eyebrow != blank %}
+        <p class="kerst-bogo-banner__eyebrow">{{ section.settings.eyebrow }}</p>
+      {% endif %}
+
+      {% if section.settings.title != blank %}
+        <h2 class="kerst-bogo-banner__title">{{ section.settings.title }}</h2>
+      {% endif %}
+
+      {% if section.settings.subtitle != blank %}
+        <p class="kerst-bogo-banner__subtitle">{{ section.settings.subtitle }}</p>
+      {% endif %}
+    </div>
+
+    <div class="kerst-bogo-banner__steps">
+      {% if section.settings.steps_title != blank %}
+        <p class="kerst-bogo-banner__steps-title">{{ section.settings.steps_title }}</p>
+      {% endif %}
+
+      <ol class="kerst-bogo-banner__list">
+        {% for block in section.blocks %}
+          {% if block.type == 'step' %}
+            <li {{ block.shopify_attributes }}>{{ block.settings.text }}</li>
+          {% endif %}
+        {% endfor %}
+      </ol>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Kerst BOGO Banner",
+  "tag": "section",
+  "class": "kerst-bogo-section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Desktop background image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_background_image",
+      "label": "Mobile background image"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_image",
+      "label": "Left decorative image"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_image",
+      "label": "Right decorative image"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Fallback background color",
+      "default": "#b30000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Dark overlay opacity",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "desktop_height",
+      "label": "Desktop height",
+      "min": 180,
+      "max": 600,
+      "step": 10,
+      "default": 280
+    },
+    {
+      "type": "range",
+      "id": "tablet_height",
+      "label": "Tablet height",
+      "min": 220,
+      "max": 700,
+      "step": 10,
+      "default": 430
+    },
+    {
+      "type": "range",
+      "id": "mobile_height",
+      "label": "Mobile height",
+      "min": 300,
+      "max": 800,
+      "step": 10,
+      "default": 520
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Small title",
+      "default": "KERST SALE"
+    },
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Main title",
+      "default": "KOOP 1,\nKRIJG 1\nGRATIS"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "OP ALLE BALLEN"
+    },
+    {
+      "type": "text",
+      "id": "steps_title",
+      "label": "Steps title",
+      "default": "HOE HET WERKT:"
+    },
+    {
+      "type": "color",
+      "id": "eyebrow_color",
+      "label": "Small title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Main title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "Subtitle color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "steps_title_color",
+      "label": "Steps title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "steps_text_color",
+      "label": "Steps text color",
+      "default": "#ffffff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Step text",
+          "default": "Voeg minimaal 2 ballen toe aan je winkelwagen"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Kerst BOGO Banner",
+      "blocks": [
+        {
+          "type": "step",
+          "settings": {
+            "text": "Voeg minimaal 2 ballen toe aan je winkelwagen – mix en match elke bal!"
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "text": "Wij maken er 1 cadeau van."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "text": "Leun achterover en ontspan."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
