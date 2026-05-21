@@ -176,9 +176,10 @@
     <link rel="stylesheet" href="{{ 'theme.scss.css' | asset_url }}">
     <link rel="stylesheet" href="{{ 'is--style.css' | asset_url }}">
     <link rel="stylesheet" href="{{ 'is--custom.css' | asset_url }}">
-    {%- if template.name == 'product' -%}
+    {%- comment -%} Homepage sections (TikTok, bundles, money-back) + product page styles {%- endcomment -%}
+    {%- unless template.name == 'password' -%}
       <link rel="stylesheet" href="{{ 'sw--product_page.css' | asset_url }}">
-    {%- endif -%}
+    {%- endunless -%}
     {%- if page.handle contains 'dev-' -%}
       <link rel="stylesheet" href="{{ 'sw--dev-page.css' | asset_url }}">
     {%- endif -%}
@@ -285,6 +286,9 @@
       <div class="weg_container"></div>
     </div>
     <div class="weg_container weglot-stub-mount" hidden aria-hidden="true"></div>
+
+    {% render 'perf-core-scripts' %}
+
     <script
       async
       src="https://eu-library.klarnaservices.com/lib.js"

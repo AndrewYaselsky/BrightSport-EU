@@ -2682,6 +2682,24 @@ span.check_svg {
 .tiktok_col {
     text-align: center;
 }
+/* Layout before Slick initializes (avoids vertical stack flash) */
+.tiktok_slider_inner:not(.slick-initialized) {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    gap: 20px;
+    justify-content: center;
+}
+.tiktok_slider_inner:not(.slick-initialized) .tiktok_slider_row {
+    flex: 0 0 auto;
+    width: 253px;
+}
+.tiktok_slider_inner:not(.slick-initialized) .tiktok_slider_video video {
+    height: 450px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 7.5px;
+}
 .tiktok_heading h2 {
     color: var(--white, #FFF);
     text-align: center;
