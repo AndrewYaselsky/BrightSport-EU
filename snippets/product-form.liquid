@@ -43,7 +43,7 @@
         assign base_price = product.selected_or_first_available_variant.price
       -%}
       <div class="qty_selector_discount">
-        <div class="qty_selector_discount_title_bogo">🔥 Koop 1 en krijg 1 gratis</div>
+        <div class="qty_selector_discount_title_bogo">🔥 Buy 1 get 1 free</div>
         <div class="qty_selector_discount_title"><span>→ AANBIEDING EINDIGT OM 23:59 ←</span></div>
           <div class="quantity_selector">
             <div
@@ -58,7 +58,7 @@
                 <div class="single_quantity_main_left">
                   <h4 class="h4">1 Bal + 1 Bal</h4>
                   <div class="sq_you_save">
-                    + Gratis luchtpomp
+                    + Free air pump
                   </div>
                 </div>
                 <div class="single_quantity_main_right">
@@ -78,11 +78,11 @@
               <div class="single_quantity_main">
                 <div class="single_quantity_main_left">
                   <h4 class="h4">
-                    2 Ballen + 2 Ballen
-                    <div class="single_quantity_main_left_gratis">Gratis verzending</div>
+                    2 Balls + 2 Balls
+                    <div class="single_quantity_main_left_gratis">Free shipping</div>
                   </h4>
                   <div class="sq_you_save">
-                    + Gratis luchtpomp
+                    + Free air pump
                   </div>
                 </div>
                 <div class="single_quantity_main_right">
@@ -104,11 +104,11 @@
               <div class="single_quantity_main">
                 <div class="single_quantity_main_left">
                   <h4 class="h4">
-                    3 Ballen + 3 Ballen
+                    3 Balls + 3 Balls
                     <div class="single_quantity_main_left_gratis" style="background-color:#ffd602">Beste deal</div>
                   </h4>
                   <div class="sq_you_save">
-                    + Gratis luchtpomp
+                    + Free air pump
                   </div>
                 </div>
                 <div class="single_quantity_main_right">
@@ -196,9 +196,9 @@
                   <h4 class="h4">1 Bal</h4>
                   <div class="sq_you_save">
                     {%- if product.tags contains 'bogo-deal' -%}
-                      Koop 1, krijg 1 - mix en match
+                      Buy 1, get 1 - mix and match
                     {%- else -%}
-                      Bespaar {{ save1 }}% op je totale bestelling!
+                      Save {{ save1 }}% on your total order!
                     {%- endif -%}
                   </div>
                 </div>
@@ -222,14 +222,14 @@
               <div class="single_quantity_main">
                 <div class="single_quantity_main_left">
                   <h4 class="h4">
-                    2 Ballen
-                    <div class="single_quantity_main_left_gratis">Gratis verzending</div>
+                    2 Balls
+                    <div class="single_quantity_main_left_gratis">Free shipping</div>
                   </h4>
                   <div class="sq_you_save">
                     {%- if product.tags contains 'bogo-deal' -%}
-                      Koop 1 krijg 1 gratis
+                      Buy 1 get 1 free
                     {%- else -%}
-                      Bespaar {{ save2 }}% op je totale bestelling!
+                      Save {{ save2 }}% on your total order!
                     {%- endif -%}
                   </div>
                 </div>
@@ -260,9 +260,9 @@
                   </h4>
                   <div class="sq_you_save">
                     {%- if product.tags contains 'bogo-deal' -%}
-                      Koop 2 krijg 2 gratis
+                      Buy 2 get 2 free
                     {%- else -%}
-                      Bespaar {{ save3 }}% op je totale bestelling!
+                      Save {{ save3 }}% on your total order!
                     {%- endif -%}
                   </div>
                 </div>
@@ -299,7 +299,7 @@
               <div class="single_quantity_main">
                 <div class="single_quantity_main_left">
                   <h4 class="h4">1 Bal</h4>
-                  <div class="sq_you_save">Bespaar {{ discount_percentage1 }}% op je totale bestelling!</div>
+                  <div class="sq_you_save">Save {{ discount_percentage1 }}% on your total order!</div>
                 </div>
                 <div class="single_quantity_main_right">
                   <h6 class="quanity-price" style="margin-bottom: 0px;">{{ get_discount_price_one | money }}</h6>
@@ -331,10 +331,10 @@
               <div class="single_quantity_main">
                 <div class="single_quantity_main_left">
                   <h4 class="h4">
-                    2 Ballen
-                    <div class="single_quantity_main_left_gratis">Gratis verzending</div>
+                    2 Balls
+                    <div class="single_quantity_main_left_gratis">Free shipping</div>
                   </h4>
-                  <div class="sq_you_save">Bespaar {{ discount_percentage2 }}% op je totale bestelling!</div>
+                  <div class="sq_you_save">Save {{ discount_percentage2 }}% on your total order!</div>
                 </div>
                 <div class="single_quantity_main_right">
                   <h6 class="quanity-price" style="margin-bottom: 0px;">{{ get_discount_price_two | times: 2 | money }}</h6>
@@ -368,10 +368,10 @@
               <div class="single_quantity_main">
                 <div class="single_quantity_main_left">
                   <h4 class="h4">
-                    3 Ballen
+                    3 Balls
                     <div class="single_quantity_main_left_gratis">Beste deal</div>
                   </h4>
-                  <div class="sq_you_save">Bespaar {{ discount_percentage3 }}% op je totale bestelling!</div>
+                  <div class="sq_you_save">Save {{ discount_percentage3 }}% on your total order!</div>
                 </div>
                 <div class="single_quantity_main_right">
                   <h6 class="quanity-price" style="margin-bottom: 0px;">
@@ -402,7 +402,7 @@
                 class="h6 discounttag"
                 data-oprice="{{ selected_variant.price | minus:1000 | money }}"
               >
-                Bespaar {{ 1000 | money_without_trailing_zeros }}
+                Save {{ 1000 | money_without_trailing_zeros }}
               </h6>
             </div>
             <div class="single_quantity" data-qty="2">
@@ -413,7 +413,7 @@
                 class="h6 discounttag hasdiscount"
                 data-oprice="{{ selected_variant.price | minus: 1300  | money }}"
               >
-                Bespaar {{ 2600 | money_without_trailing_zeros }}
+                Save {{ 2600 | money_without_trailing_zeros }}
               </h6>
             </div>
             <div class="single_quantity" data-qty="3">
@@ -423,7 +423,7 @@
                 class="h6 discounttag hasdiscount"
                 data-oprice="{{ selected_variant.price | minus: 1500 | money }}"
               >
-                Bespaar {{ 4500 | money_without_trailing_zeros }}
+                Save {{ 4500 | money_without_trailing_zeros }}
               </h6>
             </div>
           </div>
@@ -602,7 +602,7 @@
               <div class="single_quantity_main_left">
                 <h4 class="h4">1 Product</h4>
                 <div class="sq_you_save">
-                  Bespaar <span>{{ dis_price_one | money }}</span>
+                  Save <span>{{ dis_price_one | money }}</span>
                 </div>
               </div>
               <div class="single_quantity_main_right">
@@ -661,7 +661,7 @@
               <div class="single_quantity_main_left">
                 <h4 class="h4">3 Producten</h4>
                 <div class="sq_you_save">
-                  <span>Bespaar {{ saleval_3 }}% op je totale bestelling!</span>
+                  <span>Save {{ saleval_3 }}% on your total order!</span>
                 </div>
               </div>
               <div class="single_quantity_main_right">
@@ -866,7 +866,7 @@
 
   {%- comment -%}
     --------------------------------------------------------------------------------------------------------------------
-    TOEVOEGEN AAN WINKELWAGEN KNOP
+    ADD TO CART BUTTON
     --------------------------------------------------------------------------------------------------------------------
   {%- endcomment -%}
 
@@ -905,7 +905,7 @@
     <span class="pulse green"></span>
     <span class="stock-section-content">
       {%- if product.metafields.custom.maximum_stock_number > 0 -%}
-        Nog maar <span class="stock-left">{{ product.metafields.custom.maximum_stock_number }}</span> ballen op voorraad!
+        Only <span class="stock-left">{{ product.metafields.custom.maximum_stock_number }}</span> balls in stock!
       {%- else -%}
         {%- liquid
           assign stockQuantity = product.title | size
@@ -913,7 +913,7 @@
             assign stockQuantity = 9
           endif
         -%}
-        Nog maar <span class="stock-left">{{ stockQuantity }}</span> ballen op voorraad!
+        Only <span class="stock-left">{{ stockQuantity }}</span> balls in stock!
       {%- endif -%}
     </span>
   </div>

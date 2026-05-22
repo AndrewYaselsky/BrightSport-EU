@@ -3653,6 +3653,24 @@ body .bundle_save_btn a:hover {
 } */
 
 .weglot-stub-mount,
+.language-selector__trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  width: 100%;
+}
+.language-selector__list[hidden] {
+  display: none !important;
+}
+.language-selector__list:not([hidden]) {
+  display: block;
+}
 .weglot-stub-mount .weglot-container,
 .weglot-stub-mount .country-selector {
   position: absolute !important;

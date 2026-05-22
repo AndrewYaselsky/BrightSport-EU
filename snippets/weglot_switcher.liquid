@@ -1,33 +1,5 @@
-<!--Start Weglot Script-->
-<script src="//cdn.weglot.com/weglot.min.js" defer></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    if (typeof Weglot === 'undefined') return;
-
-    var switchers = [
-      {
-        button_style: {
-          full_name: true,
-          with_name: true,
-          is_dropdown: true,
-          with_flags: true,
-          flag_type: 'circle',
-          invert_flags: false
-        },
-        location: {
-          target: '#weglot-switcher-2',
-          sibling: null
-        }
-      }
-    ].filter(function (config) {
-      return document.querySelector(config.location.target);
-    });
-
-    if (!switchers.length) return;
-
-    Weglot.initialize({
-      api_key: 'wg_f8864cdeb8f6ccf3f7c604f53c139c565',
-      switchers: switchers
-    });
-  });
-</script>
+{%- comment -%}
+  Weglot disabled — use native Shopify languages + Translate & Adapt (free).
+  Uninstall Weglot app and disable its app embed in Theme Editor → App embeds.
+  See snippets/language-switcher.liquid
+{%- endcomment -%}

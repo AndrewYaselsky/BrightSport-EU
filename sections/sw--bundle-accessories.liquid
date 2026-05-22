@@ -106,7 +106,7 @@
                     <div class="our_ball_product_add_to_cart">
 
                         <button type="button" name="add" class="product_cart_add_btn ad_to_cart_coll{% unless product.available %} disabled{% endunless %}" data-var_id="{{ product.variants.first.id }}" data-add-to-cart="{{ product.variants.first.id }}" {% unless product.available %}disabled{% endunless %} style="{% if forloop.index == 3 %}position: relative !important;{% endif %}{% unless product.available %} opacity: 0.5; cursor: not-allowed;{% endunless %}">
-                          {% if product.available %}In winkelwagen{% else %}Sold Out{% endif %}
+                          {% if product.available %}Add to cart{% else %}Sold Out{% endif %}
                           <svg
                             width="16"
                             height="16"
@@ -221,7 +221,7 @@
      {
       "type" : "text",
       "id" : "add_to_cart_btn_text",
-      "label" : "In winkelwagen Button Text"
+      "label" : "Add to cart Button Text"
     },
     {
       "type" : "select",

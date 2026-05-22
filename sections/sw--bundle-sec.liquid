@@ -51,8 +51,8 @@
  <form action="/cart/add" method="post" id="addToCart">
     <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
     <input type="hidden" name="quantity" value="1" />
-    <input type="submit" value="In winkelwagen" style="display: none;" />
-    <a href="#" class="add-btn">In winkelwagen</a>
+    <input type="submit" value="Add to cart" style="display: none;" />
+    <a href="#" class="add-btn">Add to cart</a>
 </form> 
 
                           
@@ -60,7 +60,7 @@
                         {% endfor %}
 
 
-<button id="add-to-cart-button">In winkelwagen</button>
+<button id="add-to-cart-button">Add to cart</button>
 
 
 

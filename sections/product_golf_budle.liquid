@@ -102,7 +102,7 @@
                         <path d="M14.95 6.0875C14.8874 5.89061 14.7668 5.71723 14.604 5.59009C14.4411 5.46294 14.2437 5.38797 14.0375 5.375L10.325 5.11875L8.94999 1.65C8.87491 1.459 8.74422 1.29494 8.57485 1.17905C8.40548 1.06317 8.20522 1.00079 7.99999 1C7.79477 1.00079 7.59451 1.06317 7.42513 1.17905C7.25576 1.29494 7.12507 1.459 7.04999 1.65L5.64999 5.1375L1.96249 5.375C1.75656 5.38881 1.55951 5.4641 1.39683 5.59112C1.23415 5.71814 1.11332 5.89106 1.04999 6.0875C0.984955 6.28695 0.981155 6.50131 1.03908 6.70294C1.09701 6.90458 1.21401 7.08423 1.37499 7.21875L4.21249 9.61875L3.36874 12.9375C3.31037 13.162 3.32087 13.3989 3.39889 13.6174C3.47692 13.8358 3.61885 14.0258 3.80624 14.1625C3.98814 14.293 4.20485 14.3664 4.42864 14.373C4.65244 14.3797 4.87313 14.3195 5.06249 14.2L7.99374 12.3438H8.00624L11.1625 14.3375C11.3244 14.4427 11.5132 14.4991 11.7062 14.5C11.8639 14.4988 12.0192 14.4614 12.1601 14.3908C12.3011 14.3201 12.424 14.2181 12.5193 14.0926C12.6147 13.967 12.68 13.8213 12.7102 13.6666C12.7405 13.5118 12.7348 13.3522 12.6937 13.2L11.8 9.56875L14.625 7.21875C14.786 7.08423 14.903 6.90458 14.9609 6.70294C15.0188 6.50131 15.015 6.28695 14.95 6.0875Z" fill="#FBBC04"></path>
                       </svg></div>
                   </div>
-                  <div class="text-s text-semi-bold">Beoordeeld 4.9/5 Af 1700+ Tevreden Klanten</div>
+                  <div class="text-s text-semi-bold">Rated 4.9/5 from 1700+ happy customers</div>
                 </div>
                 
                 <h3>{{ product.title }}</h3>
@@ -153,7 +153,7 @@
                                 
                                 {%- if forloop.index == 2 -%}
                                   {%- assign price = 18000 -%}
-                                  {%- assign badge = '<div class="single_quantity_main_left_gratis">Gratis Verzending</div>' -%}
+                                  {%- assign badge = '<div class="single_quantity_main_left_gratis">Free Shipping</div>' -%}
                                 {%- elsif forloop.index == 3 -%}
                                   {%- assign price = 27000 -%}
                                   {%- assign badge = '<div class="single_quantity_main_left_gratis" style="background-color:#ffd602">Beste Deal</div>' -%}
@@ -176,11 +176,11 @@
                                       </h4>
                                       <div class="sq_you_save">
                                         {%- if forloop.index == 1 -%}
-                                          ⁠Koop 1, Krijg 1 - Mix en Match
+                                          Buy 1, Get 1 - Mix and Match
                                         {%- elsif forloop.index == 2 -%}
-                                          ⁠⁠Koop 1, Krijg 1 Gratis
+                                          Buy 1, Get 1 Free
                                         {%- elsif forloop.index == 3 -%}
-                                          ⁠⁠Koop 2, Krijg 2 Gratis
+                                          Buy 2, Get 2 Free
                                         {%- endif -%}
                                       </div>
                                     </div>
@@ -254,7 +254,7 @@
 
                         {%- comment -%}
                         <div class="qty_selector_discount" style="width:100%;">
-                          <div class="qty_selector_discount_title"><span>BUNDEL EN BESPAAR</span></div>
+                          <div class="qty_selector_discount_title"><span>BUNDLE AND SAVE</span></div>
                           <div class="quantity_selector"> 
                             
                             <input type="hidden" id="all_quant" value="2"/>
@@ -284,8 +284,8 @@
                       
                                 <div class="single_quantity_main">
                                  <div class="single_quantity_main_left">
-                                  <h4 class="h4 cstm-size">{{ variant.title }} {% if box_counter != 1 %}<div class="single_quantity_main_left_gratis">Gratis Verzending</div>{% endif %}</h4>
-                                  <div class="sq_you_save">Bespaar <span>{{ 100 | minus: last_price }}%</span></div>
+                                  <h4 class="h4 cstm-size">{{ variant.title }} {% if box_counter != 1 %}<div class="single_quantity_main_left_gratis">Free Shipping</div>{% endif %}</h4>
+                                  <div class="sq_you_save">Save <span>{{ 100 | minus: last_price }}%</span></div>
                                  </div>
                                  <div class="single_quantity_main_right">
                                   <h6 class="quanity-price" style="margin-bottom: 0px;">{{ variant.price | money_without_trailing_zeros }}</h6>
@@ -393,7 +393,7 @@
                       </form>
                       
                       <button id="themainestbutton" class="button w-inline-block" style="width:100%;">
-                       <div c-label="Button Text" c-type="text" class="button_text">Toevoegen Aan Winkelwagentje</div>
+                       <div c-label="Button Text" c-type="text" class="button_text">Add to Cart</div>
                        <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/ShoppingCart_1.svg?v=1682459148" loading="lazy" c-label="Button Icon" c-type="image_picker" c-size="100x100" alt="" class="button_icon">
                       </button>
 
@@ -413,7 +413,7 @@
 
                     {% assign upsell_product = all_products[section.settings.cup_upsell] %}                  
                     <div class="checkbox-wrapper">
-                      <div class="text-s text-bold text-caps-first-letter">Maak uw aankoop compleet met…</div>
+                      <div class="text-s text-bold text-caps-first-letter">Complete your purchase with…</div>
                       <div class="checkbox-field-wrapper">
                         <label class="w-checkbox checkbox-field">
                           <div class="checkbox-field-mini">
@@ -425,14 +425,14 @@
                               <div class="checkbox-price">
                                 <div class="text-s text-normal opacity-0-6 text-strikethrough">{{ upsell_product.compare_at_price  | money }}</div>
                                 <div class="text-s text-bold green-color">{{ upsell_product.price  | money }}</div>
-                                <div class="text-s text-medium">Bespaar {{ upsell_product.compare_at_price | minus: upsell_product.price  | money }}</div>
+                                <div class="text-s text-medium">Save {{ upsell_product.compare_at_price | minus: upsell_product.price  | money }}</div>
                               </div>
                             </div>
                           </div>
                           <div>
                             <div class="checkbox-button">
                               <a class="button-v2 is-smaller w-inline-block">
-                                <div c-label="Button Text" c-type="text" class="button_text" id="addupsell">VOEG BUNDEL TOE AAN WINKELWAGEN</div>
+                                <div c-label="Button Text" c-type="text" class="button_text" id="addupsell">ADD BUNDLE TO CART</div>
                               </a> 
                             </div>
                           </div>
@@ -444,33 +444,33 @@
                 <div class="product-header1_accordion-wrapper">
                   <div class="product-header1_accordion">
                     <div data-w-id="65d03ec8-9865-f50a-b6b1-b93cddba6355" class="product-header1_heading">
-                      <div class="text-m text-bold">Informatie</div>
+                      <div class="text-m text-bold">Information</div>
                     </div><img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/ic20-plus.svg?v=1682459148" loading="lazy" alt="" class="product-header1_accordion-icon">
                     <div class="accordion-content">
                       <div class="margin-bottom margin-small">
-                        <p class="text-m opacity-0-6 margin-bottom-16px">BRIGHT Golfballen zijn een innovatieve toevoeging aan je golfuitrusting, ontworpen om je spelervaring te vernieuwen. Deze bolvormige juwelen zijn niet alleen in het oog springend - ze zijn ontworpen voor high-performance spel. Raak nooit meer een bal kwijt met onze 6 duurzame LED golfballen gemaakt met BRIGHT’s kenmerkende 3-laags waterdichte coating. Elke bal heeft een intense gloed voor superieure zichtbaarheid, waardoor je langer kunt spelen bij weinig licht of in de schemering. Of je nu een doorgewinterde professional bent, of een beginner, onze BRIGHT Golfballen zijn perfect voor diegenen die op zoek zijn naar naar een mix van stijl, functionaliteit en een vleugje luxe in hun spel. </p>
+                        <p class="text-m opacity-0-6 margin-bottom-16px">BRIGHT golf balls are an innovative addition to your golf gear, designed to refresh your playing experience. These spherical gems are eye-catching and built for high-performance play. Never lose a ball again with our 6 durable LED golf balls made with BRIGHT’s signature 3-layer waterproof coating. Each ball has an intense glow for superior visibility so you can play longer in low light or at dusk. Whether you are a seasoned pro or a beginner, our BRIGHT golf balls are perfect for anyone seeking style, functionality, and a touch of luxury in their game. </p>
                       </div>
                     </div>
                     <div data-w-id="47c0bc28-c832-bff5-37ca-aa9b55eb1e22" class="product-header1_close"></div>
                   </div>
                   <div class="product-header1_accordion">
                     <div data-w-id="9747a18e-5ed3-0629-740a-4a5ee900cfd0" class="product-header1_heading">
-                      <div class="text-m text-bold">Verzending & Retourneren</div>
+                      <div class="text-m text-bold">Shipping & Returns</div>
                     </div><img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/ic20-plus.svg?v=1682459148" loading="lazy" alt="" class="product-header1_accordion-icon">
                     <div class="accordion-content">
                       <div class="margin-bottom margin-small">
-                        <p class="text-m opacity-0-6 margin-bottom-16px">Binnen 24 uur nadat de bestelling is verwerkt ontvangt de klant een Track & Trace code. Alle bestellingen worden binnen 1-2 werkdagen vanuit ons magazijn verzonden. Houd er rekening mee dat alle verzendtijden worden berekend vanaf de datum van verzending. </p>
+                        <p class="text-m opacity-0-6 margin-bottom-16px">Within 24 hours after the order is processed, the customer receives a tracking code. All orders ship from our warehouse within 1-2 business days. Please note that all delivery times are calculated from the shipping date.</p>
                       </div>
                     </div>
                     <div class="product-header1_close"></div>
                   </div>
                   <div class="product-header1_accordion">
                     <div data-w-id="b573ed51-dc3b-671c-c1be-ebe3271a44f2" class="product-header1_heading">
-                      <div class="text-m text-bold">Onderhoudsgids</div>
+                      <div class="text-m text-bold">Care guide</div>
                     </div><img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/ic20-plus.svg?v=1682459148" loading="lazy" alt="" class="product-header1_accordion-icon">
                     <div class="accordion-content">
                       <div class="margin-bottom margin-small">
-                        <p class="text-m opacity-0-6 margin-bottom-16px">Door deze <a href="/pages/care-guide-for-golf-balls" style="color:#fbbd04; cursor:pointer;" target="_blank">onderhoudsrichtlijnen</a> te volgen, kun je de levensduur verlengen en genieten van hun gloed voor vele avondjes golfen. </p>
+                        <p class="text-m opacity-0-6 margin-bottom-16px">By following these <a href="/pages/care-guide-for-golf-balls" style="color:#fbbd04; cursor:pointer;" target="_blank">care guidelines</a>, you can extend their lifespan and enjoy their glow for many evenings on the course. </p>
                       </div>
                     </div>
                     <div class="product-header1_close"></div>
@@ -585,11 +585,11 @@
         <div class="container-large">
           <div class="w-layout-grid header37_component">
             <div data-w-id="2801e220-e116-213d-3285-cb9252cfe68b" class="header37_content">
-              <h2 c-label="Heading" c-type="text" data-w-id="2801e220-e116-213d-3285-cb9252cfe68d">SWING IN DE SPOTLIGHT</h2>
+              <h2 c-label="Heading" c-type="text" data-w-id="2801e220-e116-213d-3285-cb9252cfe68d">SWING IN THE SPOTLIGHT</h2>
               <div class="header37_list">
                 <div c-block="Block" class="header37_list-item">
-                  <div c-label="Block Title" c-type="text" class="text-l text-bold text-caps-first-letter">Laat Je Swing Schitteren</div>
-                  <p c-label="Block Text" c-type="textarea" class="text-m text-caps-first-letter opacity-0-8">Maak Van Elke Swing Een Schitterende Statement Met BRIGHT Golfballen. Ontdek Een Ongeëvenaarde Golfervaring Met Een Levendig Kleurpalet Dat De Fairway In Vuur En Vlam Zet. Verbeter Je Spel En Ontarm De Glans. </p>
+                  <div c-label="Block Title" c-type="text" class="text-l text-bold text-caps-first-letter">Let Your Swing Shine</div>
+                  <p c-label="Block Text" c-type="textarea" class="text-m text-caps-first-letter opacity-0-8">Make every swing a brilliant statement with BRIGHT golf balls. Discover an unmatched golf experience with a vibrant color palette that lights up the fairway. Elevate your game and unleash the glow. </p>
                 </div>
               </div>
               <div data-w-id="448a7f95-cfaf-8fa8-862b-788c0865e498" class="header37_button-wrapper">
@@ -611,10 +611,10 @@
                         <path d="M14.95 6.0875C14.8874 5.89061 14.7668 5.71723 14.604 5.59009C14.4411 5.46294 14.2437 5.38797 14.0375 5.375L10.325 5.11875L8.94999 1.65C8.87491 1.459 8.74422 1.29494 8.57485 1.17905C8.40548 1.06317 8.20522 1.00079 7.99999 1C7.79477 1.00079 7.59451 1.06317 7.42513 1.17905C7.25576 1.29494 7.12507 1.459 7.04999 1.65L5.64999 5.1375L1.96249 5.375C1.75656 5.38881 1.55951 5.4641 1.39683 5.59112C1.23415 5.71814 1.11332 5.89106 1.04999 6.0875C0.984955 6.28695 0.981155 6.50131 1.03908 6.70294C1.09701 6.90458 1.21401 7.08423 1.37499 7.21875L4.21249 9.61875L3.36874 12.9375C3.31037 13.162 3.32087 13.3989 3.39889 13.6174C3.47692 13.8358 3.61885 14.0258 3.80624 14.1625C3.98814 14.293 4.20485 14.3664 4.42864 14.373C4.65244 14.3797 4.87313 14.3195 5.06249 14.2L7.99374 12.3438H8.00624L11.1625 14.3375C11.3244 14.4427 11.5132 14.4991 11.7062 14.5C11.8639 14.4988 12.0192 14.4614 12.1601 14.3908C12.3011 14.3201 12.424 14.2181 12.5193 14.0926C12.6147 13.967 12.68 13.8213 12.7102 13.6666C12.7405 13.5118 12.7348 13.3522 12.6937 13.2L11.8 9.56875L14.625 7.21875C14.786 7.08423 14.903 6.90458 14.9609 6.70294C15.0188 6.50131 15.015 6.28695 14.95 6.0875Z" fill="#FBBC04"></path>
                       </svg></div>
                   </div>
-                  <div c-label="Review Text" c-type="text" class="text-s text-semi-bold">Beoordeeld 4.9/5 Af 1700+ Tevreden Klanten</div>
+                  <div c-label="Review Text" c-type="text" class="text-s text-semi-bold">Rated 4.9/5 from 1700+ happy customers</div>
                 </div>
                 <a c-label="Button URL" c-type="url" data-w-id="741cef4e-8f1c-2ec1-76c1-43d99b02784c" onclick='document.getElementById("themainestbutton").click();' class="button-v2 w-inline-block">
-                  <div c-label="Button Text" c-type="text" class="button_text">Toevoegen Aan Winkelwagentje</div><img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/ArrowRight_1.svg?v=1682459148" loading="lazy" c-label="Button Icon" c-type="image_picker" c-size="100x100" alt="" class="button_icon">
+                  <div c-label="Button Text" c-type="text" class="button_text">Add to Cart</div><img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/ArrowRight_1.svg?v=1682459148" loading="lazy" c-label="Button Icon" c-type="image_picker" c-size="100x100" alt="" class="button_icon">
                 </a>
                 <div class="product-header1_payment-methods">
                   <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Frame.svg?v=1682459148" loading="lazy" alt="" class="product-header1_payment-icon">
@@ -643,7 +643,7 @@
             <div class="layout18_content">
               <div class="layout18_text">
                 <h6 c-label="Heading" c-type="text">GLOW-UP GIDS</h6>
-                <p c-label="Text" c-type="textarea" class="text-m text-semi-bold opacity-0-6">Onze LED golfballen hebben een batterijlevensduur van 50 uur, lichten automatisch op bij impact en blijven 10 minuten na activering gloeien. </p>
+                <p c-label="Text" c-type="textarea" class="text-m text-semi-bold opacity-0-6">Our LED golf balls have a 50-hour battery life, light up automatically on impact, and stay lit for 10 minutes after activation. </p>
               </div>
               <div class="layout18_item-list">
                 <div c-block="Step Block" id="w-node-a98fd419-4e9c-b5b8-2cbf-e777e8575a56-55082463" class="layout18_item">
@@ -651,7 +651,7 @@
                     <div c-label="Step Number" c-type="text">1</div>
                   </div>
                   <div class="layout18_item-text-wrapper">
-                    <div c-label="Step Title" c-type="text" class="text-m text-bold text-caps-first-letter">Speel Jouw Beste Swing Om De Golfballen Bij Impact Te Activeren </div>
+                    <div c-label="Step Title" c-type="text" class="text-m text-bold text-caps-first-letter">Play your best swing to activate the golf balls on impact </div>
                     <!--<p c-label="Step Text" c-type="textarea" class="text-m text-medium opacity-0-6">To put a golf ball on the tees, gently position the ball atop the elevated tee, ensuring it rests securely and aligning it with the desired striking position.</p>-->
                   </div>
                 </div>
@@ -662,7 +662,7 @@
                     <div c-label="Step Number" c-type="text">2</div>
                   </div>
                   <div class="layout18_item-text-wrapper">
-                    <div c-label="Step Title" c-type="text" class="text-m text-bold text-caps-first-letter">Golfballen blijven na activering 10 minuten branden en gaan daarna automatisch uit. Zo kun je ze gemakkelijk vinden! </div>
+                    <div c-label="Step Title" c-type="text" class="text-m text-bold text-caps-first-letter">Golf balls stay lit for 10 minutes after activation, then turn off automatically—so you can find them easily! </div>
                   </div>
                 </div>
               </div>
@@ -672,7 +672,7 @@
                     <div c-label="Step Number" c-type="text">3</div>
                   </div>
                   <div class="layout18_item-text-wrapper">
-                    <div c-label="Step Title" c-type="text" class="text-m text-bold text-caps-first-letter">Verlicht Elk Spel Met Een Batterijlevensduur Van Meer Dan 50 Uur. </div>
+                    <div c-label="Step Title" c-type="text" class="text-m text-bold text-caps-first-letter">Light up every round with more than 50 hours of battery life. </div>
                   </div>
                 </div>
               </div>
@@ -690,20 +690,20 @@
             <div id="w-node-a50c2fdd-7629-658b-6573-a578630a7db5-55082463" class="layout209_content">
               <div class="layout209_text">
                 <div class="layout209_headline"><img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/ArchiveBox.png?v=1682459149" loading="lazy" c-label="Headline Icon" c-type="image_picker" c-size="200x200" alt="" class="layout209_headline-icon">
-                  <h6 c-label="Heading" c-type="text">WAT IS INBEGREPEN</h6>
+                  <h6 c-label="Heading" c-type="text">WHAT'S INCLUDED</h6>
                 </div>
                 <p c-label="Text" c-type="textarea" class="text-size-medium">
-                  Ervaar de spanning van golfen onder de sterrenhemel met de 6-pack Glow Golfballen. De superieure zichtbaarheid en kwaliteit bieden een unieke glow-in-the-dark golfervaring voor beide, wat zorgt voor onvergetelijke wedstrijden. 
+                  Experience the thrill of golfing under the stars with the 6-pack glow golf balls. Superior visibility and quality deliver a unique glow-in-the-dark golf experience for unforgettable rounds. 
                 </p>
                 <p c-label="Text" c-type="textarea" class="text-size-medium">
-                  Elke doos bevat:
+                  Each box includes:
                 </p>
               </div>
               <div class="layout209_item-list">
                 <div c-block="Layout Block" id="w-node-a50c2fdd-7629-658b-6573-a578630a7dbd-55082463" class="layout209_item">
                   <div class="layout209_item-icon-wrapper"><img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Frame-801.png?v=1682459148" loading="lazy" c-label="Icon" c-type="image_picker" c-size="200x200" alt="" class="icon-1x1-xsmall"></div>
                   <div class="layout209_item-text-wrapper">
-                    <div c-label="Text" c-type="text" class="text-m text-semi-bold">6 herbruikbare LED golfballen</div>
+                    <div c-label="Text" c-type="text" class="text-m text-semi-bold">6 reusable LED golf balls</div>
                   </div>
                 </div>
               </div>
@@ -719,13 +719,13 @@
             <div class="layout209_content">
               <div class="layout209_text">
                 <div class="layout209_headline"><img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/waterproof.png?v=1686299119" loading="lazy" c-label="Headline Icon" c-type="image_picker" c-size="200x200" alt="" class="layout209_headline-icon">
-                  <h6 c-label="Heading" c-type="text">VOLLEDIG WATERDICHT</h6>
+                  <h6 c-label="Heading" c-type="text">FULLY WATERPROOF</h6>
                 </div>
                 <p c-label="Text" c-type="textarea" class="text-size-medium">
-                  De Waterdichte Golfbal heeft een uniek ontwerp dat duurzaamheid, precisie en veerkracht combineert. De buitenkant is gemaakt van een speciaal geformuleerd waterdicht polymeer, dat vocht afstoot en optimale prestaties levert zelfs in natte condities. 
+                  The waterproof golf ball has a unique design combining durability, precision, and resilience. The outer shell uses a specially formulated waterproof polymer that repels moisture and delivers optimal performance even in wet conditions. 
                 </p>
                 <p c-label="Text" c-type="textarea" class="text-size-medium">
-                  Dit geavanceerde materiaal houdt de bal niet alleen droog, maar verlengt ook de levensduur, zodat golfers langer kunnen spelen zonder in te leveren op prestaties. 
+                  This advanced material keeps the ball dry and extends its lifespan so golfers can play longer without sacrificing performance. 
                 </p>
               </div>
             </div>
@@ -763,85 +763,85 @@
           <div class="w-layout-grid faq6_component">
             <div class="faq6_content">
               <div class="faq6_icon-div"><img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Question.svg?v=1682459149" loading="lazy" c-label="FAQ Headline Icon" c-type="image_picker" c-size="100x100" alt="" class="faq6_icon"></div>
-              <h3 c-label="Heading" c-type="text" class="yellow-color">VEELGESTELDE VRAGEN</h3>
-              <p c-label="Text" c-type="textarea" class="text-m">Hier vind je snelle en directe antwoorden op jouw vragen zonder dat je uitgebreid onderzoek hoeft te doen of contact hoeft op te nemen met de klantenservice. </p>
+              <h3 c-label="Heading" c-type="text" class="yellow-color">FREQUENTLY ASKED QUESTIONS</h3>
+              <p c-label="Text" c-type="textarea" class="text-m">Find quick, direct answers to your questions without extensive research or contacting customer service. </p>
             </div>
             <div class="faq6_list">
               <div class="faq6_accordion">
                 <div class="faq6_question">
-                  <div c-label="Question" c-type="text" class="text-l text-bold">Gaan deze minder ver dan gewone ballen?</div>
+                  <div c-label="Question" c-type="text" class="text-l text-bold">Do these travel less distance than regular balls?</div>
                 </div>
                 <div class="faq6_question-icon-v1"></div>
                 <div class="faq6_question-icon-v2" style="background-color: rgb(255, 255, 255);"></div>
                 <div class="faq6_close" style="display: none;"></div>
                 <div class="faq6_answer">
                   <div class="faq6_answer_wrapper">
-                    <p c-label="Answer" c-type="textarea" class="text-l">BRIGHT Golfballen hebben hetzelfde effect als elke andere golfbal van hoge kwaliteit.</p>
+                    <p c-label="Answer" c-type="textarea" class="text-l">BRIGHT golf balls perform like any other high-quality golf ball.</p>
                   </div>
                 </div>
               </div>
               <div class="faq6_accordion">
                 <div data-w-id="4dafed1d-eec4-d296-fae5-eb976e9e6412" class="faq6_question">
-                  <div c-label="Question" c-type="text" class="text-l text-bold">Wat voor accu zit erin?</div>
+                  <div c-label="Question" c-type="text" class="text-l text-bold">What type of battery is inside?</div>
                 </div>
                 <div class="faq6_question-icon-v1"></div>
                 <div class="faq6_question-icon-v2"></div>
                 <div class="faq6_close"></div>
                 <div style="width:100%;height:0px" class="faq6_answer">
                   <div class="faq6_answer_wrapper">
-                    <p c-label="Answer" c-type="textarea" class="text-l">In BRIGHT golfballen zitten droge accu’s. </p>
+                    <p c-label="Answer" c-type="textarea" class="text-l">BRIGHT golf balls use dry-cell batteries. </p>
                   </div>
                 </div>
               </div>
               <div class="faq6_accordion">
                 <div data-w-id="4dafed1d-eec4-d296-fae5-eb976e9e6412" class="faq6_question">
-                  <div c-label="Question" c-type="text" class="text-l text-bold">Blijven ze drijven?</div>
+                  <div c-label="Question" c-type="text" class="text-l text-bold">Do they float?</div>
                 </div>
                 <div class="faq6_question-icon-v1"></div>
                 <div class="faq6_question-icon-v2"></div>
                 <div class="faq6_close"></div>
                 <div style="width:100%;height:0px" class="faq6_answer">
                   <div class="faq6_answer_wrapper">
-                    <p c-label="Answer" c-type="textarea" class="text-l">Ze blijven niet drijven omdat ze dichter zijn dan water, zoals elke golfbal van hoge kwaliteit. </p>
+                    <p c-label="Answer" c-type="textarea" class="text-l">They do not float because they are denser than water, like any high-quality golf ball. </p>
                   </div>
                 </div>
               </div>
               <div class="faq6_accordion">
                 <div data-w-id="4dafed1d-eec4-d296-fae5-eb976e9e6412" class="faq6_question">
-                  <div c-label="Question" c-type="text" class="text-l text-bold">Kun je de gloed overdag zien?</div>
+                  <div c-label="Question" c-type="text" class="text-l text-bold">Can you see the glow during the day?</div>
                 </div>
                 <div class="faq6_question-icon-v1"></div>
                 <div class="faq6_question-icon-v2"></div>
                 <div class="faq6_close"></div>
                 <div style="width:100%;height:0px" class="faq6_answer">
                   <div class="faq6_answer_wrapper">
-                    <p c-label="Answer" c-type="textarea" class="text-l">Op een zonnige dag ziet het eruit als een normale golfbal.</p>
+                    <p c-label="Answer" c-type="textarea" class="text-l">On a sunny day they look like a normal golf ball.</p>
                   </div>
                 </div>
               </div>
               <div class="faq6_accordion">
                 <div data-w-id="4dafed1d-eec4-d296-fae5-eb976e9e6412" class="faq6_question">
-                  <div c-label="Question" c-type="text" class="text-l text-bold">Gloeit het in water?</div>
+                  <div c-label="Question" c-type="text" class="text-l text-bold">Does it glow in water?</div>
                 </div>
                 <div class="faq6_question-icon-v1"></div>
                 <div class="faq6_question-icon-v2"></div>
                 <div class="faq6_close"></div>
                 <div style="width:100%;height:0px" class="faq6_answer">
                   <div class="faq6_answer_wrapper">
-                    <p c-label="Answer" c-type="textarea" class="text-l">Ja, dat is cool. Ze gloeien ook in het water.</p>
+                    <p c-label="Answer" c-type="textarea" class="text-l">Yes—and it is cool. They glow in water too.</p>
                   </div>
                 </div> 
               </div>
               <div class="faq6_accordion">
                 <div data-w-id="4dafed1d-eec4-d296-fae5-eb976e9e6412" class="faq6_question">
-                  <div c-label="Question" c-type="text" class="text-l text-bold">Hoe lang houdt de gloed aan? </div>
+                  <div c-label="Question" c-type="text" class="text-l text-bold">How long does the glow last? </div>
                 </div>
                 <div class="faq6_question-icon-v1"></div>
                 <div class="faq6_question-icon-v2"></div>
                 <div class="faq6_close"></div>
                 <div style="width:100%;height:0px" class="faq6_answer">
                   <div class="faq6_answer_wrapper">
-                    <p c-label="Answer" c-type="textarea" class="text-l">Onze LED golfballen hebben een batterijlevensduur van meer dan 50 uur. Laat het gewoon gloeien met een swing en het begint 10 minuten te gloeien. </p>
+                    <p c-label="Answer" c-type="textarea" class="text-l">Our LED golf balls have more than 50 hours of battery life. Hit a swing to start a 10-minute glow. </p>
                   </div>
                 </div> 
               </div>
@@ -866,8 +866,8 @@
           <div class="vertical-div align-center">
             <div class="cta51_card">
               <div class="cta51_card-wrapper">
-                <h6 c-label="Heading" c-type="text">WORDT GEÏNSPIREERD. WORDT EEN VERNIEUWER. WORDT BRIGHT. </h6>
-                <p c-label="Text" c-type="textarea" class="text-m text-caps-first-letter opacity-0-6">Geïnspireerd Door Spirit. Gemaakt Voor Sport. <br><br>BRIGHT Is Opgericht Om De Manier Waarop We Werbeelding, Inspiratie en Innovatie Kanaliseren Naar De Manier Waarop We Sporten Transformeren. Nieuwsgierigheid En Enthousiasme Voor Het Transformeren Van Het Landschap Van Atletiek Is De Essentie Van Onze Ideeën. Onze Missie Is Om De Geest Van Sport Levendig En Opgewekt Te Houden, Door Altijd Te Werken Aan Een Positieve Invloed Op Het Leven Van Onze Sporters Door Middel Van De Innovatie Achter Onze Producten.</p>
+                <h6 c-label="Heading" c-type="text">GET INSPIRED. BECOME A RENEWER. BECOME BRIGHT. </h6>
+                <p c-label="Text" c-type="textarea" class="text-m text-caps-first-letter opacity-0-6">Inspired by spirit. Made for sport. <br><br>BRIGHT was founded to channel imagery, inspiration, and innovation into how we transform sport. Curiosity and enthusiasm for reshaping athletics are at the heart of our ideas. Our mission is to keep the spirit of sport alive and energized by always working to positively impact athletes’ lives through the innovation behind our products.</p>
                 <div class="cta51_button-wrapper">
                   <div class="header37_reviews-wrapper">
                     <div class="product-header1_rating-wrapper">
@@ -887,10 +887,10 @@
                           <path d="M14.95 6.0875C14.8874 5.89061 14.7668 5.71723 14.604 5.59009C14.4411 5.46294 14.2437 5.38797 14.0375 5.375L10.325 5.11875L8.94999 1.65C8.87491 1.459 8.74422 1.29494 8.57485 1.17905C8.40548 1.06317 8.20522 1.00079 7.99999 1C7.79477 1.00079 7.59451 1.06317 7.42513 1.17905C7.25576 1.29494 7.12507 1.459 7.04999 1.65L5.64999 5.1375L1.96249 5.375C1.75656 5.38881 1.55951 5.4641 1.39683 5.59112C1.23415 5.71814 1.11332 5.89106 1.04999 6.0875C0.984955 6.28695 0.981155 6.50131 1.03908 6.70294C1.09701 6.90458 1.21401 7.08423 1.37499 7.21875L4.21249 9.61875L3.36874 12.9375C3.31037 13.162 3.32087 13.3989 3.39889 13.6174C3.47692 13.8358 3.61885 14.0258 3.80624 14.1625C3.98814 14.293 4.20485 14.3664 4.42864 14.373C4.65244 14.3797 4.87313 14.3195 5.06249 14.2L7.99374 12.3438H8.00624L11.1625 14.3375C11.3244 14.4427 11.5132 14.4991 11.7062 14.5C11.8639 14.4988 12.0192 14.4614 12.1601 14.3908C12.3011 14.3201 12.424 14.2181 12.5193 14.0926C12.6147 13.967 12.68 13.8213 12.7102 13.6666C12.7405 13.5118 12.7348 13.3522 12.6937 13.2L11.8 9.56875L14.625 7.21875C14.786 7.08423 14.903 6.90458 14.9609 6.70294C15.0188 6.50131 15.015 6.28695 14.95 6.0875Z" fill="#FBBC04"></path>
                         </svg></div>
                     </div>
-                    <div c-label="Review Text" c-type="text" class="text-s text-semi-bold">Beoordeeld 4.9/5 Af 1700+ Tevreden Klanten</div>
+                    <div c-label="Review Text" c-type="text" class="text-s text-semi-bold">Rated 4.9/5 from 1700+ happy customers</div>
                   </div>
                   <a c-label="Button URL" c-type="url" data-w-id="741cef4e-8f1c-2ec1-76c1-43d99b02784c" onclick='document.getElementById("themainestbutton").click();' class="button-v2 w-inline-block">
-                    <div c-label="Button Text" c-type="text" class="button_text">Toevoegen Aan Winkelwagentje</div><img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/ArrowRight_1.svg?v=1682459148" loading="lazy" c-label="Button Icon" c-type="image_picker" c-size="100x100" alt="" class="button_icon">
+                    <div c-label="Button Text" c-type="text" class="button_text">Add to Cart</div><img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/ArrowRight_1.svg?v=1682459148" loading="lazy" c-label="Button Icon" c-type="image_picker" c-size="100x100" alt="" class="button_icon">
                   </a>
                 <div class="product-header1_payment-methods">
                   <img src="https://cdn.shopify.com/s/files/1/0283/8190/4984/files/Frame.svg?v=1682459148" loading="lazy" alt="" class="product-header1_payment-icon">
@@ -1144,7 +1144,7 @@
       {
         "type": "checkbox",
         "id": "description_below_add_to_cart",
-        "label": "Description below Toevoegen Aan Winkelwagentje",
+        "label": "Description below Add to Cart",
         "default": false
       },
       {
@@ -1270,13 +1270,13 @@
       },
       {
         "type": "header",
-        "content": "Toevoegen Aan Winkelwagentje Button"
+        "content": "Add to Cart Button"
       },
       {
         "type": "text",
         "id": "cart-button-text",
         "placeholder": "Enter your text here",
-        "default": "Toevoegen Aan Winkelwagentje",
+        "default": "Add to Cart",
         "label": "Button Text"
     },
       {
@@ -1301,7 +1301,7 @@
         "type": "text",
         "id": "ugc-section-heading",
         "placeholder": "Enter your text here",
-        "default": "ERVAAR DE GLOW",
+        "default": "EXPERIENCE THE GLOW",
         "label": "Heading"
     },
     {
@@ -1312,7 +1312,7 @@
         "type": "text",
         "id": "stock-text",
         "placeholder": "Enter your text here",
-        "default": "Lage voorraad! Klaar voor verzending ",
+        "default": "Low stock! Ready to ship ",
         "label": "Text"
     },
     {
@@ -1323,7 +1323,7 @@
         "type": "text",
         "id": "klarna-payment-text",
         "placeholder": "Enter your text here",
-        "default": "Betaal pas over 30 dagen met",
+        "default": "Pay in 30 days with",
         "label": "Text"
     },
     {

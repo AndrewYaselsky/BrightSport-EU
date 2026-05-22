@@ -169,7 +169,7 @@
                     <div class="our_ball_product_add_to_cart">
                       {%- if collection.handle == 'bogo' -%}
                         <button type="button" name="add" class="product_cart_add_btn ad_to_cart_coll" style="border-radius: 0 0 30px 30px;width: 100%;max-width:100%;" data-var_id="{{ product.variants.first.id }}" data-add-to-cart="{{ product.variants.first.id }}">
-                          In winkelwagen
+                          Add to cart
                           <svg
                             width="16"
                             height="16"
@@ -183,7 +183,7 @@
                       {%- else %}
                         {% unless forloop.index == 3 %}
                           <button type="button" name="add" class="product_cart_add_btn ad_to_cart_coll" data-var_id="{{ product.variants.first.id }}" data-add-to-cart="{{ product.variants.first.id }}">
-                            In winkelwagen
+                            Add to cart
                             <svg
                               width="16"
                               height="16"
@@ -325,7 +325,7 @@
      {
       "type" : "text",
       "id" : "add_to_cart_btn_text",
-      "label" : "In winkelwagen Button Text"
+      "label" : "Add to cart Button Text"
     },
     {
       "type" : "select",

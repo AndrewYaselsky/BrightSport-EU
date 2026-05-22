@@ -1,0 +1,113 @@
+{%- comment -%}
+  Native Shopify language switcher (free). Requires:
+  Settings → Languages → add & publish languages
+  Translate & Adapt app for translating products/pages/theme text
+{%- endcomment -%}
+
+{%- if localization.available_languages.size > 1 -%}
+  {%- assign current_lang = localization.language.iso_code | downcase -%}
+
+  <div class="language-switcher weglot-container" id="language-switcher" data-wg-notranslate="true">
+    <aside
+      class="weglot_switcher country-selector language-selector default closed wg-drop"
+      aria-label="{{ 'localization.language_label' | t | default: 'Language' }}"
+    >
+      <div
+        class="wg-li {{ current_lang }} wgcurrent wg-flags language-selector__current"
+        data-l="{{ current_lang }}"
+        role="combobox"
+        aria-expanded="false"
+        aria-controls="language-switcher-listbox"
+      >
+        <button type="button" class="language-selector__trigger" aria-label="{{ 'localization.language_label' | t | default: 'Language' }}">
+          <img
+            src="https://cdn.weglot.com/flags/circle/{% case current_lang %}{% when 'en' %}gb{% when 'da' %}dk{% when 'sv' %}se{% when 'nb' %}no{% when 'no' %}no{% else %}{{ current_lang }}{% endcase %}.svg"
+            width="24"
+            height="24"
+            alt=""
+            class="wg-flag"
+            loading="lazy"
+          >
+          <span class="language-selector__label">{{ localization.language.endonym_name }}</span>
+        </button>
+      </div>
+
+      <ul role="listbox" id="language-switcher-listbox" class="language-selector__list" hidden>
+        {%- for language in localization.available_languages -%}
+          {%- assign lang_code = language.iso_code | downcase -%}
+          <li
+            class="wg-li {{ lang_code }} wg-flags language-selector__item{% if language.iso_code == localization.language.iso_code %} is-active{% endif %}"
+            role="option"
+            id="lang-{{ lang_code }}"
+          >
+            <a
+              href="{{ language.root_url }}"
+              hreflang="{{ language.iso_code }}"
+              lang="{{ language.iso_code }}"
+              {% if language.iso_code == localization.language.iso_code %}
+                aria-current="true"
+              {% endif %}
+            >
+              <img
+                src="https://cdn.weglot.com/flags/circle/{% case lang_code %}{% when 'en' %}gb{% when 'da' %}dk{% when 'sv' %}se{% when 'nb' %}no{% when 'no' %}no{% else %}{{ lang_code }}{% endcase %}.svg"
+                width="24"
+                height="24"
+                alt=""
+                class="wg-flag"
+                loading="lazy"
+              >
+              {{ language.endonym_name }}
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </aside>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var switcher = document.querySelector('#language-switcher .country-selector');
+      if (!switcher) return;
+
+      var trigger = switcher.querySelector('.language-selector__trigger');
+      var listbox = switcher.querySelector('.language-selector__list');
+      if (!trigger || !listbox) return;
+
+      function openDropdown() {
+        switcher.classList.remove('closed');
+        trigger.setAttribute('aria-expanded', 'true');
+        listbox.hidden = false;
+      }
+
+      function closeDropdown() {
+        switcher.classList.add('closed');
+        trigger.setAttribute('aria-expanded', 'false');
+        listbox.hidden = true;
+      }
+
+      trigger.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var isOpen = trigger.getAttribute('aria-expanded') === 'true';
+        if (isOpen) closeDropdown();
+        else openDropdown();
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!switcher.contains(e.target)) closeDropdown();
+      });
+
+      trigger.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowDown') {
+          e.preventDefault();
+          openDropdown();
+        }
+        if (e.key === 'Escape') closeDropdown();
+      });
+    });
+  </script>
+{%- elsif request.design_mode -%}
+  <p class="language-switcher__hint" style="color:#888;font-size:12px;">
+    Add languages in Shopify Admin → Settings → Languages to show the switcher.
+  </p>
+{%- endif -%}

@@ -20,7 +20,7 @@
           <button class="Drawer__Close Icon-Wrapper--clickable upsell-drawer-close" 
                   data-action="close-drawer" 
                   data-drawer-id="sidebar-cart" 
-                  aria-label="Winkelwagen sluiten">
+                  aria-label="Close cart">
             {%- include 'icon' with 'close' -%}
           </button>
         </div>  
@@ -81,13 +81,13 @@
         <button class="Drawer__Close Icon-Wrapper--clickable" 
                 data-action="close-drawer" 
                 data-drawer-id="sidebar-cart" 
-                aria-label="Winkelwagen sluiten">
+                aria-label="Close cart">
           {%- include 'icon' with 'close' -%}
         </button>
       </div>
        
       <div class="positive-message-box">
-        <p class="positive-message-content">⚽️ Ja, je gaat deze bal super vinden!</p>
+        <p class="positive-message-content">⚽️ Yes, you are going to love this ball!</p>
       </div>
       
       {% include 'banana-stand-cart-top-container' %}
@@ -147,7 +147,7 @@
         <!-- BOGO Minimum Items Message -->
         {% if showbogocart and BOGO_total_quantity < 2 %}
           <div class="bogo-minimum-message">
-            Voeg minimaal 2 ballen toe om van deze deal te profiteren.
+            Add at least 2 balls to use this deal.
           </div>
         {% endif %}
 

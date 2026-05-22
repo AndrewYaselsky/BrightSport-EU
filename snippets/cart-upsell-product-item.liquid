@@ -40,8 +40,8 @@
   </h2>
   
   <div class="ProductMeta__Title upsell-subtitle u-h4">
-    {%- if is_bogo_context and subtitle contains 'MIX EN MATCH DE BALLEN' -%}
-      KOOP 1, KRIJG 1 GRATIS BAL - Mix en match de ballen.
+    {%- if is_bogo_context and subtitle contains 'MIX AND MATCH THE BALLS' -%}
+      BUY 1, GET 1 FREE BAL - Mix and match the balls.
     {%- else -%}
       {{ subtitle }}
     {%- endif -%}
@@ -82,7 +82,7 @@
           data-id="{{ product.selected_or_first_available_variant.id }}">
     {% if product.available %}
       <span class="atc-text">
-        Toevoegen aan winkelwagen
+        Add to cart
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M23.6875 16.125C23.6875 16.7578 23.1602 17.2852 22.5625 17.2852H17.5V22.3477C17.5 22.9453 16.9727 23.4375 16.375 23.4375C15.7422 23.4375 15.25 22.9453 15.25 22.3477V17.2852H10.1875C9.55469 17.2852 9.0625 16.7578 9.0625 16.125C9.0625 15.5273 9.55469 15.0352 10.1875 15.0352H15.25V9.97266C15.25 9.33984 15.7422 8.8125 16.375 8.8125C16.9727 8.8125 17.5 9.33984 17.5 9.97266V15.0352H22.5625C23.1602 15 23.6875 15.5273 23.6875 16.125Z" fill="#0B090E"/>
         </svg>

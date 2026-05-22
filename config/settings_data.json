@@ -31,8 +31,8 @@
     "newsletter_popup_text_color": "#ffffff",
     "secondary_elements_background": "#ff7a00",
     "secondary_elements_text_color": "#ff0000",
-    "annotext": "Laatste kans om onze exclusieve ⚽ FIFA Wereldbeker Sale te bemachtigen:\n<span class=\"last_chance_bar__inner__hours\">02</span><span>:</span><span class=\"last_chance_bar__inner__mins\">10</span><span>:</span><span class=\"last_chance_bar__inner__secs\">50</span>",
-    "urgencytext": "Laatste kans om onze exclusieve ⚽ FIFA Wereldbeker Sale te scoren:",
+    "annotext": "Last chance to get our exclusive ⚽ FIFA World Cup Sale:\n<span class=\"last_chance_bar__inner__hours\">02</span><span>:</span><span class=\"last_chance_bar__inner__mins\">10</span><span>:</span><span class=\"last_chance_bar__inner__secs\">50</span>",
+    "urgencytext": "Last chance to score our exclusive ⚽ FIFA World Cup Sale:",
     "bg_image": "shopify://shop_images/image_2026-02-27_005441535.png",
     "bg_image_mobile": "shopify://shop_images/image_2026-02-27_005106936.png",
     "sub_heading": "",
@@ -75,7 +75,7 @@
     "social_snapchat": "",
     "social_fancy": "",
     "c_product1": "the-bright-air-pump",
-    "ptitle_1": "THE BRIGHT™ Ballenpomp",
+    "ptitle_1": "THE BRIGHT™ Ballspomp",
     "subtitle": "Gemakkelijk te gebruiken & Handig mee te nemen",
     "image1": "shopify://shop_images/BRIGHT_POMPJE_WITTE_ACHTERGROND-removebg.png",
     "c_product2": "bright-grip-socks",
@@ -262,7 +262,7 @@
           "cart-button-text": "VOEG TOE AAN WINKELKAR",
           "cart-button-before-text": "TOEVOEGEN AAN WINKELWAGEN...",
           "cart-button-after-text": "TOEGEVOEGD AAN WINKELWAGEN!",
-          "ugc-section-heading": "ERVAAR DE GLOW",
+          "ugc-section-heading": "EXPERIENCE THE GLOW",
           "stock-text": "<span> Lage voorraad!</span> Klaar voor verzending",
           "klarna-payment-text": "Betaal pas over 30 dagen met",
           "money-back-heading": "Geld terug garantie",
@@ -516,9 +516,9 @@
             "type": "mega_menu",
             "settings": {
               "navigation_mega_menu": "Producten",
-              "megamenu_main_title": "Ballen",
+              "megamenu_main_title": "Balls",
               "see_all_btn_url": "/collections/all#our-balls",
-              "see_all_btn": "Bekijk alle",
+              "see_all_btn": "View all",
               "megamenu_image1": "shopify://shop_images/img_1.png",
               "sub_title1": "Voetbal",
               "product_url1": "shopify://products/bright-football",
@@ -545,7 +545,7 @@
               "label_checkbox6": false,
               "megamenu_main_title2": "Accessoires",
               "see_all_btn_url2": "/collections/all#accessories",
-              "see_all_btn2": "Bekijk alle",
+              "see_all_btn2": "View all",
               "megamenu_right_image1": "shopify://shop_images/image_2024-01-12_211111746.png",
               "right_sub_title1": "Lichtgevend net",
               "right_product_url1": "shopify://products/bright™-glow-in-the-dark-basketball-net",
@@ -723,7 +723,7 @@
             "type": "faq",
             "settings": {
               "faq-question": "Wat zijn de levertijden?",
-              "faq-answer": "<p><strong>Nederland/België: </strong>1-3 werkdagen</p><p><strong>Rest van Europa:</strong> 2-4 werkdagen</p><p><strong>Rest van de Wereld:</strong> 3-5 werkdagen</p><p><strong>Gratis verzending voor bestellingen vanaf €60</strong></p><p>Alle bestellingen worden verzonden met DHL en PostNL. Een Track & Trace wordt via e-mail verzonden nadat de bestelling is verwerkt.</p>"
+              "faq-answer": "<p><strong>Netherlands/Belgium: </strong>1-3 business days</p><p><strong>Rest of Europe:</strong> 2-4 business days</p><p><strong>Rest of the World:</strong> 3-5 business days</p><p><strong>Free shipping on orders from €60</strong></p><p>All orders ship via DHL and PostNL. A tracking link is emailed once your order is processed.</p>"
             }
           },
           "1de18365-b29b-4f77-aadb-181b32ab754c": {
@@ -806,7 +806,7 @@
           "cart-button-text": "VOEG TOE AAN WINKELKAR",
           "cart-button-before-text": "TOEVOEGEN AAN WINKELWAGEN...",
           "cart-button-after-text": "TOEGEVOEGD AAN WINKELWAGEN!",
-          "ugc-section-heading": "ERVAAR DE GLOW",
+          "ugc-section-heading": "EXPERIENCE THE GLOW",
           "stock-text": "Lage voorraad! Klaar voor verzending",
           "klarna-payment-text": "Betaal pas over 30 dagen met",
           "money-back-heading": "Money Back Gurantee",
@@ -1052,7 +1052,7 @@
           "2916986a-aaff-4655-b3d4-e17b15312969"
         ],
         "settings": {
-          "main_heading1": "Ballen",
+          "main_heading1": "Balls",
           "main_heading2": "Accessoires",
           "main_heading3": "Bundels",
           "main_heading": "Onze grootste uitverkoop ooit!",
@@ -1240,37 +1240,37 @@
           "b9f26362-1349-4824-8f84-b1cb6a2b186f": {
             "type": "scrollbar",
             "settings": {
-              "text": "Laatste kans!  |  Valentijnskorting: <span class=\"last_chance_bar__inner__hours\">02</span><span>:</span><span class=\"last_chance_bar__inner__mins\">10</span><span>:</span><span class=\"last_chance_bar__inner__secs\">50</span> 🔥 Shop nieuwe artikelen"
+              "text": "Last chance!  |  Valentine discount: <span class=\"last_chance_bar__inner__hours\">02</span><span>:</span><span class=\"last_chance_bar__inner__mins\">10</span><span>:</span><span class=\"last_chance_bar__inner__secs\">50</span> 🔥 Shop new items"
             }
           },
           "5439f202-9452-4bdf-99c9-2dc764c88c31": {
             "type": "scrollbar",
             "settings": {
-              "text": "Laatste kans!  |  Valentijnskorting: <span class=\"last_chance_bar__inner__hours\">02</span><span>:</span><span class=\"last_chance_bar__inner__mins\">10</span><span>:</span><span class=\"last_chance_bar__inner__secs\">50</span> 🔥 Shop nieuwe artikelen"
+              "text": "Last chance!  |  Valentine discount: <span class=\"last_chance_bar__inner__hours\">02</span><span>:</span><span class=\"last_chance_bar__inner__mins\">10</span><span>:</span><span class=\"last_chance_bar__inner__secs\">50</span> 🔥 Shop new items"
             }
           },
           "41576dfb-bf64-4cc0-85fd-cc4e3a8962c9": {
             "type": "scrollbar",
             "settings": {
-              "text": "Laatste kans!  | Valentijnskorting: <span class=\"last_chance_bar__inner__hours\">02</span><span>:</span><span class=\"last_chance_bar__inner__mins\">10</span><span>:</span><span class=\"last_chance_bar__inner__secs\">50</span> 🔥 Shop nieuwe artikelen"
+              "text": "Last chance!  | Valentine discount: <span class=\"last_chance_bar__inner__hours\">02</span><span>:</span><span class=\"last_chance_bar__inner__mins\">10</span><span>:</span><span class=\"last_chance_bar__inner__secs\">50</span> 🔥 Shop new items"
             }
           },
           "a597e295-512b-4a4e-af15-70afcbfe9d31": {
             "type": "scrollbar",
             "settings": {
-              "text": "Laatste kans!  | Valentijnskorting: <span class=\"last_chance_bar__inner__hours\">02</span><span>:</span><span class=\"last_chance_bar__inner__mins\">10</span><span>:</span><span class=\"last_chance_bar__inner__secs\">50</span> 🔥 Shop nieuwe artikelen"
+              "text": "Last chance!  | Valentine discount: <span class=\"last_chance_bar__inner__hours\">02</span><span>:</span><span class=\"last_chance_bar__inner__mins\">10</span><span>:</span><span class=\"last_chance_bar__inner__secs\">50</span> 🔥 Shop new items"
             }
           },
           "06929d5c-beb0-4cdf-a9de-21790eb714cc": {
             "type": "scrollbar",
             "settings": {
-              "text": "Laatste kans!  | Valentijnskorting: <span class=\"last_chance_bar__inner__hours\">02</span><span>:</span><span class=\"last_chance_bar__inner__mins\">10</span><span>:</span><span class=\"last_chance_bar__inner__secs\">50</span> 🔥 Shop nieuwe artikelen"
+              "text": "Last chance!  | Valentine discount: <span class=\"last_chance_bar__inner__hours\">02</span><span>:</span><span class=\"last_chance_bar__inner__mins\">10</span><span>:</span><span class=\"last_chance_bar__inner__secs\">50</span> 🔥 Shop new items"
             }
           },
           "029ade2b-3dbc-46f2-adc1-43d93e358536": {
             "type": "scrollbar",
             "settings": {
-              "text": "Laatste kans!  | Valentijnskorting: <span class=\"last_chance_bar__inner__hours\">02</span><span>:</span><span class=\"last_chance_bar__inner__mins\">10</span><span>:</span><span class=\"last_chance_bar__inner__secs\">50</span> 🔥 Shop nieuwe artikelen"
+              "text": "Last chance!  | Valentine discount: <span class=\"last_chance_bar__inner__hours\">02</span><span>:</span><span class=\"last_chance_bar__inner__mins\">10</span><span>:</span><span class=\"last_chance_bar__inner__secs\">50</span> 🔥 Shop new items"
             }
           }
         },
@@ -1443,7 +1443,7 @@
             "type": "accordian",
             "settings": {
               "question": "Hoe lang duurt het om mijn bestelling te ontvangen?",
-              "answer": "<p>De bestelling wordt meestal binnen 1-2 dagen verwerkt. De levertijd bedraagt 3 tot 5 werkdagen.</p>"
+              "answer": "<p>Orders are usually processed within 1-2 days. Delivery takes 3 to 5 business days.</p>"
             }
           },
           "db3d76a0-ec7e-46f2-9c30-94a30775de6f": {
@@ -1695,7 +1695,7 @@
             "type": "accordian",
             "settings": {
               "question": "Hoe lang duurt het voordat ik mijn bestelling ontvang?",
-              "answer": "<p>De bestelling wordt doorgaans binnen 1-2 dagen verwerkt. De levertijd bedraagt 3 tot 5 werkdagen.</p>"
+              "answer": "<p>Orders are usually processed within 1-2 days. Delivery takes 3 to 5 business days.</p>"
             }
           },
           "a30cfe2d-fe87-4f20-8a0f-d5942a10efcd": {
@@ -1886,10 +1886,10 @@
           "tab_page_2_handle": "",
           "reviews_enabled": false,
           "featured_image_size": "large",
-          "cart-button-text": "Toevoegen Aan Winkelwagentje",
+          "cart-button-text": "Add to Cart",
           "cart-button-before-text": "ADDING TO CART...",
           "cart-button-after-text": "ADDED TO CART!",
-          "ugc-section-heading": "ERVAAR DE GLOW",
+          "ugc-section-heading": "EXPERIENCE THE GLOW",
           "stock-text": "Lage voorraad! Klaar voor verzending",
           "klarna-payment-text": "Betaal pas over 30 dagen met",
           "money-back-heading": "Money Back Gurantee",
@@ -1906,7 +1906,7 @@
             "type": "accordian",
             "settings": {
               "question": "Hoe lang zijn de verzendtijden?",
-              "answer": "<b>Europa:</b> 2-4 werkdagen<br>\n<br>\n<b>Rest van de wereld:</b> 3-5 werkdagen<br>\n<br>\n<b>Gratis verzending voor bestellingen boven de $60 (wereldwijd).</b><br>\n<br>\nAlle bestellingen worden verzonden met DHL of UPS. Een Track &amp; Trace wordt per e-mail verzonden nadat de bestelling is verwerkt."
+              "answer": "<b>Europa:</b> 2-4 business days<br>\n<br>\n<b>Rest of the world:</b> 3-5 business days<br>\n<br>\n<b>Free shipping on orders over $60 (worldwide).</b><br>\n<br>\nAll orders ship via DHL or UPS. A tracking link is emailed once your order is processed."
             }
           },
           "accordian_74jdpF": {
@@ -1974,7 +1974,7 @@
             "type": "accordian",
             "settings": {
               "question": "Hoe lang zijn de verzendtijden?",
-              "answer": "<b>Europa:</b> 2-4 werkdagen<br>\n<br>\n<b>Rest van de wereld:</b> 3-5 werkdagen<br>\n<br>\n<b>Gratis verzending voor bestellingen boven de $60 (wereldwijd).</b><br>\n<br>\nAlle bestellingen worden verzonden met DHL of UPS. Een Track &amp; Trace wordt per e-mail verzonden nadat de bestelling is verwerkt."
+              "answer": "<b>Europa:</b> 2-4 business days<br>\n<br>\n<b>Rest of the world:</b> 3-5 business days<br>\n<br>\n<b>Free shipping on orders over $60 (worldwide).</b><br>\n<br>\nAll orders ship via DHL or UPS. A tracking link is emailed once your order is processed."
             }
           },
           "accordian_3PKTcb": {
@@ -2034,7 +2034,7 @@
             "type": "accordian",
             "settings": {
               "question": "Wat zijn de levertijden?",
-              "answer": "Europa: 2-4 werkdagen\n\nRest van de wereld: 3-6 werkdagen\n\nGeniet van gratis verzending wanneer je meer dan EU€60 uitgeeft\n\nAlle bestellingen worden verzonden met DHL of UPS. Een Track &amp; Trace wordt per e-mail verzonden nadat de bestelling is verwerkt."
+              "answer": "Europa: 2-4 business days\n\nRest of the world: 3-6 business days\n\nEnjoy free shipping when you spend over €60\n\nAll orders ship via DHL or UPS. A tracking link is emailed once your order is processed."
             }
           },
           "accordian_AH8czU": {
@@ -2183,7 +2183,7 @@
           "cart-button-text": "ADD TO CART",
           "cart-button-before-text": "ADDING TO CART...",
           "cart-button-after-text": "ADDED TO CART!",
-          "ugc-section-heading": "ERVAAR DE GLOW",
+          "ugc-section-heading": "EXPERIENCE THE GLOW",
           "stock-text": "Lage voorraad! Klaar voor verzending",
           "klarna-payment-text": "Betaal pas over 30 dagen met",
           "money-back-heading": "Money Back Gurantee",
@@ -2245,7 +2245,7 @@
           "step_HDxCVc": {
             "type": "step",
             "settings": {
-              "text": "Step 1:\nVoeg minimaal 2 voetballen toe aan je winkelwagen – mix en match je favorieten!"
+              "text": "Step 1:\nAdd at least 2 footballs to your cart – mix and match your favorites!"
             }
           },
           "step_4wWJAW": {
