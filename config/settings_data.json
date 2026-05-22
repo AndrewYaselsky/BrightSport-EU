@@ -75,54 +75,54 @@
     "social_snapchat": "",
     "social_fancy": "",
     "c_product1": "the-bright-air-pump",
-    "ptitle_1": "THE BRIGHT™ Ballspomp",
-    "subtitle": "Gemakkelijk te gebruiken & Handig mee te nemen",
+    "ptitle_1": "THE BRIGHT™ Ball Pump",
+    "subtitle": "Easy to use & convenient to carry",
     "image1": "shopify://shop_images/BRIGHT_POMPJE_WITTE_ACHTERGROND-removebg.png",
     "c_product2": "bright-grip-socks",
     "ptitle_2": "BRIGHT™ Grip Socks",
-    "subtitle2": "Versnel je beweging",
+    "subtitle2": "Speed up your movement",
     "image2": "shopify://shop_images/image_2024-01-12_175631895.png",
     "c_product3": "bright-arm-sleeves",
     "ptitle_3": "BRIGHT™ Arm Sleeves",
-    "subtitle3": "Geef Je Stijl Glans",
+    "subtitle3": "Give Your Style Shine",
     "image3": "shopify://shop_images/image_2023-07-12_1306572401_1.webp",
     "c_product4": "bright-night-vision-glasses",
     "ptitle_4": "BRIGHT™ Night Vision Glasses",
-    "subtitle4": "Laat de Nacht je Niet Stoppen",
+    "subtitle4": "Don't Let the Night Stop You",
     "image4": "shopify://shop_images/glasses.webp",
     "c_product5": "bright-sport-golf-balls",
-    "ptitle_5": "BRIGHT™ Golfballen",
-    "subtitle5": "Helder Schijnen, s' nachts Golfen",
+    "ptitle_5": "BRIGHT™ Golf balls",
+    "subtitle5": "Shine Bright, Golf at Night",
     "image5": "shopify://shop_images/Image-1.webp",
     "c_product6": "bright-basketball",
-    "ptitle_6": "BRIGHT™ Basketball",
-    "subtitle6": "50% KORTING OP 1 - 55% KORTING OP 2 - 60% KORTING OP 3+ | MIX EN MATCH DE BALLEN.",
+    "ptitle_6": "BRIGHT™ Basketballl",
+    "subtitle6": "50% OFF 1 - 55% OFF 2 - 60% OFF 3+ | MIX AND MATCH THE BALLS.",
     "image6": "shopify://shop_images/hero-ball-2c_e6c2d23c-8c62-4010-934a-a7dc417d03fd.png",
     "c_product7": "american-football",
     "ptitle_7": "BRIGHT™ American Football",
-    "subtitle7": "50% KORTING OP 1 - 55% KORTING OP 2 - 60% KORTING OP 3+ | MIX EN MATCH DE BALLEN.",
+    "subtitle7": "50% OFF 1 - 55% OFF 2 - 60% OFF 3+ | MIX AND MATCH THE BALLS.",
     "image7": "shopify://shop_images/image_2024-01-12_181057947.png",
     "c_product8": "bright-football",
     "ptitle_8": "BRIGHT™ Football",
-    "subtitle8": "50% KORTING OP 1 - 55% KORTING OP 2 - 60% KORTING OP 3+ | MIX EN MATCH DE BALLEN.",
+    "subtitle8": "50% OFF 1 - 55% OFF 2 - 60% OFF 3+ | MIX AND MATCH THE BALLS.",
     "image8": "shopify://shop_images/hero-ball-1c_1.png",
     "c_product9": "the-bright-volleyball",
-    "ptitle_9": "BRIGHT™ Volleyball",
-    "subtitle9": "50% KORTING OP 1 - 55% KORTING OP 2 - 60% KORTING OP 3+ | MIX EN MATCH DE BALLEN.",
+    "ptitle_9": "BRIGHT™ Volleyballl",
+    "subtitle9": "50% OFF 1 - 55% OFF 2 - 60% OFF 3+ | MIX AND MATCH THE BALLS.",
     "image9": "shopify://shop_images/ball_color1_438d450a-ec2c-43c4-bcae-9b54c5bddf1c.png",
     "c_product10": "bright-rugby-football",
     "ptitle_10": "BRIGHT™ Rugby",
-    "subtitle10": "50% KORTING OP 1 - 55% KORTING OP 2 - 60% KORTING OP 3+ | MIX EN MATCH DE BALLEN.",
+    "subtitle10": "50% OFF 1 - 55% OFF 2 - 60% OFF 3+ | MIX AND MATCH THE BALLS.",
     "image10": "shopify://shop_images/image_2024-01-12_180847072.png",
     "c_product11": "bright™-glow-in-the-dark-basketball-net",
-    "ptitle_11": "BRIGHT™ Glow in the dark Basketball Net",
-    "subtitle11": "Laat het spel 's nachts doorgaan",
-    "image11": "shopify://shop_images/Cart-drawer-Basketballnet2.png",
+    "ptitle_11": "BRIGHT™ Glow in the dark Basketballl Net",
+    "subtitle11": "Keep the game going at night",
+    "image11": "shopify://shop_images/Cart-drawer-Basketballlnet2.png",
     "favicon": "shopify://shop_images/Artboard_21transparent.png",
     "favicon_aa": "about_main",
     "cart_upsell_product": "giftbagandcard",
-    "cart_upsell_title": "Ja, Giftwrap mijn bestelling",
-    "cart_upsell_description": "Verras je dierbaren met het perfecte cadeau!",
+    "cart_upsell_title": "Yes, gift-wrap my order",
+    "cart_upsell_description": "Surprise your loved ones with the perfect gift!",
     "checkout_header_image": "",
     "checkout_logo_image": "shopify://shop_images/groter-removebg-preview.png",
     "checkout_logo_position": "center",
@@ -193,7 +193,7 @@
         "disabled": true,
         "settings": {
           "subheading": "",
-          "title": "ONTDEK DE MEEST UNIEKE VOETBAL OP DE MARKT",
+          "title": "DISCOVER THE MOST UNIQUE FOOTBALL ON THE MARKET",
           "show_mobile_product_info": true
         }
       },
@@ -209,8 +209,8 @@
           "footer-0": {
             "type": "text",
             "settings": {
-              "title": "over ons",
-              "content": "<p>Het team van BRIGHT doet zijn uiterste best om de hoogst mogelijke kwaliteit te leveren en de beste ervaring te creëren voor jou. Ons doel is dan ook om deze nieuwe innoverende bal een plek in de markt te geven.  We willen dat jij hier deel uit van kan maken zonder enig risico, daarom bieden wij een 30-dagen geld terug garantie!</p>",
+              "title": "About us",
+              "content": "<p>The BRIGHT team does its utmost to deliver the highest possible quality and create the best experience for you. Our goal is to give this innovative ball a place in the market. We want you to be part of it without any risk—that is why we offer a 30-day money-back guarantee!</p>",
               "show_social_media": true
             }
           },
@@ -259,18 +259,18 @@
           "tab_page_2_handle": "",
           "reviews_enabled": false,
           "featured_image_size": "large",
-          "cart-button-text": "VOEG TOE AAN WINKELKAR",
-          "cart-button-before-text": "TOEVOEGEN AAN WINKELWAGEN...",
-          "cart-button-after-text": "TOEGEVOEGD AAN WINKELWAGEN!",
+          "cart-button-text": "ADD TO CART",
+          "cart-button-before-text": "ADDING TO CART...",
+          "cart-button-after-text": "ADDED TO CART!",
           "ugc-section-heading": "EXPERIENCE THE GLOW",
-          "stock-text": "<span> Lage voorraad!</span> Klaar voor verzending",
-          "klarna-payment-text": "Betaal pas over 30 dagen met",
-          "money-back-heading": "Geld terug garantie",
-          "money-back-top-text": "<p>BRIGHT doet haar uiterste best om de meest innovatieve bal op de markt te brengen en we willen ervoor zorgen dat jij daar zonder enig risico deel van uit kunt maken. Hier is hoe:</p>",
+          "stock-text": "<span> Low stock!</span> Ready to ship",
+          "klarna-payment-text": "Pay in 30 days with",
+          "money-back-heading": "Money-back guarantee",
+          "money-back-top-text": "<p>BRIGHT works hard to bring the most innovative ball to market, and we want you to be part of it without any risk. Here is how:</p>",
           "money-back-image": "shopify://shop_images/30-DAY_MONEY_BACK_GUARANTEE_Portuguese_copy.jpg",
-          "money-back-bottom-text": "<p>We bieden 24/7 ticket- en e-mailondersteuning, neem gerust contact op met support@brightsport.com. We staan klaar om je te helpen :)</p>",
-          "what-included-heading": "Wat is inbegrepen",
-          "what-included-text": "<p>BRIGHT doet haar uiterste best om de meest innovatieve bal op de markt te brengen en wij willen ervoor zorgen dat jij daar zonder enig risico deel van kunt uitmaken. Dit is hoe:</p>"
+          "money-back-bottom-text": "<p>We offer 24/7 ticket and email support—contact support@brightsport.com anytime. We are here to help :)</p>",
+          "what-included-heading": "What's included",
+          "what-included-text": "<p>BRIGHT works hard to bring the most innovative ball to market, and we want you to be part of it without any risk. Here is how:</p>"
         }
       },
       "blog-template": {
@@ -297,7 +297,7 @@
             "settings": {
               "icon": "<svg width=\"30\" height=\"31\" viewbox=\"0 0 30 31\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<mask id=\"mask0_99_529\" style=\"mask-type:alpha\" maskunits=\"userSpaceOnUse\" x=\"0\" y=\"0\" width=\"30\" height=\"31\">\n<rect y=\"0.274292\" width=\"30\" height=\"30\" fill=\"#D9D9D9\"></rect>\n</mask>\n<g mask=\"url(#mask0_99_529)\">\n<path d=\"M15 19.914C14.4375 19.914 14.0625 19.539 14.0625 18.9765C14.1562 17.7578 14.8125 16.7265 15.75 15.9765C16.3125 15.414 16.875 14.8515 16.875 14.289C16.875 13.2578 16.0312 12.414 15 12.414C13.9688 12.414 13.125 13.2578 13.125 14.289C13.125 14.8515 12.75 15.2265 12.1875 15.2265C11.625 15.2265 11.25 14.8515 11.25 14.289C11.25 12.2265 12.9375 10.539 15 10.539C17.0625 10.539 18.75 12.2265 18.75 14.289C18.6562 15.5078 18 16.539 17.0625 17.289C16.5 17.8515 15.9375 18.414 15.9375 18.9765C15.9375 19.539 15.5625 19.914 15 19.914Z\" fill=\"white\" fill-opacity=\"0.6\"></path>\n<path d=\"M15 22.7265C14.4822 22.7265 14.0625 22.3068 14.0625 21.789C14.0625 21.2712 14.4822 20.8515 15 20.8515C15.5178 20.8515 15.9375 21.2712 15.9375 21.789C15.9375 22.3068 15.5178 22.7265 15 22.7265Z\" fill=\"white\" fill-opacity=\"0.6\"></path>\n<path d=\"M4.12498 28.1641C3.84373 27.9766 3.74998 27.6016 3.74998 27.2266L4.59373 22.4453C1.12498 16.7266 2.99998 9.22658 8.71873 5.85158C14.4375 2.47658 21.9375 4.25783 25.4062 9.97658C28.875 15.6953 27 23.1953 21.2812 26.6641C17.5312 28.9141 12.75 29.0078 8.99998 26.7578L5.15623 28.3516C4.68748 28.4453 4.40623 28.3516 4.12498 28.1641ZM8.99998 24.7891C9.18748 24.7891 9.37498 24.8828 9.46873 24.9766C14.3437 28.0703 20.7187 26.5703 23.7187 21.7891C26.7187 17.0078 25.3125 10.5391 20.5312 7.53908C15.75 4.53908 9.37498 5.75783 6.28123 10.6328C4.12498 14.0078 4.12498 18.4141 6.28123 21.7891C6.37498 21.9766 6.46873 22.2578 6.37498 22.4453L5.81248 25.9141L8.53123 24.7891H8.99998Z\" fill=\"white\" fill-opacity=\"0.6\"></path>\n</g>\n</svg>",
               "btn_url": "shopify://pages/contact",
-              "btn_text": "Helpcentrum"
+              "btn_text": "Help center"
             }
           },
           "f09f08fa-d0d3-4670-9394-bfb89ef8dae1": {
@@ -305,7 +305,7 @@
             "settings": {
               "icon": "<svg width=\"30\" height=\"31\" viewbox=\"0 0 30 31\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<mask id=\"mask0_99_538\" style=\"mask-type:alpha\" maskunits=\"userSpaceOnUse\" x=\"0\" y=\"0\" width=\"30\" height=\"31\">\n<rect y=\"0.274292\" width=\"30\" height=\"30\" fill=\"#D9D9D9\"></rect>\n</mask>\n<g mask=\"url(#mask0_99_538)\">\n<path d=\"M25.875 28.1641C26.1563 27.9766 26.25 27.6016 26.25 27.2266L25.4063 22.4453C28.875 16.7266 27 9.22658 21.2813 5.85158C15.5625 2.47658 8.06252 4.25783 4.59377 9.97658C1.12502 15.6953 3.00002 23.1953 8.71877 26.6641C12.4688 28.9141 17.25 29.0078 21 26.7578L24.8438 28.3516C25.3125 28.4453 25.5938 28.3516 25.875 28.1641ZM21 24.7891C20.8125 24.7891 20.625 24.8828 20.5313 24.9766C15.6563 28.0703 9.28127 26.5703 6.28127 21.7891C3.28127 17.0078 4.68752 10.5391 9.46877 7.53908C14.25 4.53908 20.625 5.75783 23.7188 10.6328C25.875 14.0078 25.875 18.4141 23.7188 21.7891C23.625 21.9766 23.5313 22.2578 23.625 22.4453L24.1875 25.9141L21.4688 24.7891H21Z\" fill=\"white\" fill-opacity=\"0.6\"></path>\n<path d=\"M10.9453 17.7543C10.638 17.7543 10.3724 17.645 10.1484 17.4262C9.92969 17.2023 9.82031 16.9366 9.82031 16.6293C9.82031 16.3168 9.92969 16.0512 10.1484 15.8325C10.3724 15.6137 10.638 15.5043 10.9453 15.5043C11.2578 15.5043 11.5234 15.6137 11.7422 15.8325C11.9609 16.0512 12.0703 16.3168 12.0703 16.6293C12.0703 16.8325 12.0182 17.02 11.9141 17.1918C11.8151 17.3637 11.6797 17.5017 11.5078 17.6059C11.3411 17.7049 11.1536 17.7543 10.9453 17.7543ZM14.8735 17.7543C14.5662 17.7543 14.3006 17.645 14.0766 17.4262C13.8579 17.2023 13.7485 16.9366 13.7485 16.6293C13.7485 16.3168 13.8579 16.0512 14.0766 15.8325C14.3006 15.6137 14.5662 15.5043 14.8735 15.5043C15.186 15.5043 15.4516 15.6137 15.6704 15.8325C15.8891 16.0512 15.9985 16.3168 15.9985 16.6293C15.9985 16.8325 15.9464 17.02 15.8423 17.1918C15.7433 17.3637 15.6079 17.5017 15.436 17.6059C15.2693 17.7049 15.0818 17.7543 14.8735 17.7543ZM18.8017 17.7543C18.4944 17.7543 18.2288 17.645 18.0048 17.4262C17.7861 17.2023 17.6767 16.9366 17.6767 16.6293C17.6767 16.3168 17.7861 16.0512 18.0048 15.8325C18.2288 15.6137 18.4944 15.5043 18.8017 15.5043C19.1142 15.5043 19.3798 15.6137 19.5986 15.8325C19.8173 16.0512 19.9267 16.3168 19.9267 16.6293C19.9267 16.8325 19.8746 17.02 19.7705 17.1918C19.6715 17.3637 19.5361 17.5017 19.3642 17.6059C19.1976 17.7049 19.0101 17.7543 18.8017 17.7543Z\" fill=\"white\" fill-opacity=\"0.6\"></path>\n</g>\n</svg>",
               "btn_url": "shopify://pages/about-us",
-              "btn_text": "Over ons"
+              "btn_text": "About us"
             }
           },
           "f3da7bb3-8545-4954-a5ca-bdf8e30dcb6c": {
@@ -320,18 +320,18 @@
           "9ff02aef-ac5b-487c-a9ab-84bf163b7e1a": {
             "type": "slider",
             "settings": {
-              "img": "shopify://shop_images/Basketball_d30d183b-1233-4630-be43-1f6dda3c7079.png",
+              "img": "shopify://shop_images/Basketballl_d30d183b-1233-4630-be43-1f6dda3c7079.png",
               "url": "shopify://products/bright-basketball",
-              "title": "Basketball",
+              "title": "Basketballl",
               "titleurl": "shopify://products/bright-basketball"
             }
           },
           "d07b2c1d-23e4-49a0-bec3-d8ee84241179": {
             "type": "slider",
             "settings": {
-              "img": "shopify://shop_images/Volleyball_e1804ae9-30b2-4e98-9400-9d9551aa457c.png",
+              "img": "shopify://shop_images/Volleyballl_e1804ae9-30b2-4e98-9400-9d9551aa457c.png",
               "url": "shopify://products/the-bright-volleyball",
-              "title": "Volleyball",
+              "title": "Volleyballl",
               "titleurl": "shopify://products/the-bright-volleyball"
             }
           },
@@ -358,7 +358,7 @@
             "settings": {
               "img": "shopify://shop_images/img_eaecfade-2fe3-45ae-b07e-ced51dc6215e.png",
               "url": "shopify://products/bright-sport-golf-balls",
-              "title": "Golfballen",
+              "title": "Golf balls",
               "titleurl": "shopify://products/bright-sport-golf-balls"
             }
           },
@@ -375,9 +375,9 @@
             "type": "slider",
             "disabled": true,
             "settings": {
-              "img": "shopify://shop_images/Volleyball_e1804ae9-30b2-4e98-9400-9d9551aa457c.png",
+              "img": "shopify://shop_images/Volleyballl_e1804ae9-30b2-4e98-9400-9d9551aa457c.png",
               "url": "shopify://products/the-bright-volleyball",
-              "title": "Volleyball",
+              "title": "Volleyballl",
               "titleurl": "shopify://products/the-bright-volleyball"
             }
           },
@@ -385,9 +385,9 @@
             "type": "slider",
             "disabled": true,
             "settings": {
-              "img": "shopify://shop_images/Basketball_d30d183b-1233-4630-be43-1f6dda3c7079.png",
+              "img": "shopify://shop_images/Basketballl_d30d183b-1233-4630-be43-1f6dda3c7079.png",
               "url": "shopify://products/bright-basketball",
-              "title": "Basketball",
+              "title": "Basketballl",
               "titleurl": "shopify://products/bright-basketball"
             }
           },
@@ -421,8 +421,8 @@
           "secondary_menu": "main-menu",
           "show_social_media": true,
           "img": "shopify://shop_images/image_2026-03-26_000237274.png",
-          "title": "tot <span>60% korting</span>",
-          "titleinner": "🐰 Pasen",
+          "title": "up to <span>60% off</span>",
+          "titleinner": "🐰 Easter",
           "sdasle": "SALE"
         }
       },
@@ -441,7 +441,7 @@
         ],
         "settings": {
           "show_section": true,
-          "title": "Maak je kit compleet",
+          "title": "Complete your kit",
           "show_product_info": true,
           "show_color_swatch": false
         }
@@ -504,7 +504,7 @@
           "show_only_for_visitors": true,
           "show_only_once": true,
           "title": "BLACKFRIDAY",
-          "content": "<p>ALLEEN VANDAAG 20% KORTING MET CODE: 'BLACKFRIDAY'</p>",
+          "content": "<p>TODAY ONLY 20% OFF WITH CODE: 'BLACKFRIDAY'</p>",
           "show_newsletter": false,
           "apparition_delay": 5
         }
@@ -515,39 +515,39 @@
           "0df3c430-f3e1-4626-93e5-594e15b9df6f": {
             "type": "mega_menu",
             "settings": {
-              "navigation_mega_menu": "Producten",
+              "navigation_mega_menu": "Products",
               "megamenu_main_title": "Balls",
               "see_all_btn_url": "/collections/all#our-balls",
               "see_all_btn": "View all",
               "megamenu_image1": "shopify://shop_images/img_1.png",
-              "sub_title1": "Voetbal",
+              "sub_title1": "Football",
               "product_url1": "shopify://products/bright-football",
               "label_checkbox1": false,
               "megamenu_image2": "shopify://shop_images/Rugby.png",
               "sub_title2": "Rugby",
               "product_url2": "shopify://products/bright-rugby-football",
               "label_checkbox2": false,
-              "megamenu_image3": "shopify://shop_images/Basketball.png",
-              "sub_title3": "Basketbal",
+              "megamenu_image3": "shopify://shop_images/Basketballl.png",
+              "sub_title3": "Basketball",
               "product_url3": "shopify://products/bright-basketball",
               "label_checkbox3": false,
               "megamenu_image4": "shopify://shop_images/image_2023-10-18_143842894.png",
               "sub_title4": "US Football",
               "product_url4": "shopify://products/american-football",
               "label_checkbox4": false,
-              "megamenu_image5": "shopify://shop_images/Volleyball.png",
-              "sub_title5": "Volleybal",
+              "megamenu_image5": "shopify://shop_images/Volleyballl.png",
+              "sub_title5": "Volleyball",
               "product_url5": "shopify://products/the-bright-volleyball",
               "label_checkbox5": false,
               "megamenu_image6": "shopify://shop_images/Golf.png",
-              "sub_title6": "Golfballen",
+              "sub_title6": "Golf balls",
               "product_url6": "shopify://products/bright-sport-golf-balls",
               "label_checkbox6": false,
-              "megamenu_main_title2": "Accessoires",
+              "megamenu_main_title2": "Accessories",
               "see_all_btn_url2": "/collections/all#accessories",
               "see_all_btn2": "View all",
               "megamenu_right_image1": "shopify://shop_images/image_2024-01-12_211111746.png",
-              "right_sub_title1": "Lichtgevend net",
+              "right_sub_title1": "Glow-in-the-dark net",
               "right_product_url1": "shopify://products/bright™-glow-in-the-dark-basketball-net",
               "right_label_checkbox1": false,
               "megamenu_right_image2": "shopify://shop_images/Vision-glasses.png",
@@ -555,7 +555,7 @@
               "right_product_url2": "shopify://products/bright-night-vision-glasses",
               "right_label_checkbox2": false,
               "megamenu_right_image3": "shopify://shop_images/image_32.png",
-              "right_sub_title3": "Grip Sokken",
+              "right_sub_title3": "Grip Socks",
               "right_product_url3": "shopify://products/bright-grip-socks",
               "right_label_checkbox3": false,
               "megamenu_right_image4": "shopify://shop_images/Airpump.png",
@@ -567,7 +567,7 @@
               "right_product_url5": "shopify://products/mystery-gift",
               "right_label_checkbox5": false,
               "megamenu_right_image6": "shopify://shop_images/Arm-sleeves.png",
-              "right_sub_title6": "Arm Mouwen",
+              "right_sub_title6": "Arm Sleeves",
               "right_product_url6": "shopify://products/bright-arm-sleeves",
               "right_label_checkbox6": false
             }
@@ -587,16 +587,16 @@
           "transparent_text_color": "#ffffff",
           "transparent_logo": "shopify://shop_images/witte_logoo-removebg-preview.png",
           "btn_url": "shopify://collections",
-          "btn_text": "BUNDEL EN BESPAAR",
+          "btn_text": "BUNDLE AND SAVE",
           "header_top_icon": "",
           "header_top_icon_url": "/account/login",
           "header_top_icon_text": "",
           "header_top_icon2": "<svg width=\"30\" height=\"31\" viewbox=\"0 0 30 31\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<mask id=\"mask0_144_941\" style=\"mask-type:alpha\" maskunits=\"userSpaceOnUse\" x=\"0\" y=\"0\" width=\"30\" height=\"31\">\n<rect y=\"0.637207\" width=\"30\" height=\"30\" fill=\"#D9D9D9\"></rect>\n</mask>\n<g mask=\"url(#mask0_144_941)\">\n<path d=\"M15 20.2769C14.4375 20.2769 14.0625 19.9019 14.0625 19.3394C14.1562 18.1207 14.8125 17.0894 15.75 16.3394C16.3125 15.7769 16.875 15.2144 16.875 14.6519C16.875 13.6207 16.0312 12.7769 15 12.7769C13.9688 12.7769 13.125 13.6207 13.125 14.6519C13.125 15.2144 12.75 15.5894 12.1875 15.5894C11.625 15.5894 11.25 15.2144 11.25 14.6519C11.25 12.5894 12.9375 10.9019 15 10.9019C17.0625 10.9019 18.75 12.5894 18.75 14.6519C18.6562 15.8707 18 16.9019 17.0625 17.6519C16.5 18.2144 15.9375 18.7769 15.9375 19.3394C15.9375 19.9019 15.5625 20.2769 15 20.2769Z\" fill=\"white\" fill-opacity=\"0.3\"></path>\n<path d=\"M15 23.0894C14.4822 23.0894 14.0625 22.6697 14.0625 22.1519C14.0625 21.6341 14.4822 21.2144 15 21.2144C15.5178 21.2144 15.9375 21.6341 15.9375 22.1519C15.9375 22.6697 15.5178 23.0894 15 23.0894Z\" fill=\"white\" fill-opacity=\"0.3\"></path>\n<path d=\"M4.12504 28.527C3.84379 28.3395 3.75004 27.9645 3.75004 27.5895L4.59379 22.8082C1.12504 17.0895 3.00004 9.5895 8.71879 6.2145C14.4375 2.8395 21.9375 4.62075 25.4063 10.3395C28.875 16.0582 27 23.5582 21.2813 27.027C17.5313 29.277 12.75 29.3707 9.00004 27.1207L5.15629 28.7145C4.68754 28.8082 4.40629 28.7145 4.12504 28.527ZM9.00004 25.152C9.18754 25.152 9.37504 25.2457 9.46879 25.3395C14.3438 28.4332 20.7188 26.9332 23.7188 22.152C26.7188 17.3707 25.3125 10.902 20.5313 7.902C15.75 4.902 9.37504 6.12075 6.28129 10.9957C4.12504 14.3707 4.12504 18.777 6.28129 22.152C6.37504 22.3395 6.46879 22.6207 6.37504 22.8082L5.81254 26.277L8.53129 25.152H9.00004Z\" fill=\"white\" fill-opacity=\"0.3\"></path>\n</g>\n</svg>",
           "header_top_icon_url2": "shopify://pages/contact-us",
-          "header_top_icon_text2": "Helpcentrum",
+          "header_top_icon_text2": "Help center",
           "header_top_icon3": "<svg width=\"26\" height=\"29\" viewbox=\"0 0 26 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M23.875 28.527C24.1563 28.3395 24.25 27.9645 24.25 27.5895L23.4063 22.8082C26.875 17.0895 25 9.5895 19.2813 6.2145C13.5625 2.8395 6.06255 4.62075 2.5938 10.3395C-0.874952 16.0582 1.00005 23.5582 6.7188 27.027C10.4688 29.277 15.25 29.3707 19 27.1207L22.8438 28.7145C23.3125 28.8082 23.5938 28.7145 23.875 28.527ZM19 25.152C18.8125 25.152 18.625 25.2457 18.5313 25.3395C13.6563 28.4332 7.2813 26.9332 4.2813 22.152C1.2813 17.3707 2.68755 10.902 7.4688 7.902C12.25 4.902 18.625 6.12075 21.7188 10.9957C23.875 14.3707 23.875 18.777 21.7188 22.152C21.625 22.3395 21.5313 22.6207 21.625 22.8082L22.1875 26.277L19.4688 25.152H19Z\" fill=\"white\" fill-opacity=\"0.3\"></path>\n<path d=\"M8.94531 18.1172C8.63802 18.1172 8.3724 18.0079 8.14844 17.7891C7.92969 17.5652 7.82031 17.2995 7.82031 16.9922C7.82031 16.6797 7.92969 16.4141 8.14844 16.1954C8.3724 15.9766 8.63802 15.8672 8.94531 15.8672C9.25781 15.8672 9.52344 15.9766 9.74219 16.1954C9.96094 16.4141 10.0703 16.6797 10.0703 16.9922C10.0703 17.1954 10.0182 17.3829 9.91406 17.5547C9.8151 17.7266 9.67969 17.8646 9.50781 17.9688C9.34115 18.0678 9.15365 18.1172 8.94531 18.1172ZM12.8735 18.1172C12.5662 18.1172 12.3006 18.0079 12.0766 17.7891C11.8579 17.5652 11.7485 17.2995 11.7485 16.9922C11.7485 16.6797 11.8579 16.4141 12.0766 16.1954C12.3006 15.9766 12.5662 15.8672 12.8735 15.8672C13.186 15.8672 13.4516 15.9766 13.6704 16.1954C13.8891 16.4141 13.9985 16.6797 13.9985 16.9922C13.9985 17.1954 13.9464 17.3829 13.8423 17.5547C13.7433 17.7266 13.6079 17.8646 13.436 17.9688C13.2693 18.0678 13.0818 18.1172 12.8735 18.1172ZM16.8017 18.1172C16.4944 18.1172 16.2288 18.0079 16.0048 17.7891C15.7861 17.5652 15.6767 17.2995 15.6767 16.9922C15.6767 16.6797 15.7861 16.4141 16.0048 16.1954C16.2288 15.9766 16.4944 15.8672 16.8017 15.8672C17.1142 15.8672 17.3798 15.9766 17.5986 16.1954C17.8173 16.4141 17.9267 16.6797 17.9267 16.9922C17.9267 17.1954 17.8746 17.3829 17.7705 17.5547C17.6715 17.7266 17.5361 17.8646 17.3642 17.9688C17.1976 18.0678 17.0101 18.1172 16.8017 18.1172Z\" fill=\"white\" fill-opacity=\"0.3\"></path>\n</svg>",
           "header_top_icon_url3": "shopify://pages/dev-about-us",
-          "header_top_icon_text3": "Over ons"
+          "header_top_icon_text3": "About us"
         }
       },
       "slideshow": {
@@ -611,7 +611,7 @@
               "content_position": "bottomCenter",
               "subheading": "",
               "title": "",
-              "button_1_text": "SHOP DE LENTE SALE",
+              "button_1_text": "SHOP THE SPRING SALE",
               "button_1_link": "shopify://collections/all",
               "button_2_text": "",
               "button_2_link": ""
@@ -722,43 +722,43 @@
           "0a11589f-1946-4e07-8172-774ab8cd29fc": {
             "type": "faq",
             "settings": {
-              "faq-question": "Wat zijn de levertijden?",
+              "faq-question": "What are the delivery times?",
               "faq-answer": "<p><strong>Netherlands/Belgium: </strong>1-3 business days</p><p><strong>Rest of Europe:</strong> 2-4 business days</p><p><strong>Rest of the World:</strong> 3-5 business days</p><p><strong>Free shipping on orders from €60</strong></p><p>All orders ship via DHL and PostNL. A tracking link is emailed once your order is processed.</p>"
             }
           },
           "1de18365-b29b-4f77-aadb-181b32ab754c": {
             "type": "faq",
             "settings": {
-              "faq-question": "Hoe werkt het?",
-              "faq-answer": "<p>Onze viral BRIGHT® bal gebruikt lichtgevende technologie, waarmee deze licht gaat geven zodra die in contact komt met licht. Denk daarbij aan het licht van de camera op je mobiele telefoon. Zodra je dus een foto of video maakt, lijkt het alsof de bal licht geeft op je scherm. Het is een super gaaf effect die zeker ieders aandacht gaat opeisen! </p>"
+              "faq-question": "How does it work?",
+              "faq-answer": "<p>Our viral BRIGHT® ball uses glow technology—it lights up when it catches light. Think of your phone camera flash. When you take a photo or video, the ball appears to glow on your screen. It is a stunning effect that grabs everyone's attention!</p>"
             }
           },
           "c09e0eb9-1c47-4e29-ad39-dd733e5a65ad": {
             "type": "faq",
             "settings": {
-              "faq-question": "Kan de bal zowel binnen als buiten gebruikt worden?",
-              "faq-answer": "<p>Met de BRIGHT bal beleef je oneindig veel spelplezier, aangezien deze zowel indoor als outdoor gebruikt kan worden!</p><p>Het maakt daarom niet uit of je op het veld staat of thuis bezig bent, de BRIGHT bal past zich aan elke situatie aan. </p>"
+              "faq-question": "Can the ball be used both indoors and outdoors?",
+              "faq-answer": "<p>With the BRIGHT ball you get endless fun—it works both indoors and outdoors!</p><p>Whether you are on the pitch or playing at home, the BRIGHT ball adapts to every situation.</p>"
             }
           },
           "734b272b-6e93-4a35-ba3c-c1a3a1f6b486": {
             "type": "faq",
             "settings": {
-              "faq-question": "Kun je de bal schoonmaken?",
-              "faq-answer": "<p>Het behouden van het lichtgevende effect is efen fluitje van een cent! Veeg deze simpelweg af met een natte doek, waarbij je sterke schoonmaakmiddelen of het onderdompelen in water moet vermijden. </p>"
+              "faq-question": "Can you clean the ball?",
+              "faq-answer": "<p>Keeping the glow effect is easy! Simply wipe with a damp cloth—avoid harsh cleaners or submerging in water.</p>"
             }
           },
           "a885519e-b7aa-47dd-aca1-b71615ae2d00": {
             "type": "faq",
             "settings": {
-              "faq-question": "Wat als ik mijn product niet goed vind?",
-              "faq-answer": "<p>We zijn ervan overtuigd dat het product in de smaak valt! Is dat niet het geval, dan bieden we een 30-dagen geld terug garantie. Ben je niet 100% tevreden over je aankoop vanwege welke reden dan ook, stuur het simpelweg terug om je geld of een ander product te krijgen. </p>"
+              "faq-question": "What if I don't like my product?",
+              "faq-answer": "<p>We are confident you will love the product! If not, we offer a 30-day money-back guarantee. If you are not 100% satisfied for any reason, simply return it for a refund or exchange.</p>"
             }
           },
           "486b5803-2a63-4619-9d39-7443a7056a72": {
             "type": "faq",
             "settings": {
-              "faq-question": "Bieden jullie wereldwijde verzending aan?",
-              "faq-answer": "<p>Geniet van de BRIGHT® bal waar je ook bent! Onze wereldwijde verzending zorgt ervoor dat dit sensationele product je kan bereiken, waar je ook woont. Denk aan de verzendkosten en de levertijden, die kunnen variëren afhankelijk van je locatie. </p>"
+              "faq-question": "Do you offer worldwide shipping?",
+              "faq-answer": "<p>Enjoy the BRIGHT® ball wherever you are! Our worldwide shipping brings this product to you wherever you live. Shipping costs and delivery times may vary by location.</p>"
             }
           },
           "9e0df131-e15e-43f3-b3e5-8df1b7243752": {
@@ -779,7 +779,7 @@
           "9e0df131-e15e-43f3-b3e5-8df1b7243752"
         ],
         "settings": {
-          "faq-heading-text": "Veel Gestelde Vragen",
+          "faq-heading-text": "Frequently Asked Questions",
           "faq-contact-button-url": "shopify://pages/contact",
           "faq-contact-button": "CONTACT US"
         }
@@ -799,16 +799,16 @@
           "image_size": "medium",
           "enable_image_zoom": true,
           "show_thumbnails": true,
-          "tab_page_1_handle": "verzending",
+          "tab_page_1_handle": "shipping",
           "tab_page_2_handle": "",
           "reviews_enabled": false,
           "featured_image_size": "large",
-          "cart-button-text": "VOEG TOE AAN WINKELKAR",
-          "cart-button-before-text": "TOEVOEGEN AAN WINKELWAGEN...",
-          "cart-button-after-text": "TOEGEVOEGD AAN WINKELWAGEN!",
+          "cart-button-text": "ADD TO CART",
+          "cart-button-before-text": "ADDING TO CART...",
+          "cart-button-after-text": "ADDED TO CART!",
           "ugc-section-heading": "EXPERIENCE THE GLOW",
-          "stock-text": "Lage voorraad! Klaar voor verzending",
-          "klarna-payment-text": "Betaal pas over 30 dagen met",
+          "stock-text": "Low stock! Ready to ship",
+          "klarna-payment-text": "Pay in 30 days with",
           "money-back-heading": "Money Back Gurantee",
           "money-back-top-text": "<p>BRIGHT is doing its utmost to bring the most innovative ball to the market and we want to make sure you can be part of it without any risk. Here's how:</p>",
           "money-back-bottom-text": "<p>We offer 24/7 ticket and e-mail support, please feel free to contact support@brightsport.com. We are ready to help you :)</p>",
@@ -820,14 +820,14 @@
         "type": "is--footer",
         "settings": {
           "logo": "<svg width=\"125\" height=\"17\" viewbox=\"0 0 125 17\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M14.888 17C20.144 17 21.608 14.984 21.608 12.272C21.608 10.4 20.552 9.176 19.136 8.744C20.264 8.312 21.272 7.304 21.272 5.408C21.272 2.432 18.704 0.943999 14.768 0.943999H4.28L0.512 5.624H14.984C15.416 5.624 15.992 5.696 15.992 6.272C15.992 6.944 15.416 7.04 14.912 7.04H0.536V17H14.888ZM14.816 10.856C15.704 10.856 16.064 11.096 16.064 11.6C16.064 12.176 15.704 12.392 14.912 12.392H6.104V10.856H14.816ZM47.3216 17L46.1696 15.68C43.9856 13.136 42.9056 12.176 42.4736 11.888C44.9696 11.288 46.3856 9.176 46.3856 6.776C46.3856 2.024 41.5136 0.943999 37.8896 0.943999H27.7136L24.0896 5.624H38.5856C39.9056 5.624 40.6256 6.056 40.6256 7.088C40.6256 8.144 39.9056 8.6 38.5856 8.6H24.0656V17H29.6096V13.016H36.8576L39.9056 17H47.3216ZM54.7614 17V0.943999H49.2174V17H54.7614ZM78.527 17V6.752H68.279L64.943 10.76H73.007V12.392H67.175C64.679 12.392 62.927 11.096 62.927 9.056C62.927 7.088 64.775 5.624 67.175 5.624H75.359L78.959 0.943999H67.175C61.535 0.943999 57.383 4.112 57.383 8.816C57.383 13.472 61.535 17 67.175 17H78.527ZM101.317 17V0.943999H95.7725V6.416H86.9165V0.943999H81.3485V17H86.9165V11.048H95.7725V17H101.317ZM115.739 17V5.624H121.019L124.619 0.943999H106.475L102.875 5.624H110.171V17H115.739Z\" fill=\"white\"></path>\n</svg>",
-          "address": "<p>© Bright Sports. Alle rechten voorbehouden</p>",
+          "address": "<p>© Bright Sports. All rights reserved</p>",
           "title": "bright",
           "menu": "bright",
           "title1": "Other",
           "menu1": "other",
           "news_title": "NIEUWSBRIEF",
-          "cap": "Meld u aan voor de <span>Bright Email</span> Club voor het laatste nieuws, exclusieve kortingen & meer",
-          "social_title": "VOLG ONS OP",
+          "cap": "Sign up for the <span>Bright Email</span> Club for the latest news, exclusive discounts & more",
+          "social_title": "FOLLOW US ON",
           "footer_payment_icon": "<svg width=\"400\" height=\"24\" viewbox=\"0 0 400 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_2628_25610)\">\n<path d=\"M4.45458 0.5H29.1819C31.3157 0.5 33.0455 2.22981 33.0455 4.36364V19.6364C33.0455 21.7702 31.3157 23.5 29.1819 23.5H4.45458C2.32075 23.5 0.590942 21.7702 0.590942 19.6364V4.36364C0.590942 2.22981 2.32075 0.5 4.45458 0.5Z\" stroke=\"white\" stroke-opacity=\"0.12\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5.27559 15.3796H3.91431V9H5.27559V15.3796ZM8.67413 9H7.34239C7.34239 10.174 6.84054 11.2516 5.96556 11.9566L5.43794 12.3815L7.48228 15.3799H9.16315L7.28207 12.6209C8.1737 11.666 8.67413 10.3812 8.67413 9ZM10.8454 15.3785H9.5598V9.00175H10.8454V15.3785ZM14.7295 10.9669V11.2491C14.3826 10.9945 13.964 10.8449 13.5124 10.8449C12.3173 10.8449 11.3484 11.8871 11.3484 13.1725C11.3484 14.458 12.3173 15.5 13.5124 15.5C13.964 15.5 14.3826 15.3504 14.7295 15.096V15.3779H15.9574V10.9669H14.7295ZM14.7258 13.1725C14.7258 13.7993 14.2277 14.3074 13.6132 14.3074C12.9987 14.3074 12.5006 13.7993 12.5006 13.1725C12.5006 12.5457 12.9987 12.0377 13.6132 12.0377C14.2277 12.0377 14.7258 12.5457 14.7258 13.1725ZM27.6834 11.2491V10.9669H28.9112V15.3779H27.6834V15.096C27.3365 15.3504 26.9178 15.5 26.4662 15.5C25.271 15.5 24.3022 14.458 24.3022 13.1725C24.3022 11.8871 25.271 10.8449 26.4662 10.8449C26.9178 10.8449 27.3365 10.9945 27.6834 11.2491ZM26.567 14.3074C27.1815 14.3074 27.6796 13.7993 27.6796 13.1725C27.6796 12.5457 27.1815 12.0377 26.567 12.0377C25.9525 12.0377 25.4544 12.5457 25.4544 13.1725C25.4544 13.7993 25.9525 14.3074 26.567 14.3074ZM29.4441 14.6421C29.4441 14.1844 29.7891 13.8134 30.2146 13.8134C30.6402 13.8134 30.9852 14.1844 30.9852 14.6421C30.9852 15.0998 30.6402 15.4708 30.2146 15.4708C29.7891 15.4708 29.4441 15.0998 29.4441 14.6421ZM22.1202 10.8482C21.6298 10.8482 21.1656 11.012 20.8552 11.4639V10.9671H19.6327V15.3779H20.8702V13.0599C20.8702 12.3891 21.2885 12.0607 21.792 12.0607C22.3316 12.0607 22.6418 12.4073 22.6418 13.0508V15.3779H23.8682V12.5729C23.8682 11.5463 23.1094 10.8482 22.1202 10.8482ZM17.8569 10.967V11.5415C18.103 11.1969 18.5616 10.9672 19.0602 10.9672V12.2508L19.0534 12.2505C19.0509 12.2503 19.0483 12.2502 19.0457 12.2502C18.5598 12.2502 17.8597 12.6236 17.8597 13.3185V15.3779H16.5997V10.967H17.8569Z\" fill=\"white\"></path>\n</g>\n<g clip-path=\"url(#clip1_2628_25610)\">\n<path d=\"M49.9092 0.5H74.6364C76.7703 0.5 78.5001 2.22981 78.5001 4.36364V19.6364C78.5001 21.7702 76.7703 23.5 74.6364 23.5H49.9092C47.7753 23.5 46.0455 21.7702 46.0455 19.6364V4.36364C46.0455 2.22981 47.7753 0.5 49.9092 0.5Z\" stroke=\"white\" stroke-opacity=\"0.12\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M55.7016 16.2583H53.6749L52.1551 10.1924C52.083 9.91331 51.9298 9.66669 51.7045 9.5504C51.1423 9.25825 50.5227 9.02567 49.8468 8.90844V8.67491H53.1116C53.5622 8.67491 53.9002 9.02567 53.9565 9.43309L54.7451 13.8087L56.7707 8.67491H58.7411L55.7016 16.2583ZM59.8676 16.2583H57.9536L59.5297 8.67491H61.4438L59.8676 16.2583ZM63.9201 10.7757C63.9763 10.3673 64.3143 10.1337 64.7086 10.1337C65.3281 10.0751 66.003 10.1924 66.5663 10.4836L66.9043 8.85084C66.341 8.61731 65.7214 8.5 65.1592 8.5C63.3014 8.5 61.9497 9.5504 61.9497 11.0082C61.9497 12.1173 62.9072 12.6996 63.5831 13.0504C64.3143 13.4002 64.5959 13.6337 64.5396 13.9836C64.5396 14.5082 63.9763 14.7418 63.4141 14.7418C62.7382 14.7418 62.0623 14.5669 61.4438 14.2747L61.1058 15.9084C61.7817 16.1996 62.5129 16.3169 63.1888 16.3169C65.2718 16.3745 66.5663 15.3251 66.5663 13.75C66.5663 11.7665 63.9201 11.6502 63.9201 10.7757ZM73.265 16.2583L71.7452 8.67491H70.1128C69.7748 8.67491 69.4369 8.90844 69.3243 9.25825L66.51 16.2583H68.4803L68.8737 15.1502H71.2946L71.5199 16.2583H73.265ZM70.3944 10.7171L70.9566 13.5751H69.3806L70.3944 10.7171Z\" fill=\"white\"></path>\n</g>\n<g clip-path=\"url(#clip2_2628_25610)\">\n<path d=\"M95.3636 0.5H120.091C122.225 0.5 123.955 2.22981 123.955 4.36364V19.6364C123.955 21.7702 122.225 23.5 120.091 23.5H95.3636C93.2298 23.5 91.5 21.7702 91.5 19.6364V4.36364C91.5 2.22981 93.2298 0.5 95.3636 0.5Z\" stroke=\"white\" stroke-opacity=\"0.12\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M107.916 17.3805C106.777 18.4088 105.3 19.0296 103.685 19.0296C100.083 19.0296 97.1627 15.939 97.1627 12.1267C97.1627 8.31422 100.083 5.22363 103.685 5.22363C105.3 5.22363 106.777 5.84439 107.916 6.87267C109.055 5.84439 110.532 5.22363 112.147 5.22363C115.749 5.22363 118.669 8.31422 118.669 12.1267C118.669 15.939 115.749 19.0296 112.147 19.0296C110.532 19.0296 109.055 18.4088 107.916 17.3805Z\" fill=\"#ED0006\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M107.916 17.3805C109.318 16.1144 110.208 14.2304 110.208 12.1267C110.208 10.0228 109.318 8.1388 107.916 6.87267C109.055 5.84439 110.532 5.22363 112.147 5.22363C115.749 5.22363 118.669 8.31422 118.669 12.1267C118.669 15.939 115.749 19.0296 112.147 19.0296C110.532 19.0296 109.055 18.4088 107.916 17.3805Z\" fill=\"#F9A000\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M107.916 6.87305C109.318 8.13915 110.208 10.0231 110.208 12.127C110.208 14.2308 109.318 16.1148 107.916 17.3809C106.514 16.1148 105.624 14.2308 105.624 12.127C105.624 10.0231 106.514 8.13915 107.916 6.87305Z\" fill=\"#FF5E00\"></path>\n</g>\n<g clip-path=\"url(#clip3_2628_25610)\">\n<path d=\"M140.818 0.5H165.545C167.679 0.5 169.409 2.22981 169.409 4.36364V19.6364C169.409 21.7702 167.679 23.5 165.545 23.5H140.818C138.684 23.5 136.955 21.7702 136.955 19.6364V4.36364C136.955 2.22981 138.684 0.5 140.818 0.5Z\" stroke=\"white\" stroke-opacity=\"0.12\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M142.452 8.5L139.322 15.7468H143.069L143.534 14.5913H144.596L145.06 15.7468H149.185V14.8649L149.552 15.7468H151.686L152.053 14.8463V15.7468H160.631L161.674 14.6213L162.651 15.7468L167.057 15.7561L163.917 12.1436L167.057 8.5H162.719L161.704 9.60465L160.758 8.5H151.426L150.625 10.3705L149.805 8.5H146.066V9.35185L145.65 8.5H142.452ZM143.177 9.52902H145.004L147.08 14.4431V9.52902H149.081L150.684 13.0524L152.162 9.52902H154.153V14.7291H152.942L152.932 10.6543L151.166 14.7291H150.082L148.306 10.6543V14.7291H145.814L145.342 13.5633H142.789L142.318 14.7281H140.982L143.177 9.52902ZM160.187 9.52902H155.262V14.726H160.111L161.674 13.0036L163.181 14.726H164.756L162.467 12.1426L164.756 9.52902H163.249L161.694 11.2316L160.187 9.52902ZM144.066 10.4089L143.225 12.4856H144.906L144.066 10.4089ZM156.478 11.555V10.6057V10.6048H159.552L160.893 12.1229L159.492 13.6493H156.478V12.613H159.165V11.555H156.478Z\" fill=\"white\"></path>\n</g>\n<g clip-path=\"url(#clip4_2628_25610)\">\n<path d=\"M186.273 0.5H211C213.134 0.5 214.864 2.22981 214.864 4.36364V19.6364C214.864 21.7702 213.134 23.5 211 23.5H186.273C184.139 23.5 182.409 21.7702 182.409 19.6364V4.36364C182.409 2.22981 184.139 0.5 186.273 0.5Z\" stroke=\"white\" stroke-opacity=\"0.12\"></path>\n<path d=\"M201.117 12.1267C201.117 15.939 198.196 19.0296 194.594 19.0296C190.992 19.0296 188.072 15.939 188.072 12.1267C188.072 8.31422 190.992 5.22363 194.594 5.22363C198.196 5.22363 201.117 8.31422 201.117 12.1267Z\" fill=\"#ED0006\"></path>\n<path d=\"M209.578 12.1267C209.578 15.939 206.658 19.0296 203.056 19.0296C199.453 19.0296 196.533 15.939 196.533 12.1267C196.533 8.31422 199.453 5.22363 203.056 5.22363C206.658 5.22363 209.578 8.31422 209.578 12.1267Z\" fill=\"#0099DF\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M198.825 6.87305C200.227 8.13915 201.117 10.0231 201.117 12.127C201.117 14.2308 200.227 16.1148 198.825 17.3809C197.423 16.1148 196.533 14.2308 196.533 12.127C196.533 10.0231 197.423 8.13915 198.825 6.87305Z\" fill=\"#6C6BBD\"></path>\n</g>\n<g clip-path=\"url(#clip5_2628_25610)\">\n<path d=\"M231.727 0.5H256.455C258.588 0.5 260.318 2.22981 260.318 4.36364V19.6364C260.318 21.7702 258.588 23.5 256.455 23.5H231.727C229.593 23.5 227.864 21.7702 227.864 19.6364V4.36364C227.864 2.22981 229.593 0.5 231.727 0.5Z\" stroke=\"white\" stroke-opacity=\"0.12\"></path>\n<path d=\"M246.198 11.0612C246.198 12.6013 245.166 13.7007 243.724 13.7007H242.365C242.35 13.7007 242.335 13.7038 242.321 13.7099C242.307 13.7159 242.295 13.7247 242.284 13.7358C242.274 13.747 242.265 13.7601 242.26 13.7747C242.254 13.7892 242.251 13.8048 242.251 13.8204V15.8446C242.251 15.8763 242.239 15.9066 242.218 15.9291C242.196 15.9515 242.167 15.9642 242.137 15.9643H241.186C241.164 15.9642 241.142 15.9571 241.123 15.944C241.104 15.9308 241.089 15.9121 241.081 15.8903C241.075 15.876 241.072 15.8607 241.072 15.8452V8.54085C241.072 8.52514 241.075 8.50958 241.08 8.49511C241.086 8.48056 241.094 8.46732 241.105 8.4562C241.116 8.44507 241.128 8.43627 241.142 8.43023C241.156 8.4242 241.171 8.42114 241.186 8.42114H243.73C245.166 8.4194 246.198 9.51882 246.198 11.0612ZM245.012 11.0612C245.012 10.1758 244.435 9.52863 243.652 9.52863H242.365C242.35 9.52863 242.335 9.53176 242.321 9.53772C242.307 9.54376 242.295 9.55263 242.284 9.56376C242.274 9.57489 242.265 9.58805 242.26 9.6026C242.254 9.61707 242.251 9.63263 242.251 9.64834V12.4672C242.251 12.4987 242.263 12.5291 242.284 12.5514C242.306 12.5737 242.335 12.5863 242.365 12.5863H243.652C244.435 12.5921 245.012 11.9443 245.012 11.0612ZM246.48 14.563C246.47 14.3268 246.517 14.0918 246.616 13.8793C246.715 13.6667 246.863 13.4835 247.047 13.3462C247.418 13.0542 247.998 12.9032 248.849 12.872L249.756 12.8385V12.5585C249.756 11.9975 249.396 11.7604 248.819 11.7604C248.242 11.7604 247.876 11.9744 247.792 12.3243C247.785 12.3489 247.771 12.3705 247.751 12.3855C247.731 12.4006 247.707 12.4083 247.683 12.4075H246.787C246.771 12.4081 246.754 12.4047 246.739 12.3978C246.724 12.3909 246.711 12.3806 246.7 12.3676C246.689 12.3546 246.681 12.3393 246.676 12.3227C246.672 12.3062 246.671 12.2887 246.673 12.2717C246.806 11.4423 247.466 10.812 248.86 10.812C250.344 10.812 250.88 11.5349 250.88 12.9147V15.8446C250.879 15.8766 250.867 15.9071 250.845 15.9295C250.823 15.952 250.794 15.9645 250.764 15.9643H249.861C249.831 15.9643 249.802 15.9518 249.78 15.9297C249.77 15.9185 249.761 15.9054 249.755 15.8909C249.75 15.8763 249.747 15.8609 249.747 15.8452V15.626C249.747 15.6079 249.742 15.5901 249.733 15.575C249.723 15.5598 249.71 15.5481 249.694 15.5413C249.678 15.5345 249.66 15.5329 249.643 15.5367C249.626 15.5406 249.611 15.5497 249.599 15.563C249.328 15.8712 248.891 16.0939 248.19 16.0939C247.16 16.0939 246.48 15.5329 246.48 14.563ZM249.756 13.928V13.7007L248.582 13.7655C247.963 13.7985 247.603 14.0674 247.603 14.5202C247.603 14.9297 247.933 15.1564 248.51 15.1564C249.293 15.1564 249.756 14.7139 249.756 13.928ZM251.786 18.1782V17.3292C251.786 17.3114 251.79 17.2939 251.798 17.2778C251.805 17.2617 251.816 17.2476 251.829 17.2363C251.842 17.2251 251.857 17.217 251.874 17.2126C251.89 17.2083 251.908 17.2078 251.924 17.2112C252.063 17.2384 252.204 17.2523 252.344 17.2529C252.587 17.2652 252.826 17.1921 253.024 17.0453C253.222 16.8985 253.367 16.6865 253.436 16.4432L253.495 16.2477C253.503 16.2214 253.503 16.193 253.495 16.1667L251.614 11.1121C251.607 11.0938 251.604 11.074 251.607 11.0545C251.609 11.035 251.615 11.0163 251.626 11C251.636 10.9837 251.651 10.9704 251.667 10.9611C251.684 10.9518 251.702 10.9469 251.721 10.9467H252.633C252.656 10.947 252.679 10.9545 252.698 10.9685C252.717 10.9824 252.732 11.002 252.74 11.0248L254.018 14.5897C254.026 14.6133 254.041 14.6338 254.06 14.6483C254.08 14.6628 254.103 14.6706 254.127 14.6706C254.151 14.6706 254.175 14.6628 254.194 14.6483C254.214 14.6338 254.229 14.6133 254.237 14.5897L255.346 11.0346C255.354 11.0103 255.369 10.9892 255.389 10.9742C255.408 10.9593 255.432 10.9513 255.457 10.9513H256.4C256.419 10.9515 256.438 10.9563 256.455 10.9657C256.471 10.9749 256.486 10.9883 256.496 11.0046C256.507 11.0209 256.514 11.0396 256.516 11.0593C256.518 11.0789 256.516 11.0988 256.509 11.1173L254.497 16.7306C254.034 18.0353 253.239 18.369 252.365 18.369C252.199 18.3737 252.033 18.3529 251.873 18.3072C251.846 18.2998 251.823 18.2828 251.807 18.2592C251.791 18.2356 251.784 18.207 251.786 18.1782ZM234.962 8.00012C233.763 7.99118 232.607 8.46303 231.731 9.31867C231.694 9.3546 231.67 9.40376 231.666 9.45671C231.661 9.50965 231.675 9.56245 231.706 9.605L232.248 10.38C232.266 10.4057 232.289 10.4272 232.315 10.4428C232.341 10.4584 232.371 10.4678 232.401 10.4702C232.431 10.4728 232.461 10.4683 232.49 10.4571C232.518 10.4461 232.544 10.4286 232.565 10.4059C232.88 10.0765 233.255 9.81605 233.667 9.63976C234.079 9.46354 234.521 9.37503 234.966 9.3794C236.826 9.3794 237.797 10.8438 237.797 12.2896C237.797 13.8615 236.777 14.9673 235.31 14.9893C234.177 14.9893 233.323 14.2033 233.323 13.1652C233.324 12.903 233.381 12.6442 233.489 12.4077C233.597 12.1712 233.755 11.9627 233.949 11.7974C233.99 11.7615 234.016 11.7101 234.022 11.6542C234.027 11.5985 234.011 11.5427 233.977 11.499L233.407 10.746C233.39 10.7233 233.369 10.7043 233.344 10.6904C233.32 10.6764 233.293 10.6677 233.266 10.6647C233.238 10.6617 233.21 10.6646 233.184 10.6731C233.157 10.6816 233.132 10.6956 233.111 10.7142C232.761 11.0092 232.479 11.3825 232.284 11.8066C232.09 12.2307 231.989 12.695 231.989 13.1652C231.989 14.9523 233.441 16.3541 235.3 16.3657H235.325C237.533 16.3356 239.129 14.6249 239.129 12.2867C239.129 10.2105 237.668 8.00012 234.962 8.00012H234.962Z\" fill=\"white\"></path>\n</g>\n<g clip-path=\"url(#clip6_2628_25610)\">\n<path d=\"M277.182 0.5H301.909C304.043 0.5 305.773 2.22981 305.773 4.36364V19.6364C305.773 21.7702 304.043 23.5 301.909 23.5H277.182C275.048 23.5 273.318 21.7702 273.318 19.6364V4.36364C273.318 2.22981 275.048 0.5 277.182 0.5Z\" stroke=\"white\" stroke-opacity=\"0.12\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M281.975 8.34313C281.694 8.69505 281.245 8.97258 280.796 8.93295C280.74 8.45716 280.96 7.95164 281.217 7.63935C281.498 7.27753 281.989 7.01983 282.387 7C282.434 7.49564 282.251 7.98138 281.975 8.34313ZM282.382 9.02713C281.987 9.00298 281.625 9.15316 281.334 9.27447C281.146 9.35258 280.987 9.41869 280.866 9.41869C280.73 9.41869 280.565 9.34902 280.379 9.27084C280.135 9.16836 279.857 9.05127 279.565 9.05687C278.896 9.06676 278.273 9.46822 277.932 10.1076C277.23 11.3863 277.749 13.2796 278.428 14.3204C278.76 14.8359 279.158 15.4009 279.682 15.3811C279.913 15.3719 280.079 15.2973 280.25 15.2202C280.448 15.1313 280.653 15.0391 280.974 15.0391C281.283 15.0391 281.48 15.1289 281.668 15.2152C281.847 15.2972 282.019 15.376 282.275 15.3712C282.818 15.3613 283.159 14.8557 283.492 14.3403C283.85 13.7871 284.008 13.2471 284.032 13.1652L284.034 13.1557C284.034 13.1551 284.03 13.1529 284.022 13.1492C283.902 13.0911 282.986 12.6468 282.977 11.4557C282.968 10.4559 283.703 9.94938 283.819 9.8696C283.826 9.86473 283.831 9.86145 283.833 9.85978C283.365 9.12626 282.635 9.04698 282.382 9.02713ZM286.141 15.3167V7.58982H288.878C290.292 7.58982 291.279 8.62073 291.279 10.1274C291.279 11.6341 290.273 12.675 288.841 12.675H287.273V15.3167H286.141ZM287.273 8.60087H288.579C289.562 8.60087 290.123 9.156 290.123 10.1324C290.123 11.1088 289.562 11.6688 288.574 11.6688H287.273V8.60087ZM295.019 14.3898C294.719 14.9945 294.059 15.3761 293.348 15.3761C292.295 15.3761 291.56 14.712 291.56 13.7108C291.56 12.7196 292.271 12.1496 293.587 12.0653L295 11.9761V11.5499C295 10.9204 294.612 10.5785 293.919 10.5785C293.348 10.5785 292.931 10.8907 292.847 11.3665H291.827C291.86 10.3653 292.749 9.63673 293.952 9.63673C295.248 9.63673 296.09 10.3554 296.09 11.4706V15.3167H295.042V14.3898H295.019ZM293.652 14.4592C293.048 14.4592 292.665 14.1519 292.665 13.6811C292.665 13.1953 293.034 12.9129 293.741 12.8683L295 12.784V13.2201C295 13.9438 294.42 14.4592 293.652 14.4592ZM299.568 15.619C299.114 16.9721 298.594 17.4181 297.49 17.4181C297.405 17.4181 297.125 17.4082 297.059 17.3884V16.4616C297.129 16.4715 297.303 16.4814 297.391 16.4814C297.892 16.4814 298.173 16.2584 298.346 15.6785L298.449 15.3365L296.53 9.71113H297.714L299.048 14.2759H299.072L300.405 9.71113H301.557L299.568 15.619Z\" fill=\"white\"></path>\n</g>\n<g clip-path=\"url(#clip7_2628_25610)\">\n<path d=\"M322.636 0.5H348.909C351.043 0.5 352.773 2.22981 352.773 4.36364V19.6364C352.773 21.7702 351.043 23.5 348.909 23.5H322.636C320.503 23.5 318.773 21.7702 318.773 19.6364V4.36364C318.773 2.22981 320.503 0.5 322.636 0.5Z\" stroke=\"white\" stroke-opacity=\"0.12\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M334.803 15.7584V12.7375H336.362C337.001 12.7375 337.54 12.5234 337.98 12.1012L338.085 11.9942C338.888 11.12 338.836 9.75816 337.98 8.94943C337.552 8.52129 336.966 8.28936 336.362 8.30121H333.859V15.7584H334.803ZM334.803 11.8217V9.217H336.386C336.726 9.217 337.048 9.34783 337.289 9.58572C337.799 10.0852 337.811 10.9178 337.318 11.4352C337.078 11.6909 336.738 11.8336 336.386 11.8217H334.803ZM342.487 11.0546C342.083 10.68 341.532 10.4897 340.835 10.4897C339.938 10.4897 339.264 10.8227 338.818 11.4827L339.651 12.0121C339.955 11.5601 340.371 11.3341 340.899 11.3341C341.233 11.3341 341.555 11.459 341.808 11.6849C342.054 11.899 342.194 12.2083 342.194 12.5353V12.7554C341.831 12.5531 341.374 12.4462 340.811 12.4462C340.155 12.4462 339.627 12.6008 339.234 12.9159C338.842 13.2311 338.642 13.6474 338.642 14.1766C338.631 14.6583 338.836 15.1162 339.199 15.4254C339.568 15.7585 340.037 15.925 340.588 15.925C341.239 15.925 341.755 15.6336 342.148 15.0508H342.189V15.7584H343.091V12.6126C343.091 11.9526 342.892 11.4292 342.487 11.0546ZM339.926 14.8189C339.733 14.6762 339.615 14.4443 339.615 14.1944C339.615 13.915 339.744 13.683 339.996 13.4987C340.254 13.3144 340.577 13.2192 340.958 13.2192C341.486 13.2133 341.896 13.3322 342.189 13.5701C342.189 13.9745 342.031 14.3253 341.72 14.6227C341.439 14.9081 341.058 15.0686 340.659 15.0686C340.395 15.0746 340.137 14.9854 339.926 14.8189ZM345.119 18.0004L348.273 10.6561H347.247L345.788 14.3193H345.77L344.275 10.6561H343.25L345.319 15.4314L344.146 18.0004H345.119Z\" fill=\"white\"></path>\n<path d=\"M331.545 12.0831C331.545 11.7916 331.521 11.5002 331.475 11.2148H327.495V12.862H329.775C329.681 13.3914 329.376 13.8671 328.931 14.1644V15.2348H330.291C331.088 14.4915 331.545 13.3914 331.545 12.0831Z\" fill=\"white\"></path>\n<path d=\"M327.495 16.2696C328.632 16.2696 329.593 15.889 330.291 15.2349L328.931 14.1644C328.55 14.4261 328.063 14.5748 327.495 14.5748C326.393 14.5748 325.461 13.8196 325.127 12.8086H323.726V13.9147C324.441 15.3598 325.9 16.2696 327.495 16.2696Z\" fill=\"white\"></path>\n<path d=\"M325.127 12.8088C324.951 12.2795 324.951 11.7027 325.127 11.1675V10.0674H323.726C323.122 11.2746 323.122 12.7018 323.726 13.909L325.127 12.8088Z\" fill=\"white\"></path>\n<path d=\"M327.495 9.40108C328.098 9.38922 328.679 9.62115 329.113 10.0433L330.32 8.81832C329.552 8.09279 328.544 7.69439 327.495 7.70631C325.9 7.70631 324.441 8.6221 323.726 10.0671L325.127 11.1732C325.461 10.1564 326.393 9.40108 327.495 9.40108Z\" fill=\"white\"></path>\n</g>\n<rect x=\"366.409\" y=\"0.5\" width=\"33\" height=\"23\" rx=\"3.5\" stroke=\"white\" stroke-opacity=\"0.12\"></rect>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M387.185 9.0752C387.173 9.15328 387.159 9.23307 387.144 9.31506C386.622 12.0857 384.836 13.0429 382.555 13.0429H381.393C381.114 13.0429 380.879 13.2522 380.836 13.5366L380.072 18.5399C380.044 18.7267 380.183 18.895 380.366 18.895H382.426C382.67 18.895 382.877 18.7118 382.916 18.4632L382.936 18.355L383.324 15.8108L383.349 15.6713C383.387 15.4217 383.594 15.2384 383.838 15.2384H384.146C386.142 15.2384 387.705 14.4009 388.161 11.9771C388.352 10.9646 388.253 10.1191 387.749 9.52451C387.596 9.34525 387.406 9.19641 387.185 9.0752Z\" fill=\"white\" fill-opacity=\"0.6\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M386.638 8.84993C386.559 8.82586 386.476 8.80411 386.392 8.78443C386.307 8.76525 386.22 8.74826 386.131 8.73335C385.817 8.68106 385.474 8.65625 385.107 8.65625H382.004C381.927 8.65625 381.854 8.67409 381.79 8.70635C381.646 8.77747 381.54 8.9175 381.514 9.08894L380.854 13.4105L380.835 13.5365C380.879 13.252 381.114 13.0427 381.393 13.0427H382.554C384.836 13.0427 386.622 12.085 387.144 9.31488C387.16 9.23289 387.173 9.15309 387.184 9.07501C387.052 9.00255 386.909 8.9406 386.755 8.88781C386.717 8.87473 386.678 8.86215 386.638 8.84993Z\" fill=\"white\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M381.515 9.08911C381.54 8.91767 381.647 8.77764 381.79 8.70701C381.855 8.67463 381.927 8.65679 382.004 8.65679H385.107C385.474 8.65679 385.818 8.68171 386.131 8.73401C386.22 8.7488 386.307 8.76591 386.392 8.78509C386.476 8.80464 386.559 8.82651 386.638 8.85046C386.678 8.86268 386.717 8.87539 386.756 8.88798C386.91 8.94077 387.053 9.00321 387.185 9.07518C387.34 8.05131 387.184 7.35419 386.648 6.72293C386.058 6.02789 384.992 5.73047 383.628 5.73047H379.669C379.391 5.73047 379.153 5.93979 379.11 6.22475L377.461 17.0283C377.428 17.2421 377.588 17.4349 377.796 17.4349H380.241L381.515 9.08911Z\" fill=\"white\" fill-opacity=\"0.8\"></path>\n<defs>\n<clippath id=\"clip0_2628_25610\">\n<rect width=\"33.4545\" height=\"24\" fill=\"white\" transform=\"translate(0.0909424)\"></rect>\n</clippath>\n<clippath id=\"clip1_2628_25610\">\n<rect width=\"33.4545\" height=\"24\" fill=\"white\" transform=\"translate(45.5455)\"></rect>\n</clippath>\n<clippath id=\"clip2_2628_25610\">\n<rect width=\"33.4545\" height=\"24\" fill=\"white\" transform=\"translate(91)\"></rect>\n</clippath>\n<clippath id=\"clip3_2628_25610\">\n<rect width=\"33.4545\" height=\"24\" fill=\"white\" transform=\"translate(136.455)\"></rect>\n</clippath>\n<clippath id=\"clip4_2628_25610\">\n<rect width=\"33.4545\" height=\"24\" fill=\"white\" transform=\"translate(181.909)\"></rect>\n</clippath>\n<clippath id=\"clip5_2628_25610\">\n<rect width=\"33.4545\" height=\"24\" fill=\"white\" transform=\"translate(227.364)\"></rect>\n</clippath>\n<clippath id=\"clip6_2628_25610\">\n<rect width=\"33.4545\" height=\"24\" fill=\"white\" transform=\"translate(272.818)\"></rect>\n</clippath>\n<clippath id=\"clip7_2628_25610\">\n<rect width=\"35.6364\" height=\"24\" fill=\"white\" transform=\"translate(318.273)\"></rect>\n</clippath>\n</defs>\n</svg>"
         }
       },
@@ -985,9 +985,9 @@
       "sw--bundle-functionality-sec": {
         "type": "sw--bundle-functionality-sec",
         "settings": {
-          "main_heading": "Bundels",
-          "sub_heading": "Pas je bundel aan met elke bal!",
-          "best_selling_text": "<p>🔥 BEST VERKOPENDE</p>",
+          "main_heading": "Bundles",
+          "sub_heading": "Customize your bundle with any ball!",
+          "best_selling_text": "<p>🔥 BEST SELLING</p>",
           "product": "starter-bundle",
           "product2": "athlete-bundle",
           "product3": "team-bundle",
@@ -1006,8 +1006,8 @@
           "mobile_discount_image": "shopify://shop_images/VDS-PDP-Mobile-discountbox.png",
           "btn_url": "shopify://collections",
           "btn_text": "Shop now",
-          "banner_bottom_text": "Wordt automatisch toegepast bij het <span class=\"grey_bold\"><b>uitchecken.</b></span>\n<span class=\"yellow_bold\"><b>Alle ballen </b> kunnen worden gecombineerd.</span>",
-          "banner_bottom_text_mobile": "Wordt automatisch toegepast bij het  <span class=\"grey_bold\"><b>uitchecken.</b></span> <span class=\"yellow_bold\"><b>On all balls!</b></span>"
+          "banner_bottom_text": "Applied automatically at <span class=\"grey_bold\"><b>checkout.</b></span>\n<span class=\"yellow_bold\"><b>All balls </b> can be combined.</span>",
+          "banner_bottom_text_mobile": "Applied automatically at <span class=\"grey_bold\"><b>checkout.</b></span> <span class=\"yellow_bold\"><b>On all balls!</b></span>"
         }
       },
       "sw--bundle-our-balls": {
@@ -1053,14 +1053,14 @@
         ],
         "settings": {
           "main_heading1": "Balls",
-          "main_heading2": "Accessoires",
-          "main_heading3": "Bundels",
-          "main_heading": "Onze grootste uitverkoop ooit!",
+          "main_heading2": "Accessories",
+          "main_heading3": "Bundles",
+          "main_heading": "Our biggest sale ever!",
           "collections": "balls",
           "enabled": true,
           "product_image": "shopify://shop_images/Frame_34306.png",
-          "product_main_title": "startersbundel",
-          "add_to_cart_btn_text": "In winkelwagen",
+          "product_main_title": "starter bundle",
+          "add_to_cart_btn_text": "Add to cart",
           "select_position": "top-right"
         }
       },
@@ -1110,12 +1110,12 @@
           "121a466b-a7c9-43eb-9ee4-7079434ed1aa"
         ],
         "settings": {
-          "main_heading": "Accessoires",
+          "main_heading": "Accessories",
           "collections": "accessories",
           "enabled": true,
           "product_image": "shopify://shop_images/img_1_da5ba201-b764-4566-be77-305afe539ba6.png",
-          "product_main_title": "Accessoires",
-          "add_to_cart_btn_text": "In winkelwagen",
+          "product_main_title": "Accessories",
+          "add_to_cart_btn_text": "Add to cart",
           "select_position": "bottom-left"
         }
       },
@@ -1125,19 +1125,19 @@
           "c6f6e9fc-1957-4feb-938f-4e3d5251cd3d": {
             "type": "Marquee",
             "settings": {
-              "text": "BALLEN BALLEN DE MEEST UNIEKE BALLEN VAN DE MARKT BALLEN BALLEN DE MEEST UNIEKE BALLEN VAN DE MARKT BALLEN BALLEN DE MEEST UNIEKE BALLEN VAN DE MARKT BALLEN BALLEN DE MEEST UNIEKE BALLEN VAN DE MARKT BALLEN BALLEN DE MEEST UNIEKE BALLEN VAN DE MARKT BALLEN BALLEN"
+              "text": "BALLS BALLS THE MOST UNIQUE BALLS ON THE MARKET BALLS BALLS THE MOST UNIQUE BALLS ON THE MARKET BALLS BALLS THE MOST UNIQUE BALLS ON THE MARKET BALLS BALLS THE MOST UNIQUE BALLS ON THE MARKET BALLS BALLS THE MOST UNIQUE BALLS ON THE MARKET BALLS BALLS"
             }
           },
           "d61ae1c7-3c1d-4942-9a5f-514104f86b57": {
             "type": "Marquee",
             "settings": {
-              "text": "BALLEN BALLEN DE MEEST UNIEKE BALLEN VAN DE MARKT BALLEN BALLEN DE MEEST UNIEKE BALLEN VAN DE MARKT BALLEN BALLEN DE MEEST UNIEKE BALLEN VAN DE MARKT BALLEN BALLEN DE MEEST UNIEKE BALLEN VAN DE MARKT BALLEN BALLEN DE MEEST UNIEKE BALLEN VAN DE MARKT BALLEN BALLEN"
+              "text": "BALLS BALLS THE MOST UNIQUE BALLS ON THE MARKET BALLS BALLS THE MOST UNIQUE BALLS ON THE MARKET BALLS BALLS THE MOST UNIQUE BALLS ON THE MARKET BALLS BALLS THE MOST UNIQUE BALLS ON THE MARKET BALLS BALLS THE MOST UNIQUE BALLS ON THE MARKET BALLS BALLS"
             }
           },
           "5be80b5f-f9cb-4e88-83e0-9c5ea933a079": {
             "type": "Marquee",
             "settings": {
-              "text": "BALLEN BALLEN DE MEEST UNIEKE BALLEN VAN DE MARKT BALLEN BALLEN DE MEEST UNIEKE BALLEN VAN DE MARKT BALLEN BALLEN DE MEEST UNIEKE BALLEN VAN DE MARKT BALLEN BALLEN DE MEEST UNIEKE BALLEN VAN DE MARKT BALLEN BALLEN DE MEEST UNIEKE BALLEN VAN DE MARKT BALLEN BALLEN"
+              "text": "BALLS BALLS THE MOST UNIQUE BALLS ON THE MARKET BALLS BALLS THE MOST UNIQUE BALLS ON THE MARKET BALLS BALLS THE MOST UNIQUE BALLS ON THE MARKET BALLS BALLS THE MOST UNIQUE BALLS ON THE MARKET BALLS BALLS THE MOST UNIQUE BALLS ON THE MARKET BALLS BALLS"
             }
           }
         },
@@ -1154,31 +1154,31 @@
           "cb2b628b-6e0c-410e-9a8f-ce498135bda5": {
             "type": "Marquee",
             "settings": {
-              "text": "BALLEN BALLEN ACCESSOIRES KRIJG DE MEEST UITZONDERLIJKE ACCESSOIRES DIE BIJ UW BAL PASSEN ACCESSOIRES ACCESSOIRES BALLEN BALLEN ACCESSOIRES KRIJG DE MEEST UITZONDERLIJKE ACCESSOIRES DIE BIJ UW BAL PASSEN ACCESSOIRES ACCESSOIRES BALLEN BALLEN ACCESSOIRES KRIJG DE MEEST UITZONDERLIJKE ACCESSOIRES DIE BIJ UW BAL PASSEN ACCESSOIRES ACCESSOIRES BALLEN BALLEN ACCESSOIRES KRIJG DE MEEST UITZONDERLIJKE ACCESSOIRES DIE BIJ UW BAL PASSEN ACCESSOIRES ACCESSOIRES BALLEN BALLEN ACCESSOIRES KRIJG DE MEEST UITZONDERLIJKE ACCESSOIRES DIE BIJ UW BAL PASSEN ACCESSOIRES ACCESSOIRES"
+              "text": "BALLS BALLS ACCESSORIES GET THE MOST EXCEPTIONAL ACCESSORIES THAT MATCH YOUR BALL ACCESSORIES ACCESSORIES BALLS BALLS ACCESSORIES GET THE MOST EXCEPTIONAL ACCESSORIES THAT MATCH YOUR BALL ACCESSORIES ACCESSORIES BALLS BALLS ACCESSORIES GET THE MOST EXCEPTIONAL ACCESSORIES THAT MATCH YOUR BALL ACCESSORIES ACCESSORIES BALLS BALLS ACCESSORIES GET THE MOST EXCEPTIONAL ACCESSORIES THAT MATCH YOUR BALL ACCESSORIES ACCESSORIES BALLS BALLS ACCESSORIES GET THE MOST EXCEPTIONAL ACCESSORIES THAT MATCH YOUR BALL ACCESSORIES ACCESSORIES"
             }
           },
           "20067478-36d6-4efb-ab58-52c921678021": {
             "type": "Marquee",
             "settings": {
-              "text": "BALLEN BALLEN ACCESSOIRES KRIJG DE MEEST UITZONDERLIJKE ACCESSOIRES DIE BIJ UW BAL PASSEN ACCESSOIRES ACCESSOIRES BALLEN BALLEN ACCESSOIRES KRIJG DE MEEST UITZONDERLIJKE ACCESSOIRES DIE BIJ UW BAL PASSEN ACCESSOIRES ACCESSOIRES BALLEN BALLEN ACCESSOIRES KRIJG DE MEEST UITZONDERLIJKE ACCESSOIRES DIE BIJ UW BAL PASSEN ACCESSOIRES ACCESSOIRES BALLEN BALLEN ACCESSOIRES KRIJG DE MEEST UITZONDERLIJKE ACCESSOIRES DIE BIJ UW BAL PASSEN ACCESSOIRES ACCESSOIRES BALLEN BALLEN ACCESSOIRES KRIJG DE MEEST UITZONDERLIJKE ACCESSOIRES DIE BIJ UW BAL PASSEN ACCESSOIRES ACCESSOIRES"
+              "text": "BALLS BALLS ACCESSORIES GET THE MOST EXCEPTIONAL ACCESSORIES THAT MATCH YOUR BALL ACCESSORIES ACCESSORIES BALLS BALLS ACCESSORIES GET THE MOST EXCEPTIONAL ACCESSORIES THAT MATCH YOUR BALL ACCESSORIES ACCESSORIES BALLS BALLS ACCESSORIES GET THE MOST EXCEPTIONAL ACCESSORIES THAT MATCH YOUR BALL ACCESSORIES ACCESSORIES BALLS BALLS ACCESSORIES GET THE MOST EXCEPTIONAL ACCESSORIES THAT MATCH YOUR BALL ACCESSORIES ACCESSORIES BALLS BALLS ACCESSORIES GET THE MOST EXCEPTIONAL ACCESSORIES THAT MATCH YOUR BALL ACCESSORIES ACCESSORIES"
             }
           },
           "a475b61b-2ff3-4c91-bd08-8f928e790d3b": {
             "type": "Marquee",
             "settings": {
-              "text": "BALLEN BALLEN ACCESSOIRES KRIJG DE MEEST UITZONDERLIJKE ACCESSOIRES DIE BIJ UW BAL PASSEN ACCESSOIRES ACCESSOIRES BALLEN BALLEN ACCESSOIRES KRIJG DE MEEST UITZONDERLIJKE ACCESSOIRES DIE BIJ UW BAL PASSEN ACCESSOIRES ACCESSOIRES BALLEN BALLEN ACCESSOIRES KRIJG DE MEEST UITZONDERLIJKE ACCESSOIRES DIE BIJ UW BAL PASSEN ACCESSOIRES ACCESSOIRES BALLEN BALLEN ACCESSOIRES KRIJG DE MEEST UITZONDERLIJKE ACCESSOIRES DIE BIJ UW BAL PASSEN ACCESSOIRES ACCESSOIRES BALLEN BALLEN ACCESSOIRES KRIJG DE MEEST UITZONDERLIJKE ACCESSOIRES DIE BIJ UW BAL PASSEN ACCESSOIRES ACCESSOIRES"
+              "text": "BALLS BALLS ACCESSORIES GET THE MOST EXCEPTIONAL ACCESSORIES THAT MATCH YOUR BALL ACCESSORIES ACCESSORIES BALLS BALLS ACCESSORIES GET THE MOST EXCEPTIONAL ACCESSORIES THAT MATCH YOUR BALL ACCESSORIES ACCESSORIES BALLS BALLS ACCESSORIES GET THE MOST EXCEPTIONAL ACCESSORIES THAT MATCH YOUR BALL ACCESSORIES ACCESSORIES BALLS BALLS ACCESSORIES GET THE MOST EXCEPTIONAL ACCESSORIES THAT MATCH YOUR BALL ACCESSORIES ACCESSORIES BALLS BALLS ACCESSORIES GET THE MOST EXCEPTIONAL ACCESSORIES THAT MATCH YOUR BALL ACCESSORIES ACCESSORIES"
             }
           },
           "490f010f-e843-42af-b5a0-fb18d23444c8": {
             "type": "Marquee",
             "settings": {
-              "text": "BALLEN BALLEN ACCESSOIRES KRIJG DE MEEST UITZONDERLIJKE ACCESSOIRES DIE BIJ UW BAL PASSEN ACCESSOIRES ACCESSOIRES BALLEN BALLEN ACCESSOIRES KRIJG DE MEEST UITZONDERLIJKE ACCESSOIRES DIE BIJ UW BAL PASSEN ACCESSOIRES ACCESSOIRES BALLEN BALLEN ACCESSOIRES KRIJG DE MEEST UITZONDERLIJKE ACCESSOIRES DIE BIJ UW BAL PASSEN ACCESSOIRES ACCESSOIRES BALLEN BALLEN ACCESSOIRES KRIJG DE MEEST UITZONDERLIJKE ACCESSOIRES DIE BIJ UW BAL PASSEN ACCESSOIRES ACCESSOIRES BALLEN BALLEN ACCESSOIRES KRIJG DE MEEST UITZONDERLIJKE ACCESSOIRES DIE BIJ UW BAL PASSEN ACCESSOIRES ACCESSOIRES"
+              "text": "BALLS BALLS ACCESSORIES GET THE MOST EXCEPTIONAL ACCESSORIES THAT MATCH YOUR BALL ACCESSORIES ACCESSORIES BALLS BALLS ACCESSORIES GET THE MOST EXCEPTIONAL ACCESSORIES THAT MATCH YOUR BALL ACCESSORIES ACCESSORIES BALLS BALLS ACCESSORIES GET THE MOST EXCEPTIONAL ACCESSORIES THAT MATCH YOUR BALL ACCESSORIES ACCESSORIES BALLS BALLS ACCESSORIES GET THE MOST EXCEPTIONAL ACCESSORIES THAT MATCH YOUR BALL ACCESSORIES ACCESSORIES BALLS BALLS ACCESSORIES GET THE MOST EXCEPTIONAL ACCESSORIES THAT MATCH YOUR BALL ACCESSORIES ACCESSORIES"
             }
           },
           "7055a31e-f677-44ef-bd87-139749a446b5": {
             "type": "Marquee",
             "settings": {
-              "text": "BALLEN BALLEN ACCESSOIRES KRIJG DE MEEST UITZONDERLIJKE ACCESSOIRES DIE BIJ UW BAL PASSEN ACCESSOIRES ACCESSOIRES BALLEN BALLEN ACCESSOIRES KRIJG DE MEEST UITZONDERLIJKE ACCESSOIRES DIE BIJ UW BAL PASSEN ACCESSOIRES ACCESSOIRES BALLEN BALLEN ACCESSOIRES KRIJG DE MEEST UITZONDERLIJKE ACCESSOIRES DIE BIJ UW BAL PASSEN ACCESSOIRES ACCESSOIRES BALLEN BALLEN ACCESSOIRES KRIJG DE MEEST UITZONDERLIJKE ACCESSOIRES DIE BIJ UW BAL PASSEN ACCESSOIRES ACCESSOIRES BALLEN BALLEN ACCESSOIRES KRIJG DE MEEST UITZONDERLIJKE ACCESSOIRES DIE BIJ UW BAL PASSEN ACCESSOIRES ACCESSOIRES"
+              "text": "BALLS BALLS ACCESSORIES GET THE MOST EXCEPTIONAL ACCESSORIES THAT MATCH YOUR BALL ACCESSORIES ACCESSORIES BALLS BALLS ACCESSORIES GET THE MOST EXCEPTIONAL ACCESSORIES THAT MATCH YOUR BALL ACCESSORIES ACCESSORIES BALLS BALLS ACCESSORIES GET THE MOST EXCEPTIONAL ACCESSORIES THAT MATCH YOUR BALL ACCESSORIES ACCESSORIES BALLS BALLS ACCESSORIES GET THE MOST EXCEPTIONAL ACCESSORIES THAT MATCH YOUR BALL ACCESSORIES ACCESSORIES BALLS BALLS ACCESSORIES GET THE MOST EXCEPTIONAL ACCESSORIES THAT MATCH YOUR BALL ACCESSORIES ACCESSORIES"
             }
           }
         },
@@ -1197,31 +1197,31 @@
           "d9a72365-8b4f-4300-a4fb-0283d13e5e79": {
             "type": "Marquee",
             "settings": {
-              "text": "BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS"
+              "text": "BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES"
             }
           },
           "e94ae61c-473f-4666-a56a-f23b37b0c4fd": {
             "type": "Marquee",
             "settings": {
-              "text": "BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS"
+              "text": "BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES"
             }
           },
           "9d0b110e-089b-4b50-8560-c39a86005f0e": {
             "type": "Marquee",
             "settings": {
-              "text": "BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS"
+              "text": "BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES"
             }
           },
           "737a860f-98c4-4dbb-890c-a2ba5c84d075": {
             "type": "Marquee",
             "settings": {
-              "text": "BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS"
+              "text": "BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES"
             }
           },
           "36c47550-1555-47a3-ae41-89b7c42ee116": {
             "type": "Marquee",
             "settings": {
-              "text": "BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS BUNDELS"
+              "text": "BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES BUNDLES"
             }
           }
         },
@@ -1302,7 +1302,7 @@
             "settings": {
               "img": "shopify://shop_images/image_2024-06-05_173035533.png",
               "img1": "shopify://shop_images/ball_color1_438d450a-ec2c-43c4-bcae-9b54c5bddf1c.png",
-              "btn": "Shop Volleyball",
+              "btn": "Shop Volleyballl",
               "url": "shopify://products/the-bright-volleyball"
             }
           },
@@ -1320,7 +1320,7 @@
             "settings": {
               "img": "shopify://shop_images/image_2024-06-05_173453040.png",
               "img1": "shopify://shop_images/image_2024-06-05_124620344.png",
-              "btn": "Shop Basketball",
+              "btn": "Shop Basketballl",
               "url": "shopify://products/bright-basketball"
             }
           }
@@ -1332,8 +1332,8 @@
           "bd0b6eb4-d44f-46b0-983f-9076a5d3ac00"
         ],
         "settings": {
-          "title": "WIJ HEBBEN DE MEEST <span>UNIEKE</span> <br>BALLEN OP DE MARKT",
-          "title1": "WIJ HEBBEN<br>DE MEEST<br> <span>UNIEKE</span> <br>BALLEN OP DE MARKT",
+          "title": "WE HAVE THE MOST <span>UNIQUE</span> <br>BALLS ON THE MARKET",
+          "title1": "WE HAVE<br>THE MOST<br> <span>UNIQUE</span> <br>BALLS ON THE MARKET",
           "text": "<svg width=\"11\" height=\"9\" viewbox=\"0 0 11 9\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M0.835938 5.03906L0.296875 4.5L0.835938 3.98438L4.21094 0.609375L4.75 0.0703125L5.80469 1.125L5.26562 1.66406L3.17969 3.75H10H10.75V5.25H10H3.17969L5.26562 7.35938L5.80469 7.875L4.75 8.95312L4.21094 8.41406L0.835938 5.03906Z\" fill=\"white\" fill-opacity=\"0.4\"></path>\n</svg>\nHOVER TO light balls\n<svg width=\"11\" height=\"9\" viewbox=\"0 0 11 9\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M10.1406 5.03906L6.76562 8.41406L6.25 8.95312L5.17188 7.875L5.71094 7.35938L7.79688 5.25H1H0.25V3.75H1H7.79688L5.71094 1.66406L5.17188 1.125L6.25 0.0703125L6.76562 0.609375L10.1406 3.98438L10.6797 4.5L10.1406 5.03906Z\" fill=\"white\" fill-opacity=\"0.4\"></path>\n</svg>"
         }
       },
@@ -1342,8 +1342,8 @@
         "settings": {
           "img": "shopify://shop_images/MBG-Dutch.png",
           "bg_title": "shopify://shop_images/Bright_logo.svg",
-          "title": "Ja, we <span>geloven</span> zoveel in ons product",
-          "dis": "We staan achter onze producten en willen dat je helemaal tevreden bent met je aankoop. Daarom bieden we een 30 dagen geld-terug garantie op al onze producten."
+          "title": "Yes, we <span>believe</span> so much in our product",
+          "dis": "We stand behind our products and want you to be completely satisfied with your purchase. That is why we offer a 30-day money-back guarantee on all our products."
         }
       },
       "sw--tiktok-sec": {
@@ -1419,7 +1419,7 @@
           "main_heading": "we gaan",
           "sub_heading": "viraal",
           "top_icon": "<svg width=\"23\" height=\"24\" viewbox=\"0 0 23 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6211 8.66353C18.1707 9.77064 20.0692 10.4221 22.1194 10.4221V6.47861C21.7314 6.47876 21.3444 6.43828 20.9647 6.35783V9.46197C18.9146 9.46197 17.0164 8.8105 15.4664 7.70338V15.7508C15.4664 19.7766 12.2013 23.0399 8.17366 23.0399C6.67094 23.0399 5.27412 22.5858 4.11377 21.807C5.43809 23.1604 7.28488 24 9.32807 24C13.356 24 16.6212 20.7367 16.6212 16.7108V8.66353H16.6211ZM18.0455 4.68505C17.2536 3.82034 16.7337 2.70275 16.6211 1.46721V0.960022H15.5269C15.8023 2.53029 16.7417 3.87188 18.0455 4.68505V4.68505ZM6.66117 18.7179C6.21875 18.1381 5.9796 17.4287 5.98067 16.6993C5.98067 14.8581 7.47419 13.3653 9.31674 13.3653C9.66008 13.365 10.0014 13.4177 10.3287 13.5214V9.48986C9.94629 9.43749 9.56034 9.41528 9.17444 9.42346V12.5614C8.847 12.4577 8.50553 12.405 8.16205 12.4053C6.3195 12.4053 4.82612 13.8981 4.82612 15.7395C4.82612 17.0414 5.5726 18.1688 6.66117 18.7179V18.7179Z\" fill=\"#EE1D52\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15.4664 7.70338C17.0164 8.8105 18.9146 9.46197 20.9647 9.46197V6.35783C19.8203 6.11429 18.8072 5.51648 18.0455 4.68505C16.7417 3.87188 15.8022 2.53029 15.5268 0.960022H12.6526V16.7107C12.6461 18.5469 11.1551 20.0336 9.31656 20.0336C8.2331 20.0336 7.27055 19.5175 6.66099 18.7179C5.57243 18.1688 4.82595 17.0414 4.82595 15.7395C4.82595 13.8981 6.31933 12.4053 8.16187 12.4053C8.51487 12.4053 8.85511 12.4602 9.17426 12.5614V9.42346C5.21745 9.50516 2.03516 12.7366 2.03516 16.7108C2.03516 18.6947 2.82765 20.4932 4.11374 21.8072C5.27409 22.5859 6.6709 23.04 8.17363 23.04C12.2012 23.04 15.4664 19.7766 15.4664 15.751V7.70338Z\" fill=\"white\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M20.9647 6.3578V5.51844C19.9327 5.52 18.9211 5.23114 18.0455 4.68488C18.8205 5.533 19.8411 6.11786 20.9647 6.3578V6.3578ZM15.5268 0.96C15.5005 0.809948 15.4804 0.658884 15.4664 0.507186V0H11.4978V15.7508C11.4914 17.5868 10.0006 19.0735 8.16188 19.0735C7.62199 19.0735 7.1124 18.9456 6.661 18.7179C7.27056 19.5174 8.2331 20.0335 9.31657 20.0335C11.155 20.0335 12.6461 18.5468 12.6526 16.7106V0.96H15.5268ZM9.17441 9.42343V8.52984C8.8428 8.4845 8.50848 8.46184 8.17378 8.46201C4.14575 8.46201 0.880615 11.7254 0.880615 15.7508C0.880615 18.2745 2.16387 20.4987 4.11389 21.807C2.8278 20.493 2.0353 18.6945 2.0353 16.7106C2.0353 12.7366 5.21746 9.50513 9.17441 9.42343V9.42343Z\" fill=\"#69C9D0\"></path>\n</svg>",
-          "top_heading": "ZOALS TE ZIEN OP TIKTOK"
+          "top_heading": "AS SEEN ON TIKTOK"
         }
       },
       "20c8be73-b582-4d21-8691-f7050645cd1a": {
@@ -1428,8 +1428,8 @@
           "0f84e2dd-4ea9-4123-875b-1b90e2d21b6d": {
             "type": "accordian",
             "settings": {
-              "question": "Bieden jullie wereldwijde verzending aan?",
-              "answer": "<p>Geniet overal van de BRIGHT® ballen! Onze wereldwijde verzending zorgt ervoor dat dit sensationele product jou kan bereiken, waar je ook woont. Houd rekening met de verzend- en levertijden, die kunnen variëren afhankelijk van jouw locatie.</p>"
+              "question": "Do you offer worldwide shipping?",
+              "answer": "<p>Enjoy BRIGHT® balls everywhere! Our worldwide shipping gets this product to you wherever you live. Please note shipping and delivery times may vary by location.</p>"
             }
           },
           "accordian_TLWF6X": {
@@ -1442,29 +1442,29 @@
           "3cd8f729-f3a1-4c12-85f3-456e18c56b1d": {
             "type": "accordian",
             "settings": {
-              "question": "Hoe lang duurt het om mijn bestelling te ontvangen?",
+              "question": "How long does it take to receive my order?",
               "answer": "<p>Orders are usually processed within 1-2 days. Delivery takes 3 to 5 business days.</p>"
             }
           },
           "db3d76a0-ec7e-46f2-9c30-94a30775de6f": {
             "type": "accordian",
             "settings": {
-              "question": "Bieden jullie groothandelsprijzen voor bulkbestellingen?",
-              "answer": "<p>Ja! Vul alstublieft dit contactformulier in om informatie over prijzen aan te vragen.</p>"
+              "question": "Do you offer wholesale prices for bulk orders?",
+              "answer": "<p>Yes! Please fill out this contact form to request pricing information.</p>"
             }
           },
           "4b4eaf49-680d-47cd-9165-b3c3c827801b": {
             "type": "accordian",
             "settings": {
-              "question": "Wat is jullie retourbeleid?",
-              "answer": "<p>We zijn ervan overtuigd dat het product naar wens zal zijn! Zo niet, bieden we een geld-terug-garantie van 30 dagen. Als je om welke reden dan ook niet 100% tevreden bent met je aankoop, neem dan contact op met ons vriendelijke klantenserviceteam via <a href=\"mailto:support@brightsport.com\" title=\"mailto:support@brightsport.com\"><strong>support@brightsport.com</strong></a><strong> </strong></p>"
+              "question": "What is your return policy?",
+              "answer": "<p>We are confident you will love the product! If not, we offer a 30-day money-back guarantee. If you are not 100% satisfied for any reason, contact our friendly customer service team at <a href=\"mailto:support@brightsport.com\" title=\"mailto:support@brightsport.com\"><strong>support@brightsport.com</strong></a><strong> </strong></p>"
             }
           },
           "4ed035eb-9edc-4e7e-b03c-2d6f1d69e527": {
             "type": "accordian",
             "settings": {
-              "question": "Kan ik mijn product personaliseren?",
-              "answer": "<p>Ja! We kunnen onze ballen personaliseren volgens jouw merk, maar het BRIGHT-logo en de naam zullen er nog steeds op staan. Een minimale bestelhoeveelheid is hiervoor vereist. Vul dit <a href=\"/pages/contact-us\" title=\"Dev Contact Us\"><strong>contactformulier</strong></a> in om prijzen aan te vragen.</p>\n<div class=\"klaviyo-form-TpSUVF\"></div>"
+              "question": "Can I personalize my product?",
+              "answer": "<p>Yes! We can personalize our balls with your branding, but the BRIGHT logo and name remain visible. A minimum order quantity is required. Fill out this <a href=\"/pages/contact-us\" title=\"Dev Contact Us\"><strong>contact form</strong></a> to request pricing.</p>\n<div class=\"klaviyo-form-TpSUVF\"></div>"
             }
           }
         },
@@ -1477,7 +1477,7 @@
           "4ed035eb-9edc-4e7e-b03c-2d6f1d69e527"
         ],
         "settings": {
-          "title": "JE hebt <span>vragen</span>.<br>\nWE HEBBEN <span>ANTWOORDEN</span>.",
+          "title": "YOU have <span>questions</span>.<br>\nWE HAVE <span>ANSWERS</span>.",
           "caption": ""
         }
       },
@@ -1485,9 +1485,9 @@
         "type": "sw--light-up",
         "settings": {
           "img": "shopify://shop_images/bg_copy_85491091-add4-49d7-8b2b-91c5d7b1e715.webp",
-          "title": "Klaar om je <br>\n<span>SPEL?</span>",
-          "caption": "Verhoog je spel met de helderste bal",
-          "btn": "Shop de Bestsellers van BRIGHT",
+          "title": "Ready for your <br>\n<span>GAME?</span>",
+          "caption": "Elevate your game with the brightest ball",
+          "btn": "Shop BRIGHT Bestsellers",
           "url": "shopify://collections/all",
           "payment_icon": "<svg width=\"400\" height=\"24\" viewbox=\"0 0 400 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_2628_25610)\">\n<path d=\"M4.45458 0.5H29.1819C31.3157 0.5 33.0455 2.22981 33.0455 4.36364V19.6364C33.0455 21.7702 31.3157 23.5 29.1819 23.5H4.45458C2.32075 23.5 0.590942 21.7702 0.590942 19.6364V4.36364C0.590942 2.22981 2.32075 0.5 4.45458 0.5Z\" stroke=\"white\" stroke-opacity=\"0.12\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5.27559 15.3796H3.91431V9H5.27559V15.3796ZM8.67413 9H7.34239C7.34239 10.174 6.84054 11.2516 5.96556 11.9566L5.43794 12.3815L7.48228 15.3799H9.16315L7.28207 12.6209C8.1737 11.666 8.67413 10.3812 8.67413 9ZM10.8454 15.3785H9.5598V9.00175H10.8454V15.3785ZM14.7295 10.9669V11.2491C14.3826 10.9945 13.964 10.8449 13.5124 10.8449C12.3173 10.8449 11.3484 11.8871 11.3484 13.1725C11.3484 14.458 12.3173 15.5 13.5124 15.5C13.964 15.5 14.3826 15.3504 14.7295 15.096V15.3779H15.9574V10.9669H14.7295ZM14.7258 13.1725C14.7258 13.7993 14.2277 14.3074 13.6132 14.3074C12.9987 14.3074 12.5006 13.7993 12.5006 13.1725C12.5006 12.5457 12.9987 12.0377 13.6132 12.0377C14.2277 12.0377 14.7258 12.5457 14.7258 13.1725ZM27.6834 11.2491V10.9669H28.9112V15.3779H27.6834V15.096C27.3365 15.3504 26.9178 15.5 26.4662 15.5C25.271 15.5 24.3022 14.458 24.3022 13.1725C24.3022 11.8871 25.271 10.8449 26.4662 10.8449C26.9178 10.8449 27.3365 10.9945 27.6834 11.2491ZM26.567 14.3074C27.1815 14.3074 27.6796 13.7993 27.6796 13.1725C27.6796 12.5457 27.1815 12.0377 26.567 12.0377C25.9525 12.0377 25.4544 12.5457 25.4544 13.1725C25.4544 13.7993 25.9525 14.3074 26.567 14.3074ZM29.4441 14.6421C29.4441 14.1844 29.7891 13.8134 30.2146 13.8134C30.6402 13.8134 30.9852 14.1844 30.9852 14.6421C30.9852 15.0998 30.6402 15.4708 30.2146 15.4708C29.7891 15.4708 29.4441 15.0998 29.4441 14.6421ZM22.1202 10.8482C21.6298 10.8482 21.1656 11.012 20.8552 11.4639V10.9671H19.6327V15.3779H20.8702V13.0599C20.8702 12.3891 21.2885 12.0607 21.792 12.0607C22.3316 12.0607 22.6418 12.4073 22.6418 13.0508V15.3779H23.8682V12.5729C23.8682 11.5463 23.1094 10.8482 22.1202 10.8482ZM17.8569 10.967V11.5415C18.103 11.1969 18.5616 10.9672 19.0602 10.9672V12.2508L19.0534 12.2505C19.0509 12.2503 19.0483 12.2502 19.0457 12.2502C18.5598 12.2502 17.8597 12.6236 17.8597 13.3185V15.3779H16.5997V10.967H17.8569Z\" fill=\"white\"></path>\n</g>\n<g clip-path=\"url(#clip1_2628_25610)\">\n<path d=\"M49.9092 0.5H74.6364C76.7703 0.5 78.5001 2.22981 78.5001 4.36364V19.6364C78.5001 21.7702 76.7703 23.5 74.6364 23.5H49.9092C47.7753 23.5 46.0455 21.7702 46.0455 19.6364V4.36364C46.0455 2.22981 47.7753 0.5 49.9092 0.5Z\" stroke=\"white\" stroke-opacity=\"0.12\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M55.7016 16.2583H53.6749L52.1551 10.1924C52.083 9.91331 51.9298 9.66669 51.7045 9.5504C51.1423 9.25825 50.5227 9.02567 49.8468 8.90844V8.67491H53.1116C53.5622 8.67491 53.9002 9.02567 53.9565 9.43309L54.7451 13.8087L56.7707 8.67491H58.7411L55.7016 16.2583ZM59.8676 16.2583H57.9536L59.5297 8.67491H61.4438L59.8676 16.2583ZM63.9201 10.7757C63.9763 10.3673 64.3143 10.1337 64.7086 10.1337C65.3281 10.0751 66.003 10.1924 66.5663 10.4836L66.9043 8.85084C66.341 8.61731 65.7214 8.5 65.1592 8.5C63.3014 8.5 61.9497 9.5504 61.9497 11.0082C61.9497 12.1173 62.9072 12.6996 63.5831 13.0504C64.3143 13.4002 64.5959 13.6337 64.5396 13.9836C64.5396 14.5082 63.9763 14.7418 63.4141 14.7418C62.7382 14.7418 62.0623 14.5669 61.4438 14.2747L61.1058 15.9084C61.7817 16.1996 62.5129 16.3169 63.1888 16.3169C65.2718 16.3745 66.5663 15.3251 66.5663 13.75C66.5663 11.7665 63.9201 11.6502 63.9201 10.7757ZM73.265 16.2583L71.7452 8.67491H70.1128C69.7748 8.67491 69.4369 8.90844 69.3243 9.25825L66.51 16.2583H68.4803L68.8737 15.1502H71.2946L71.5199 16.2583H73.265ZM70.3944 10.7171L70.9566 13.5751H69.3806L70.3944 10.7171Z\" fill=\"white\"></path>\n</g>\n<g clip-path=\"url(#clip2_2628_25610)\">\n<path d=\"M95.3636 0.5H120.091C122.225 0.5 123.955 2.22981 123.955 4.36364V19.6364C123.955 21.7702 122.225 23.5 120.091 23.5H95.3636C93.2298 23.5 91.5 21.7702 91.5 19.6364V4.36364C91.5 2.22981 93.2298 0.5 95.3636 0.5Z\" stroke=\"white\" stroke-opacity=\"0.12\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M107.916 17.3805C106.777 18.4088 105.3 19.0296 103.685 19.0296C100.083 19.0296 97.1627 15.939 97.1627 12.1267C97.1627 8.31422 100.083 5.22363 103.685 5.22363C105.3 5.22363 106.777 5.84439 107.916 6.87267C109.055 5.84439 110.532 5.22363 112.147 5.22363C115.749 5.22363 118.669 8.31422 118.669 12.1267C118.669 15.939 115.749 19.0296 112.147 19.0296C110.532 19.0296 109.055 18.4088 107.916 17.3805Z\" fill=\"#ED0006\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M107.916 17.3805C109.318 16.1144 110.208 14.2304 110.208 12.1267C110.208 10.0228 109.318 8.1388 107.916 6.87267C109.055 5.84439 110.532 5.22363 112.147 5.22363C115.749 5.22363 118.669 8.31422 118.669 12.1267C118.669 15.939 115.749 19.0296 112.147 19.0296C110.532 19.0296 109.055 18.4088 107.916 17.3805Z\" fill=\"#F9A000\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M107.916 6.87305C109.318 8.13915 110.208 10.0231 110.208 12.127C110.208 14.2308 109.318 16.1148 107.916 17.3809C106.514 16.1148 105.624 14.2308 105.624 12.127C105.624 10.0231 106.514 8.13915 107.916 6.87305Z\" fill=\"#FF5E00\"></path>\n</g>\n<g clip-path=\"url(#clip3_2628_25610)\">\n<path d=\"M140.818 0.5H165.545C167.679 0.5 169.409 2.22981 169.409 4.36364V19.6364C169.409 21.7702 167.679 23.5 165.545 23.5H140.818C138.684 23.5 136.955 21.7702 136.955 19.6364V4.36364C136.955 2.22981 138.684 0.5 140.818 0.5Z\" stroke=\"white\" stroke-opacity=\"0.12\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M142.452 8.5L139.322 15.7468H143.069L143.534 14.5913H144.596L145.06 15.7468H149.185V14.8649L149.552 15.7468H151.686L152.053 14.8463V15.7468H160.631L161.674 14.6213L162.651 15.7468L167.057 15.7561L163.917 12.1436L167.057 8.5H162.719L161.704 9.60465L160.758 8.5H151.426L150.625 10.3705L149.805 8.5H146.066V9.35185L145.65 8.5H142.452ZM143.177 9.52902H145.004L147.08 14.4431V9.52902H149.081L150.684 13.0524L152.162 9.52902H154.153V14.7291H152.942L152.932 10.6543L151.166 14.7291H150.082L148.306 10.6543V14.7291H145.814L145.342 13.5633H142.789L142.318 14.7281H140.982L143.177 9.52902ZM160.187 9.52902H155.262V14.726H160.111L161.674 13.0036L163.181 14.726H164.756L162.467 12.1426L164.756 9.52902H163.249L161.694 11.2316L160.187 9.52902ZM144.066 10.4089L143.225 12.4856H144.906L144.066 10.4089ZM156.478 11.555V10.6057V10.6048H159.552L160.893 12.1229L159.492 13.6493H156.478V12.613H159.165V11.555H156.478Z\" fill=\"white\"></path>\n</g>\n<g clip-path=\"url(#clip4_2628_25610)\">\n<path d=\"M186.273 0.5H211C213.134 0.5 214.864 2.22981 214.864 4.36364V19.6364C214.864 21.7702 213.134 23.5 211 23.5H186.273C184.139 23.5 182.409 21.7702 182.409 19.6364V4.36364C182.409 2.22981 184.139 0.5 186.273 0.5Z\" stroke=\"white\" stroke-opacity=\"0.12\"></path>\n<path d=\"M201.117 12.1267C201.117 15.939 198.196 19.0296 194.594 19.0296C190.992 19.0296 188.072 15.939 188.072 12.1267C188.072 8.31422 190.992 5.22363 194.594 5.22363C198.196 5.22363 201.117 8.31422 201.117 12.1267Z\" fill=\"#ED0006\"></path>\n<path d=\"M209.578 12.1267C209.578 15.939 206.658 19.0296 203.056 19.0296C199.453 19.0296 196.533 15.939 196.533 12.1267C196.533 8.31422 199.453 5.22363 203.056 5.22363C206.658 5.22363 209.578 8.31422 209.578 12.1267Z\" fill=\"#0099DF\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M198.825 6.87305C200.227 8.13915 201.117 10.0231 201.117 12.127C201.117 14.2308 200.227 16.1148 198.825 17.3809C197.423 16.1148 196.533 14.2308 196.533 12.127C196.533 10.0231 197.423 8.13915 198.825 6.87305Z\" fill=\"#6C6BBD\"></path>\n</g>\n<g clip-path=\"url(#clip5_2628_25610)\">\n<path d=\"M231.727 0.5H256.455C258.588 0.5 260.318 2.22981 260.318 4.36364V19.6364C260.318 21.7702 258.588 23.5 256.455 23.5H231.727C229.593 23.5 227.864 21.7702 227.864 19.6364V4.36364C227.864 2.22981 229.593 0.5 231.727 0.5Z\" stroke=\"white\" stroke-opacity=\"0.12\"></path>\n<path d=\"M246.198 11.0612C246.198 12.6013 245.166 13.7007 243.724 13.7007H242.365C242.35 13.7007 242.335 13.7038 242.321 13.7099C242.307 13.7159 242.295 13.7247 242.284 13.7358C242.274 13.747 242.265 13.7601 242.26 13.7747C242.254 13.7892 242.251 13.8048 242.251 13.8204V15.8446C242.251 15.8763 242.239 15.9066 242.218 15.9291C242.196 15.9515 242.167 15.9642 242.137 15.9643H241.186C241.164 15.9642 241.142 15.9571 241.123 15.944C241.104 15.9308 241.089 15.9121 241.081 15.8903C241.075 15.876 241.072 15.8607 241.072 15.8452V8.54085C241.072 8.52514 241.075 8.50958 241.08 8.49511C241.086 8.48056 241.094 8.46732 241.105 8.4562C241.116 8.44507 241.128 8.43627 241.142 8.43023C241.156 8.4242 241.171 8.42114 241.186 8.42114H243.73C245.166 8.4194 246.198 9.51882 246.198 11.0612ZM245.012 11.0612C245.012 10.1758 244.435 9.52863 243.652 9.52863H242.365C242.35 9.52863 242.335 9.53176 242.321 9.53772C242.307 9.54376 242.295 9.55263 242.284 9.56376C242.274 9.57489 242.265 9.58805 242.26 9.6026C242.254 9.61707 242.251 9.63263 242.251 9.64834V12.4672C242.251 12.4987 242.263 12.5291 242.284 12.5514C242.306 12.5737 242.335 12.5863 242.365 12.5863H243.652C244.435 12.5921 245.012 11.9443 245.012 11.0612ZM246.48 14.563C246.47 14.3268 246.517 14.0918 246.616 13.8793C246.715 13.6667 246.863 13.4835 247.047 13.3462C247.418 13.0542 247.998 12.9032 248.849 12.872L249.756 12.8385V12.5585C249.756 11.9975 249.396 11.7604 248.819 11.7604C248.242 11.7604 247.876 11.9744 247.792 12.3243C247.785 12.3489 247.771 12.3705 247.751 12.3855C247.731 12.4006 247.707 12.4083 247.683 12.4075H246.787C246.771 12.4081 246.754 12.4047 246.739 12.3978C246.724 12.3909 246.711 12.3806 246.7 12.3676C246.689 12.3546 246.681 12.3393 246.676 12.3227C246.672 12.3062 246.671 12.2887 246.673 12.2717C246.806 11.4423 247.466 10.812 248.86 10.812C250.344 10.812 250.88 11.5349 250.88 12.9147V15.8446C250.879 15.8766 250.867 15.9071 250.845 15.9295C250.823 15.952 250.794 15.9645 250.764 15.9643H249.861C249.831 15.9643 249.802 15.9518 249.78 15.9297C249.77 15.9185 249.761 15.9054 249.755 15.8909C249.75 15.8763 249.747 15.8609 249.747 15.8452V15.626C249.747 15.6079 249.742 15.5901 249.733 15.575C249.723 15.5598 249.71 15.5481 249.694 15.5413C249.678 15.5345 249.66 15.5329 249.643 15.5367C249.626 15.5406 249.611 15.5497 249.599 15.563C249.328 15.8712 248.891 16.0939 248.19 16.0939C247.16 16.0939 246.48 15.5329 246.48 14.563ZM249.756 13.928V13.7007L248.582 13.7655C247.963 13.7985 247.603 14.0674 247.603 14.5202C247.603 14.9297 247.933 15.1564 248.51 15.1564C249.293 15.1564 249.756 14.7139 249.756 13.928ZM251.786 18.1782V17.3292C251.786 17.3114 251.79 17.2939 251.798 17.2778C251.805 17.2617 251.816 17.2476 251.829 17.2363C251.842 17.2251 251.857 17.217 251.874 17.2126C251.89 17.2083 251.908 17.2078 251.924 17.2112C252.063 17.2384 252.204 17.2523 252.344 17.2529C252.587 17.2652 252.826 17.1921 253.024 17.0453C253.222 16.8985 253.367 16.6865 253.436 16.4432L253.495 16.2477C253.503 16.2214 253.503 16.193 253.495 16.1667L251.614 11.1121C251.607 11.0938 251.604 11.074 251.607 11.0545C251.609 11.035 251.615 11.0163 251.626 11C251.636 10.9837 251.651 10.9704 251.667 10.9611C251.684 10.9518 251.702 10.9469 251.721 10.9467H252.633C252.656 10.947 252.679 10.9545 252.698 10.9685C252.717 10.9824 252.732 11.002 252.74 11.0248L254.018 14.5897C254.026 14.6133 254.041 14.6338 254.06 14.6483C254.08 14.6628 254.103 14.6706 254.127 14.6706C254.151 14.6706 254.175 14.6628 254.194 14.6483C254.214 14.6338 254.229 14.6133 254.237 14.5897L255.346 11.0346C255.354 11.0103 255.369 10.9892 255.389 10.9742C255.408 10.9593 255.432 10.9513 255.457 10.9513H256.4C256.419 10.9515 256.438 10.9563 256.455 10.9657C256.471 10.9749 256.486 10.9883 256.496 11.0046C256.507 11.0209 256.514 11.0396 256.516 11.0593C256.518 11.0789 256.516 11.0988 256.509 11.1173L254.497 16.7306C254.034 18.0353 253.239 18.369 252.365 18.369C252.199 18.3737 252.033 18.3529 251.873 18.3072C251.846 18.2998 251.823 18.2828 251.807 18.2592C251.791 18.2356 251.784 18.207 251.786 18.1782ZM234.962 8.00012C233.763 7.99118 232.607 8.46303 231.731 9.31867C231.694 9.3546 231.67 9.40376 231.666 9.45671C231.661 9.50965 231.675 9.56245 231.706 9.605L232.248 10.38C232.266 10.4057 232.289 10.4272 232.315 10.4428C232.341 10.4584 232.371 10.4678 232.401 10.4702C232.431 10.4728 232.461 10.4683 232.49 10.4571C232.518 10.4461 232.544 10.4286 232.565 10.4059C232.88 10.0765 233.255 9.81605 233.667 9.63976C234.079 9.46354 234.521 9.37503 234.966 9.3794C236.826 9.3794 237.797 10.8438 237.797 12.2896C237.797 13.8615 236.777 14.9673 235.31 14.9893C234.177 14.9893 233.323 14.2033 233.323 13.1652C233.324 12.903 233.381 12.6442 233.489 12.4077C233.597 12.1712 233.755 11.9627 233.949 11.7974C233.99 11.7615 234.016 11.7101 234.022 11.6542C234.027 11.5985 234.011 11.5427 233.977 11.499L233.407 10.746C233.39 10.7233 233.369 10.7043 233.344 10.6904C233.32 10.6764 233.293 10.6677 233.266 10.6647C233.238 10.6617 233.21 10.6646 233.184 10.6731C233.157 10.6816 233.132 10.6956 233.111 10.7142C232.761 11.0092 232.479 11.3825 232.284 11.8066C232.09 12.2307 231.989 12.695 231.989 13.1652C231.989 14.9523 233.441 16.3541 235.3 16.3657H235.325C237.533 16.3356 239.129 14.6249 239.129 12.2867C239.129 10.2105 237.668 8.00012 234.962 8.00012H234.962Z\" fill=\"white\"></path>\n</g>\n<g clip-path=\"url(#clip6_2628_25610)\">\n<path d=\"M277.182 0.5H301.909C304.043 0.5 305.773 2.22981 305.773 4.36364V19.6364C305.773 21.7702 304.043 23.5 301.909 23.5H277.182C275.048 23.5 273.318 21.7702 273.318 19.6364V4.36364C273.318 2.22981 275.048 0.5 277.182 0.5Z\" stroke=\"white\" stroke-opacity=\"0.12\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M281.975 8.34313C281.694 8.69505 281.245 8.97258 280.796 8.93295C280.74 8.45716 280.96 7.95164 281.217 7.63935C281.498 7.27753 281.989 7.01983 282.387 7C282.434 7.49564 282.251 7.98138 281.975 8.34313ZM282.382 9.02713C281.987 9.00298 281.625 9.15316 281.334 9.27447C281.146 9.35258 280.987 9.41869 280.866 9.41869C280.73 9.41869 280.565 9.34902 280.379 9.27084C280.135 9.16836 279.857 9.05127 279.565 9.05687C278.896 9.06676 278.273 9.46822 277.932 10.1076C277.23 11.3863 277.749 13.2796 278.428 14.3204C278.76 14.8359 279.158 15.4009 279.682 15.3811C279.913 15.3719 280.079 15.2973 280.25 15.2202C280.448 15.1313 280.653 15.0391 280.974 15.0391C281.283 15.0391 281.48 15.1289 281.668 15.2152C281.847 15.2972 282.019 15.376 282.275 15.3712C282.818 15.3613 283.159 14.8557 283.492 14.3403C283.85 13.7871 284.008 13.2471 284.032 13.1652L284.034 13.1557C284.034 13.1551 284.03 13.1529 284.022 13.1492C283.902 13.0911 282.986 12.6468 282.977 11.4557C282.968 10.4559 283.703 9.94938 283.819 9.8696C283.826 9.86473 283.831 9.86145 283.833 9.85978C283.365 9.12626 282.635 9.04698 282.382 9.02713ZM286.141 15.3167V7.58982H288.878C290.292 7.58982 291.279 8.62073 291.279 10.1274C291.279 11.6341 290.273 12.675 288.841 12.675H287.273V15.3167H286.141ZM287.273 8.60087H288.579C289.562 8.60087 290.123 9.156 290.123 10.1324C290.123 11.1088 289.562 11.6688 288.574 11.6688H287.273V8.60087ZM295.019 14.3898C294.719 14.9945 294.059 15.3761 293.348 15.3761C292.295 15.3761 291.56 14.712 291.56 13.7108C291.56 12.7196 292.271 12.1496 293.587 12.0653L295 11.9761V11.5499C295 10.9204 294.612 10.5785 293.919 10.5785C293.348 10.5785 292.931 10.8907 292.847 11.3665H291.827C291.86 10.3653 292.749 9.63673 293.952 9.63673C295.248 9.63673 296.09 10.3554 296.09 11.4706V15.3167H295.042V14.3898H295.019ZM293.652 14.4592C293.048 14.4592 292.665 14.1519 292.665 13.6811C292.665 13.1953 293.034 12.9129 293.741 12.8683L295 12.784V13.2201C295 13.9438 294.42 14.4592 293.652 14.4592ZM299.568 15.619C299.114 16.9721 298.594 17.4181 297.49 17.4181C297.405 17.4181 297.125 17.4082 297.059 17.3884V16.4616C297.129 16.4715 297.303 16.4814 297.391 16.4814C297.892 16.4814 298.173 16.2584 298.346 15.6785L298.449 15.3365L296.53 9.71113H297.714L299.048 14.2759H299.072L300.405 9.71113H301.557L299.568 15.619Z\" fill=\"white\"></path>\n</g>\n<g clip-path=\"url(#clip7_2628_25610)\">\n<path d=\"M322.636 0.5H348.909C351.043 0.5 352.773 2.22981 352.773 4.36364V19.6364C352.773 21.7702 351.043 23.5 348.909 23.5H322.636C320.503 23.5 318.773 21.7702 318.773 19.6364V4.36364C318.773 2.22981 320.503 0.5 322.636 0.5Z\" stroke=\"white\" stroke-opacity=\"0.12\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M334.803 15.7584V12.7375H336.362C337.001 12.7375 337.54 12.5234 337.98 12.1012L338.085 11.9942C338.888 11.12 338.836 9.75816 337.98 8.94943C337.552 8.52129 336.966 8.28936 336.362 8.30121H333.859V15.7584H334.803ZM334.803 11.8217V9.217H336.386C336.726 9.217 337.048 9.34783 337.289 9.58572C337.799 10.0852 337.811 10.9178 337.318 11.4352C337.078 11.6909 336.738 11.8336 336.386 11.8217H334.803ZM342.487 11.0546C342.083 10.68 341.532 10.4897 340.835 10.4897C339.938 10.4897 339.264 10.8227 338.818 11.4827L339.651 12.0121C339.955 11.5601 340.371 11.3341 340.899 11.3341C341.233 11.3341 341.555 11.459 341.808 11.6849C342.054 11.899 342.194 12.2083 342.194 12.5353V12.7554C341.831 12.5531 341.374 12.4462 340.811 12.4462C340.155 12.4462 339.627 12.6008 339.234 12.9159C338.842 13.2311 338.642 13.6474 338.642 14.1766C338.631 14.6583 338.836 15.1162 339.199 15.4254C339.568 15.7585 340.037 15.925 340.588 15.925C341.239 15.925 341.755 15.6336 342.148 15.0508H342.189V15.7584H343.091V12.6126C343.091 11.9526 342.892 11.4292 342.487 11.0546ZM339.926 14.8189C339.733 14.6762 339.615 14.4443 339.615 14.1944C339.615 13.915 339.744 13.683 339.996 13.4987C340.254 13.3144 340.577 13.2192 340.958 13.2192C341.486 13.2133 341.896 13.3322 342.189 13.5701C342.189 13.9745 342.031 14.3253 341.72 14.6227C341.439 14.9081 341.058 15.0686 340.659 15.0686C340.395 15.0746 340.137 14.9854 339.926 14.8189ZM345.119 18.0004L348.273 10.6561H347.247L345.788 14.3193H345.77L344.275 10.6561H343.25L345.319 15.4314L344.146 18.0004H345.119Z\" fill=\"white\"></path>\n<path d=\"M331.545 12.0831C331.545 11.7916 331.521 11.5002 331.475 11.2148H327.495V12.862H329.775C329.681 13.3914 329.376 13.8671 328.931 14.1644V15.2348H330.291C331.088 14.4915 331.545 13.3914 331.545 12.0831Z\" fill=\"white\"></path>\n<path d=\"M327.495 16.2696C328.632 16.2696 329.593 15.889 330.291 15.2349L328.931 14.1644C328.55 14.4261 328.063 14.5748 327.495 14.5748C326.393 14.5748 325.461 13.8196 325.127 12.8086H323.726V13.9147C324.441 15.3598 325.9 16.2696 327.495 16.2696Z\" fill=\"white\"></path>\n<path d=\"M325.127 12.8088C324.951 12.2795 324.951 11.7027 325.127 11.1675V10.0674H323.726C323.122 11.2746 323.122 12.7018 323.726 13.909L325.127 12.8088Z\" fill=\"white\"></path>\n<path d=\"M327.495 9.40108C328.098 9.38922 328.679 9.62115 329.113 10.0433L330.32 8.81832C329.552 8.09279 328.544 7.69439 327.495 7.70631C325.9 7.70631 324.441 8.6221 323.726 10.0671L325.127 11.1732C325.461 10.1564 326.393 9.40108 327.495 9.40108Z\" fill=\"white\"></path>\n</g>\n<rect x=\"366.409\" y=\"0.5\" width=\"33\" height=\"23\" rx=\"3.5\" stroke=\"white\" stroke-opacity=\"0.12\"></rect>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M387.185 9.0752C387.173 9.15328 387.159 9.23307 387.144 9.31506C386.622 12.0857 384.836 13.0429 382.555 13.0429H381.393C381.114 13.0429 380.879 13.2522 380.836 13.5366L380.072 18.5399C380.044 18.7267 380.183 18.895 380.366 18.895H382.426C382.67 18.895 382.877 18.7118 382.916 18.4632L382.936 18.355L383.324 15.8108L383.349 15.6713C383.387 15.4217 383.594 15.2384 383.838 15.2384H384.146C386.142 15.2384 387.705 14.4009 388.161 11.9771C388.352 10.9646 388.253 10.1191 387.749 9.52451C387.596 9.34525 387.406 9.19641 387.185 9.0752Z\" fill=\"white\" fill-opacity=\"0.6\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M386.638 8.84993C386.559 8.82586 386.476 8.80411 386.392 8.78443C386.307 8.76525 386.22 8.74826 386.131 8.73335C385.817 8.68106 385.474 8.65625 385.107 8.65625H382.004C381.927 8.65625 381.854 8.67409 381.79 8.70635C381.646 8.77747 381.54 8.9175 381.514 9.08894L380.854 13.4105L380.835 13.5365C380.879 13.252 381.114 13.0427 381.393 13.0427H382.554C384.836 13.0427 386.622 12.085 387.144 9.31488C387.16 9.23289 387.173 9.15309 387.184 9.07501C387.052 9.00255 386.909 8.9406 386.755 8.88781C386.717 8.87473 386.678 8.86215 386.638 8.84993Z\" fill=\"white\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M381.515 9.08911C381.54 8.91767 381.647 8.77764 381.79 8.70701C381.855 8.67463 381.927 8.65679 382.004 8.65679H385.107C385.474 8.65679 385.818 8.68171 386.131 8.73401C386.22 8.7488 386.307 8.76591 386.392 8.78509C386.476 8.80464 386.559 8.82651 386.638 8.85046C386.678 8.86268 386.717 8.87539 386.756 8.88798C386.91 8.94077 387.053 9.00321 387.185 9.07518C387.34 8.05131 387.184 7.35419 386.648 6.72293C386.058 6.02789 384.992 5.73047 383.628 5.73047H379.669C379.391 5.73047 379.153 5.93979 379.11 6.22475L377.461 17.0283C377.428 17.2421 377.588 17.4349 377.796 17.4349H380.241L381.515 9.08911Z\" fill=\"white\" fill-opacity=\"0.8\"></path>\n<defs>\n<clippath id=\"clip0_2628_25610\">\n<rect width=\"33.4545\" height=\"24\" fill=\"white\" transform=\"translate(0.0909424)\"></rect>\n</clippath>\n<clippath id=\"clip1_2628_25610\">\n<rect width=\"33.4545\" height=\"24\" fill=\"white\" transform=\"translate(45.5455)\"></rect>\n</clippath>\n<clippath id=\"clip2_2628_25610\">\n<rect width=\"33.4545\" height=\"24\" fill=\"white\" transform=\"translate(91)\"></rect>\n</clippath>\n<clippath id=\"clip3_2628_25610\">\n<rect width=\"33.4545\" height=\"24\" fill=\"white\" transform=\"translate(136.455)\"></rect>\n</clippath>\n<clippath id=\"clip4_2628_25610\">\n<rect width=\"33.4545\" height=\"24\" fill=\"white\" transform=\"translate(181.909)\"></rect>\n</clippath>\n<clippath id=\"clip5_2628_25610\">\n<rect width=\"33.4545\" height=\"24\" fill=\"white\" transform=\"translate(227.364)\"></rect>\n</clippath>\n<clippath id=\"clip6_2628_25610\">\n<rect width=\"33.4545\" height=\"24\" fill=\"white\" transform=\"translate(272.818)\"></rect>\n</clippath>\n<clippath id=\"clip7_2628_25610\">\n<rect width=\"35.6364\" height=\"24\" fill=\"white\" transform=\"translate(318.273)\"></rect>\n</clippath>\n</defs>\n</svg>"
         }
@@ -1527,11 +1527,11 @@
           "2faa807e-30ba-4451-a391-13e3f68fe75b"
         ],
         "settings": {
-          "title": "Gemaakt voor <svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.2\" viewbox=\"0 0 60 72\" width=\"60\" height=\"72\"><style>.a{fill:#fff}</style>\n<path fill-rule=\"evenodd\" class=\"a\" d=\"m45.4 24.5h-14c0-7.1-0.6-11.1-1.5-12.1q-1.6-1.5-4.1-1.5c-3.5 0-5.4 1.8-5.4 6.4 0 2.6 0.7 4.9 2.1 6.8 1.3 1.9 3.1 4.2 5.3 6.8l12.2 15.3c1.3-4.3 2-9.4 2-15.4h13.1c0 10.4-2.2 19.1-6.4 26.1l11.3 14.1h-16l-3.8-4.6c-4.5 3.3-9.8 5-15.9 5-14.9 0-23.5-6.1-23.5-18 0-5.7 2.3-10.5 7-14.3 2-1.6 4-3.1 5.9-4.6-1.1-1.4-2.2-2.9-3.3-4.6-2.8-3.9-4.2-8.1-4.2-12.6q0-8.3 5.7-12.6c3.8-2.9 8.4-4.3 13.8-4.3q8.5 0 14.1 4.2 5.6 4.3 5.6 19.9zm-12.4 33.2l-11.8-14.1c-1.1 0.8-2.1 1.6-2.7 2.3q-2.8 2.7-2.8 6.6c0 5.3 2.6 7.9 9.7 7.9q4.2 0 7.6-2.7z\"></path></svg><br>\ndoor atleten",
-          "cap": "<p>BRIGHT heeft het klassieke voetbalspel een geheel nieuwe draai gegeven door een bal te maken van een <em>holografische stof</em> die zeer reflecterend is om te flitsen. Met de BRIGHT bal blijf je spelen, lang nadat de sterren zijn verschenen. <br/><br/>Met een focus op kwaliteit en innovatie is BRIGHT toonaangevend op het gebied van sportproducten. Speel vandaag nog <em>en verlicht</em> de nacht met BRIGHT.</p><p><strong>Waar wacht je nog op? </strong></p>",
-          "btn": "Shop onze producten",
+          "title": "Made for <svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.2\" viewbox=\"0 0 60 72\" width=\"60\" height=\"72\"><style>.a{fill:#fff}</style>\n<path fill-rule=\"evenodd\" class=\"a\" d=\"m45.4 24.5h-14c0-7.1-0.6-11.1-1.5-12.1q-1.6-1.5-4.1-1.5c-3.5 0-5.4 1.8-5.4 6.4 0 2.6 0.7 4.9 2.1 6.8 1.3 1.9 3.1 4.2 5.3 6.8l12.2 15.3c1.3-4.3 2-9.4 2-15.4h13.1c0 10.4-2.2 19.1-6.4 26.1l11.3 14.1h-16l-3.8-4.6c-4.5 3.3-9.8 5-15.9 5-14.9 0-23.5-6.1-23.5-18 0-5.7 2.3-10.5 7-14.3 2-1.6 4-3.1 5.9-4.6-1.1-1.4-2.2-2.9-3.3-4.6-2.8-3.9-4.2-8.1-4.2-12.6q0-8.3 5.7-12.6c3.8-2.9 8.4-4.3 13.8-4.3q8.5 0 14.1 4.2 5.6 4.3 5.6 19.9zm-12.4 33.2l-11.8-14.1c-1.1 0.8-2.1 1.6-2.7 2.3q-2.8 2.7-2.8 6.6c0 5.3 2.6 7.9 9.7 7.9q4.2 0 7.6-2.7z\"></path></svg><br>\nby athletes",
+          "cap": "<p>BRIGHT has reinvented classic football with a ball made from <em>holographic fabric</em> that catches and reflects light. With the BRIGHT ball, keep playing long after the stars come out.<br/><br/>Focused on quality and innovation, BRIGHT leads in sports products. Play today and <em>light up</em> the night with BRIGHT.</p><p><strong>What are you waiting for?</strong></p>",
+          "btn": "Shop our products",
           "url": "/collections/all",
-          "rate": "<svg width=\"80\" height=\"16\" viewbox=\"0 0 80 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M14.95 6.0875C14.8874 5.89061 14.7668 5.71723 14.604 5.59009C14.4412 5.46294 14.2437 5.38797 14.0375 5.375L10.325 5.11875L8.95002 1.65C8.87494 1.459 8.74425 1.29494 8.57488 1.17905C8.40551 1.06317 8.20525 1.00079 8.00002 1V1C7.7948 1.00079 7.59454 1.06317 7.42516 1.17905C7.25579 1.29494 7.1251 1.459 7.05002 1.65L5.65002 5.1375L1.96252 5.375C1.75659 5.38881 1.55954 5.4641 1.39686 5.59112C1.23418 5.71814 1.11336 5.89106 1.05002 6.0875C0.984985 6.28695 0.981185 6.50131 1.03911 6.70294C1.09704 6.90458 1.21404 7.08423 1.37502 7.21875L4.21252 9.61875L3.36877 12.9375C3.3104 13.162 3.3209 13.3989 3.39892 13.6174C3.47695 13.8358 3.61888 14.0258 3.80627 14.1625C3.98817 14.293 4.20488 14.3664 4.42867 14.373C4.65247 14.3797 4.87316 14.3195 5.06252 14.2L7.99377 12.3438H8.00627L11.1625 14.3375C11.3244 14.4427 11.5132 14.4991 11.7063 14.5C11.8639 14.4988 12.0192 14.4614 12.1602 14.3908C12.3011 14.3201 12.424 14.2181 12.5194 14.0926C12.6147 13.967 12.68 13.8213 12.7103 13.6666C12.7405 13.5118 12.7349 13.3522 12.6938 13.2L11.8 9.56875L14.625 7.21875C14.786 7.08423 14.903 6.90458 14.9609 6.70294C15.0189 6.50131 15.0151 6.28695 14.95 6.0875Z\" fill=\"#FBBC04\"></path>\n<path d=\"M30.95 6.0875C30.8874 5.89061 30.7668 5.71723 30.604 5.59009C30.4412 5.46294 30.2437 5.38797 30.0375 5.375L26.325 5.11875L24.95 1.65C24.8749 1.459 24.7443 1.29494 24.5749 1.17905C24.4055 1.06317 24.2052 1.00079 24 1V1C23.7948 1.00079 23.5945 1.06317 23.4252 1.17905C23.2558 1.29494 23.1251 1.459 23.05 1.65L21.65 5.1375L17.9625 5.375C17.7566 5.38881 17.5595 5.4641 17.3969 5.59112C17.2342 5.71814 17.1134 5.89106 17.05 6.0875C16.985 6.28695 16.9812 6.50131 17.0391 6.70294C17.097 6.90458 17.214 7.08423 17.375 7.21875L20.2125 9.61875L19.3688 12.9375C19.3104 13.162 19.3209 13.3989 19.3989 13.6174C19.4769 13.8358 19.6189 14.0258 19.8063 14.1625C19.9882 14.293 20.2049 14.3664 20.4287 14.373C20.6525 14.3797 20.8732 14.3195 21.0625 14.2L23.9938 12.3438H24.0063L27.1625 14.3375C27.3244 14.4427 27.5132 14.4991 27.7063 14.5C27.8639 14.4988 28.0192 14.4614 28.1602 14.3908C28.3011 14.3201 28.424 14.2181 28.5194 14.0926C28.6147 13.967 28.68 13.8213 28.7103 13.6666C28.7405 13.5118 28.7349 13.3522 28.6938 13.2L27.8 9.56875L30.625 7.21875C30.786 7.08423 30.903 6.90458 30.9609 6.70294C31.0189 6.50131 31.0151 6.28695 30.95 6.0875Z\" fill=\"#FBBC04\"></path>\n<path d=\"M46.95 6.0875C46.8874 5.89061 46.7668 5.71723 46.604 5.59009C46.4412 5.46294 46.2437 5.38797 46.0375 5.375L42.325 5.11875L40.95 1.65C40.8749 1.459 40.7443 1.29494 40.5749 1.17905C40.4055 1.06317 40.2052 1.00079 40 1V1C39.7948 1.00079 39.5945 1.06317 39.4252 1.17905C39.2558 1.29494 39.1251 1.459 39.05 1.65L37.65 5.1375L33.9625 5.375C33.7566 5.38881 33.5595 5.4641 33.3969 5.59112C33.2342 5.71814 33.1134 5.89106 33.05 6.0875C32.985 6.28695 32.9812 6.50131 33.0391 6.70294C33.097 6.90458 33.214 7.08423 33.375 7.21875L36.2125 9.61875L35.3688 12.9375C35.3104 13.162 35.3209 13.3989 35.3989 13.6174C35.4769 13.8358 35.6189 14.0258 35.8063 14.1625C35.9882 14.293 36.2049 14.3664 36.4287 14.373C36.6525 14.3797 36.8732 14.3195 37.0625 14.2L39.9938 12.3438H40.0063L43.1625 14.3375C43.3244 14.4427 43.5132 14.4991 43.7063 14.5C43.8639 14.4988 44.0192 14.4614 44.1602 14.3908C44.3011 14.3201 44.424 14.2181 44.5194 14.0926C44.6147 13.967 44.68 13.8213 44.7103 13.6666C44.7405 13.5118 44.7349 13.3522 44.6938 13.2L43.8 9.56875L46.625 7.21875C46.786 7.08423 46.903 6.90458 46.9609 6.70294C47.0189 6.50131 47.0151 6.28695 46.95 6.0875Z\" fill=\"#FBBC04\"></path>\n<path d=\"M62.95 6.0875C62.8874 5.89061 62.7668 5.71723 62.604 5.59009C62.4412 5.46294 62.2437 5.38797 62.0375 5.375L58.325 5.11875L56.95 1.65C56.8749 1.459 56.7443 1.29494 56.5749 1.17905C56.4055 1.06317 56.2052 1.00079 56 1V1C55.7948 1.00079 55.5945 1.06317 55.4252 1.17905C55.2558 1.29494 55.1251 1.459 55.05 1.65L53.65 5.1375L49.9625 5.375C49.7566 5.38881 49.5595 5.4641 49.3969 5.59112C49.2342 5.71814 49.1134 5.89106 49.05 6.0875C48.985 6.28695 48.9812 6.50131 49.0391 6.70294C49.097 6.90458 49.214 7.08423 49.375 7.21875L52.2125 9.61875L51.3688 12.9375C51.3104 13.162 51.3209 13.3989 51.3989 13.6174C51.4769 13.8358 51.6189 14.0258 51.8063 14.1625C51.9882 14.293 52.2049 14.3664 52.4287 14.373C52.6525 14.3797 52.8732 14.3195 53.0625 14.2L55.9938 12.3438H56.0063L59.1625 14.3375C59.3244 14.4427 59.5132 14.4991 59.7063 14.5C59.8639 14.4988 60.0192 14.4614 60.1602 14.3908C60.3011 14.3201 60.424 14.2181 60.5194 14.0926C60.6147 13.967 60.68 13.8213 60.7103 13.6666C60.7405 13.5118 60.7349 13.3522 60.6938 13.2L59.8 9.56875L62.625 7.21875C62.786 7.08423 62.903 6.90458 62.9609 6.70294C63.0189 6.50131 63.0151 6.28695 62.95 6.0875Z\" fill=\"#FBBC04\"></path>\n<path d=\"M78.95 6.0875C78.8874 5.89061 78.7668 5.71723 78.604 5.59009C78.4412 5.46294 78.2437 5.38797 78.0375 5.375L74.325 5.11875L72.95 1.65C72.8749 1.459 72.7443 1.29494 72.5749 1.17905C72.4055 1.06317 72.2052 1.00079 72 1V1C71.7948 1.00079 71.5945 1.06317 71.4252 1.17905C71.2558 1.29494 71.1251 1.459 71.05 1.65L69.65 5.1375L65.9625 5.375C65.7566 5.38881 65.5595 5.4641 65.3969 5.59112C65.2342 5.71814 65.1134 5.89106 65.05 6.0875C64.985 6.28695 64.9812 6.50131 65.0391 6.70294C65.097 6.90458 65.214 7.08423 65.375 7.21875L68.2125 9.61875L67.3688 12.9375C67.3104 13.162 67.3209 13.3989 67.3989 13.6174C67.4769 13.8358 67.6189 14.0258 67.8063 14.1625C67.9882 14.293 68.2049 14.3664 68.4287 14.373C68.6525 14.3797 68.8732 14.3195 69.0625 14.2L71.9938 12.3438H72.0063L75.1625 14.3375C75.3244 14.4427 75.5132 14.4991 75.7063 14.5C75.8639 14.4988 76.0192 14.4614 76.1602 14.3908C76.3011 14.3201 76.424 14.2181 76.5194 14.0926C76.6147 13.967 76.68 13.8213 76.7103 13.6666C76.7405 13.5118 76.7349 13.3522 76.6938 13.2L75.8 9.56875L78.625 7.21875C78.786 7.08423 78.903 6.90458 78.9609 6.70294C79.0189 6.50131 79.0151 6.28695 78.95 6.0875Z\" fill=\"#FBBC04\"></path>\n</svg>\n\n1700+ Tevreden klanten"
+          "rate": "<svg width=\"80\" height=\"16\" viewbox=\"0 0 80 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M14.95 6.0875C14.8874 5.89061 14.7668 5.71723 14.604 5.59009C14.4412 5.46294 14.2437 5.38797 14.0375 5.375L10.325 5.11875L8.95002 1.65C8.87494 1.459 8.74425 1.29494 8.57488 1.17905C8.40551 1.06317 8.20525 1.00079 8.00002 1V1C7.7948 1.00079 7.59454 1.06317 7.42516 1.17905C7.25579 1.29494 7.1251 1.459 7.05002 1.65L5.65002 5.1375L1.96252 5.375C1.75659 5.38881 1.55954 5.4641 1.39686 5.59112C1.23418 5.71814 1.11336 5.89106 1.05002 6.0875C0.984985 6.28695 0.981185 6.50131 1.03911 6.70294C1.09704 6.90458 1.21404 7.08423 1.37502 7.21875L4.21252 9.61875L3.36877 12.9375C3.3104 13.162 3.3209 13.3989 3.39892 13.6174C3.47695 13.8358 3.61888 14.0258 3.80627 14.1625C3.98817 14.293 4.20488 14.3664 4.42867 14.373C4.65247 14.3797 4.87316 14.3195 5.06252 14.2L7.99377 12.3438H8.00627L11.1625 14.3375C11.3244 14.4427 11.5132 14.4991 11.7063 14.5C11.8639 14.4988 12.0192 14.4614 12.1602 14.3908C12.3011 14.3201 12.424 14.2181 12.5194 14.0926C12.6147 13.967 12.68 13.8213 12.7103 13.6666C12.7405 13.5118 12.7349 13.3522 12.6938 13.2L11.8 9.56875L14.625 7.21875C14.786 7.08423 14.903 6.90458 14.9609 6.70294C15.0189 6.50131 15.0151 6.28695 14.95 6.0875Z\" fill=\"#FBBC04\"></path>\n<path d=\"M30.95 6.0875C30.8874 5.89061 30.7668 5.71723 30.604 5.59009C30.4412 5.46294 30.2437 5.38797 30.0375 5.375L26.325 5.11875L24.95 1.65C24.8749 1.459 24.7443 1.29494 24.5749 1.17905C24.4055 1.06317 24.2052 1.00079 24 1V1C23.7948 1.00079 23.5945 1.06317 23.4252 1.17905C23.2558 1.29494 23.1251 1.459 23.05 1.65L21.65 5.1375L17.9625 5.375C17.7566 5.38881 17.5595 5.4641 17.3969 5.59112C17.2342 5.71814 17.1134 5.89106 17.05 6.0875C16.985 6.28695 16.9812 6.50131 17.0391 6.70294C17.097 6.90458 17.214 7.08423 17.375 7.21875L20.2125 9.61875L19.3688 12.9375C19.3104 13.162 19.3209 13.3989 19.3989 13.6174C19.4769 13.8358 19.6189 14.0258 19.8063 14.1625C19.9882 14.293 20.2049 14.3664 20.4287 14.373C20.6525 14.3797 20.8732 14.3195 21.0625 14.2L23.9938 12.3438H24.0063L27.1625 14.3375C27.3244 14.4427 27.5132 14.4991 27.7063 14.5C27.8639 14.4988 28.0192 14.4614 28.1602 14.3908C28.3011 14.3201 28.424 14.2181 28.5194 14.0926C28.6147 13.967 28.68 13.8213 28.7103 13.6666C28.7405 13.5118 28.7349 13.3522 28.6938 13.2L27.8 9.56875L30.625 7.21875C30.786 7.08423 30.903 6.90458 30.9609 6.70294C31.0189 6.50131 31.0151 6.28695 30.95 6.0875Z\" fill=\"#FBBC04\"></path>\n<path d=\"M46.95 6.0875C46.8874 5.89061 46.7668 5.71723 46.604 5.59009C46.4412 5.46294 46.2437 5.38797 46.0375 5.375L42.325 5.11875L40.95 1.65C40.8749 1.459 40.7443 1.29494 40.5749 1.17905C40.4055 1.06317 40.2052 1.00079 40 1V1C39.7948 1.00079 39.5945 1.06317 39.4252 1.17905C39.2558 1.29494 39.1251 1.459 39.05 1.65L37.65 5.1375L33.9625 5.375C33.7566 5.38881 33.5595 5.4641 33.3969 5.59112C33.2342 5.71814 33.1134 5.89106 33.05 6.0875C32.985 6.28695 32.9812 6.50131 33.0391 6.70294C33.097 6.90458 33.214 7.08423 33.375 7.21875L36.2125 9.61875L35.3688 12.9375C35.3104 13.162 35.3209 13.3989 35.3989 13.6174C35.4769 13.8358 35.6189 14.0258 35.8063 14.1625C35.9882 14.293 36.2049 14.3664 36.4287 14.373C36.6525 14.3797 36.8732 14.3195 37.0625 14.2L39.9938 12.3438H40.0063L43.1625 14.3375C43.3244 14.4427 43.5132 14.4991 43.7063 14.5C43.8639 14.4988 44.0192 14.4614 44.1602 14.3908C44.3011 14.3201 44.424 14.2181 44.5194 14.0926C44.6147 13.967 44.68 13.8213 44.7103 13.6666C44.7405 13.5118 44.7349 13.3522 44.6938 13.2L43.8 9.56875L46.625 7.21875C46.786 7.08423 46.903 6.90458 46.9609 6.70294C47.0189 6.50131 47.0151 6.28695 46.95 6.0875Z\" fill=\"#FBBC04\"></path>\n<path d=\"M62.95 6.0875C62.8874 5.89061 62.7668 5.71723 62.604 5.59009C62.4412 5.46294 62.2437 5.38797 62.0375 5.375L58.325 5.11875L56.95 1.65C56.8749 1.459 56.7443 1.29494 56.5749 1.17905C56.4055 1.06317 56.2052 1.00079 56 1V1C55.7948 1.00079 55.5945 1.06317 55.4252 1.17905C55.2558 1.29494 55.1251 1.459 55.05 1.65L53.65 5.1375L49.9625 5.375C49.7566 5.38881 49.5595 5.4641 49.3969 5.59112C49.2342 5.71814 49.1134 5.89106 49.05 6.0875C48.985 6.28695 48.9812 6.50131 49.0391 6.70294C49.097 6.90458 49.214 7.08423 49.375 7.21875L52.2125 9.61875L51.3688 12.9375C51.3104 13.162 51.3209 13.3989 51.3989 13.6174C51.4769 13.8358 51.6189 14.0258 51.8063 14.1625C51.9882 14.293 52.2049 14.3664 52.4287 14.373C52.6525 14.3797 52.8732 14.3195 53.0625 14.2L55.9938 12.3438H56.0063L59.1625 14.3375C59.3244 14.4427 59.5132 14.4991 59.7063 14.5C59.8639 14.4988 60.0192 14.4614 60.1602 14.3908C60.3011 14.3201 60.424 14.2181 60.5194 14.0926C60.6147 13.967 60.68 13.8213 60.7103 13.6666C60.7405 13.5118 60.7349 13.3522 60.6938 13.2L59.8 9.56875L62.625 7.21875C62.786 7.08423 62.903 6.90458 62.9609 6.70294C63.0189 6.50131 63.0151 6.28695 62.95 6.0875Z\" fill=\"#FBBC04\"></path>\n<path d=\"M78.95 6.0875C78.8874 5.89061 78.7668 5.71723 78.604 5.59009C78.4412 5.46294 78.2437 5.38797 78.0375 5.375L74.325 5.11875L72.95 1.65C72.8749 1.459 72.7443 1.29494 72.5749 1.17905C72.4055 1.06317 72.2052 1.00079 72 1V1C71.7948 1.00079 71.5945 1.06317 71.4252 1.17905C71.2558 1.29494 71.1251 1.459 71.05 1.65L69.65 5.1375L65.9625 5.375C65.7566 5.38881 65.5595 5.4641 65.3969 5.59112C65.2342 5.71814 65.1134 5.89106 65.05 6.0875C64.985 6.28695 64.9812 6.50131 65.0391 6.70294C65.097 6.90458 65.214 7.08423 65.375 7.21875L68.2125 9.61875L67.3688 12.9375C67.3104 13.162 67.3209 13.3989 67.3989 13.6174C67.4769 13.8358 67.6189 14.0258 67.8063 14.1625C67.9882 14.293 68.2049 14.3664 68.4287 14.373C68.6525 14.3797 68.8732 14.3195 69.0625 14.2L71.9938 12.3438H72.0063L75.1625 14.3375C75.3244 14.4427 75.5132 14.4991 75.7063 14.5C75.8639 14.4988 76.0192 14.4614 76.1602 14.3908C76.3011 14.3201 76.424 14.2181 76.5194 14.0926C76.6147 13.967 76.68 13.8213 76.7103 13.6666C76.7405 13.5118 76.7349 13.3522 76.6938 13.2L75.8 9.56875L78.625 7.21875C78.786 7.08423 78.903 6.90458 78.9609 6.70294C79.0189 6.50131 79.0151 6.28695 78.95 6.0875Z\" fill=\"#FBBC04\"></path>\n</svg>\n\n1700+ Happy customers"
         }
       },
       "172fc69b-c71c-41c5-81ae-1ec763f45dda": {
@@ -1602,7 +1602,7 @@
           "4048dc32-854e-44e5-a9be-2b4955f8342d": {
             "type": "balls",
             "settings": {
-              "title": "<span>Basketball</span> game",
+              "title": "<span>Basketballl</span> game",
               "img1": "shopify://shop_images/image_2024-06-05_124613906.png",
               "img2": "shopify://shop_images/image_2024-06-05_124620344.png"
             }
@@ -1610,7 +1610,7 @@
           "7540b9d0-9429-4c34-a7c2-8b163b4a1b7f": {
             "type": "balls",
             "settings": {
-              "title": "<span>Volleyball </span> game",
+              "title": "<span>Volleyballl </span> game",
               "img1": "shopify://shop_images/image_2024-06-05_124845281.png",
               "img2": "shopify://shop_images/image_2024-06-05_124850716.png"
             }
@@ -1667,10 +1667,10 @@
           "balls_jitpqJ"
         ],
         "settings": {
-          "rate": "<svg width=\"80\" height=\"16\" viewbox=\"0 0 80 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M14.9498 6.0875C14.8872 5.89061 14.7666 5.71723 14.6038 5.59009C14.4409 5.46294 14.2435 5.38797 14.0373 5.375L10.3248 5.11875L8.94978 1.65C8.8747 1.459 8.74401 1.29494 8.57464 1.17905C8.40526 1.06317 8.205 1.00079 7.99978 1C7.79455 1.00079 7.59429 1.06317 7.42492 1.17905C7.25555 1.29494 7.12486 1.459 7.04978 1.65L5.64978 5.1375L1.96228 5.375C1.75634 5.38881 1.55929 5.4641 1.39661 5.59112C1.23393 5.71814 1.11311 5.89106 1.04978 6.0875C0.984741 6.28695 0.980941 6.50131 1.03887 6.70294C1.0968 6.90458 1.21379 7.08423 1.37478 7.21875L4.21228 9.61875L3.36853 12.9375C3.31015 13.162 3.32066 13.3989 3.39868 13.6174C3.4767 13.8358 3.61863 14.0258 3.80603 14.1625C3.98792 14.293 4.20463 14.3664 4.42843 14.373C4.65222 14.3797 4.87292 14.3195 5.06228 14.2L7.99353 12.3438H8.00603L11.1623 14.3375C11.3242 14.4427 11.5129 14.4991 11.706 14.5C11.8637 14.4988 12.019 14.4614 12.1599 14.3908C12.3009 14.3201 12.4237 14.2181 12.5191 14.0926C12.6145 13.967 12.6798 13.8213 12.71 13.6666C12.7403 13.5118 12.7346 13.3522 12.6935 13.2L11.7998 9.56875L14.6248 7.21875C14.7858 7.08423 14.9028 6.90458 14.9607 6.70294C15.0186 6.50131 15.0148 6.28695 14.9498 6.0875Z\" fill=\"#FBBC04\"></path>\n<path d=\"M30.9498 6.0875C30.8872 5.89061 30.7666 5.71723 30.6038 5.59009C30.4409 5.46294 30.2435 5.38797 30.0373 5.375L26.3248 5.11875L24.9498 1.65C24.8747 1.459 24.744 1.29494 24.5746 1.17905C24.4053 1.06317 24.205 1.00079 23.9998 1C23.7946 1.00079 23.5943 1.06317 23.4249 1.17905C23.2555 1.29494 23.1249 1.459 23.0498 1.65L21.6498 5.1375L17.9623 5.375C17.7563 5.38881 17.5593 5.4641 17.3966 5.59112C17.2339 5.71814 17.1131 5.89106 17.0498 6.0875C16.9847 6.28695 16.9809 6.50131 17.0389 6.70294C17.0968 6.90458 17.2138 7.08423 17.3748 7.21875L20.2123 9.61875L19.3685 12.9375C19.3102 13.162 19.3207 13.3989 19.3987 13.6174C19.4767 13.8358 19.6186 14.0258 19.806 14.1625C19.9879 14.293 20.2046 14.3664 20.4284 14.373C20.6522 14.3797 20.8729 14.3195 21.0623 14.2L23.9935 12.3438H24.006L27.1623 14.3375C27.3242 14.4427 27.5129 14.4991 27.706 14.5C27.8637 14.4988 28.019 14.4614 28.1599 14.3908C28.3009 14.3201 28.4237 14.2181 28.5191 14.0926C28.6145 13.967 28.6798 13.8213 28.71 13.6666C28.7403 13.5118 28.7346 13.3522 28.6935 13.2L27.7998 9.56875L30.6248 7.21875C30.7858 7.08423 30.9028 6.90458 30.9607 6.70294C31.0186 6.50131 31.0148 6.28695 30.9498 6.0875Z\" fill=\"#FBBC04\"></path>\n<path d=\"M46.9498 6.0875C46.8872 5.89061 46.7666 5.71723 46.6038 5.59009C46.4409 5.46294 46.2435 5.38797 46.0373 5.375L42.3248 5.11875L40.9498 1.65C40.8747 1.459 40.744 1.29494 40.5746 1.17905C40.4053 1.06317 40.205 1.00079 39.9998 1C39.7946 1.00079 39.5943 1.06317 39.4249 1.17905C39.2555 1.29494 39.1249 1.459 39.0498 1.65L37.6498 5.1375L33.9623 5.375C33.7563 5.38881 33.5593 5.4641 33.3966 5.59112C33.2339 5.71814 33.1131 5.89106 33.0498 6.0875C32.9847 6.28695 32.9809 6.50131 33.0389 6.70294C33.0968 6.90458 33.2138 7.08423 33.3748 7.21875L36.2123 9.61875L35.3685 12.9375C35.3102 13.162 35.3207 13.3989 35.3987 13.6174C35.4767 13.8358 35.6186 14.0258 35.806 14.1625C35.9879 14.293 36.2046 14.3664 36.4284 14.373C36.6522 14.3797 36.8729 14.3195 37.0623 14.2L39.9935 12.3438H40.006L43.1623 14.3375C43.3242 14.4427 43.5129 14.4991 43.706 14.5C43.8637 14.4988 44.019 14.4614 44.1599 14.3908C44.3009 14.3201 44.4237 14.2181 44.5191 14.0926C44.6145 13.967 44.6798 13.8213 44.71 13.6666C44.7403 13.5118 44.7346 13.3522 44.6935 13.2L43.7998 9.56875L46.6248 7.21875C46.7858 7.08423 46.9028 6.90458 46.9607 6.70294C47.0186 6.50131 47.0148 6.28695 46.9498 6.0875Z\" fill=\"#FBBC04\"></path>\n<path d=\"M62.9498 6.0875C62.8872 5.89061 62.7666 5.71723 62.6038 5.59009C62.4409 5.46294 62.2435 5.38797 62.0373 5.375L58.3248 5.11875L56.9498 1.65C56.8747 1.459 56.744 1.29494 56.5746 1.17905C56.4053 1.06317 56.205 1.00079 55.9998 1C55.7946 1.00079 55.5943 1.06317 55.4249 1.17905C55.2555 1.29494 55.1249 1.459 55.0498 1.65L53.6498 5.1375L49.9623 5.375C49.7563 5.38881 49.5593 5.4641 49.3966 5.59112C49.2339 5.71814 49.1131 5.89106 49.0498 6.0875C48.9847 6.28695 48.9809 6.50131 49.0389 6.70294C49.0968 6.90458 49.2138 7.08423 49.3748 7.21875L52.2123 9.61875L51.3685 12.9375C51.3102 13.162 51.3207 13.3989 51.3987 13.6174C51.4767 13.8358 51.6186 14.0258 51.806 14.1625C51.9879 14.293 52.2046 14.3664 52.4284 14.373C52.6522 14.3797 52.8729 14.3195 53.0623 14.2L55.9935 12.3438H56.006L59.1623 14.3375C59.3242 14.4427 59.5129 14.4991 59.706 14.5C59.8637 14.4988 60.019 14.4614 60.1599 14.3908C60.3009 14.3201 60.4237 14.2181 60.5191 14.0926C60.6145 13.967 60.6798 13.8213 60.71 13.6666C60.7403 13.5118 60.7346 13.3522 60.6935 13.2L59.7998 9.56875L62.6248 7.21875C62.7858 7.08423 62.9028 6.90458 62.9607 6.70294C63.0186 6.50131 63.0148 6.28695 62.9498 6.0875Z\" fill=\"#FBBC04\"></path>\n<path d=\"M78.9498 6.0875C78.8872 5.89061 78.7666 5.71723 78.6038 5.59009C78.4409 5.46294 78.2435 5.38797 78.0373 5.375L74.3248 5.11875L72.9498 1.65C72.8747 1.459 72.744 1.29494 72.5746 1.17905C72.4053 1.06317 72.205 1.00079 71.9998 1C71.7946 1.00079 71.5943 1.06317 71.4249 1.17905C71.2555 1.29494 71.1249 1.459 71.0498 1.65L69.6498 5.1375L65.9623 5.375C65.7563 5.38881 65.5593 5.4641 65.3966 5.59112C65.2339 5.71814 65.1131 5.89106 65.0498 6.0875C64.9847 6.28695 64.9809 6.50131 65.0389 6.70294C65.0968 6.90458 65.2138 7.08423 65.3748 7.21875L68.2123 9.61875L67.3685 12.9375C67.3102 13.162 67.3207 13.3989 67.3987 13.6174C67.4767 13.8358 67.6186 14.0258 67.806 14.1625C67.9879 14.293 68.2046 14.3664 68.4284 14.373C68.6522 14.3797 68.8729 14.3195 69.0623 14.2L71.9935 12.3438H72.006L75.1623 14.3375C75.3242 14.4427 75.5129 14.4991 75.706 14.5C75.8637 14.4988 76.019 14.4614 76.1599 14.3908C76.3009 14.3201 76.4237 14.2181 76.5191 14.0926C76.6145 13.967 76.6798 13.8213 76.71 13.6666C76.7403 13.5118 76.7346 13.3522 76.6935 13.2L75.7998 9.56875L78.6248 7.21875C78.7858 7.08423 78.9028 6.90458 78.9607 6.70294C79.0186 6.50131 79.0148 6.28695 78.9498 6.0875Z\" fill=\"#FBBC04\"></path>\n</svg>\nGewaardeerd <span> 4.9/5 </span> door meer dan 1700 klanten",
-          "title": "VERLICHT JE",
-          "text": "<p><strong>Niet alleen een spel, het is een ervaring</strong></p><ul><li>Het cadeau dat elke jonge speler wenst</li><li>Momenten die hun ogen doen oplichten </li></ul>",
-          "btn": "Leg de magie nu vast!",
+          "rate": "<svg width=\"80\" height=\"16\" viewbox=\"0 0 80 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M14.9498 6.0875C14.8872 5.89061 14.7666 5.71723 14.6038 5.59009C14.4409 5.46294 14.2435 5.38797 14.0373 5.375L10.3248 5.11875L8.94978 1.65C8.8747 1.459 8.74401 1.29494 8.57464 1.17905C8.40526 1.06317 8.205 1.00079 7.99978 1C7.79455 1.00079 7.59429 1.06317 7.42492 1.17905C7.25555 1.29494 7.12486 1.459 7.04978 1.65L5.64978 5.1375L1.96228 5.375C1.75634 5.38881 1.55929 5.4641 1.39661 5.59112C1.23393 5.71814 1.11311 5.89106 1.04978 6.0875C0.984741 6.28695 0.980941 6.50131 1.03887 6.70294C1.0968 6.90458 1.21379 7.08423 1.37478 7.21875L4.21228 9.61875L3.36853 12.9375C3.31015 13.162 3.32066 13.3989 3.39868 13.6174C3.4767 13.8358 3.61863 14.0258 3.80603 14.1625C3.98792 14.293 4.20463 14.3664 4.42843 14.373C4.65222 14.3797 4.87292 14.3195 5.06228 14.2L7.99353 12.3438H8.00603L11.1623 14.3375C11.3242 14.4427 11.5129 14.4991 11.706 14.5C11.8637 14.4988 12.019 14.4614 12.1599 14.3908C12.3009 14.3201 12.4237 14.2181 12.5191 14.0926C12.6145 13.967 12.6798 13.8213 12.71 13.6666C12.7403 13.5118 12.7346 13.3522 12.6935 13.2L11.7998 9.56875L14.6248 7.21875C14.7858 7.08423 14.9028 6.90458 14.9607 6.70294C15.0186 6.50131 15.0148 6.28695 14.9498 6.0875Z\" fill=\"#FBBC04\"></path>\n<path d=\"M30.9498 6.0875C30.8872 5.89061 30.7666 5.71723 30.6038 5.59009C30.4409 5.46294 30.2435 5.38797 30.0373 5.375L26.3248 5.11875L24.9498 1.65C24.8747 1.459 24.744 1.29494 24.5746 1.17905C24.4053 1.06317 24.205 1.00079 23.9998 1C23.7946 1.00079 23.5943 1.06317 23.4249 1.17905C23.2555 1.29494 23.1249 1.459 23.0498 1.65L21.6498 5.1375L17.9623 5.375C17.7563 5.38881 17.5593 5.4641 17.3966 5.59112C17.2339 5.71814 17.1131 5.89106 17.0498 6.0875C16.9847 6.28695 16.9809 6.50131 17.0389 6.70294C17.0968 6.90458 17.2138 7.08423 17.3748 7.21875L20.2123 9.61875L19.3685 12.9375C19.3102 13.162 19.3207 13.3989 19.3987 13.6174C19.4767 13.8358 19.6186 14.0258 19.806 14.1625C19.9879 14.293 20.2046 14.3664 20.4284 14.373C20.6522 14.3797 20.8729 14.3195 21.0623 14.2L23.9935 12.3438H24.006L27.1623 14.3375C27.3242 14.4427 27.5129 14.4991 27.706 14.5C27.8637 14.4988 28.019 14.4614 28.1599 14.3908C28.3009 14.3201 28.4237 14.2181 28.5191 14.0926C28.6145 13.967 28.6798 13.8213 28.71 13.6666C28.7403 13.5118 28.7346 13.3522 28.6935 13.2L27.7998 9.56875L30.6248 7.21875C30.7858 7.08423 30.9028 6.90458 30.9607 6.70294C31.0186 6.50131 31.0148 6.28695 30.9498 6.0875Z\" fill=\"#FBBC04\"></path>\n<path d=\"M46.9498 6.0875C46.8872 5.89061 46.7666 5.71723 46.6038 5.59009C46.4409 5.46294 46.2435 5.38797 46.0373 5.375L42.3248 5.11875L40.9498 1.65C40.8747 1.459 40.744 1.29494 40.5746 1.17905C40.4053 1.06317 40.205 1.00079 39.9998 1C39.7946 1.00079 39.5943 1.06317 39.4249 1.17905C39.2555 1.29494 39.1249 1.459 39.0498 1.65L37.6498 5.1375L33.9623 5.375C33.7563 5.38881 33.5593 5.4641 33.3966 5.59112C33.2339 5.71814 33.1131 5.89106 33.0498 6.0875C32.9847 6.28695 32.9809 6.50131 33.0389 6.70294C33.0968 6.90458 33.2138 7.08423 33.3748 7.21875L36.2123 9.61875L35.3685 12.9375C35.3102 13.162 35.3207 13.3989 35.3987 13.6174C35.4767 13.8358 35.6186 14.0258 35.806 14.1625C35.9879 14.293 36.2046 14.3664 36.4284 14.373C36.6522 14.3797 36.8729 14.3195 37.0623 14.2L39.9935 12.3438H40.006L43.1623 14.3375C43.3242 14.4427 43.5129 14.4991 43.706 14.5C43.8637 14.4988 44.019 14.4614 44.1599 14.3908C44.3009 14.3201 44.4237 14.2181 44.5191 14.0926C44.6145 13.967 44.6798 13.8213 44.71 13.6666C44.7403 13.5118 44.7346 13.3522 44.6935 13.2L43.7998 9.56875L46.6248 7.21875C46.7858 7.08423 46.9028 6.90458 46.9607 6.70294C47.0186 6.50131 47.0148 6.28695 46.9498 6.0875Z\" fill=\"#FBBC04\"></path>\n<path d=\"M62.9498 6.0875C62.8872 5.89061 62.7666 5.71723 62.6038 5.59009C62.4409 5.46294 62.2435 5.38797 62.0373 5.375L58.3248 5.11875L56.9498 1.65C56.8747 1.459 56.744 1.29494 56.5746 1.17905C56.4053 1.06317 56.205 1.00079 55.9998 1C55.7946 1.00079 55.5943 1.06317 55.4249 1.17905C55.2555 1.29494 55.1249 1.459 55.0498 1.65L53.6498 5.1375L49.9623 5.375C49.7563 5.38881 49.5593 5.4641 49.3966 5.59112C49.2339 5.71814 49.1131 5.89106 49.0498 6.0875C48.9847 6.28695 48.9809 6.50131 49.0389 6.70294C49.0968 6.90458 49.2138 7.08423 49.3748 7.21875L52.2123 9.61875L51.3685 12.9375C51.3102 13.162 51.3207 13.3989 51.3987 13.6174C51.4767 13.8358 51.6186 14.0258 51.806 14.1625C51.9879 14.293 52.2046 14.3664 52.4284 14.373C52.6522 14.3797 52.8729 14.3195 53.0623 14.2L55.9935 12.3438H56.006L59.1623 14.3375C59.3242 14.4427 59.5129 14.4991 59.706 14.5C59.8637 14.4988 60.019 14.4614 60.1599 14.3908C60.3009 14.3201 60.4237 14.2181 60.5191 14.0926C60.6145 13.967 60.6798 13.8213 60.71 13.6666C60.7403 13.5118 60.7346 13.3522 60.6935 13.2L59.7998 9.56875L62.6248 7.21875C62.7858 7.08423 62.9028 6.90458 62.9607 6.70294C63.0186 6.50131 63.0148 6.28695 62.9498 6.0875Z\" fill=\"#FBBC04\"></path>\n<path d=\"M78.9498 6.0875C78.8872 5.89061 78.7666 5.71723 78.6038 5.59009C78.4409 5.46294 78.2435 5.38797 78.0373 5.375L74.3248 5.11875L72.9498 1.65C72.8747 1.459 72.744 1.29494 72.5746 1.17905C72.4053 1.06317 72.205 1.00079 71.9998 1C71.7946 1.00079 71.5943 1.06317 71.4249 1.17905C71.2555 1.29494 71.1249 1.459 71.0498 1.65L69.6498 5.1375L65.9623 5.375C65.7563 5.38881 65.5593 5.4641 65.3966 5.59112C65.2339 5.71814 65.1131 5.89106 65.0498 6.0875C64.9847 6.28695 64.9809 6.50131 65.0389 6.70294C65.0968 6.90458 65.2138 7.08423 65.3748 7.21875L68.2123 9.61875L67.3685 12.9375C67.3102 13.162 67.3207 13.3989 67.3987 13.6174C67.4767 13.8358 67.6186 14.0258 67.806 14.1625C67.9879 14.293 68.2046 14.3664 68.4284 14.373C68.6522 14.3797 68.8729 14.3195 69.0623 14.2L71.9935 12.3438H72.006L75.1623 14.3375C75.3242 14.4427 75.5129 14.4991 75.706 14.5C75.8637 14.4988 76.019 14.4614 76.1599 14.3908C76.3009 14.3201 76.4237 14.2181 76.5191 14.0926C76.6145 13.967 76.6798 13.8213 76.71 13.6666C76.7403 13.5118 76.7346 13.3522 76.6935 13.2L75.7998 9.56875L78.6248 7.21875C78.7858 7.08423 78.9028 6.90458 78.9607 6.70294C79.0186 6.50131 79.0148 6.28695 78.9498 6.0875Z\" fill=\"#FBBC04\"></path>\n</svg>\nRated <span> 4.9/5 </span> by more than 1700 customers",
+          "title": "LIGHT UP YOUR",
+          "text": "<p><strong>Not just a game—it is an experience</strong></p><ul><li>The gift every young player wants</li><li>Moments that make their eyes light up</li></ul>",
+          "btn": "Capture the magic now!",
           "url": "/collections/all#our-balls",
           "video_poster_1": "shopify://shop_images/video1.png",
           "video1": "https://cdn.shopify.com/videos/c/o/v/ea7de930c6e94cd9ac2f75d6c578bc71.mp4",
@@ -1687,43 +1687,43 @@
           "16821ee5-36c7-42cb-87ce-1530d81c2679": {
             "type": "accordian",
             "settings": {
-              "question": "Hoe gloeit de bal?",
-              "answer": "<p>Het is gemaakt van een holografisch materiaal dat licht vangt en weerkaatst. Wanneer je een foto maakt of een video opneemt met de flits ingeschakeld, geeft de bal een lichtgevend effect, waardoor het lijkt alsof hij gloeit op het scherm van je apparaat. Dit verbluffende effect is zelfs zichtbaar in daglicht!</p>"
+              "question": "How does the ball glow?",
+              "answer": "<p>It is made from holographic material that catches and reflects light. When you take a photo or video with flash on, the ball creates a glow effect on your screen. This stunning effect is even visible in daylight!</p>"
             }
           },
           "f588f843-75b6-4caf-ae2b-0e423b456d4d": {
             "type": "accordian",
             "settings": {
-              "question": "Hoe lang duurt het voordat ik mijn bestelling ontvang?",
+              "question": "How long until I receive my order?",
               "answer": "<p>Orders are usually processed within 1-2 days. Delivery takes 3 to 5 business days.</p>"
             }
           },
           "a30cfe2d-fe87-4f20-8a0f-d5942a10efcd": {
             "type": "accordian",
             "settings": {
-              "question": "Kan de bal zowel binnen als buiten worden gebruikt?",
-              "answer": "<p>Ja, het is geschikt voor zowel binnen- als buitenspelen.</p>"
+              "question": "Can the ball be used indoors and outdoors?",
+              "answer": "<p>Yes, it is suitable for both indoor and outdoor play.</p>"
             }
           },
           "d14e1957-9bc0-490d-aef8-8359276d0a33": {
             "type": "accordian",
             "settings": {
-              "question": "Kun je de bal schoonmaken?",
-              "answer": "<p>Ja, je kunt het schoonmaken met een schone, vochtige doek zonder schadelijke schoonmaakmiddelen te gebruiken.</p>"
+              "question": "Can you clean the ball?",
+              "answer": "<p>Yes, you can clean it with a clean, damp cloth without harsh cleaners.</p>"
             }
           },
           "1188d6d8-ff63-479f-89b3-5a4c2b780c07": {
             "type": "accordian",
             "settings": {
-              "question": "Wat is het materiaal van deze ballen?",
-              "answer": "<p>Het is gemaakt van holografisch leer.</p>"
+              "question": "What material are these balls made of?",
+              "answer": "<p>It is made from holographic leather.</p>"
             }
           },
           "9a10a8e0-d1c2-4cd2-aafe-94d4cdf60337": {
             "type": "accordian",
             "settings": {
-              "question": "Kan ik mijn product personaliseren?",
-              "answer": "<p>Ja! We kunnen onze ballen personaliseren volgens jouw branding, maar het BRIGHT-logo en de naam blijven zichtbaar. Hiervoor is een minimale bestelhoeveelheid vereist. Vul dit <a href=\"/pages/dev-contact-us\" title=\"Dev Contact Us\"><strong>contactformulier</strong></a> in om informatie over prijzen op te vragen.</p>"
+              "question": "Can I personalize my product?",
+              "answer": "<p>Yes! We can personalize our balls with your branding, but the BRIGHT logo and name remain visible. A minimum order quantity is required. Fill out this <a href=\"/pages/dev-contact-us\" title=\"Dev Contact Us\"><strong>contact form</strong></a> to request pricing.</p>"
             }
           }
         },
@@ -1736,16 +1736,16 @@
           "9a10a8e0-d1c2-4cd2-aafe-94d4cdf60337"
         ],
         "settings": {
-          "title": "Je hebt<span> vragen</span>. <br>\nWij hebben <span>antwoorden</span>.",
+          "title": "You have<span> questions</span>. <br>\nWe have <span>answers</span>.",
           "caption": ""
         }
       },
       "e15a9688-a733-4a05-8e43-009a45adf102": {
         "type": "sw--bundle-functionality-sec",
         "settings": {
-          "main_heading": "Bundels",
-          "sub_heading": "Pas je bundel aan met elke bal!",
-          "best_selling_text": "<p>🔥 BEST VERKOPENDE</p>",
+          "main_heading": "Bundles",
+          "sub_heading": "Customize your bundle with any ball!",
+          "best_selling_text": "<p>🔥 BEST SELLING</p>",
           "product": "starter-bundle",
           "product2": "athlete-bundle",
           "product3": "team-bundle",
@@ -1759,16 +1759,16 @@
         "settings": {
           "img": "shopify://shop_images/moneyback-graphic_e220b63c-ba32-4b2f-85c1-de678c7d6b5b.svg",
           "bg_title": "shopify://shop_images/Bright_logo.svg",
-          "title": "JA.  ZOVEEL <span>GELOVEN</span> WIJ IN ONS PRODUCT",
-          "dis": "We staan achter onze producten en willen dat je helemaal tevreden bent met je aankoop. Daarom bieden we een 30 dagen geld-terug garantie op al onze producten."
+          "title": "YES. WE <span>BELIEVE</span> SO MUCH IN OUR PRODUCT",
+          "dis": "We stand behind our products and want you to be completely satisfied with your purchase. That is why we offer a 30-day money-back guarantee on all our products."
         }
       },
       "29ba4bf5-939b-4246-8b2b-09fa71038584": {
         "type": "sw--the-bestesllers",
         "settings": {
-          "title": "De bestsellers",
+          "title": "The bestsellers",
           "collection": "balls",
-          "btn": "Alle producten bekijken"
+          "btn": "View all products"
         }
       },
       "b7afbaac-fb6a-4818-8690-96bec15a5272": {
@@ -1890,8 +1890,8 @@
           "cart-button-before-text": "ADDING TO CART...",
           "cart-button-after-text": "ADDED TO CART!",
           "ugc-section-heading": "EXPERIENCE THE GLOW",
-          "stock-text": "Lage voorraad! Klaar voor verzending",
-          "klarna-payment-text": "Betaal pas over 30 dagen met",
+          "stock-text": "Low stock! Ready to ship",
+          "klarna-payment-text": "Pay in 30 days with",
           "money-back-heading": "Money Back Gurantee",
           "money-back-top-text": "<p>BRIGHT is doing its utmost to bring the most innovative ball to the market and we want to make sure you can be part of it without any risk. Here's how:</p>",
           "money-back-bottom-text": "<p>We offer 24/7 ticket and e-mail support, please feel free to contact support@brightsport.com. We are ready to help you :)</p>",
@@ -1905,7 +1905,7 @@
           "accordian_eUU4HY": {
             "type": "accordian",
             "settings": {
-              "question": "Hoe lang zijn de verzendtijden?",
+              "question": "How long are shipping times?",
               "answer": "<b>Europa:</b> 2-4 business days<br>\n<br>\n<b>Rest of the world:</b> 3-5 business days<br>\n<br>\n<b>Free shipping on orders over $60 (worldwide).</b><br>\n<br>\nAll orders ship via DHL or UPS. A tracking link is emailed once your order is processed."
             }
           },
@@ -1919,35 +1919,35 @@
           "accordian_VJmwXB": {
             "type": "accordian",
             "settings": {
-              "question": "Hoe was ik ze?",
-              "answer": "Was en droog de sokken normaal bij gebruikelijke temperaturen en keer ze binnenstebuiten om grondig te reinigen."
+              "question": "How do I wash them?",
+              "answer": "Wash and dry the socks normally at usual temperatures and turn them inside out for a thorough clean."
             }
           },
           "accordian_AneYT6": {
             "type": "accordian",
             "settings": {
-              "question": "Kan ik de BRIGHT Sokken met elk schoeisel dragen?",
-              "answer": "Absoluut! Onze BRIGHT Grip Sokken zijn ontworpen om veelzijdig te zijn en kunnen worden gedragen met elk schoeisel voor verbeterd comfort en stabiliteit."
+              "question": "Can I wear BRIGHT Socks with any footwear?",
+              "answer": "Absolutely! Our BRIGHT Grip Socks are designed to be versatile and can be worn with any footwear for improved comfort and stability."
             }
           },
           "accordian_pqAmnh": {
             "type": "accordian",
             "settings": {
-              "question": "Hoe helpen de BRIGHT Sokken blaren te voorkomen?",
-              "answer": "Onze sokken zijn gemaakt van een unieke mix van materialen die wrijving vermindert, wat de belangrijkste oorzaak van blaren is."
+              "question": "How do BRIGHT Socks help prevent blisters?",
+              "answer": "Our socks are made from a unique blend of materials that reduce friction—the main cause of blisters."
             }
           },
           "accordian_tK7gEx": {
             "type": "accordian",
             "settings": {
-              "question": "Hoe verbeteren de BRIGHT Sokken snelheid en controle?",
-              "answer": "De rubberen grips aan de onderkant van de sokken bieden superieure tractie, waardoor uw snelheid en controle tijdens bewegingen verbeteren."
+              "question": "How do BRIGHT Socks improve speed and control?",
+              "answer": "The rubber grips on the bottom of the socks provide superior traction, improving your speed and control during movement."
             }
           },
           "accordian_4UBxrT": {
             "type": "accordian",
             "settings": {
-              "question": "Waar zijn BRIGHT Sokken van gemaakt?",
+              "question": "What are BRIGHT Socks made of?",
               "answer": "40% katoen, 40% nylon, 15% polyester en 5% spandex"
             }
           }
@@ -1962,7 +1962,7 @@
           "accordian_4UBxrT"
         ],
         "settings": {
-          "title": "Je hebt<span> vragen</span>. <br>\nWij hebben <span>antwoorden</span>.",
+          "title": "You have<span> questions</span>. <br>\nWe have <span>answers</span>.",
           "caption": "",
           "prdct": "bright-grip-socks"
         }
@@ -1973,43 +1973,43 @@
           "accordian_C3JViQ": {
             "type": "accordian",
             "settings": {
-              "question": "Hoe lang zijn de verzendtijden?",
+              "question": "How long are shipping times?",
               "answer": "<b>Europa:</b> 2-4 business days<br>\n<br>\n<b>Rest of the world:</b> 3-5 business days<br>\n<br>\n<b>Free shipping on orders over $60 (worldwide).</b><br>\n<br>\nAll orders ship via DHL or UPS. A tracking link is emailed once your order is processed."
             }
           },
           "accordian_3PKTcb": {
             "type": "accordian",
             "settings": {
-              "question": "Hoe was ik mijn BRIGHT Arm Mouw?",
-              "answer": "Ja, onze arm mouwen kunnen met de hand worden gewassen. Strijk de mouw echter niet, omdat dit de mouw zal beschadigen."
+              "question": "How do I wash my BRIGHT Arm Sleeve?",
+              "answer": "Yes, our arm sleeves can be hand washed. Do not iron the sleeve, as this will damage it."
             }
           },
           "accordian_RQVD6c": {
             "type": "accordian",
             "settings": {
-              "question": "Zal het holografische effect na verloop van tijd vervagen?",
-              "answer": "BRIGHT Arm Mouwen zijn ontworpen met duurzame materialen om ervoor te zorgen dat het holografische effect gedurende een lange periode behouden blijft."
+              "question": "Will the holographic effect fade over time?",
+              "answer": "BRIGHT Arm Sleeves are made with durable materials so the holographic effect lasts for a long time."
             }
           },
           "accordian_kCKRAR": {
             "type": "accordian",
             "settings": {
-              "question": "Zijn de BRIGHT Arm Mouwen verkrijgbaar in verschillende maten?",
-              "answer": "Ja! Ze zijn verkrijgbaar in twee verschillende maten om ervoor te zorgen dat ze de juiste pasvorm voor u hebben. Raadpleeg onze maattabel."
+              "question": "Are BRIGHT Arm Sleeves available in different sizes?",
+              "answer": "Yes! They are available in two sizes for the right fit. See our size chart."
             }
           },
           "accordian_38bxcF": {
             "type": "accordian",
             "settings": {
-              "question": "Gloeit de BRIGHT Holografische Arm Mouw alleen op in foto's of video's?",
-              "answer": "Het gloeit niet alleen op in foto's en video's, maar ook wanneer er een lichtbron, zoals autokoplampen, op schijnt. Dit zorgt ervoor dat u 's nachts zichtbaar bent."
+              "question": "Does the BRIGHT Holographic Arm Sleeve only glow in photos or videos?",
+              "answer": "It glows not only in photos and videos, but also when a light source such as car headlights shines on it—keeping you visible at night."
             }
           },
           "accordian_LYtB6H": {
             "type": "accordian",
             "settings": {
-              "question": "Waar is de BRIGHT Holografische Arm Mouw van gemaakt?",
-              "answer": "BRIGHT Arm Mouwen zijn gemaakt van 85% Chinlon en 15% Spandex."
+              "question": "What is the BRIGHT Holographic Arm Sleeve made of?",
+              "answer": "BRIGHT Arm Sleeves are made of 85% Chinlon and 15% Spandex."
             }
           }
         },
@@ -2022,7 +2022,7 @@
           "accordian_LYtB6H"
         ],
         "settings": {
-          "title": "Je hebt<span> vragen</span>. <br>\nWij hebben <span>antwoorden</span>.",
+          "title": "You have<span> questions</span>. <br>\nWe have <span>answers</span>.",
           "caption": "",
           "prdct": "bright-arm-sleeves"
         }
@@ -2033,43 +2033,43 @@
           "accordian_n4ktcU": {
             "type": "accordian",
             "settings": {
-              "question": "Wat zijn de levertijden?",
+              "question": "What are the delivery times?",
               "answer": "Europa: 2-4 business days\n\nRest of the world: 3-6 business days\n\nEnjoy free shipping when you spend over €60\n\nAll orders ship via DHL or UPS. A tracking link is emailed once your order is processed."
             }
           },
           "accordian_AH8czU": {
             "type": "accordian",
             "settings": {
-              "question": "Komen BRIGHT™ Brillen in verschillende maten?",
-              "answer": "BRIGHT™ Brillen zijn ontworpen om de meeste volwassenen comfortabel te passen."
+              "question": "Do BRIGHT™ Glasses come in different sizes?",
+              "answer": "BRIGHT™ Glasses are designed to fit most adults comfortably."
             }
           },
           "accordian_TAzJtX": {
             "type": "accordian",
             "settings": {
-              "question": "Hoe maak ik mijn BRIGHT™ Bril schoon en verzorg ik deze?",
-              "answer": "We raden aan je bril voorzichtig af te vegen met een zachte, schone doek. Vermijd het gebruik van agressieve chemicaliën of zeep, omdat deze de lenzen kunnen beschadigen."
+              "question": "How do I clean and care for my BRIGHT™ Glasses?",
+              "answer": "We recommend gently wiping your glasses with a soft, clean cloth. Avoid harsh chemicals or soap, as they can damage the lenses."
             }
           },
           "accordian_pJEajg": {
             "type": "accordian",
             "settings": {
-              "question": "Zijn BRIGHT™ Brillen waterbestendig?",
-              "answer": "BRIGHT™ Brillen zijn niet specifiek ontworpen om volledig waterbestendig te zijn, maar ze kunnen lichte blootstelling aan vocht weerstaan. Vermijd onderdompeling in water."
+              "question": "Are BRIGHT™ Glasses waterproof?",
+              "answer": "BRIGHT™ Glasses are not fully waterproof, but they can withstand light moisture. Avoid submerging in water."
             }
           },
           "accordian_Gk6DkX": {
             "type": "accordian",
             "settings": {
-              "question": "Zijn BRIGHT™ Brillen veilig voor kinderen om te gebruiken?",
-              "answer": "Hoewel BRIGHT™ Brillen zijn ontworpen voor volwassenen, kunnen ze onder toezicht van een volwassene door kinderen worden gebruikt. Zorg er altijd voor dat ze goed passen en veilig worden gebruikt."
+              "question": "Are BRIGHT™ Glasses safe for children to use?",
+              "answer": "Although designed for adults, BRIGHT™ Glasses can be used by children under adult supervision. Always ensure a proper, safe fit."
             }
           },
           "accordian_JYD378": {
             "type": "accordian",
             "settings": {
-              "question": "Kunnen BRIGHT™ Brillen over een bril op sterkte worden gedragen?",
-              "answer": "BRIGHT™ Brillen zijn niet specifiek ontworpen om over een bril op sterkte te passen. Voor de beste pasvorm en comfort raden we aan ze direct te dragen."
+              "question": "Can BRIGHT™ Glasses be worn over prescription glasses?",
+              "answer": "BRIGHT™ Glasses are not designed to fit over prescription glasses. For the best fit and comfort, we recommend wearing them directly."
             }
           }
         },
@@ -2082,7 +2082,7 @@
           "accordian_JYD378"
         ],
         "settings": {
-          "title": "Je hebt<span> vragen</span>. <br>\nWij hebben <span>antwoorden</span>.",
+          "title": "You have<span> questions</span>. <br>\nWe have <span>answers</span>.",
           "caption": "",
           "prdct": "bright-night-vision-glasses"
         }
@@ -2184,8 +2184,8 @@
           "cart-button-before-text": "ADDING TO CART...",
           "cart-button-after-text": "ADDED TO CART!",
           "ugc-section-heading": "EXPERIENCE THE GLOW",
-          "stock-text": "Lage voorraad! Klaar voor verzending",
-          "klarna-payment-text": "Betaal pas over 30 dagen met",
+          "stock-text": "Low stock! Ready to ship",
+          "klarna-payment-text": "Pay in 30 days with",
           "money-back-heading": "Money Back Gurantee",
           "money-back-top-text": "<p>BRIGHT is doing its utmost to bring the most innovative ball to the market and we want to make sure you can be part of it without any risk. Here's how:</p>",
           "money-back-bottom-text": "<p>We offer 24/7 ticket and e-mail support, please feel free to contact support@brightsport.com. We are ready to help you :)</p>",
@@ -2234,9 +2234,9 @@
           "right_image": "shopify://shop_images/image_2026-03-08_002221219.png",
           "bg_color": "#7ec8e3",
           "overlay_opacity": 0,
-          "title": "⚽ FIFA Wereldbeker SALE",
-          "sports_text": "Amerikaans voetbal - Basketbal - Golfballen - Voetbal",
-          "disclaimer_text": "De korting wordt automatisch toegepast bij het afrekenen, ballen kunnen gecombineerd worden."
+          "title": "⚽ FIFA World Cup SALE",
+          "sports_text": "American football - Basketballl - Golf balls - Football",
+          "disclaimer_text": "The discount is applied automatically at checkout; balls can be combined."
         }
       },
       "bogo-sale-bogo-banner": {
@@ -2257,7 +2257,7 @@
           "step_qyqgew": {
             "type": "step",
             "settings": {
-              "text": "Step 3:\nRond je bestelling af en maak je klaar voor de wedstrijd."
+              "text": "Step 3:\nComplete your order and get ready for the match."
             }
           }
         },
@@ -2277,9 +2277,9 @@
           "tablet_height": 430,
           "mobile_height": 520,
           "eyebrow": "⚽ FIFA WORLD CUP SALE",
-          "title": "KOOP 1,\nKRIJG 1\nGRATIS",
-          "subtitle": "OP ALLE BALLEN",
-          "steps_title": "HOE HET WERKT:",
+          "title": "BUY 1,\nGET 1\nFREE",
+          "subtitle": "ON ALL BALLS",
+          "steps_title": "HOW IT WORKS:",
           "eyebrow_color": "#ffffff",
           "title_color": "#ffffff",
           "subtitle_color": "#ffffff",
