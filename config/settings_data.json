@@ -1349,71 +1349,78 @@
       "sw--tiktok-sec": {
         "type": "sw--tiktok-sec",
         "blocks": {
-          "874b6d39-c77e-48f1-a240-cc1dbb0c256f1": {
+          "ef690d0a-a89e-475e-926c-cb674de00ac3": {
             "type": "text",
             "settings": {
               "url_video": "https://cdn.shopify.com/videos/c/o/v/b68632aeca6e4e09ba44f307795c734f.mp4",
-              "url_video_text": "@brightsprt · 37k",
+              "video_poster": "shopify://shop_images/b68632aeca6e4e09ba44f307795c734f_001.jpg",
+              "url_video_text": "@brightsprt · 41k",
               "url": ""
             }
           },
-          "decdfcf0-ca41-4ea0-87f2-5fab193cc69a1": {
+          "6a5f5b97-6c0c-4bb2-901d-9eea076676af": {
             "type": "text",
             "settings": {
               "url_video": "https://cdn.shopify.com/videos/c/o/v/437f11b3e911485e8c2e56c7f983c877.mp4",
-              "url_video_text": "@brightsprt · 37k",
+              "video_poster": "shopify://shop_images/437f11b3e911485e8c2e56c7f983c877_001.jpg",
+              "url_video_text": "@brightsprt · 41k",
               "url": ""
             }
           },
-          "16449721-c402-4cf2-aced-ea24ba47e01b1": {
+          "d4a5628e-e56a-4bf2-b105-25165761bbce": {
             "type": "text",
             "settings": {
               "url_video": "https://cdn.shopify.com/videos/c/o/v/ea7de930c6e94cd9ac2f75d6c578bc71.mp4",
-              "url_video_text": "@brightsprt · 37k",
+              "video_poster": "shopify://shop_images/ea7de930c6e94cd9ac2f75d6c578bc71_001.jpg",
+              "url_video_text": "@brightsprt · 41k",
               "url": ""
             }
           },
-          "f4b5bb6f-ab22-4720-8c5e-54e48085ddfe1": {
+          "7a059990-669f-43b9-a207-28ae2a8a5ccc": {
             "type": "text",
             "settings": {
               "url_video": "https://cdn.shopify.com/videos/c/o/v/0dd345ba599148ef9f944df9a3294347.mp4",
-              "url_video_text": "@brightsprt · 37k",
+              "video_poster": "shopify://shop_images/0dd345ba599148ef9f944df9a3294347_001.jpg",
+              "url_video_text": "@brightsprt · 41k",
               "url": ""
             }
           },
-          "d979fe48-d9dc-48fb-84a1-846bd6cd4f211": {
+          "c9a635ba-6d20-48fc-9f26-a5ff2f8a0997": {
             "type": "text",
             "settings": {
               "url_video": "https://cdn.shopify.com/videos/c/o/v/b68632aeca6e4e09ba44f307795c734f.mp4",
-              "url_video_text": "@brightsprt · 37k",
+              "video_poster": "shopify://shop_images/b68632aeca6e4e09ba44f307795c734f_001_1.jpg",
+              "url_video_text": "@brightsprt · 41k",
               "url": ""
             }
           },
-          "f2f87bc3-d04b-410f-b2fe-db0bc22ea4c11": {
+          "2b15488a-814b-422c-9c16-123906677857": {
             "type": "text",
             "settings": {
               "url_video": "https://cdn.shopify.com/videos/c/o/v/437f11b3e911485e8c2e56c7f983c877.mp4",
-              "url_video_text": "@brightsprt · 37k",
+              "video_poster": "shopify://shop_images/437f11b3e911485e8c2e56c7f983c877_00-00-02.jpg",
+              "url_video_text": "@brightsprt · 41k",
               "url": ""
             }
           },
-          "0aa5e892-b18b-41db-9fc5-9f48eab030d41": {
+          "cabb28bc-686b-4b59-92ee-6e77325ac682": {
             "type": "text",
             "settings": {
               "url_video": "https://cdn.shopify.com/videos/c/o/v/ea7de930c6e94cd9ac2f75d6c578bc71.mp4",
-              "url_video_text": "@brightsprt · 37k",
+              "video_poster": "shopify://shop_images/ea7de930c6e94cd9ac2f75d6c578bc71_00-00-08.jpg",
+              "url_video_text": "@brightsprt · 41k",
               "url": ""
             }
           }
         },
         "block_order": [
-          "874b6d39-c77e-48f1-a240-cc1dbb0c256f1",
-          "decdfcf0-ca41-4ea0-87f2-5fab193cc69a1",
-          "16449721-c402-4cf2-aced-ea24ba47e01b1",
-          "f4b5bb6f-ab22-4720-8c5e-54e48085ddfe1",
-          "d979fe48-d9dc-48fb-84a1-846bd6cd4f211",
-          "f2f87bc3-d04b-410f-b2fe-db0bc22ea4c11",
-          "0aa5e892-b18b-41db-9fc5-9f48eab030d41"
+          "ef690d0a-a89e-475e-926c-cb674de00ac3",
+          "6a5f5b97-6c0c-4bb2-901d-9eea076676af",
+          "d4a5628e-e56a-4bf2-b105-25165761bbce",
+          "7a059990-669f-43b9-a207-28ae2a8a5ccc",
+          "c9a635ba-6d20-48fc-9f26-a5ff2f8a0997",
+          "2b15488a-814b-422c-9c16-123906677857",
+          "cabb28bc-686b-4b59-92ee-6e77325ac682"
         ],
         "settings": {
           "main_heading": "we gaan",
