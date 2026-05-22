@@ -95,7 +95,7 @@
     "subtitle5": "Shine Bright, Golf at Night",
     "image5": "shopify://shop_images/Image-1.webp",
     "c_product6": "bright-basketball",
-    "ptitle_6": "BRIGHT™ Basketballl",
+    "ptitle_6": "BRIGHT™ Basketball",
     "subtitle6": "50% OFF 1 - 55% OFF 2 - 60% OFF 3+ | MIX AND MATCH THE BALLS.",
     "image6": "shopify://shop_images/hero-ball-2c_e6c2d23c-8c62-4010-934a-a7dc417d03fd.png",
     "c_product7": "american-football",
@@ -107,7 +107,7 @@
     "subtitle8": "50% OFF 1 - 55% OFF 2 - 60% OFF 3+ | MIX AND MATCH THE BALLS.",
     "image8": "shopify://shop_images/hero-ball-1c_1.png",
     "c_product9": "the-bright-volleyball",
-    "ptitle_9": "BRIGHT™ Volleyballl",
+    "ptitle_9": "BRIGHT™ Volleyball",
     "subtitle9": "50% OFF 1 - 55% OFF 2 - 60% OFF 3+ | MIX AND MATCH THE BALLS.",
     "image9": "shopify://shop_images/ball_color1_438d450a-ec2c-43c4-bcae-9b54c5bddf1c.png",
     "c_product10": "bright-rugby-football",
@@ -115,9 +115,9 @@
     "subtitle10": "50% OFF 1 - 55% OFF 2 - 60% OFF 3+ | MIX AND MATCH THE BALLS.",
     "image10": "shopify://shop_images/image_2024-01-12_180847072.png",
     "c_product11": "bright™-glow-in-the-dark-basketball-net",
-    "ptitle_11": "BRIGHT™ Glow in the dark Basketballl Net",
+    "ptitle_11": "BRIGHT™ Glow in the dark Basketball Net",
     "subtitle11": "Keep the game going at night",
-    "image11": "shopify://shop_images/Cart-drawer-Basketballlnet2.png",
+    "image11": "shopify://shop_images/Cart-drawer-Basketballnet2.png",
     "favicon": "shopify://shop_images/Artboard_21transparent.png",
     "favicon_aa": "about_main",
     "cart_upsell_product": "giftbagandcard",
@@ -320,18 +320,18 @@
           "9ff02aef-ac5b-487c-a9ab-84bf163b7e1a": {
             "type": "slider",
             "settings": {
-              "img": "shopify://shop_images/Basketballl_d30d183b-1233-4630-be43-1f6dda3c7079.png",
+              "img": "shopify://shop_images/Basketball_d30d183b-1233-4630-be43-1f6dda3c7079.png",
               "url": "shopify://products/bright-basketball",
-              "title": "Basketballl",
+              "title": "Basketball",
               "titleurl": "shopify://products/bright-basketball"
             }
           },
           "d07b2c1d-23e4-49a0-bec3-d8ee84241179": {
             "type": "slider",
             "settings": {
-              "img": "shopify://shop_images/Volleyballl_e1804ae9-30b2-4e98-9400-9d9551aa457c.png",
+              "img": "shopify://shop_images/Volleyball_e1804ae9-30b2-4e98-9400-9d9551aa457c.png",
               "url": "shopify://products/the-bright-volleyball",
-              "title": "Volleyballl",
+              "title": "Volleyball",
               "titleurl": "shopify://products/the-bright-volleyball"
             }
           },
@@ -375,9 +375,9 @@
             "type": "slider",
             "disabled": true,
             "settings": {
-              "img": "shopify://shop_images/Volleyballl_e1804ae9-30b2-4e98-9400-9d9551aa457c.png",
+              "img": "shopify://shop_images/Volleyball_e1804ae9-30b2-4e98-9400-9d9551aa457c.png",
               "url": "shopify://products/the-bright-volleyball",
-              "title": "Volleyballl",
+              "title": "Volleyball",
               "titleurl": "shopify://products/the-bright-volleyball"
             }
           },
@@ -385,9 +385,9 @@
             "type": "slider",
             "disabled": true,
             "settings": {
-              "img": "shopify://shop_images/Basketballl_d30d183b-1233-4630-be43-1f6dda3c7079.png",
+              "img": "shopify://shop_images/Basketball_d30d183b-1233-4630-be43-1f6dda3c7079.png",
               "url": "shopify://products/bright-basketball",
-              "title": "Basketballl",
+              "title": "Basketball",
               "titleurl": "shopify://products/bright-basketball"
             }
           },
@@ -527,7 +527,7 @@
               "sub_title2": "Rugby",
               "product_url2": "shopify://products/bright-rugby-football",
               "label_checkbox2": false,
-              "megamenu_image3": "shopify://shop_images/Basketballl.png",
+              "megamenu_image3": "shopify://shop_images/Basketball.png",
               "sub_title3": "Basketball",
               "product_url3": "shopify://products/bright-basketball",
               "label_checkbox3": false,
@@ -535,7 +535,7 @@
               "sub_title4": "US Football",
               "product_url4": "shopify://products/american-football",
               "label_checkbox4": false,
-              "megamenu_image5": "shopify://shop_images/Volleyballl.png",
+              "megamenu_image5": "shopify://shop_images/Volleyball.png",
               "sub_title5": "Volleyball",
               "product_url5": "shopify://products/the-bright-volleyball",
               "label_checkbox5": false,
@@ -1302,7 +1302,7 @@
             "settings": {
               "img": "shopify://shop_images/image_2024-06-05_173035533.png",
               "img1": "shopify://shop_images/ball_color1_438d450a-ec2c-43c4-bcae-9b54c5bddf1c.png",
-              "btn": "Shop Volleyballl",
+              "btn": "Shop Volleyball",
               "url": "shopify://products/the-bright-volleyball"
             }
           },
@@ -1320,7 +1320,7 @@
             "settings": {
               "img": "shopify://shop_images/image_2024-06-05_173453040.png",
               "img1": "shopify://shop_images/image_2024-06-05_124620344.png",
-              "btn": "Shop Basketballl",
+              "btn": "Shop Basketball",
               "url": "shopify://products/bright-basketball"
             }
           }
@@ -1423,8 +1423,8 @@
           "cabb28bc-686b-4b59-92ee-6e77325ac6822"
         ],
         "settings": {
-          "main_heading": "we gaan",
-          "sub_heading": "viraal",
+          "main_heading": "we're going",
+          "sub_heading": "viral",
           "top_icon": "<svg width=\"23\" height=\"24\" viewbox=\"0 0 23 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6211 8.66353C18.1707 9.77064 20.0692 10.4221 22.1194 10.4221V6.47861C21.7314 6.47876 21.3444 6.43828 20.9647 6.35783V9.46197C18.9146 9.46197 17.0164 8.8105 15.4664 7.70338V15.7508C15.4664 19.7766 12.2013 23.0399 8.17366 23.0399C6.67094 23.0399 5.27412 22.5858 4.11377 21.807C5.43809 23.1604 7.28488 24 9.32807 24C13.356 24 16.6212 20.7367 16.6212 16.7108V8.66353H16.6211ZM18.0455 4.68505C17.2536 3.82034 16.7337 2.70275 16.6211 1.46721V0.960022H15.5269C15.8023 2.53029 16.7417 3.87188 18.0455 4.68505V4.68505ZM6.66117 18.7179C6.21875 18.1381 5.9796 17.4287 5.98067 16.6993C5.98067 14.8581 7.47419 13.3653 9.31674 13.3653C9.66008 13.365 10.0014 13.4177 10.3287 13.5214V9.48986C9.94629 9.43749 9.56034 9.41528 9.17444 9.42346V12.5614C8.847 12.4577 8.50553 12.405 8.16205 12.4053C6.3195 12.4053 4.82612 13.8981 4.82612 15.7395C4.82612 17.0414 5.5726 18.1688 6.66117 18.7179V18.7179Z\" fill=\"#EE1D52\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15.4664 7.70338C17.0164 8.8105 18.9146 9.46197 20.9647 9.46197V6.35783C19.8203 6.11429 18.8072 5.51648 18.0455 4.68505C16.7417 3.87188 15.8022 2.53029 15.5268 0.960022H12.6526V16.7107C12.6461 18.5469 11.1551 20.0336 9.31656 20.0336C8.2331 20.0336 7.27055 19.5175 6.66099 18.7179C5.57243 18.1688 4.82595 17.0414 4.82595 15.7395C4.82595 13.8981 6.31933 12.4053 8.16187 12.4053C8.51487 12.4053 8.85511 12.4602 9.17426 12.5614V9.42346C5.21745 9.50516 2.03516 12.7366 2.03516 16.7108C2.03516 18.6947 2.82765 20.4932 4.11374 21.8072C5.27409 22.5859 6.6709 23.04 8.17363 23.04C12.2012 23.04 15.4664 19.7766 15.4664 15.751V7.70338Z\" fill=\"white\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M20.9647 6.3578V5.51844C19.9327 5.52 18.9211 5.23114 18.0455 4.68488C18.8205 5.533 19.8411 6.11786 20.9647 6.3578V6.3578ZM15.5268 0.96C15.5005 0.809948 15.4804 0.658884 15.4664 0.507186V0H11.4978V15.7508C11.4914 17.5868 10.0006 19.0735 8.16188 19.0735C7.62199 19.0735 7.1124 18.9456 6.661 18.7179C7.27056 19.5174 8.2331 20.0335 9.31657 20.0335C11.155 20.0335 12.6461 18.5468 12.6526 16.7106V0.96H15.5268ZM9.17441 9.42343V8.52984C8.8428 8.4845 8.50848 8.46184 8.17378 8.46201C4.14575 8.46201 0.880615 11.7254 0.880615 15.7508C0.880615 18.2745 2.16387 20.4987 4.11389 21.807C2.8278 20.493 2.0353 18.6945 2.0353 16.7106C2.0353 12.7366 5.21746 9.50513 9.17441 9.42343V9.42343Z\" fill=\"#69C9D0\"></path>\n</svg>",
           "top_heading": "AS SEEN ON TIKTOK"
         }
@@ -1609,7 +1609,7 @@
           "4048dc32-854e-44e5-a9be-2b4955f8342d": {
             "type": "balls",
             "settings": {
-              "title": "<span>Basketballl</span> game",
+              "title": "<span>Basketball</span> game",
               "img1": "shopify://shop_images/image_2024-06-05_124613906.png",
               "img2": "shopify://shop_images/image_2024-06-05_124620344.png"
             }
@@ -1617,7 +1617,7 @@
           "7540b9d0-9429-4c34-a7c2-8b163b4a1b7f": {
             "type": "balls",
             "settings": {
-              "title": "<span>Volleyballl </span> game",
+              "title": "<span>Volleyball </span> game",
               "img1": "shopify://shop_images/image_2024-06-05_124845281.png",
               "img2": "shopify://shop_images/image_2024-06-05_124850716.png"
             }
@@ -1681,10 +1681,10 @@
           "url": "/collections/all#our-balls",
           "video_poster_1": "shopify://shop_images/video1.png",
           "video1": "https://cdn.shopify.com/videos/c/o/v/ea7de930c6e94cd9ac2f75d6c578bc71.mp4",
-          "video_text1": "<p>@brightsprt · 37k</p>",
+          "video_text1": "<p>@brightsprt · 41k</p>",
           "video_poster_2": "shopify://shop_images/video2.png",
           "video2": "https://cdn.shopify.com/videos/c/o/v/768502b2408843b9a03b30ec3b6936fa.mp4",
-          "video_text2": "<p>@brightsprt · 37k</p>",
+          "video_text2": "<p>@brightsprt · 41k</p>",
           "payment_icon": "<!--?xml version=\"1.0\" encoding=\"UTF-8\"?-->\n<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewbox=\"0 0 400 24\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n  <defs>\n    <style>\n      .cls-1, .cls-2 {\n        fill: none;\n      }\n\n      .cls-3, .cls-4, .cls-5, .cls-6 {\n        fill: #fff;\n      }\n\n      .cls-3, .cls-4, .cls-5, .cls-7, .cls-8, .cls-9, .cls-10 {\n        fill-rule: evenodd;\n      }\n\n      .cls-11 {\n        fill: #0099df;\n      }\n\n      .cls-4 {\n        fill-opacity: .6;\n      }\n\n      .cls-5 {\n        fill-opacity: .8;\n      }\n\n      .cls-2 {\n        stroke: #fff;\n        stroke-opacity: .1;\n      }\n\n      .cls-12, .cls-9 {\n        fill: #ed0006;\n      }\n\n      .cls-13 {\n        clip-path: url(#clippath-1);\n      }\n\n      .cls-14 {\n        clip-path: url(#clippath-3);\n      }\n\n      .cls-15 {\n        clip-path: url(#clippath-4);\n      }\n\n      .cls-16 {\n        clip-path: url(#clippath-2);\n      }\n\n      .cls-17 {\n        clip-path: url(#clippath-7);\n      }\n\n      .cls-18 {\n        clip-path: url(#clippath-6);\n      }\n\n      .cls-19 {\n        clip-path: url(#clippath-5);\n      }\n\n      .cls-7 {\n        fill: #f9a000;\n      }\n\n      .cls-8 {\n        fill: #6c6bbd;\n      }\n\n      .cls-10 {\n        fill: #ff5e00;\n      }\n\n      .cls-20 {\n        clip-path: url(#clippath);\n      }\n    </style>\n    <clippath id=\"clippath\">\n      <rect class=\"cls-1\" y=\"0\" width=\"33.5\" height=\"24\"></rect>\n    </clippath>\n    <clippath id=\"clippath-1\">\n      <rect class=\"cls-1\" x=\"45.5\" y=\"0\" width=\"33.5\" height=\"24\"></rect>\n    </clippath>\n    <clippath id=\"clippath-2\">\n      <rect class=\"cls-1\" x=\"91\" y=\"0\" width=\"33.5\" height=\"24\"></rect>\n    </clippath>\n    <clippath id=\"clippath-3\">\n      <rect class=\"cls-1\" x=\"136.5\" y=\"0\" width=\"33.5\" height=\"24\"></rect>\n    </clippath>\n    <clippath id=\"clippath-4\">\n      <rect class=\"cls-1\" x=\"181.9\" y=\"0\" width=\"33.5\" height=\"24\"></rect>\n    </clippath>\n    <clippath id=\"clippath-5\">\n      <rect class=\"cls-1\" x=\"227.4\" y=\"0\" width=\"33.5\" height=\"24\"></rect>\n    </clippath>\n    <clippath id=\"clippath-6\">\n      <rect class=\"cls-1\" x=\"272.8\" y=\"0\" width=\"33.5\" height=\"24\"></rect>\n    </clippath>\n    <clippath id=\"clippath-7\">\n      <rect class=\"cls-1\" x=\"318.3\" y=\"0\" width=\"35.6\" height=\"24\"></rect>\n    </clippath>\n  </defs>\n  <!-- Generator: Adobe Illustrator 28.7.1, SVG Export Plug-In . SVG Version: 1.2.0 Build 142)  -->\n  <g>\n    <g id=\"Layer_1\">\n      <g id=\"Layer_1-2\" data-name=\"Layer_1\">\n        <g class=\"cls-20\">\n          <g>\n            <path class=\"cls-2\" d=\"M4.5.5h24.7c2.1,0,3.9,1.7,3.9,3.9v15.3c0,2.1-1.7,3.9-3.9,3.9H4.5c-2.1,0-3.9-1.7-3.9-3.9V4.4c0-2.2,1.7-3.9,3.9-3.9Z\"></path>\n            <path class=\"cls-6\" d=\"M24.5,7.6l-5.2-2.9c-1.5-.9-3.4.2-3.4,1.9v.3c0,.3.1.5.4.7l1,.5c.3.2.6,0,.6-.4v-.7c0-.4.4-.6.7-.4l4.5,2.5c.3.2.3.6,0,.8l-4.5,2.5c-.3.2-.7,0-.7-.4v-.4c0-1.7-1.9-2.8-3.4-1.9l-5.2,2.9c-1.5.9-1.5,3,0,3.8l5.2,2.9c1.5.9,3.4-.2,3.4-1.9v-.3c0-.3-.1-.5-.4-.7l-1-.5c-.3-.2-.6,0-.6.4v.7c0,.4-.4.6-.7.4l-4.5-2.5c-.3-.2-.3-.6,0-.8l4.5-2.5c.3-.2.7,0,.7.4v.4c0,1.7,1.9,2.8,3.4,1.9l5.2-2.9c1.5-.9,1.5-3,0-3.8Z\"></path>\n          </g>\n        </g>\n        <g class=\"cls-13\">\n          <g>\n            <path class=\"cls-2\" d=\"M49.9.5h24.7c2.1,0,3.9,1.7,3.9,3.9v15.3c0,2.1-1.7,3.9-3.9,3.9h-24.7c-2.1,0-3.9-1.7-3.9-3.9V4.4c0-2.1,1.7-3.9,3.9-3.9Z\"></path>\n            <path class=\"cls-3\" d=\"M55.7,16.3h-2l-1.5-6.1c0-.3-.2-.5-.5-.6-.6-.3-1.2-.5-1.9-.6v-.2h3.3c.5,0,.8.4.8.8l.8,4.4,2-5.1h2l-3,7.6v-.2ZM59.9,16.3h-1.9l1.6-7.6h1.9l-1.6,7.6ZM63.9,10.8c0-.4.4-.6.8-.6.6,0,1.3,0,1.9.3l.3-1.6c-.6-.2-1.2-.4-1.7-.4-1.9,0-3.2,1.1-3.2,2.5s1,1.7,1.6,2c.7.3,1,.6,1,.9,0,.5-.6.8-1.1.8s-1.4-.2-2-.5l-.3,1.6c.7.3,1.4.4,2.1.4,2.1,0,3.4-1,3.4-2.6s-2.6-2.1-2.6-3l-.2.2ZM73.3,16.3l-1.5-7.6h-1.6c-.3,0-.7.2-.8.6l-2.8,7h2l.4-1.1h2.4l.2,1.1h1.7ZM70.4,10.7l.6,2.9h-1.6s1-2.9,1-2.9Z\"></path>\n          </g>\n        </g>\n        <g class=\"cls-16\">\n          <g>\n            <path class=\"cls-2\" d=\"M95.4.5h24.7c2.1,0,3.9,1.7,3.9,3.9v15.3c0,2.1-1.7,3.9-3.9,3.9h-24.7c-2.1,0-3.9-1.7-3.9-3.9V4.4c0-2.1,1.7-3.9,3.9-3.9Z\"></path>\n            <path class=\"cls-9\" d=\"M107.9,17.4c-1.1,1-2.6,1.6-4.2,1.6-3.6,0-6.5-3.1-6.5-6.9s2.9-6.9,6.5-6.9,3.1.6,4.2,1.6c1.1-1,2.6-1.6,4.2-1.6,3.6,0,6.5,3.1,6.5,6.9s-2.9,6.9-6.5,6.9-3.1-.6-4.2-1.6Z\"></path>\n            <path class=\"cls-7\" d=\"M107.9,17.4c1.4-1.3,2.3-3.2,2.3-5.3s-.9-4-2.3-5.3c1.1-1,2.6-1.6,4.2-1.6,3.6,0,6.5,3.1,6.5,6.9s-2.9,6.9-6.5,6.9-3.1-.6-4.2-1.6Z\"></path>\n            <path class=\"cls-10\" d=\"M107.9,6.9c1.4,1.3,2.3,3.2,2.3,5.3s-.9,4-2.3,5.3c-1.4-1.3-2.3-3.2-2.3-5.3s.9-4,2.3-5.3Z\"></path>\n          </g>\n        </g>\n        <g class=\"cls-14\">\n          <g>\n            <path class=\"cls-2\" d=\"M140.8.5h24.7c2.1,0,3.9,1.7,3.9,3.9v15.3c0,2.1-1.7,3.9-3.9,3.9h-24.7c-2.1,0-3.9-1.7-3.9-3.9V4.4c0-2.1,1.7-3.9,3.9-3.9Z\"></path>\n            <path class=\"cls-3\" d=\"M142.5,8.5l-3.1,7.2h3.7l.5-1.2h1.1l.5,1.2h4.1v-.9l.4.9h2.1l.4-.9v.9h8.6l1-1.1,1,1.1h4.4l-3.1-3.6,3.1-3.6h-4.3l-1,1.1-.9-1.1h-9.3l-.8,1.9-.8-1.9h-3.7v.9l-.4-.9h-3.5ZM143.2,9.5h1.8l2.1,4.9v-4.9h2l1.6,3.5,1.5-3.5h2v5.2h-1.2v-4.1l-1.8,4.1h-1.1l-1.8-4.1v4.1h-2.5l-.5-1.2h-2.6l-.5,1.2h-1.3l2.2-5.2h.1ZM160.2,9.5h-4.9v5.2h4.8l1.6-1.7,1.5,1.7h1.6l-2.3-2.6,2.3-2.6h-1.5l-1.6,1.7-1.5-1.7h0ZM144.1,10.4l-.8,2.1h1.7l-.8-2.1h0ZM156.5,11.6v-.9h3.1l1.3,1.5-1.4,1.5h-3v-1h2.7v-1.1h-2.7Z\"></path>\n          </g>\n        </g>\n        <g class=\"cls-15\">\n          <g>\n            <path class=\"cls-2\" d=\"M186.3.5h24.7c2.1,0,3.9,1.7,3.9,3.9v15.3c0,2.1-1.7,3.9-3.9,3.9h-24.7c-2.1,0-3.9-1.7-3.9-3.9V4.4c0-2.1,1.7-3.9,3.9-3.9Z\"></path>\n            <path class=\"cls-12\" d=\"M201.1,12.1c0,3.8-2.9,6.9-6.5,6.9s-6.5-3.1-6.5-6.9,2.9-6.9,6.5-6.9,6.5,3.1,6.5,6.9Z\"></path>\n            <path class=\"cls-11\" d=\"M209.6,12.1c0,3.8-2.9,6.9-6.5,6.9s-6.5-3.1-6.5-6.9,2.9-6.9,6.5-6.9,6.5,3.1,6.5,6.9Z\"></path>\n            <path class=\"cls-8\" d=\"M198.8,6.9c1.4,1.3,2.3,3.2,2.3,5.3s-.9,4-2.3,5.3c-1.4-1.3-2.3-3.2-2.3-5.3s.9-4,2.3-5.3Z\"></path>\n          </g>\n        </g>\n        <g class=\"cls-19\">\n          <g>\n            <path class=\"cls-2\" d=\"M231.7.5h24.7c2.1,0,3.9,1.7,3.9,3.9v15.3c0,2.1-1.7,3.9-3.9,3.9h-24.7c-2.1,0-3.9-1.7-3.9-3.9V4.4c0-2.1,1.7-3.9,3.9-3.9Z\"></path>\n            <path class=\"cls-6\" d=\"M246.2,11.1c0,1.5-1,2.6-2.5,2.6h-1.4v2h-1v-7.3h2.5c1.4,0,2.5,1.1,2.5,2.6h-.1ZM245,11.1c0-.9-.6-1.5-1.4-1.5h-1.3v2.8h1.3c.8,0,1.4-.6,1.4-1.5v.2ZM246.5,14.6c0-.2,0-.5.1-.7,0-.2.2-.4.4-.5.4-.3,1-.4,1.8-.5h.9v-.3c0-.6-.4-.8-.9-.8s-.9.2-1,.6h-.9c.1-.8.8-1.5,2.2-1.5s2,.7,2,2.1v2.9h-.9v-.2h0c-.3.3-.7.5-1.4.5-1,0-1.7-.6-1.7-1.5h-.6ZM249.8,13.9v-.2h-1.2c-.6,0-1,.4-1,.8s.3.6.9.6,1.2-.4,1.2-1.2h.1ZM251.8,18.2v-.8h.4c.2,0,.5,0,.7-.2.2-.1.3-.4.4-.6v-.2h0l-1.9-5.1h.9l1.3,3.6h0l1.1-3.6h.9l-2,5.6c-.5,1.3-1.3,1.6-2.1,1.6h-.5l.8-.3ZM235,8c-1.2,0-2.4.5-3.2,1.3h0v.2l.5.8h0c.3-.3.7-.6,1.1-.8.4-.2.9-.3,1.3-.3,1.9,0,2.8,1.5,2.8,2.9s-1,2.7-2.5,2.7-2-.8-2-1.8,0-.5.2-.8c.1-.2.3-.4.5-.6h0v-.3l-.6-.8h0c-.3.3-.6.7-.8,1.1-.2.4-.3.9-.3,1.4,0,1.8,1.5,3.2,3.3,3.2h0c2.2,0,3.8-1.7,3.8-4.1s-1.5-4.3-4.2-4.3h0v.2Z\"></path>\n          </g>\n        </g>\n        <g class=\"cls-18\">\n          <g>\n            <path class=\"cls-2\" d=\"M277.2.5h24.7c2.1,0,3.9,1.7,3.9,3.9v15.3c0,2.1-1.7,3.9-3.9,3.9h-24.7c-2.1,0-3.9-1.7-3.9-3.9V4.4c0-2.1,1.7-3.9,3.9-3.9Z\"></path>\n            <path class=\"cls-3\" d=\"M282,8.3c-.3.4-.7.6-1.2.6,0-.5.2-1,.4-1.3.3-.4.8-.6,1.2-.6,0,.5-.1,1-.4,1.3ZM282.4,9c-.4,0-.8.1-1,.2-.2,0-.3.1-.5.1s-.3,0-.5-.1-.5-.2-.8-.2c-.7,0-1.3.4-1.6,1.1-.7,1.3-.2,3.2.5,4.2.3.5.7,1.1,1.3,1.1s.4,0,.6-.2c.2,0,.4-.2.7-.2s.5,0,.7.2c.2,0,.4.2.6.2.5,0,.9-.5,1.2-1,.4-.6.5-1.1.5-1.2h0c-.1,0-1-.5-1-1.7s.7-1.5.8-1.6h0c-.5-.7-1.2-.8-1.5-.8h0ZM286.1,15.3v-7.7h2.7c1.4,0,2.4,1,2.4,2.5s-1,2.5-2.4,2.5h-1.6v2.6h-1.1ZM287.3,8.6h1.3c1,0,1.5.6,1.5,1.5s-.6,1.5-1.5,1.5h-1.3v-3.1h0ZM295,14.4c-.3.6-1,1-1.7,1-1.1,0-1.8-.7-1.8-1.7s.7-1.6,2-1.6h1.4v-.5c0-.6-.4-1-1.1-1s-1,.3-1.1.8h-1c0-1,.9-1.7,2.1-1.7s2.1.7,2.1,1.8v3.8h-1v-.9h.1ZM293.7,14.5c-.6,0-1-.3-1-.8s.4-.8,1.1-.8h1.3v.4c0,.7-.6,1.2-1.3,1.2h-.1ZM299.6,15.6c-.5,1.4-1,1.8-2.1,1.8s-.4,0-.4,0v-.9h.3c.5,0,.8-.2,1-.8v-.3c.1,0-1.8-5.6-1.8-5.6h1.2l1.3,4.6h0l1.3-4.6h1.2l-2,5.9h0Z\"></path>\n          </g>\n        </g>\n        <g class=\"cls-17\">\n          <g>\n            <path class=\"cls-2\" d=\"M322.6.5h26.3c2.1,0,3.9,1.7,3.9,3.9v15.3c0,2.1-1.7,3.9-3.9,3.9h-26.3c-2.1,0-3.9-1.7-3.9-3.9V4.4c0-2.1,1.7-3.9,3.9-3.9Z\"></path>\n            <path class=\"cls-3\" d=\"M334.8,15.8v-3h1.6c.6,0,1.2-.2,1.6-.6h.1c.8-1,.8-2.3-.1-3.2-.4-.4-1-.7-1.6-.6h-2.5v7.5h.9ZM334.8,11.8v-2.6h1.6c.3,0,.7.1.9.4.5.5.5,1.3,0,1.8-.2.3-.6.4-.9.4h-1.6ZM342.5,11.1c-.4-.4-1-.6-1.7-.6s-1.6.3-2,1l.8.5c.3-.5.7-.7,1.2-.7s.7.1.9.4c.2.2.4.5.4.9v.2c-.4-.2-.8-.3-1.4-.3s-1.2.2-1.6.5-.6.7-.6,1.3.2.9.6,1.2.8.5,1.4.5,1.2-.3,1.6-.9h0v.7h.9v-3.1c0-.7-.2-1.2-.6-1.6h.1ZM339.9,14.8c-.2-.1-.3-.4-.3-.6s.1-.5.4-.7.6-.3,1-.3.9.1,1.2.4c0,.4-.2.8-.5,1.1s-.7.4-1.1.4-.5,0-.7-.2h0ZM345.1,18l3.2-7.3h-1l-1.5,3.7h0l-1.5-3.7h-1l2.1,4.8-1.2,2.6h1-.1Z\"></path>\n            <path class=\"cls-6\" d=\"M331.5,12.1v-.9h-4v1.6h2.3c0,.5-.4,1-.8,1.3v1.1h1.4c.8-.7,1.3-1.8,1.3-3.2h-.2Z\"></path>\n            <path class=\"cls-6\" d=\"M327.5,16.3c1.1,0,2.1-.4,2.8-1l-1.4-1.1c-.4.3-.9.4-1.4.4-1.1,0-2-.8-2.4-1.8h-1.4v1.1c.7,1.4,2.2,2.4,3.8,2.4Z\"></path>\n            <path class=\"cls-6\" d=\"M325.1,12.8c-.2-.5-.2-1.1,0-1.6v-1.1h-1.4c-.6,1.2-.6,2.6,0,3.8,0,0,1.4-1.1,1.4-1.1Z\"></path>\n            <path class=\"cls-6\" d=\"M327.5,9.4c.6,0,1.2.2,1.6.6l1.2-1.2c-.8-.7-1.8-1.1-2.8-1.1-1.6,0-3.1.9-3.8,2.4l1.4,1.1c.3-1,1.3-1.8,2.4-1.8h0Z\"></path>\n          </g>\n        </g>\n        <rect class=\"cls-2\" x=\"366.4\" y=\".5\" width=\"33\" height=\"23\" rx=\"3.5\" ry=\"3.5\"></rect>\n        <path class=\"cls-4\" d=\"M387.2,9.1v.2c-.5,2.8-2.3,3.7-4.6,3.7h-1.2c-.3,0-.5.2-.6.5l-.8,5c0,.2.1.4.3.4h2.1c.2,0,.5-.2.5-.4h0c0-.1.4-2.7.4-2.7h0c0-.4.2-.6.5-.6h.3c2,0,3.6-.8,4-3.3.2-1,0-1.9-.4-2.5-.2-.2-.3-.3-.6-.4h.1Z\"></path>\n        <path class=\"cls-3\" d=\"M386.6,8.8h-4.8c-.1,0-.2.2-.3.4l-.7,4.3h0c0-.2.3-.4.6-.4h1.2c2.3,0,4.1-1,4.6-3.7v-.2c-.1,0-.3-.1-.4-.2h-.1v-.2Z\"></path>\n        <path class=\"cls-5\" d=\"M381.5,9.1c0-.2.1-.3.3-.4h4.9c.2,0,.3.1.4.2.2-1,0-1.7-.5-2.4-.6-.7-1.7-1-3-1h-4c-.3,0-.5.2-.6.5l-1.6,10.8c0,.2.1.4.3.4h2.4l1.3-8.3v.2Z\"></path>\n      </g>\n    </g>\n  </g>\n</svg>"
         }
       },
@@ -1855,10 +1855,10 @@
           "cabb28bc-686b-4b59-92ee-6e77325ac682"
         ],
         "settings": {
-          "main_heading": "We gaan",
-          "sub_heading": "viraal",
+          "main_heading": "we're going",
+          "sub_heading": "viral",
           "top_icon": "<svg width=\"23\" height=\"24\" viewbox=\"0 0 23 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6211 8.66353C18.1707 9.77064 20.0692 10.4221 22.1194 10.4221V6.47861C21.7314 6.47876 21.3444 6.43828 20.9647 6.35783V9.46197C18.9146 9.46197 17.0164 8.8105 15.4664 7.70338V15.7508C15.4664 19.7766 12.2013 23.0399 8.17366 23.0399C6.67094 23.0399 5.27412 22.5858 4.11377 21.807C5.43809 23.1604 7.28488 24 9.32807 24C13.356 24 16.6212 20.7367 16.6212 16.7108V8.66353H16.6211ZM18.0455 4.68505C17.2536 3.82034 16.7337 2.70275 16.6211 1.46721V0.960022H15.5269C15.8023 2.53029 16.7417 3.87188 18.0455 4.68505V4.68505ZM6.66117 18.7179C6.21875 18.1381 5.9796 17.4287 5.98067 16.6993C5.98067 14.8581 7.47419 13.3653 9.31674 13.3653C9.66008 13.365 10.0014 13.4177 10.3287 13.5214V9.48986C9.94629 9.43749 9.56034 9.41528 9.17444 9.42346V12.5614C8.847 12.4577 8.50553 12.405 8.16205 12.4053C6.3195 12.4053 4.82612 13.8981 4.82612 15.7395C4.82612 17.0414 5.5726 18.1688 6.66117 18.7179V18.7179Z\" fill=\"#EE1D52\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15.4664 7.70338C17.0164 8.8105 18.9146 9.46197 20.9647 9.46197V6.35783C19.8203 6.11429 18.8072 5.51648 18.0455 4.68505C16.7417 3.87188 15.8022 2.53029 15.5268 0.960022H12.6526V16.7107C12.6461 18.5469 11.1551 20.0336 9.31656 20.0336C8.2331 20.0336 7.27055 19.5175 6.66099 18.7179C5.57243 18.1688 4.82595 17.0414 4.82595 15.7395C4.82595 13.8981 6.31933 12.4053 8.16187 12.4053C8.51487 12.4053 8.85511 12.4602 9.17426 12.5614V9.42346C5.21745 9.50516 2.03516 12.7366 2.03516 16.7108C2.03516 18.6947 2.82765 20.4932 4.11374 21.8072C5.27409 22.5859 6.6709 23.04 8.17363 23.04C12.2012 23.04 15.4664 19.7766 15.4664 15.751V7.70338Z\" fill=\"white\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M20.9647 6.3578V5.51844C19.9327 5.52 18.9211 5.23114 18.0455 4.68488C18.8205 5.533 19.8411 6.11786 20.9647 6.3578V6.3578ZM15.5268 0.96C15.5005 0.809948 15.4804 0.658884 15.4664 0.507186V0H11.4978V15.7508C11.4914 17.5868 10.0006 19.0735 8.16188 19.0735C7.62199 19.0735 7.1124 18.9456 6.661 18.7179C7.27056 19.5174 8.2331 20.0335 9.31657 20.0335C11.155 20.0335 12.6461 18.5468 12.6526 16.7106V0.96H15.5268ZM9.17441 9.42343V8.52984C8.8428 8.4845 8.50848 8.46184 8.17378 8.46201C4.14575 8.46201 0.880615 11.7254 0.880615 15.7508C0.880615 18.2745 2.16387 20.4987 4.11389 21.807C2.8278 20.493 2.0353 18.6945 2.0353 16.7106C2.0353 12.7366 5.21746 9.50513 9.17441 9.42343V9.42343Z\" fill=\"#69C9D0\"></path>\n</svg>",
-          "top_heading": "gezien op TikTok"
+          "top_heading": "AS SEEN ON TIKTOK"
         }
       },
       "62911bfb-eacf-420a-acab-335d01c85810": {
@@ -2242,7 +2242,7 @@
           "bg_color": "#7ec8e3",
           "overlay_opacity": 0,
           "title": "⚽ FIFA World Cup SALE",
-          "sports_text": "American football - Basketballl - Golf balls - Football",
+          "sports_text": "American football - Basketball - Golf balls - Football",
           "disclaimer_text": "The discount is applied automatically at checkout; balls can be combined."
         }
       },
@@ -2258,7 +2258,7 @@
           "step_4wWJAW": {
             "type": "step",
             "settings": {
-              "text": "Step 2:\nWij maken er 1 cadeau van."
+              "text": "Step 2:\nWe give you one for free."
             }
           },
           "step_qyqgew": {
