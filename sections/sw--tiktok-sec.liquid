@@ -37,15 +37,13 @@
                 {%- endif -%}
                 <video
                   class="cm_video"
-                  playsinline
-                  loop
-                  muted
-                  preload="none"
-                  {% if block.settings.video_poster != blank %}
-                    poster="{{ block.settings.video_poster | image_url: width: 506 }}"
-                  {% endif %}
-                  width="506"
-                  height="450"
+                  playsinline="" loop=""
+                    {% if forloop.index == 1 %}
+                      autoplay=""
+                      muted=""
+                    {% endif %}
+                  width="100%"
+                  height="100%"
                 >
                   {%- comment -%} src injected by JS only for active/nearby slides {%- endcomment -%}
                   <source data-src="{{ block.settings.url_video }}" type="video/mp4">
