@@ -23,13 +23,13 @@
     },
     "password": {
       "enter_password": "",
-      "password_input": "",
+      "password_input": "Uw wachtwoord",
       "password_submit": "",
-      "newsletter_input": "",
+      "newsletter_input": "Uw e-mailadres",
       "newsletter_submit": "",
-      "newsletter_success": "",
+      "newsletter_success": "Bedankt voor het aanmelden!",
       "powered_by_html": "",
-      "login_title": "",
+      "login_title": "Bent u de winkeleigenaar?",
       "login_link": ""
     },
     "pagination": {
@@ -40,7 +40,7 @@
   },
   "header": {
     "navigation": {
-      "title": "",
+      "title": "Hoofdnavigatie",
       "sidebar_title": "",
       "open_sidebar": "Open navigatie",
       "close_sidebar": "Sluit navigatie",
@@ -57,7 +57,7 @@
       "credits_html": ""
     },
     "newsletter": {
-      "success": "",
+      "success": "U bent geabonneerd op onze nieuwsbrief.",
       "input": "",
       "submit": ""
     }
@@ -410,7 +410,7 @@
     }
   },
   "date_formats": {
-    "month_day_year": "",
+    "month_day_year": "%d %B %Y",
     "month_day_year_short": "",
     "month_day_year_time": ""
   },
@@ -455,5 +455,21 @@
     "adding_to_cart": "Adding...",
     "sold_out": "Sold Out",
     "description": "Description"
+  },
+  "brightsport": {
+    "free_shipping": "Gratis verzending",
+    "add_to_cart": "Toevoegen aan winkelwagen",
+    "balls_two": "2 Ballen",
+    "balls_three": "3 Ballen",
+    "cart_order_note": "Voeg een notitie toe aan uw bestelling",
+    "experience_the_glow": "ERVAAR DE GLOW",
+    "low_stock_shipping": "Beperkte voorraad! Klaar voor verzending",
+    "pay_later_klarna": "Betaal in 30 dagen met",
+    "buy_1_get_1": "Koop 1, Krijg 1 Gratis",
+    "buy_2_get_2": "Koop 2, krijg 2 gratis",
+    "see_all": "Alles weergeven"
+  },
+  "localization": {
+    "language_label": "Taal"
   }
 }
