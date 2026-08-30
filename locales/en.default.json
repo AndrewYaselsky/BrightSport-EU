@@ -185,7 +185,7 @@
       "date": "Date",
       "payment_status": "Payment status",
       "fulfillment_status": "Fulfillment status",
-      "total": "Totaal"
+      "total": "Total"
     },
     "order": {
       "title": "Order {{order_number}}",
@@ -196,12 +196,12 @@
       "line_fulfillment_html": "Your product \"{{product_title}}\" has been sent. Track the shipment with number {{tracking_number}} or by clicking here: <a href=\"{{tracking_url}}\" class=\"Link Link--underlineNative\" target=\"_blank\">{{tracking_url}}</a>",
       "product": "Product",
       "quantity": "Quantity",
-      "line_price": "Totaal",
+      "line_price": "Total",
       "subtotal": "Subtotal",
       "discount": "Sale",
       "shipping": "Shipping",
       "tax": "BTW",
-      "total": "Totaal",
+      "total": "Total",
       "shipping_address": "Shipping Address",
       "billing_address": "Billing address",
       "no_shipping_address": "No shipping address was required for this order."
@@ -274,14 +274,14 @@
       "free_shipping": "You qualify for free shipping!",
       "free_shipping_remaining_html": "Spend {{remaining_amount}} more for FREE shipping!",
       "shipping_and_taxes_notice": "Shipping is calculated in the next step.",
-      "total": "Totaal",
+      "total": "Total",
       "currency_notice": "All orders are processed in shop's currency, which is {{shop_currency}}. The content of your cart may be displayed in another currency, at the most current exchange rate.",
       "checkout": "Proceed to Checkout"
     },
     "items": {
       "product": "Product",
       "quantity": "Quantity",
-      "total": "Totaal",
+      "total": "Total",
       "set_quantity": "Set quantity to {{new_quantity}}",
       "remove": "Remove"
     },

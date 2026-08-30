@@ -193,7 +193,7 @@
       "date": "Datum",
       "payment_status": "Payment status",
       "fulfillment_status": "Fulfillment status",
-      "total": "Totaal"
+      "total": "Total"
     },
     "order": {
       "title": "Bestelling {{order_number}}",
@@ -204,12 +204,12 @@
       "line_fulfillment_html": "Your product \"{{product_title}}\" has been sent. Track the shipment with number {{tracking_number}} or by clicking here: <a href=\"{{tracking_url}}\" class=\"Link Link--underlineNative\" target=\"_blank\">{{tracking_url}}</a>",
       "product": "Product",
       "quantity": "Aantal",
-      "line_price": "Totaal",
-      "subtotal": "Subtotaal",
+      "line_price": "Total",
+      "subtotal": "Subtotal",
       "discount": "Sale",
       "shipping": "Verzending",
       "tax": "BTW",
-      "total": "Totaal",
+      "total": "Total",
       "shipping_address": "Shipping Address",
       "billing_address": "Billing adress",
       "no_shipping_address": "No shipping address was required for this order."
@@ -282,14 +282,14 @@
       "free_shipping": "Je komt in aanmerking voor gratis verzending!",
       "free_shipping_remaining_html": "Besteed nog {{remaining_amount}} en krijg GRATIS verzending!",
       "shipping_and_taxes_notice": "Verzending wordt berekend bij de volgende stap.",
-      "total": "Totaal",
+      "total": "Total",
       "currency_notice": "All orders are processed in shop's currency, which is {{shop_currency}}. The content of your cart may be displayed in another currency, at the most current exchange rate.",
       "checkout": "Afrekenen"
     },
     "items": {
       "product": "Product",
       "quantity": "Aantal",
-      "total": "Totaal",
+      "total": "Total",
       "set_quantity": "Set quantity to {{new_quantity}}",
       "remove": "Verwijder"
     },
