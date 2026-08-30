@@ -284,7 +284,7 @@
       "shipping_and_taxes_notice": "",
       "total": "Total",
       "currency_notice": "All orders are processed in shop's currency, which is {{shop_currency}}. The content of your cart may be displayed in another currency, at the most current exchange rate.",
-      "checkout": "Afrekenen"
+      "checkout": "PROCEED TO CHECKOUT"
     },
     "items": {
       "product": "Product",
