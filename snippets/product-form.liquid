@@ -44,7 +44,7 @@
       -%}
       <div class="qty_selector_discount">
         <div class="qty_selector_discount_title_bogo">🔥 Buy 1 get 1 free</div>
-        <div class="qty_selector_discount_title"><span>→ AANBIEDING EINDIGT OM 23:59 ←</span></div>
+        <div class="qty_selector_discount_title"><span>→ OFFER ENDS AT 23:59 ←</span></div>
           <div class="quantity_selector">
             <div
               class="single_quantity"
@@ -180,7 +180,7 @@
         assign save3 = discount_rate_3 | times: 100 | round
       -%}
       <div class="qty_selector_discount">
-        <div class="qty_selector_discount_title"><span>→ AANBIEDING EINDIGT OM 23:59 ←</span></div>
+        <div class="qty_selector_discount_title"><span>→ OFFER ENDS AT 23:59 ←</span></div>
         {%- if price1 > 0 -%}
           <div class="quantity_selector">
             <div
@@ -586,7 +586,7 @@
       </div>
 
       <div class="qty_selector_discount">
-        <div class="qty_selector_discount_title"><span>→ AANBIEDING EINDIGT OM 23:59 ←</span></div>
+        <div class="qty_selector_discount_title"><span>→ OFFER ENDS AT 23:59 ←</span></div>
         <div class="quantity_selector">
           {% assign dis_price_one = selected_variant.compare_at_price | minus: selected_variant.price %}
 
