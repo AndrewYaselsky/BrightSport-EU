@@ -2220,13 +2220,13 @@
           "discount_M8Q6qx": {
             "type": "discount",
             "settings": {
-              "label": "55% OFF 1"
+              "label": "55% OFF 2"
             }
           },
           "discount_UgJMXP": {
             "type": "discount",
             "settings": {
-              "label": "60% OFF 1"
+              "label": "60% OFF 3+"
             }
           }
         },
@@ -2237,11 +2237,9 @@
         ],
         "settings": {
           "background_image": "shopify://shop_images/image_2026-04-20_003736037.png",
-          "left_image": "shopify://shop_images/image_2026-03-08_002247171.png",
-          "right_image": "shopify://shop_images/image_2026-03-08_002221219.png",
           "bg_color": "#7ec8e3",
           "overlay_opacity": 0,
-          "title": "⚽ FIFA World Cup SALE",
+          "title": "🍂 AUTUMN SALE 🍂",
           "sports_text": "American football - Basketball - Golf balls - Football",
           "disclaimer_text": "The discount is applied automatically at checkout; balls can be combined."
         }
