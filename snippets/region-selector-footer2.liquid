@@ -41,22 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
             title: 'Australia',
             code: 'AU',
             icon: `{% include 'icon-flag-au' %}`
-          },
-          {
-            title: 'Brazil',
-            code: 'BR',
-            icon: `{% include 'icon-flag-br' %}`
-          },
-          {
-            title: 'Switzerland',
-            code: 'CH',
-            icon: `{% include 'icon-flag-ch' %}`
-          },
-          {
-            title: 'Mexico',
-            code: 'MX',
-            icon: `{% include 'icon-flag-mx' %}`
-          },
+          }
         ]
         const findStore = (region) => regions.find(({code}) => code === region) || regions[0].value;
         const currentRegionCountryCode = computed(() => {
