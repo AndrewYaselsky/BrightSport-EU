@@ -14,6 +14,10 @@
   right: 0;
   padding: 0 35px;
 }
+.qty_selector_discount,
+.Product__Info .ProductMeta__PriceList {
+  display: none !important;
+}
 .money_back_col h2 {
   font-size: 56px;
   line-height: 1;
