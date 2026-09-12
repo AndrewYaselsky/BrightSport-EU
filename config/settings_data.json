@@ -96,23 +96,23 @@
     "image5": "shopify://shop_images/Image-1.webp",
     "c_product6": "bright-basketball",
     "ptitle_6": "BRIGHT™ Basketball",
-    "subtitle6": "50% OFF 1 - 55% OFF 2 - 60% OFF 3+ | MIX AND MATCH THE BALLS.",
+    "subtitle6": "70% OFF 1 - 75% OFF 2 - 80% OFF 3+ | MIX AND MATCH THE BALLS.",
     "image6": "shopify://shop_images/hero-ball-2c_e6c2d23c-8c62-4010-934a-a7dc417d03fd.png",
     "c_product7": "american-football",
     "ptitle_7": "BRIGHT™ American Football",
-    "subtitle7": "50% OFF 1 - 55% OFF 2 - 60% OFF 3+ | MIX AND MATCH THE BALLS.",
+    "subtitle7": "70% OFF 1 - 75% OFF 2 - 80% OFF 3+ | MIX AND MATCH THE BALLS.",
     "image7": "shopify://shop_images/image_2024-01-12_181057947.png",
     "c_product8": "bright-football",
     "ptitle_8": "BRIGHT™ Football",
-    "subtitle8": "50% OFF 1 - 55% OFF 2 - 60% OFF 3+ | MIX AND MATCH THE BALLS.",
+    "subtitle8": "70% OFF 1 - 75% OFF 2 - 80% OFF 3+ | MIX AND MATCH THE BALLS.",
     "image8": "shopify://shop_images/hero-ball-1c_1.png",
     "c_product9": "the-bright-volleyball",
     "ptitle_9": "BRIGHT™ Volleyball",
-    "subtitle9": "50% OFF 1 - 55% OFF 2 - 60% OFF 3+ | MIX AND MATCH THE BALLS.",
+    "subtitle9": "70% OFF 1 - 75% OFF 2 - 80% OFF 3+ | MIX AND MATCH THE BALLS.",
     "image9": "shopify://shop_images/ball_color1_438d450a-ec2c-43c4-bcae-9b54c5bddf1c.png",
     "c_product10": "bright-rugby-football",
     "ptitle_10": "BRIGHT™ Rugby",
-    "subtitle10": "50% OFF 1 - 55% OFF 2 - 60% OFF 3+ | MIX AND MATCH THE BALLS.",
+    "subtitle10": "70% OFF 1 - 75% OFF 2 - 80% OFF 3+ | MIX AND MATCH THE BALLS.",
     "image10": "shopify://shop_images/image_2024-01-12_180847072.png",
     "c_product11": "bright™-glow-in-the-dark-basketball-net",
     "ptitle_11": "BRIGHT™ Glow in the dark Basketball Net",
@@ -2214,19 +2214,19 @@
           "discount_HfdT6e": {
             "type": "discount",
             "settings": {
-              "label": "50% OFF 1"
+              "label": "70% OFF 1"
             }
           },
           "discount_M8Q6qx": {
             "type": "discount",
             "settings": {
-              "label": "55% OFF 2"
+              "label": "75% OFF 2"
             }
           },
           "discount_UgJMXP": {
             "type": "discount",
             "settings": {
-              "label": "60% OFF 3+"
+              "label": "80% OFF 3+"
             }
           }
         },
