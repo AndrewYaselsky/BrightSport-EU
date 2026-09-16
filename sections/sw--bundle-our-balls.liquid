@@ -129,19 +129,13 @@
                           {%- assign final_price = final_price | divided_by: 100.0 | ceil | times: 100 | minus: 5 | at_least: 0 -%}
 
                           {% if product.first_available_variant.compare_at_price > 0 and product.first_available_variant.compare_at_price != null %}
-                            {%- assign rounded_price = product.first_available_variant.price | divided_by: 100.0 | ceil | times: 100 | minus: 5 | at_least: 0 -%}
-                            <span class="main_price notranslate ht-money" data-money-convertible>
-                              {{ rounded_price | money_without_trailing_zeros }}
-                            </span>
+                            <span class="main_price notranslate ht-money" data-money-convertible>{{ product.first_available_variant.price | money_without_trailing_zeros }}</span>
                             <span class="product_compare_price notranslate ht-money" data-money-convertible>
                               <span>was</span>
                               <b>{{ product.first_available_variant.compare_at_price | money_without_trailing_zeros }}</b>
                             </span>
                           {% else %}
-                            {%- assign rounded_price = product.first_available_variant.price | divided_by: 100.0 | ceil | times: 100 | minus: 5 | at_least: 0 -%}
-                            <span class="main_price notranslate ht-money" data-money-convertible>
-                              {{ rounded_price | money_without_trailing_zeros }}
-                            </span>
+                            <span class="main_price notranslate ht-money" data-money-convertible>{{ final_price | money_without_trailing_zeros }}</span>
                             <span class="product_compare_price notranslate ht-money" data-money-convertible>
                               <span>was</span>
                               <b>{{ base_price | money_without_trailing_zeros }}</b>
