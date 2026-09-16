@@ -111,45 +111,45 @@
                         {% if show_bogo %}
                           <span class="main_price notranslate ht-money" data-money-convertible>{{ product.first_available_variant.price | money_without_trailing_zeros }}</span>
                         {% else %}
-                          {%- assign base_price = product.selected_or_first_available_variant.price -%}
-                          {%- assign quantity = 1 -%}
+{%- assign base_price = product.selected_or_first_available_variant.price -%}
+{%- assign quantity = 1 -%}
 
-                          {%- if quantity == 1 -%}
-                            {%- assign discount_rate = 0.70 -%}
-                          {%- elsif quantity == 2 -%}
-                            {%- assign discount_rate = 0.75 -%}
-                          {%- elsif quantity == 3 -%}
-                            {%- assign discount_rate = 0.80 -%}
-                          {%- else -%}
-                            {%- assign discount_rate = 0.00 -%}
-                          {%- endif -%}
+{%- if quantity == 1 -%}
+  {%- assign discount_rate = 0.70 -%}
+{%- elsif quantity == 2 -%}
+  {%- assign discount_rate = 0.75 -%}
+{%- elsif quantity == 3 -%}
+  {%- assign discount_rate = 0.80 -%}
+{%- else -%}
+  {%- assign discount_rate = 0.00 -%}
+{%- endif -%}
 
-                          {%- assign discount_amount = base_price | times: discount_rate -%}
-                          {%- assign final_price = base_price | minus: discount_amount | round -%}
-                          {%- assign final_price = final_price | divided_by: 100.0 | ceil | times: 100 | minus: 5 | at_least: 0 -%}
+{%- assign discount_amount = base_price | times: discount_rate -%}
+{%- assign final_price = base_price | minus: discount_amount | round -%}
+{%- assign final_price = final_price | divided_by: 100.0 | ceil | times: 100 | minus: 5 | at_least: 0 -%}
 
-                          {% if product.first_available_variant.compare_at_price > 0 and product.first_available_variant.compare_at_price != null %}
-                            {%- assign rounded_price = product.first_available_variant.price | divided_by: 100.0 | ceil | times: 100 | minus: 5 | at_least: 0 -%}
+{% if product.first_available_variant.compare_at_price > 0 and product.first_available_variant.compare_at_price != null %}
+  {%- assign rounded_price = product.first_available_variant.price | divided_by: 100.0 | ceil | times: 100 | minus: 5 | at_least: 0 -%}
 
-                            <span class="main_price notranslate ht-money" data-money-convertible>
-                              {{ rounded_price | money_without_trailing_zeros }}
-                            </span>
+  <span class="main_price notranslate ht-money" data-money-convertible>
+    {{ rounded_price | money_without_trailing_zeros }}
+  </span>
 
-                            <span class="product_compare_price notranslate ht-money" data-money-convertible>
-                              <span>was</span>
-                              <b>{{ product.first_available_variant.compare_at_price | money_without_trailing_zeros }}</b>
-                            </span>
-                          {% else %}
-                            <span class="main_price notranslate ht-money" data-money-convertible>
-                              {{ final_price | money_without_trailing_zeros }}
-                            </span>
+  <span class="product_compare_price notranslate ht-money" data-money-convertible>
+    <span>was</span>
+    <b>{{ product.first_available_variant.compare_at_price | money_without_trailing_zeros }}</b>
+  </span>
+{% else %}
+  <span class="main_price notranslate ht-money" data-money-convertible>
+    {{ final_price | money_without_trailing_zeros }}
+  </span>
 
-                            <span class="product_compare_price notranslate ht-money" data-money-convertible>
-                              <span>was</span>
-                              <b>{{ base_price | money_without_trailing_zeros }}</b>
-                            </span>
-                          {% endif %}
-                          {% endif %}
+  <span class="product_compare_price notranslate ht-money" data-money-convertible>
+    <span>was</span>
+    <b>{{ base_price | money_without_trailing_zeros }}</b>
+  </span>
+{% endif %}
+{% endif %}
                       {% elsif product.compare_at_price > product.price %}   
                           <span class="main_price notranslate ht-money" data-money-convertible data-price="{{product.price}}">{{ product.price | money_without_trailing_zeros }}</span>
                           <span class="product_compare_price notranslate ht-money"><span class="compare_text">was</span>{{ product.compare_at_price | money_without_trailing_zeros }}</span>
