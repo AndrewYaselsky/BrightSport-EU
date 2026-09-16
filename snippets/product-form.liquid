@@ -155,7 +155,7 @@
       
         assign base_price = product.selected_or_first_available_variant.price
          
-        assign discount_rate_1 = 0.50
+        assign discount_rate_1 = 0.70
         assign discount_amount_1 = base_price | times: discount_rate_1
         assign final_price_1 = base_price | minus: discount_amount_1
       
@@ -163,7 +163,7 @@
         assign compare_at_price1 = base_price
         assign save1 = discount_rate_1 | times: 100 | round
       
-        assign discount_rate_2 = 0.55
+        assign discount_rate_2 = 0.75
         assign discount_amount_2 = base_price | times: discount_rate_2
         assign final_price_2 = base_price | minus: discount_amount_2
           
@@ -171,7 +171,7 @@
         assign compare_at_price2 = base_price
         assign save2 = discount_rate_2 | times: 100 | round
       
-        assign discount_rate_3 = 0.60
+        assign discount_rate_3 = 0.80
         assign discount_amount_3 = base_price | times: discount_rate_3
         assign final_price_3 = base_price | minus: discount_amount_3
   
