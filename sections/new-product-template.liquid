@@ -247,11 +247,45 @@
           loading="lazy"
           >
       </div>
+      {%- assign sticky_variant = product.selected_or_first_available_variant -%}
+      {%- assign sticky_base_price = sticky_variant.price -%}
+      {%- assign sticky_quantity = 1 -%}
+
+      {%- if sticky_quantity == 1 -%}
+        {%- assign sticky_discount_rate = 0.70 -%}
+      {%- elsif sticky_quantity == 2 -%}
+        {%- assign sticky_discount_rate = 0.75 -%}
+      {%- elsif sticky_quantity == 3 -%}
+        {%- assign sticky_discount_rate = 0.80 -%}
+      {%- else -%}
+        {%- assign sticky_discount_rate = 0.00 -%}
+      {%- endif -%}
+
+      {%- if sticky_variant.compare_at_price > 0 -%}
+        {%- assign sticky_price = sticky_variant.price -%}
+        {%- assign sticky_compare_price = sticky_variant.compare_at_price -%}
+      {%- else -%}
+        {%- assign sticky_discount_amount = sticky_base_price | times: sticky_discount_rate -%}
+        {%- assign sticky_price = sticky_base_price | minus: sticky_discount_amount -%}
+        {%- assign sticky_compare_price = sticky_base_price -%}
+      {%- endif -%}
+
+      {%- assign sticky_price = sticky_price | round -%}
+      {%- assign sticky_price = sticky_price | divided_by: 100.0 | ceil | times: 100 | minus: 5 | at_least: 0 -%}
+
       <div class="sticky-add-to-cart-content">
         <div class="sticky-add-to-cart-content-price">
-          <span class="money notranslate ht-money">{{ product.selected_or_first_available_variant.price | money }}</span>
-          <span class="sticky-add-to-cart-content-price-was">was</span>
-          <span class="sticky-add-to-cart-content-compare-at-price notranslate ht-money">{{ product.selected_or_first_available_variant.compare_at_price | money }}</span>
+          <span class="money notranslate ht-money">
+            {{ sticky_price | money }}
+          </span>
+
+          <span class="sticky-add-to-cart-content-price-was">
+            was
+          </span>
+
+          <span class="sticky-add-to-cart-content-compare-at-price notranslate ht-money">
+            {{ sticky_compare_price | money }}
+          </span>
         </div>
       </div>
     </div>
