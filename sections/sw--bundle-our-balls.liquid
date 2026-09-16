@@ -125,8 +125,9 @@
                           {%- endif -%}
                           
                           {%- assign discount_amount = base_price | times: discount_rate -%}
-                          {%- assign final_price = base_price | minus: discount_amount -%}
-  
+                          {%- assign final_price = base_price | minus: discount_amount | round -%}
+                          {%- assign final_price = final_price | divided_by: 100.0 | ceil | times: 100 | minus: 5 | at_least: 0 -%}
+
                           {% if product.first_available_variant.compare_at_price > 0 and product.first_available_variant.compare_at_price != null %}
                             <span class="main_price notranslate ht-money" data-money-convertible>{{ product.first_available_variant.price | money_without_trailing_zeros }}</span>
                             <span class="product_compare_price notranslate ht-money" data-money-convertible>
