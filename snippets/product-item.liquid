@@ -197,28 +197,37 @@
             <div class="ProductItem__PriceList {% if show_price_on_hover %}ProductItem__PriceList--showOnHover{% endif %} Heading">
               {%- assign base_price = product.selected_or_first_available_variant.price -%}
               {%- assign quantity = 1 -%}
-    
+
               {%- if quantity == 1 -%}
-                {%- assign discount_rate = 0.50 -%}
+                {%- assign discount_rate = 0.70 -%}
               {%- elsif quantity == 2 -%}
-                {%- assign discount_rate = 0.55 -%}
+                {%- assign discount_rate = 0.75 -%}
               {%- elsif quantity == 3 -%}
-                {%- assign discount_rate = 0.60 -%}
+                {%- assign discount_rate = 0.80 -%}
               {%- else -%}
                 {%- assign discount_rate = 0.00 -%}
               {%- endif -%}
-    
+
               {%- assign discount_amount = base_price | times: discount_rate -%}
-              {%- assign final_price = base_price | minus: discount_amount -%}
-              
+              {%- assign final_price = base_price | minus: discount_amount | round -%}
+              {%- assign final_price = final_price | divided_by: 100.0 | ceil | times: 100 | minus: 5 | at_least: 0 -%}
+
               {% if product.first_available_variant.compare_at_price > 0 and product.first_available_variant.compare_at_price != null %}
-                <span class="ProductItem__Price Price Price--highlight Text--subdued notranslate ht-money" data-money-convertible>{{ product.first_available_variant.price | money_without_trailing_zeros }}</span>
+                {%- assign rounded_price = product.first_available_variant.price | divided_by: 100.0 | ceil | times: 100 | minus: 5 | at_least: 0 -%}
+
+                <span class="ProductItem__Price Price Price--highlight Text--subdued notranslate ht-money" data-money-convertible>
+                  {{ rounded_price | money_without_trailing_zeros }}
+                </span>
+
                 <span class="ProductItem__Price Price Price--compareAt Text--subdued notranslate ht-money" data-money-convertible>
                   <span>was</span>
                   <b>{{ product.first_available_variant.compare_at_price | money_without_trailing_zeros }}</b>
                 </span>
               {% else %}
-                <span class="ProductItem__Price Price Price--highlight Text--subdued notranslate ht-money" data-money-convertible>{{ final_price | money_without_trailing_zeros }}</span>
+                <span class="ProductItem__Price Price Price--highlight Text--subdued notranslate ht-money" data-money-convertible>
+                  {{ final_price | money_without_trailing_zeros }}
+                </span>
+
                 <span class="ProductItem__Price Price Price--compareAt Text--subdued notranslate ht-money" data-money-convertible>
                   <span>was</span>
                   <b>{{ base_price | money_without_trailing_zeros }}</b>
