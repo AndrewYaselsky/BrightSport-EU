@@ -154,29 +154,32 @@
         assign save3 = 0
       
         assign base_price = product.selected_or_first_available_variant.price
-         
+
         assign discount_rate_1 = 0.70
         assign discount_amount_1 = base_price | times: discount_rate_1
-        assign final_price_1 = base_price | minus: discount_amount_1
-      
+        assign final_price_1 = base_price | minus: discount_amount_1 | round
+        assign final_price_1 = final_price_1 | divided_by: 100.0 | ceil | times: 100 | minus: 5 | at_least: 0
+
         assign price1 = final_price_1
         assign compare_at_price1 = base_price
         assign save1 = discount_rate_1 | times: 100 | round
-      
+
         assign discount_rate_2 = 0.75
         assign discount_amount_2 = base_price | times: discount_rate_2
-        assign final_price_2 = base_price | minus: discount_amount_2
-          
+        assign final_price_2 = base_price | minus: discount_amount_2 | round
+        assign final_price_2 = final_price_2 | divided_by: 100.0 | ceil | times: 100 | minus: 5 | at_least: 0
+
         assign price2 = final_price_2
         assign compare_at_price2 = base_price
         assign save2 = discount_rate_2 | times: 100 | round
-      
+
         assign discount_rate_3 = 0.80
         assign discount_amount_3 = base_price | times: discount_rate_3
-        assign final_price_3 = base_price | minus: discount_amount_3
-  
+        assign final_price_3 = base_price | minus: discount_amount_3 | round
+        assign final_price_3 = final_price_3 | divided_by: 100.0 | ceil | times: 100 | minus: 5 | at_least: 0
+
         assign price3 = final_price_3
-        assign compare_at_price3 = base_price 
+        assign compare_at_price3 = base_price
         assign save3 = discount_rate_3 | times: 100 | round
       -%}
       <div class="qty_selector_discount">
