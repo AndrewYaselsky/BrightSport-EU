@@ -1137,6 +1137,9 @@ s .template-product .ProductItem__Info.ProductItem__Info--center {
   align-items: center;
   gap: 10px;
 }
+.kaching-bundles .kaching-bundles__block {
+  font-family: 'Montserrat' !important;
+}
 .tittok_top_heading h6 {
   margin-left: 10px;
 }
