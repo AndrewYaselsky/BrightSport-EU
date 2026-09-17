@@ -1133,7 +1133,7 @@ s .template-product .ProductItem__Info.ProductItem__Info--center {
   text-transform: lowercase;
 }
 .template-product .ProductMeta__PriceList.Heading {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 10px;
 }
